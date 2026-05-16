@@ -1,0 +1,24 @@
+{
+  "generated_at": "2026-05-16T00:29:13.171468",
+  "data_root": "/sessions/festive-confident-hamilton/mnt/BMSS Order App",
+  "n_weekly_periods": 4,
+  "latest_week_index": 3,
+  "orders_critical": 138,
+  "orders_high": 20,
+  "orders_total": 280,
+  "margin_issues_count": 87,
+  "margin_total_dollar_drag": 644.4,
+  "pricing_opportunities_count": 12,
+  "pricing_annual_upside": 3163.0,
+  "revival_candidates_count": 307,
+  "store_margin": {
+    "latest_week_revenue": 28741.05,
+    "latest_week_margin_pct": 34.54,
+    "latest_week_true_margin_pct": 31.91,
+    "latest_week_promo_total": 755.38,
+    "wow_margin_delta_pts": 1.45,
+    "wow_true_margin_delta_pts": 1.44
+  },
+  "protected_profit_items": 25,
+  "protected_revenue_items": 105
+}
