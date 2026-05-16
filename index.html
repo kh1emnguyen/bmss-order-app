@@ -1034,7 +1034,7 @@ function renderRevival() {
   </tr></thead>`;
 
   function revRows(arr, highlight = false) {
-    return arr.map(r => `<tr style="${highlight?'background:#fefce8':'}">
+    return arr.map(r => `<tr style="${highlight ? 'background:#fefce8' : ''}">
       <td style="color:var(--faint);font-size:.78rem">${r.revival_rank}</td>
       <td>
         <div class="item-name">${esc(r.display_name||r.name)}</div>
