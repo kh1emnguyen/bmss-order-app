@@ -11,10 +11,12 @@
     "promo_savings": 57.0,
     "promo_contribution_pts": 21.35,
     "cause": "promotional",
+    "chain_subsidised_loss": true,
     "wow_margin_delta_pts": -15.53,
     "wow_revenue_delta": -57.0,
     "txn_count": 1,
-    "pct_of_total_drag": 10.2
+    "pct_of_total_drag": 10.2,
+    "display_name": "Johnnie Walker Gold 750ml"
   },
   {
     "name": "Johnnie Walker Black 700ml",
@@ -28,10 +30,12 @@
     "promo_savings": 40.0,
     "promo_contribution_pts": 14.04,
     "cause": "promotional",
+    "chain_subsidised_loss": true,
     "wow_margin_delta_pts": -8.09,
     "wow_revenue_delta": 154.97,
     "txn_count": 5,
-    "pct_of_total_drag": 7.4
+    "pct_of_total_drag": 7.4,
+    "display_name": "Johnnie Walker Black 700ml"
   },
   {
     "name": "Smirnoff Vodka Red 1L 6pk",
@@ -45,10 +49,12 @@
     "promo_savings": 27.0,
     "promo_contribution_pts": 15.0,
     "cause": "promotional",
+    "chain_subsidised_loss": true,
     "wow_margin_delta_pts": -8.18,
     "wow_revenue_delta": -27.0,
     "txn_count": 2,
-    "pct_of_total_drag": 6.7
+    "pct_of_total_drag": 6.7,
+    "display_name": "Smirnoff Vodka Red 1L"
   },
   {
     "name": "Gordons London Dry Gin 700ml 12pk",
@@ -62,10 +68,12 @@
     "promo_savings": 21.0,
     "promo_contribution_pts": 5.01,
     "cause": "promotional",
+    "chain_subsidised_loss": false,
     "wow_margin_delta_pts": 3.56,
     "wow_revenue_delta": -24.99,
     "txn_count": 4,
-    "pct_of_total_drag": 6.0
+    "pct_of_total_drag": 6.0,
+    "display_name": "Gordons London Dry Gin 700ml"
   },
   {
     "name": "Carlton Draught Keg JUG 1140ml",
@@ -79,10 +87,12 @@
     "promo_savings": 0.0,
     "promo_contribution_pts": 0.0,
     "cause": "structural",
+    "chain_subsidised_loss": false,
     "wow_margin_delta_pts": -1.29,
     "wow_revenue_delta": 189.9,
     "txn_count": 46,
-    "pct_of_total_drag": 5.2
+    "pct_of_total_drag": 5.2,
+    "display_name": "Carlton Draught Keg JUG 1140ml"
   },
   {
     "name": "Chivas Regal 12YO 700ml",
@@ -96,10 +106,12 @@
     "promo_savings": 24.0,
     "promo_contribution_pts": 14.55,
     "cause": "promotional",
+    "chain_subsidised_loss": true,
     "wow_margin_delta_pts": -1.19,
     "wow_revenue_delta": 58.99,
     "txn_count": 3,
-    "pct_of_total_drag": 4.9
+    "pct_of_total_drag": 4.9,
+    "display_name": "Chivas Regal 12YO 700ml"
   },
   {
     "name": "Gordons London Dry Gin 1L",
@@ -113,10 +125,12 @@
     "promo_savings": 12.0,
     "promo_contribution_pts": 4.35,
     "cause": "promotional",
+    "chain_subsidised_loss": false,
     "wow_margin_delta_pts": -9.05,
     "wow_revenue_delta": -12.0,
     "txn_count": 3,
-    "pct_of_total_drag": 4.8
+    "pct_of_total_drag": 4.8,
+    "display_name": "Gordons London Dry Gin 1L"
   },
   {
     "name": "Jack Daniels Black Label 1L 12pk",
@@ -130,10 +144,12 @@
     "promo_savings": 21.0,
     "promo_contribution_pts": 8.75,
     "cause": "promotional",
+    "chain_subsidised_loss": false,
     "wow_margin_delta_pts": 0.0,
     "wow_revenue_delta": 159.98,
     "txn_count": 3,
-    "pct_of_total_drag": 4.6
+    "pct_of_total_drag": 4.6,
+    "display_name": "Jack Daniels Black Label 1L"
   },
   {
     "name": "Jameson Irish Whisky 1L",
@@ -147,10 +163,12 @@
     "promo_savings": 16.0,
     "promo_contribution_pts": 10.67,
     "cause": "promotional",
+    "chain_subsidised_loss": false,
     "wow_margin_delta_pts": -8.52,
     "wow_revenue_delta": 66.99,
     "txn_count": 2,
-    "pct_of_total_drag": 3.3
+    "pct_of_total_drag": 3.3,
+    "display_name": "Jameson Irish Whisky 1L"
   },
   {
     "name": "Grants Family Reserve Scotch Whisky 700ml 12pk",
@@ -164,10 +182,12 @@
     "promo_savings": 18.0,
     "promo_contribution_pts": 20.94,
     "cause": "promotional",
+    "chain_subsidised_loss": true,
     "wow_margin_delta_pts": 5.19,
     "wow_revenue_delta": -81.98,
     "txn_count": 2,
-    "pct_of_total_drag": 3.2
+    "pct_of_total_drag": 3.2,
+    "display_name": "Grants Family Reserve Scotch Whisky 700ml"
   },
   {
     "name": "Jim Beam White Bourbon 1L",
@@ -181,10 +201,12 @@
     "promo_savings": 12.0,
     "promo_contribution_pts": 9.09,
     "cause": "promotional",
+    "chain_subsidised_loss": false,
     "wow_margin_delta_pts": 5.47,
     "wow_revenue_delta": -47.99,
     "txn_count": 2,
-    "pct_of_total_drag": 2.3
+    "pct_of_total_drag": 2.3,
+    "display_name": "Jim Beam White Bourbon 1L"
   },
   {
     "name": "Absolut Vodka 700ml 6pk",
@@ -198,10 +220,12 @@
     "promo_savings": 6.0,
     "promo_contribution_pts": 2.27,
     "cause": "promotional",
+    "chain_subsidised_loss": false,
     "wow_margin_delta_pts": -5.61,
     "wow_revenue_delta": 155.97,
     "txn_count": 4,
-    "pct_of_total_drag": 2.2
+    "pct_of_total_drag": 2.2,
+    "display_name": "Absolut Vodka 700ml"
   },
   {
     "name": "Altos Tequila 700ml",
@@ -215,10 +239,12 @@
     "promo_savings": 8.0,
     "promo_contribution_pts": 13.34,
     "cause": "promotional",
+    "chain_subsidised_loss": true,
     "wow_margin_delta_pts": 0.0,
     "wow_revenue_delta": 0.0,
     "txn_count": 1,
-    "pct_of_total_drag": 2.2
+    "pct_of_total_drag": 2.2,
+    "display_name": "Altos Tequila 700ml"
   },
   {
     "name": "Skyy Vodka 700ml",
@@ -232,10 +258,12 @@
     "promo_savings": 7.0,
     "promo_contribution_pts": 5.11,
     "cause": "promotional",
+    "chain_subsidised_loss": false,
     "wow_margin_delta_pts": -3.7,
     "wow_revenue_delta": -100.98,
     "txn_count": 3,
-    "pct_of_total_drag": 2.2
+    "pct_of_total_drag": 2.2,
+    "display_name": "Skyy Vodka 700ml"
   },
   {
     "name": "Monkey Shoulder Scotch Whisky 700ml",
@@ -249,10 +277,12 @@
     "promo_savings": 10.0,
     "promo_contribution_pts": 16.67,
     "cause": "promotional",
+    "chain_subsidised_loss": true,
     "wow_margin_delta_pts": 0.0,
     "wow_revenue_delta": 0.0,
     "txn_count": 1,
-    "pct_of_total_drag": 2.1
+    "pct_of_total_drag": 2.1,
+    "display_name": "Monkey Shoulder Scotch Whisky 700ml"
   },
   {
     "name": "Carlton Draught Keg Schooner",
@@ -266,10 +296,12 @@
     "promo_savings": 8.5,
     "promo_contribution_pts": 26.6,
     "cause": "promotional",
+    "chain_subsidised_loss": false,
     "wow_margin_delta_pts": -7.91,
     "wow_revenue_delta": -55.94,
     "txn_count": 3,
-    "pct_of_total_drag": 2.0
+    "pct_of_total_drag": 2.0,
+    "display_name": "Carlton Draught Keg Schooner"
   },
   {
     "name": "Grants Fam Reserve Scotch Whisky 1L 6pk",
@@ -283,10 +315,12 @@
     "promo_savings": 9.0,
     "promo_contribution_pts": 4.69,
     "cause": "promotional",
+    "chain_subsidised_loss": false,
     "wow_margin_delta_pts": 2.69,
     "wow_revenue_delta": -47.99,
     "txn_count": 3,
-    "pct_of_total_drag": 1.7
+    "pct_of_total_drag": 1.7,
+    "display_name": "Grants Fam Reserve Scotch Whisky 1L"
   },
   {
     "name": "De Bortoli Prosecco 750ml",
@@ -300,10 +334,12 @@
     "promo_savings": 8.0,
     "promo_contribution_pts": 28.59,
     "cause": "promotional",
+    "chain_subsidised_loss": true,
     "wow_margin_delta_pts": -18.15,
     "wow_revenue_delta": -8.0,
     "txn_count": 2,
-    "pct_of_total_drag": 1.5
+    "pct_of_total_drag": 1.5,
+    "display_name": "De Bortoli Prosecco 750ml"
   },
   {
     "name": "Jack Daniels Black Label 700ml 12pk",
@@ -317,10 +353,12 @@
     "promo_savings": 6.0,
     "promo_contribution_pts": 2.48,
     "cause": "promotional",
+    "chain_subsidised_loss": false,
     "wow_margin_delta_pts": 1.63,
     "wow_revenue_delta": -229.96,
     "txn_count": 4,
-    "pct_of_total_drag": 1.5
+    "pct_of_total_drag": 1.5,
+    "display_name": "Jack Daniels Black Label 700ml"
   },
   {
     "name": "Jacobs Creek Double Barrel Shiraz 750ml",
@@ -334,10 +372,12 @@
     "promo_savings": 10.0,
     "promo_contribution_pts": 25.01,
     "cause": "promotional",
+    "chain_subsidised_loss": false,
     "wow_margin_delta_pts": -2.98,
     "wow_revenue_delta": 19.99,
     "txn_count": 2,
-    "pct_of_total_drag": 1.4
+    "pct_of_total_drag": 1.4,
+    "display_name": "Jacobs Creek Double Barrel Shiraz 750ml"
   },
   {
     "name": "Dimple Scotch 15YO 700ml",
@@ -351,10 +391,12 @@
     "promo_savings": 6.0,
     "promo_contribution_pts": 8.82,
     "cause": "promotional",
+    "chain_subsidised_loss": false,
     "wow_margin_delta_pts": 0.0,
     "wow_revenue_delta": 0.0,
     "txn_count": 1,
-    "pct_of_total_drag": 1.3
+    "pct_of_total_drag": 1.3,
+    "display_name": "Dimple Scotch 15YO 700ml"
   },
   {
     "name": "19 Crimes Shiraz 750ml",
@@ -368,10 +410,12 @@
     "promo_savings": 10.0,
     "promo_contribution_pts": 28.6,
     "cause": "promotional",
+    "chain_subsidised_loss": false,
     "wow_margin_delta_pts": 4.23,
     "wow_revenue_delta": 2.0,
     "txn_count": 2,
-    "pct_of_total_drag": 1.3
+    "pct_of_total_drag": 1.3,
+    "display_name": "19 Crimes Shiraz 750ml"
   },
   {
     "name": "Canadian Club Whisky 700ml 12pk",
@@ -385,10 +429,12 @@
     "promo_savings": 10.0,
     "promo_contribution_pts": 6.85,
     "cause": "promotional",
+    "chain_subsidised_loss": false,
     "wow_margin_delta_pts": -2.54,
     "wow_revenue_delta": 93.98,
     "txn_count": 3,
-    "pct_of_total_drag": 1.2
+    "pct_of_total_drag": 1.2,
+    "display_name": "Canadian Club Whisky 700ml"
   },
   {
     "name": "Jack Daniels Honey Whiskey 700ml",
@@ -402,10 +448,12 @@
     "promo_savings": 0.0,
     "promo_contribution_pts": 0.0,
     "cause": "structural",
+    "chain_subsidised_loss": false,
     "wow_margin_delta_pts": -0.01,
     "wow_revenue_delta": 0.0,
     "txn_count": 1,
-    "pct_of_total_drag": 1.2
+    "pct_of_total_drag": 1.2,
+    "display_name": "Jack Daniels Honey Whiskey 700ml"
   },
   {
     "name": "Oyster Bay Sauvignon Blanc 750ml",
@@ -419,10 +467,12 @@
     "promo_savings": 5.0,
     "promo_contribution_pts": 27.79,
     "cause": "promotional",
+    "chain_subsidised_loss": true,
     "wow_margin_delta_pts": -17.57,
     "wow_revenue_delta": -27.99,
     "txn_count": 1,
-    "pct_of_total_drag": 1.1
+    "pct_of_total_drag": 1.1,
+    "display_name": "Oyster Bay Sauvignon Blanc 750ml"
   },
   {
     "name": "Little Yering Shiraz 750ml",
@@ -436,10 +486,12 @@
     "promo_savings": 5.0,
     "promo_contribution_pts": 27.79,
     "cause": "promotional",
+    "chain_subsidised_loss": true,
     "wow_margin_delta_pts": 0.0,
     "wow_revenue_delta": 0.0,
     "txn_count": 1,
-    "pct_of_total_drag": 1.0
+    "pct_of_total_drag": 1.0,
+    "display_name": "Little Yering Shiraz 750ml"
   },
   {
     "name": "Coca Cola Bt 600ml 24pk",
@@ -453,10 +505,12 @@
     "promo_savings": 0.0,
     "promo_contribution_pts": 0.0,
     "cause": "unknown",
+    "chain_subsidised_loss": false,
     "wow_margin_delta_pts": -0.04,
     "wow_revenue_delta": -53.88,
     "txn_count": 5,
-    "pct_of_total_drag": 0.9
+    "pct_of_total_drag": 0.9,
+    "display_name": "Coca Cola Bt 600ml"
   },
   {
     "name": "Master Peace Shiraz 750ml",
@@ -470,10 +524,12 @@
     "promo_savings": 9.0,
     "promo_contribution_pts": 30.03,
     "cause": "promotional",
+    "chain_subsidised_loss": false,
     "wow_margin_delta_pts": 0.0,
     "wow_revenue_delta": 19.98,
     "txn_count": 3,
-    "pct_of_total_drag": 0.8
+    "pct_of_total_drag": 0.8,
+    "display_name": "Master Peace Shiraz 750ml"
   },
   {
     "name": "Jacobs Creek Double Barrel Shiraz Cabernet 750ml",
@@ -487,10 +543,12 @@
     "promo_savings": 5.0,
     "promo_contribution_pts": 25.01,
     "cause": "promotional",
+    "chain_subsidised_loss": false,
     "wow_margin_delta_pts": 0.0,
     "wow_revenue_delta": 0.0,
     "txn_count": 1,
-    "pct_of_total_drag": 0.8
+    "pct_of_total_drag": 0.8,
+    "display_name": "Jacobs Creek Double Barrel Shiraz Cabernet 750ml"
   },
   {
     "name": "Grey Goose Vodka 1L",
@@ -504,10 +562,12 @@
     "promo_savings": 0.0,
     "promo_contribution_pts": 0.0,
     "cause": "unknown",
+    "chain_subsidised_loss": false,
     "wow_margin_delta_pts": 0.0,
     "wow_revenue_delta": 0.0,
     "txn_count": 1,
-    "pct_of_total_drag": 0.7
+    "pct_of_total_drag": 0.7,
+    "display_name": "Grey Goose Vodka 1L"
   },
   {
     "name": "De Bortoli Prem Pressings Shiraz Cask 4L",
@@ -521,10 +581,12 @@
     "promo_savings": 4.0,
     "promo_contribution_pts": 21.06,
     "cause": "promotional",
+    "chain_subsidised_loss": false,
     "wow_margin_delta_pts": 0.0,
     "wow_revenue_delta": -37.98,
     "txn_count": 1,
-    "pct_of_total_drag": 0.7
+    "pct_of_total_drag": 0.7,
+    "display_name": "De Bortoli Prem Pressings Shiraz Cask 4L"
   },
   {
     "name": "Credit Card Surcharge",
@@ -538,10 +600,12 @@
     "promo_savings": 0.0,
     "promo_contribution_pts": 0.0,
     "cause": "unknown",
+    "chain_subsidised_loss": false,
     "wow_margin_delta_pts": 0.0,
     "wow_revenue_delta": -3.5,
     "txn_count": 107,
-    "pct_of_total_drag": 0.7
+    "pct_of_total_drag": 0.7,
+    "display_name": "Credit Card Surcharge"
   },
   {
     "name": "PENFOLDS B311 CHARDONNAY 2017 750ml",
@@ -555,10 +619,12 @@
     "promo_savings": 0.0,
     "promo_contribution_pts": 0.0,
     "cause": "unknown",
+    "chain_subsidised_loss": false,
     "wow_margin_delta_pts": 0.0,
     "wow_revenue_delta": 0.0,
     "txn_count": 1,
-    "pct_of_total_drag": 0.7
+    "pct_of_total_drag": 0.7,
+    "display_name": "PENFOLDS B311 CHARDONNAY 2017 750ml"
   },
   {
     "name": "Jim Beam White Bourbon 700ml 12pk",
@@ -572,10 +638,12 @@
     "promo_savings": 15.0,
     "promo_contribution_pts": 5.05,
     "cause": "promotional",
+    "chain_subsidised_loss": false,
     "wow_margin_delta_pts": -2.97,
     "wow_revenue_delta": 244.95,
     "txn_count": 6,
-    "pct_of_total_drag": 0.7
+    "pct_of_total_drag": 0.7,
+    "display_name": "Jim Beam White Bourbon 700ml"
   },
   {
     "name": "Jacobs Creek Classic Sauvignon Blanc 750ml",
@@ -589,10 +657,12 @@
     "promo_savings": 4.0,
     "promo_contribution_pts": 10.01,
     "cause": "promotional",
+    "chain_subsidised_loss": false,
     "wow_margin_delta_pts": -1.48,
     "wow_revenue_delta": 19.98,
     "txn_count": 1,
-    "pct_of_total_drag": 0.6
+    "pct_of_total_drag": 0.6,
+    "display_name": "Jacobs Creek Classic Sauvignon Blanc 750ml"
   },
   {
     "name": "Master Peace Sauv Blanc 750ml",
@@ -606,10 +676,12 @@
     "promo_savings": 3.0,
     "promo_contribution_pts": 30.03,
     "cause": "promotional",
+    "chain_subsidised_loss": true,
     "wow_margin_delta_pts": 0.0,
     "wow_revenue_delta": 0.0,
     "txn_count": 1,
-    "pct_of_total_drag": 0.6
+    "pct_of_total_drag": 0.6,
+    "display_name": "Master Peace Sauv Blanc 750ml"
   },
   {
     "name": "De Bortoli Woodfired Shiraz 750ml",
@@ -623,10 +695,12 @@
     "promo_savings": 3.0,
     "promo_contribution_pts": 15.8,
     "cause": "promotional",
+    "chain_subsidised_loss": false,
     "wow_margin_delta_pts": -10.31,
     "wow_revenue_delta": -3.0,
     "txn_count": 1,
-    "pct_of_total_drag": 0.6
+    "pct_of_total_drag": 0.6,
+    "display_name": "De Bortoli Woodfired Shiraz 750ml"
   },
   {
     "name": "Canadian Club Whisky 1L",
@@ -640,10 +714,12 @@
     "promo_savings": 12.0,
     "promo_contribution_pts": 5.88,
     "cause": "promotional",
+    "chain_subsidised_loss": false,
     "wow_margin_delta_pts": 7.08,
     "wow_revenue_delta": 24.0,
     "txn_count": 3,
-    "pct_of_total_drag": 0.5
+    "pct_of_total_drag": 0.5,
+    "display_name": "Canadian Club Whisky 1L"
   },
   {
     "name": "Stoneleigh Marlborough Sauvignon Blanc 750ml",
@@ -657,10 +733,12 @@
     "promo_savings": 2.0,
     "promo_contribution_pts": 12.51,
     "cause": "promotional",
+    "chain_subsidised_loss": false,
     "wow_margin_delta_pts": 5.1,
     "wow_revenue_delta": 1.0,
     "txn_count": 1,
-    "pct_of_total_drag": 0.5
+    "pct_of_total_drag": 0.5,
+    "display_name": "Stoneleigh Marlborough Sauvignon Blanc 750ml"
   },
   {
     "name": "Wyndham Est Bin 555 Shiraz 750ml",
@@ -674,10 +752,12 @@
     "promo_savings": 2.0,
     "promo_contribution_pts": 18.2,
     "cause": "promotional",
+    "chain_subsidised_loss": false,
     "wow_margin_delta_pts": 0.0,
     "wow_revenue_delta": 0.0,
     "txn_count": 1,
-    "pct_of_total_drag": 0.4
+    "pct_of_total_drag": 0.4,
+    "display_name": "Wyndham Est Bin 555 Shiraz 750ml"
   },
   {
     "name": "Sierra Tequila Blanco 700ml",
@@ -691,10 +771,12 @@
     "promo_savings": 0.0,
     "promo_contribution_pts": 0.0,
     "cause": "unknown",
+    "chain_subsidised_loss": false,
     "wow_margin_delta_pts": 2.69,
     "wow_revenue_delta": 58.99,
     "txn_count": 2,
-    "pct_of_total_drag": 0.4
+    "pct_of_total_drag": 0.4,
+    "display_name": "Sierra Tequila Blanco 700ml"
   },
   {
     "name": "Stomping Ground Gipps St SCNR",
@@ -708,10 +790,12 @@
     "promo_savings": 4.0,
     "promo_contribution_pts": 22.25,
     "cause": "promotional",
+    "chain_subsidised_loss": false,
     "wow_margin_delta_pts": -3.27,
     "wow_revenue_delta": -2.0,
     "txn_count": 1,
-    "pct_of_total_drag": 0.4
+    "pct_of_total_drag": 0.4,
+    "display_name": "Stomping Ground Gipps St SCNR"
   },
   {
     "name": "Gordons Gin Med Orange 700ml",
@@ -725,10 +809,12 @@
     "promo_savings": 0.0,
     "promo_contribution_pts": 0.0,
     "cause": "unknown",
+    "chain_subsidised_loss": false,
     "wow_margin_delta_pts": 0.0,
     "wow_revenue_delta": 0.0,
     "txn_count": 1,
-    "pct_of_total_drag": 0.4
+    "pct_of_total_drag": 0.4,
+    "display_name": "Gordons Gin Med Orange 700ml"
   },
   {
     "name": "Carlton Draught Kegs Pint 570ml",
@@ -742,10 +828,12 @@
     "promo_savings": 4.0,
     "promo_contribution_pts": 9.1,
     "cause": "promotional",
+    "chain_subsidised_loss": false,
     "wow_margin_delta_pts": 0.31,
     "wow_revenue_delta": -75.93,
     "txn_count": 4,
-    "pct_of_total_drag": 0.4
+    "pct_of_total_drag": 0.4,
+    "display_name": "Carlton Draught Kegs Pint 570ml"
   },
   {
     "name": "Lindemans Bin 50 Shiraz 750ml",
@@ -759,10 +847,12 @@
     "promo_savings": 2.0,
     "promo_contribution_pts": 25.03,
     "cause": "promotional",
+    "chain_subsidised_loss": false,
     "wow_margin_delta_pts": 0.0,
     "wow_revenue_delta": 0.0,
     "txn_count": 1,
-    "pct_of_total_drag": 0.3
+    "pct_of_total_drag": 0.3,
+    "display_name": "Lindemans Bin 50 Shiraz 750ml"
   },
   {
     "name": "Tiger PINT",
@@ -776,10 +866,12 @@
     "promo_savings": 16.0,
     "promo_contribution_pts": 15.86,
     "cause": "promotional",
+    "chain_subsidised_loss": false,
     "wow_margin_delta_pts": 0.53,
     "wow_revenue_delta": -19.98,
     "txn_count": 9,
-    "pct_of_total_drag": 0.3
+    "pct_of_total_drag": 0.3,
+    "display_name": "Tiger PINT"
   },
   {
     "name": "Mountain Culture Juice Trip SCNR",
@@ -793,10 +885,12 @@
     "promo_savings": 2.0,
     "promo_contribution_pts": 5.89,
     "cause": "promotional",
+    "chain_subsidised_loss": false,
     "wow_margin_delta_pts": 3.22,
     "wow_revenue_delta": -49.95,
     "txn_count": 3,
-    "pct_of_total_drag": 0.3
+    "pct_of_total_drag": 0.3,
+    "display_name": "Mountain Culture Juice Trip SCNR"
   },
   {
     "name": "Yellowglen Colours Pink Soft Rose 750ml",
@@ -810,10 +904,12 @@
     "promo_savings": 2.0,
     "promo_contribution_pts": 20.02,
     "cause": "promotional",
+    "chain_subsidised_loss": false,
     "wow_margin_delta_pts": 0.0,
     "wow_revenue_delta": 0.0,
     "txn_count": 1,
-    "pct_of_total_drag": 0.3
+    "pct_of_total_drag": 0.3,
+    "display_name": "Yellowglen Colours Pink Soft Rose 750ml"
   },
   {
     "name": "Yellow Tail Cabernet Sauvignon 750ml",
@@ -827,10 +923,12 @@
     "promo_savings": 3.0,
     "promo_contribution_pts": 10.01,
     "cause": "promotional",
+    "chain_subsidised_loss": false,
     "wow_margin_delta_pts": 0.0,
     "wow_revenue_delta": 9.99,
     "txn_count": 3,
-    "pct_of_total_drag": 0.3
+    "pct_of_total_drag": 0.3,
+    "display_name": "Yellow Tail Cabernet Sauvignon 750ml"
   },
   {
     "name": "19 CRIMES SNOOP CALI ROSE750ML",
@@ -844,10 +942,12 @@
     "promo_savings": 2.0,
     "promo_contribution_pts": 12.51,
     "cause": "promotional",
+    "chain_subsidised_loss": false,
     "wow_margin_delta_pts": -7.84,
     "wow_revenue_delta": -2.0,
     "txn_count": 1,
-    "pct_of_total_drag": 0.3
+    "pct_of_total_drag": 0.3,
+    "display_name": "19 CRIMES SNOOP CALI ROSE750ML"
   },
   {
     "name": "Faiveley Bourgogne Rouge 750ml",
@@ -861,10 +961,12 @@
     "promo_savings": 0.0,
     "promo_contribution_pts": 0.0,
     "cause": "unknown",
+    "chain_subsidised_loss": false,
     "wow_margin_delta_pts": 0.0,
     "wow_revenue_delta": 0.0,
     "txn_count": 1,
-    "pct_of_total_drag": 0.3
+    "pct_of_total_drag": 0.3,
+    "display_name": "Faiveley Bourgogne Rouge 750ml"
   },
   {
     "name": "Jack Daniels & Cola Can 375ml",
@@ -878,10 +980,12 @@
     "promo_savings": 2.0,
     "promo_contribution_pts": 3.18,
     "cause": "promotional",
+    "chain_subsidised_loss": false,
     "wow_margin_delta_pts": -3.17,
     "wow_revenue_delta": -121.94,
     "txn_count": 2,
-    "pct_of_total_drag": 0.3
+    "pct_of_total_drag": 0.3,
+    "display_name": "Jack Daniels & Cola Can 375ml"
   },
   {
     "name": "Southern Comfort 700ml",
@@ -895,10 +999,12 @@
     "promo_savings": 0.0,
     "promo_contribution_pts": 0.0,
     "cause": "unknown",
+    "chain_subsidised_loss": false,
     "wow_margin_delta_pts": 0.0,
     "wow_revenue_delta": 49.99,
     "txn_count": 2,
-    "pct_of_total_drag": 0.3
+    "pct_of_total_drag": 0.3,
+    "display_name": "Southern Comfort 700ml"
   },
   {
     "name": "Wolf Blass Yellow Label Merlot 750ml",
@@ -912,10 +1018,12 @@
     "promo_savings": 2.0,
     "promo_contribution_pts": 16.68,
     "cause": "promotional",
+    "chain_subsidised_loss": false,
     "wow_margin_delta_pts": 0.0,
     "wow_revenue_delta": 0.0,
     "txn_count": 1,
-    "pct_of_total_drag": 0.3
+    "pct_of_total_drag": 0.3,
+    "display_name": "Wolf Blass Yellow Label Merlot 750ml"
   },
   {
     "name": "Red Rock Sweet Chilli & Sour Cream 90g",
@@ -929,10 +1037,12 @@
     "promo_savings": 3.0,
     "promo_contribution_pts": 25.06,
     "cause": "promotional",
+    "chain_subsidised_loss": false,
     "wow_margin_delta_pts": 0.25,
     "wow_revenue_delta": -3.99,
     "txn_count": 3,
-    "pct_of_total_drag": 0.3
+    "pct_of_total_drag": 0.3,
+    "display_name": "Red Rock Sweet Chilli & Sour Cream 90g"
   },
   {
     "name": "Hardys VR Pinot Noir 1L",
@@ -946,10 +1056,12 @@
     "promo_savings": 1.0,
     "promo_contribution_pts": 11.12,
     "cause": "promotional",
+    "chain_subsidised_loss": false,
     "wow_margin_delta_pts": 0.0,
     "wow_revenue_delta": -8.99,
     "txn_count": 1,
-    "pct_of_total_drag": 0.3
+    "pct_of_total_drag": 0.3,
+    "display_name": "Hardys VR Pinot Noir 1L"
   },
   {
     "name": "REDDS 25 RED CUPS 425ML",
@@ -963,10 +1075,12 @@
     "promo_savings": 0.0,
     "promo_contribution_pts": 0.0,
     "cause": "unknown",
+    "chain_subsidised_loss": false,
     "wow_margin_delta_pts": 0.0,
     "wow_revenue_delta": 0.0,
     "txn_count": 3,
-    "pct_of_total_drag": 0.2
+    "pct_of_total_drag": 0.2,
+    "display_name": "REDDS 25 RED CUPS 425ML"
   },
   {
     "name": "Sovereign PT Fruity Red Cask 4.4L",
@@ -980,10 +1094,12 @@
     "promo_savings": 1.0,
     "promo_contribution_pts": 7.15,
     "cause": "promotional",
+    "chain_subsidised_loss": false,
     "wow_margin_delta_pts": -4.74,
     "wow_revenue_delta": -15.99,
     "txn_count": 1,
-    "pct_of_total_drag": 0.2
+    "pct_of_total_drag": 0.2,
+    "display_name": "Sovereign PT Fruity Red Cask 4.4L"
   },
   {
     "name": "Elephant In the Room Shiraz 750ml",
@@ -997,10 +1113,12 @@
     "promo_savings": 1.0,
     "promo_contribution_pts": 7.15,
     "cause": "promotional",
+    "chain_subsidised_loss": false,
     "wow_margin_delta_pts": -4.76,
     "wow_revenue_delta": -1.0,
     "txn_count": 1,
-    "pct_of_total_drag": 0.2
+    "pct_of_total_drag": 0.2,
+    "display_name": "Elephant In the Room Shiraz 750ml"
   },
   {
     "name": "Red Rock Deli Spicy Chilli Sriracha 90g",
@@ -1014,10 +1132,12 @@
     "promo_savings": 2.0,
     "promo_contribution_pts": 25.06,
     "cause": "promotional",
+    "chain_subsidised_loss": false,
     "wow_margin_delta_pts": 0.0,
     "wow_revenue_delta": 0.0,
     "txn_count": 2,
-    "pct_of_total_drag": 0.2
+    "pct_of_total_drag": 0.2,
+    "display_name": "Red Rock Deli Spicy Chilli Sriracha 90g"
   },
   {
     "name": "Casa Hard Lemon 8% 375ml",
@@ -1031,10 +1151,12 @@
     "promo_savings": 5.0,
     "promo_contribution_pts": 33.36,
     "cause": "promotional",
+    "chain_subsidised_loss": false,
     "wow_margin_delta_pts": 0.0,
     "wow_revenue_delta": 0.0,
     "txn_count": 1,
-    "pct_of_total_drag": 0.2
+    "pct_of_total_drag": 0.2,
+    "display_name": "Casa Hard Lemon 8% 375ml"
   },
   {
     "name": "Johnnie Walker Red 1L",
@@ -1048,10 +1170,12 @@
     "promo_savings": 3.0,
     "promo_contribution_pts": 4.35,
     "cause": "promotional",
+    "chain_subsidised_loss": false,
     "wow_margin_delta_pts": -3.42,
     "wow_revenue_delta": -3.0,
     "txn_count": 1,
-    "pct_of_total_drag": 0.2
+    "pct_of_total_drag": 0.2,
+    "display_name": "Johnnie Walker Red 1L"
   },
   {
     "name": "Grant Burge Pinot Noir Chardonnay NV 750ml",
@@ -1065,10 +1189,12 @@
     "promo_savings": 0.0,
     "promo_contribution_pts": 0.0,
     "cause": "unknown",
+    "chain_subsidised_loss": false,
     "wow_margin_delta_pts": 0.0,
     "wow_revenue_delta": 0.0,
     "txn_count": 1,
-    "pct_of_total_drag": 0.2
+    "pct_of_total_drag": 0.2,
+    "display_name": "Grant Burge Pinot Noir Chardonnay NV 750ml"
   },
   {
     "name": "Spring Valley Pineapple Juice 1L",
@@ -1082,10 +1208,12 @@
     "promo_savings": 0.0,
     "promo_contribution_pts": 0.0,
     "cause": "unknown",
+    "chain_subsidised_loss": false,
     "wow_margin_delta_pts": 0.0,
     "wow_revenue_delta": 6.99,
     "txn_count": 2,
-    "pct_of_total_drag": 0.1
+    "pct_of_total_drag": 0.1,
+    "display_name": "Spring Valley Pineapple Juice 1L"
   },
   {
     "name": "Woodstock Bourbon & Cola 4.8% Can 375ml 30pk",
@@ -1099,10 +1227,12 @@
     "promo_savings": 1.0,
     "promo_contribution_pts": 0.85,
     "cause": "unknown",
+    "chain_subsidised_loss": false,
     "wow_margin_delta_pts": -3.49,
     "wow_revenue_delta": -74.94,
     "txn_count": 4,
-    "pct_of_total_drag": 0.1
+    "pct_of_total_drag": 0.1,
+    "display_name": "Woodstock Bourbon & Cola 4.8% Can 375ml"
   },
   {
     "name": "Coca Cola No Sugar 1.25L",
@@ -1116,10 +1246,12 @@
     "promo_savings": 1.96,
     "promo_contribution_pts": 7.01,
     "cause": "promotional",
+    "chain_subsidised_loss": false,
     "wow_margin_delta_pts": -3.26,
     "wow_revenue_delta": 22.99,
     "txn_count": 4,
-    "pct_of_total_drag": 0.1
+    "pct_of_total_drag": 0.1,
+    "display_name": "Coca Cola No Sugar 1.25L"
   },
   {
     "name": "STELLA ARTOIS PINT",
@@ -1133,10 +1265,12 @@
     "promo_savings": 2.0,
     "promo_contribution_pts": 18.2,
     "cause": "promotional",
+    "chain_subsidised_loss": false,
     "wow_margin_delta_pts": 0.0,
     "wow_revenue_delta": -21.98,
     "txn_count": 1,
-    "pct_of_total_drag": 0.1
+    "pct_of_total_drag": 0.1,
+    "display_name": "STELLA ARTOIS PINT"
   },
   {
     "name": "Hard Rated Orange 375ml",
@@ -1150,10 +1284,12 @@
     "promo_savings": 0.0,
     "promo_contribution_pts": 0.0,
     "cause": "unknown",
+    "chain_subsidised_loss": false,
     "wow_margin_delta_pts": 0.0,
     "wow_revenue_delta": 0.0,
     "txn_count": 1,
-    "pct_of_total_drag": 0.1
+    "pct_of_total_drag": 0.1,
+    "display_name": "Hard Rated Orange 375ml"
   },
   {
     "name": "Garage Project Pernicious Weed IPA 330ml",
@@ -1167,10 +1303,12 @@
     "promo_savings": 1.7,
     "promo_contribution_pts": 11.13,
     "cause": "promotional",
+    "chain_subsidised_loss": false,
     "wow_margin_delta_pts": -1.66,
     "wow_revenue_delta": -31.69,
     "txn_count": 2,
-    "pct_of_total_drag": 0.1
+    "pct_of_total_drag": 0.1,
+    "display_name": "Garage Project Pernicious Weed IPA 330ml"
   },
   {
     "name": "Tiger SCNR",
@@ -1184,10 +1322,12 @@
     "promo_savings": 3.5,
     "promo_contribution_pts": 12.08,
     "cause": "promotional",
+    "chain_subsidised_loss": false,
     "wow_margin_delta_pts": -3.71,
     "wow_revenue_delta": -4.0,
     "txn_count": 3,
-    "pct_of_total_drag": 0.1
+    "pct_of_total_drag": 0.1,
+    "display_name": "Tiger SCNR"
   },
   {
     "name": "Jack Daniels Black Label 350ml Promo",
@@ -1201,10 +1341,12 @@
     "promo_savings": 0.0,
     "promo_contribution_pts": 0.0,
     "cause": "structural",
+    "chain_subsidised_loss": false,
     "wow_margin_delta_pts": 0.0,
     "wow_revenue_delta": -35.99,
     "txn_count": 2,
-    "pct_of_total_drag": 0.1
+    "pct_of_total_drag": 0.1,
+    "display_name": "Jack Daniels Black Label 350ml Promo"
   },
   {
     "name": "Somersby Pear Cider Can 375ml 30pk",
@@ -1218,10 +1360,12 @@
     "promo_savings": 0.0,
     "promo_contribution_pts": 0.0,
     "cause": "pricing_error",
+    "chain_subsidised_loss": false,
     "wow_margin_delta_pts": -8.25,
     "wow_revenue_delta": 9.5,
     "txn_count": 1,
-    "pct_of_total_drag": 0.1
+    "pct_of_total_drag": 0.1,
+    "display_name": "Somersby Pear Cider Can 375ml"
   },
   {
     "name": "Jack Daniels Black Label 200ml",
@@ -1235,10 +1379,12 @@
     "promo_savings": 0.0,
     "promo_contribution_pts": 0.0,
     "cause": "structural",
+    "chain_subsidised_loss": false,
     "wow_margin_delta_pts": 0.0,
     "wow_revenue_delta": -49.98,
     "txn_count": 1,
-    "pct_of_total_drag": 0.1
+    "pct_of_total_drag": 0.1,
+    "display_name": "Jack Daniels Black Label 200ml"
   },
   {
     "name": "Little Fat Lamb Lemon 8% Bt 1.25L",
@@ -1252,10 +1398,12 @@
     "promo_savings": 0.0,
     "promo_contribution_pts": 0.0,
     "cause": "unknown",
+    "chain_subsidised_loss": false,
     "wow_margin_delta_pts": -3.72,
     "wow_revenue_delta": -0.5,
     "txn_count": 1,
-    "pct_of_total_drag": 0.1
+    "pct_of_total_drag": 0.1,
+    "display_name": "Little Fat Lamb Lemon 8% Bt 1.25L"
   },
   {
     "name": "Sprite Lemonade Bt 600ml",
@@ -1269,10 +1417,12 @@
     "promo_savings": 0.0,
     "promo_contribution_pts": 0.0,
     "cause": "unknown",
+    "chain_subsidised_loss": false,
     "wow_margin_delta_pts": 0.0,
     "wow_revenue_delta": -8.98,
     "txn_count": 1,
-    "pct_of_total_drag": 0.1
+    "pct_of_total_drag": 0.1,
+    "display_name": "Sprite Lemonade Bt 600ml"
   },
   {
     "name": "Victoria Bitter Bt 250ml 24pk",
@@ -1286,10 +1436,12 @@
     "promo_savings": 0.0,
     "promo_contribution_pts": 0.0,
     "cause": "structural",
+    "chain_subsidised_loss": false,
     "wow_margin_delta_pts": 0.8,
     "wow_revenue_delta": 63.77,
     "txn_count": 6,
-    "pct_of_total_drag": 0.1
+    "pct_of_total_drag": 0.1,
+    "display_name": "Victoria Bitter Bt 250ml"
   },
   {
     "name": "Spring Valley Orange Juice 1L",
@@ -1303,10 +1455,12 @@
     "promo_savings": 0.0,
     "promo_contribution_pts": 0.0,
     "cause": "unknown",
+    "chain_subsidised_loss": false,
     "wow_margin_delta_pts": 0.0,
     "wow_revenue_delta": 0.0,
     "txn_count": 1,
-    "pct_of_total_drag": 0.1
+    "pct_of_total_drag": 0.1,
+    "display_name": "Spring Valley Orange Juice 1L"
   },
   {
     "name": "Gweilo Rainbow Sherbet Sour 375ml",
@@ -1320,10 +1474,12 @@
     "promo_savings": 0.7,
     "promo_contribution_pts": 2.31,
     "cause": "promotional",
+    "chain_subsidised_loss": false,
     "wow_margin_delta_pts": 0.0,
     "wow_revenue_delta": 0.0,
     "txn_count": 2,
-    "pct_of_total_drag": 0.0
+    "pct_of_total_drag": 0.0,
+    "display_name": "Gweilo Rainbow Sherbet Sour 375ml"
   },
   {
     "name": "Kilarni Estate GSM 750ml",
@@ -1337,10 +1493,12 @@
     "promo_savings": 0.0,
     "promo_contribution_pts": 0.0,
     "cause": "unknown",
+    "chain_subsidised_loss": false,
     "wow_margin_delta_pts": 0.0,
     "wow_revenue_delta": 0.0,
     "txn_count": 1,
-    "pct_of_total_drag": 0.0
+    "pct_of_total_drag": 0.0,
+    "display_name": "Kilarni Estate GSM 750ml"
   },
   {
     "name": "Red Rock Deli Honey Soy Chicken 90g",
@@ -1354,10 +1512,12 @@
     "promo_savings": 1.0,
     "promo_contribution_pts": 12.53,
     "cause": "promotional",
+    "chain_subsidised_loss": false,
     "wow_margin_delta_pts": 0.0,
     "wow_revenue_delta": 3.99,
     "txn_count": 2,
-    "pct_of_total_drag": 0.0
+    "pct_of_total_drag": 0.0,
+    "display_name": "Red Rock Deli Honey Soy Chicken 90g"
   },
   {
     "name": "Sierra Tequila Reposado Gold 700ml",
@@ -1371,10 +1531,12 @@
     "promo_savings": 0.0,
     "promo_contribution_pts": 0.0,
     "cause": "unknown",
+    "chain_subsidised_loss": false,
     "wow_margin_delta_pts": 0.0,
     "wow_revenue_delta": 0.0,
     "txn_count": 1,
-    "pct_of_total_drag": 0.0
+    "pct_of_total_drag": 0.0,
+    "display_name": "Sierra Tequila Reposado Gold 700ml"
   },
   {
     "name": "Jameson 200ml",
@@ -1388,10 +1550,12 @@
     "promo_savings": 0.0,
     "promo_contribution_pts": 0.0,
     "cause": "structural",
+    "chain_subsidised_loss": false,
     "wow_margin_delta_pts": 0.0,
     "wow_revenue_delta": 21.99,
     "txn_count": 5,
-    "pct_of_total_drag": 0.0
+    "pct_of_total_drag": 0.0,
+    "display_name": "Jameson 200ml"
   },
   {
     "name": "Hardy VR Shiraz 1L",
@@ -1405,10 +1569,12 @@
     "promo_savings": 1.0,
     "promo_contribution_pts": 3.45,
     "cause": "promotional",
+    "chain_subsidised_loss": false,
     "wow_margin_delta_pts": 5.33,
     "wow_revenue_delta": 2.0,
     "txn_count": 3,
-    "pct_of_total_drag": 0.0
+    "pct_of_total_drag": 0.0,
+    "display_name": "Hardy VR Shiraz 1L"
   },
   {
     "name": "Book Club Prosecco 750ml",
@@ -1422,10 +1588,12 @@
     "promo_savings": 0.0,
     "promo_contribution_pts": 0.0,
     "cause": "unknown",
+    "chain_subsidised_loss": false,
     "wow_margin_delta_pts": 0.0,
     "wow_revenue_delta": 0.0,
     "txn_count": 1,
-    "pct_of_total_drag": 0.0
+    "pct_of_total_drag": 0.0,
+    "display_name": "Book Club Prosecco 750ml"
   },
   {
     "name": "Johnnie Walker Black 1L",
@@ -1439,10 +1607,12 @@
     "promo_savings": 2.0,
     "promo_contribution_pts": 1.14,
     "cause": "structural",
+    "chain_subsidised_loss": false,
     "wow_margin_delta_pts": 0.96,
     "wow_revenue_delta": 88.99,
     "txn_count": 2,
-    "pct_of_total_drag": 0.0
+    "pct_of_total_drag": 0.0,
+    "display_name": "Johnnie Walker Black 1L"
   },
   {
     "name": "Weihenstephan Dunkel PINT",
@@ -1456,10 +1626,12 @@
     "promo_savings": 8.0,
     "promo_contribution_pts": 8.34,
     "cause": "promotional",
+    "chain_subsidised_loss": false,
     "wow_margin_delta_pts": 1.75,
     "wow_revenue_delta": 27.98,
     "txn_count": 6,
-    "pct_of_total_drag": 0.0
+    "pct_of_total_drag": 0.0,
+    "display_name": "Weihenstephan Dunkel PINT"
   },
   {
     "name": "Stones Mac Ginger Wine 750ml",
@@ -1473,9 +1645,11 @@
     "promo_savings": 0.0,
     "promo_contribution_pts": 0.0,
     "cause": "unknown",
+    "chain_subsidised_loss": false,
     "wow_margin_delta_pts": 0.0,
     "wow_revenue_delta": 0.0,
     "txn_count": 1,
-    "pct_of_total_drag": 0.0
+    "pct_of_total_drag": 0.0,
+    "display_name": "Stones Mac Ginger Wine 750ml"
   }
 ]

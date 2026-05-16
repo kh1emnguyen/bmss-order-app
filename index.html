@@ -1,741 +1,1104 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<meta charset="UTF-8"/>
-<meta name="viewport" content="width=device-width,initial-scale=1"/>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>BMSS Order App</title>
-<script src="https://cdn.tailwindcss.com"></script>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
 <style>
-  [x-cloak]{display:none}
-  .tab-active{border-bottom:2px solid #3b82f6;color:#2563eb}
-  .tab-inactive{border-bottom:2px solid transparent;color:#6b7280}
-  .tab-inactive:hover{color:#374151}
-  tr:last-child td{border-bottom:none}
-  .help-drawer{transform:translateX(100%);transition:transform .3s ease}
-  .help-drawer.open{transform:translateX(0)}
-  .badge{display:inline-flex;align-items:center;justify-content:center;min-width:20px;height:20px;border-radius:9999px;font-size:11px;font-weight:700;padding:0 5px}
+  *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+  :root {
+    --bg: #f8fafc; --surface: #fff; --border: #e2e8f0; --border-light: #f1f5f9;
+    --text: #1e293b; --muted: #64748b; --faint: #94a3b8;
+    --blue: #3b82f6; --blue-light: #eff6ff; --blue-dark: #1d4ed8;
+    --green: #16a34a; --green-light: #f0fdf4; --green-mid: #86efac;
+    --red: #dc2626; --red-light: #fef2f2;
+    --amber: #d97706; --amber-light: #fffbeb;
+    --purple: #7c3aed; --purple-light: #f5f3ff;
+    --indigo: #4f46e5; --indigo-light: #eef2ff;
+    --yellow-light: #fefce8;
+    --radius: 8px; --shadow: 0 1px 3px rgba(0,0,0,.08), 0 1px 2px rgba(0,0,0,.05);
+  }
+  html { font-size: 15px; }
+  body {
+    font-family: 'Inter', system-ui, -apple-system, sans-serif;
+    background: var(--bg); color: var(--text);
+    line-height: 1.6; min-height: 100vh;
+  }
+
+  /* ── Header ── */
+  .app-header {
+    background: #0f172a; color: #e2e8f0; padding: 12px 20px;
+    display: flex; align-items: center; justify-content: space-between;
+    position: sticky; top: 0; z-index: 100; box-shadow: 0 2px 8px rgba(0,0,0,.3);
+  }
+  .app-header h1 { font-size: 1rem; font-weight: 700; letter-spacing: -.01em; }
+  .app-header h1 span { color: #60a5fa; }
+  .header-meta { font-size: .75rem; color: #94a3b8; display: flex; align-items: center; gap: 12px; }
+  .header-actions { display: flex; gap: 8px; align-items: center; }
+  .btn-protect {
+    font-size: .75rem; font-weight: 600; padding: 4px 12px; border-radius: 6px;
+    cursor: pointer; border: 1px solid #f59e0b; color: #f59e0b; background: transparent;
+    transition: all .15s;
+  }
+  .btn-protect:hover, .btn-protect.active { background: #f59e0b; color: #0f172a; }
+  .btn-hub {
+    font-size: .75rem; padding: 4px 10px; border-radius: 6px;
+    text-decoration: none; background: #1e293b; color: #94a3b8;
+    border: 1px solid #334155;
+  }
+
+  /* ── Tab nav ── */
+  .tab-nav {
+    background: var(--surface); border-bottom: 1px solid var(--border);
+    display: flex; overflow-x: auto; gap: 0; padding: 0 16px;
+    scrollbar-width: none;
+  }
+  .tab-nav::-webkit-scrollbar { display: none; }
+  .tab-btn {
+    padding: 12px 18px; font-size: .875rem; font-weight: 500;
+    color: var(--muted); border: none; background: none; cursor: pointer;
+    border-bottom: 2px solid transparent; transition: all .15s;
+    white-space: nowrap; display: flex; align-items: center; gap: 6px;
+  }
+  .tab-btn:hover { color: var(--text); }
+  .tab-btn.active { color: var(--blue); border-bottom-color: var(--blue); }
+  .tab-badge {
+    font-size: .65rem; font-weight: 700; padding: 1px 6px; border-radius: 9999px;
+    background: #fee2e2; color: #b91c1c; min-width: 18px; text-align: center;
+  }
+  .tab-badge.green  { background: #dcfce7; color: #15803d; }
+  .tab-badge.amber  { background: #fef3c7; color: #92400e; }
+  .tab-badge.purple { background: #ede9fe; color: #6d28d9; }
+  .tab-badge.blue   { background: #dbeafe; color: #1d4ed8; }
+  .tab-badge.grey   { background: #f1f5f9; color: var(--muted); }
+
+  /* ── Panes ── */
+  .pane { display: none; padding: 20px; max-width: 1400px; margin: 0 auto; }
+  .pane.active { display: block; }
+
+  /* ── Cards ── */
+  .card {
+    background: var(--surface); border: 1px solid var(--border);
+    border-radius: var(--radius); padding: 16px;
+    box-shadow: var(--shadow);
+  }
+  .stat-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(160px, 1fr)); gap: 12px; margin-bottom: 16px; }
+  .stat-card {
+    background: var(--surface); border: 1px solid var(--border);
+    border-radius: var(--radius); padding: 14px 16px;
+  }
+  .stat-card .label { font-size: .75rem; color: var(--muted); margin-bottom: 4px; }
+  .stat-card .value { font-size: 1.4rem; font-weight: 700; }
+  .stat-card .delta { font-size: .75rem; margin-top: 2px; }
+  .delta-up   { color: var(--green); }
+  .delta-down { color: var(--red); }
+  .delta-flat { color: var(--faint); }
+
+  /* ── Insight bubble ── */
+  .insight-bar { margin-bottom: 16px; }
+  .insight-toggle {
+    font-size: .75rem; color: var(--blue); cursor: pointer; text-decoration: underline;
+    background: none; border: none; padding: 0;
+  }
+  .insight-box {
+    display: none; margin-top: 8px; padding: 12px 14px;
+    background: var(--blue-light); border: 1px solid #bfdbfe;
+    border-radius: var(--radius); font-size: .82rem; color: #1e40af; line-height: 1.7;
+  }
+  .insight-box.open { display: block; }
+  .insight-box p + p { margin-top: 6px; }
+  .insight-row { display: flex; flex-wrap: wrap; gap: 8px; margin-bottom: 16px; }
+  .insight-chip {
+    display: inline-flex; align-items: flex-start; gap: 6px;
+    font-size: .78rem; padding: 6px 10px; border-radius: var(--radius);
+    border: 1px solid; cursor: pointer; transition: all .15s;
+    max-width: 320px; line-height: 1.4;
+  }
+  .insight-chip.green  { background: var(--green-light); border-color: var(--green-mid); color: #14532d; }
+  .insight-chip.red    { background: var(--red-light); border-color: #fca5a5; color: #7f1d1d; }
+  .insight-chip.amber  { background: var(--amber-light); border-color: #fcd34d; color: #78350f; }
+  .insight-chip.blue   { background: var(--blue-light); border-color: #93c5fd; color: #1e3a8a; }
+  .insight-chip.purple { background: var(--purple-light); border-color: #c4b5fd; color: #4c1d95; }
+  .insight-chip .chip-icon { font-size: .9rem; flex-shrink: 0; margin-top: 1px; }
+
+  /* ── Controls bar ── */
+  .controls { display: flex; flex-wrap: wrap; gap: 8px; align-items: center; margin-bottom: 14px; }
+  .search-box {
+    border: 1px solid var(--border); border-radius: 6px; padding: 6px 12px;
+    font-size: .85rem; width: 220px; font-family: inherit;
+    outline: none; background: var(--surface); color: var(--text);
+  }
+  .search-box:focus { border-color: var(--blue); box-shadow: 0 0 0 2px #dbeafe; }
+  .filter-btn {
+    padding: 5px 12px; border-radius: 6px; font-size: .78rem; font-weight: 500;
+    cursor: pointer; border: 1px solid var(--border); background: var(--surface);
+    color: var(--muted); transition: all .15s; font-family: inherit;
+  }
+  .filter-btn:hover { background: var(--bg); }
+  .filter-btn.active { background: #1e293b; color: #fff; border-color: #1e293b; }
+  .filter-btn.indigo.active { background: var(--indigo); border-color: var(--indigo); color: #fff; }
+
+  /* ── Tables ── */
+  .table-wrap { overflow-x: auto; border-radius: var(--radius); border: 1px solid var(--border); box-shadow: var(--shadow); }
+  table { width: 100%; border-collapse: collapse; font-size: .85rem; }
+  thead { background: #f8fafc; }
+  th {
+    padding: 9px 12px; text-align: left; font-weight: 600; font-size: .78rem;
+    color: var(--muted); border-bottom: 1px solid var(--border);
+    white-space: nowrap; user-select: none;
+  }
+  th.sortable { cursor: pointer; }
+  th.sortable:hover { color: var(--text); background: #f1f5f9; }
+  th.sort-asc::after  { content: ' ↑'; color: var(--blue); }
+  th.sort-desc::after { content: ' ↓'; color: var(--blue); }
+  th.right, td.right { text-align: right; }
+  td {
+    padding: 9px 12px; border-bottom: 1px solid var(--border-light);
+    vertical-align: middle;
+  }
+  tr:last-child td { border-bottom: none; }
+  tr:hover td { background: #f8fafc; }
+  .item-name { font-weight: 500; color: var(--text); }
+  .item-sub  { font-size: .72rem; color: var(--faint); margin-top: 1px; }
+  .group-row td {
+    background: var(--indigo-light); padding: 6px 12px;
+    font-size: .73rem; font-weight: 700; color: var(--indigo);
+    text-transform: uppercase; letter-spacing: .05em;
+  }
+  .bg-green-row td { background: #f0fdf450; }
+  .bg-amber-row td { background: #fffbeb50; }
+
+  /* ── Badges ── */
+  .badge {
+    display: inline-block; font-size: .7rem; font-weight: 600;
+    padding: 1px 7px; border-radius: 9999px; white-space: nowrap;
+  }
+  .badge-red    { background: #fee2e2; color: #b91c1c; }
+  .badge-amber  { background: #fef3c7; color: #92400e; }
+  .badge-green  { background: #dcfce7; color: #15803d; }
+  .badge-blue   { background: #dbeafe; color: #1e40af; }
+  .badge-purple { background: #ede9fe; color: #6d28d9; }
+  .badge-grey   { background: #f1f5f9; color: var(--muted); }
+  .badge-indigo { background: #e0e7ff; color: #3730a3; }
+  .badge-orange { background: #ffedd5; color: #c2410c; }
+
+  /* ── Discard button ── */
+  .discard-btn {
+    background: none; border: none; cursor: pointer; color: #cbd5e1;
+    font-size: .72rem; padding: 2px 4px; border-radius: 4px; transition: all .1s;
+    font-family: inherit;
+  }
+  .discard-btn:hover { color: var(--red); background: var(--red-light); }
+
+  /* ── Briefing pane ── */
+  .briefing-wrap { max-width: 760px; }
+  .briefing-meta { font-size: .8rem; color: var(--faint); margin-bottom: 16px; }
+  .briefing-section { margin-bottom: 24px; }
+  .briefing-section h2 {
+    font-size: 1rem; font-weight: 700; color: var(--text);
+    margin-bottom: 8px; padding-bottom: 6px; border-bottom: 1px solid var(--border);
+  }
+  .briefing-section p { color: #374151; line-height: 1.75; font-size: .9rem; }
+  .briefing-stat-row { display: flex; flex-wrap: wrap; gap: 8px; margin-bottom: 24px; }
+  .briefing-stat {
+    background: var(--surface); border: 1px solid var(--border);
+    border-radius: var(--radius); padding: 10px 14px; min-width: 120px;
+  }
+  .briefing-stat .bl { font-size: .72rem; color: var(--muted); }
+  .briefing-stat .bv { font-size: 1.1rem; font-weight: 700; margin-top: 2px; }
+
+  /* ── Revival sparkline ── */
+  .sparkline { display: flex; align-items: flex-end; gap: 2px; height: 24px; }
+  .spark-bar { width: 10px; border-radius: 2px 2px 0 0; cursor: default; }
+
+  /* ── Momentum list ── */
+  .mom-item {
+    display: flex; align-items: center; gap: 12px;
+    padding: 10px 0; border-bottom: 1px solid var(--border-light);
+  }
+  .mom-item:last-child { border-bottom: none; }
+  .mom-info { flex: 1; min-width: 0; }
+  .mom-name { font-weight: 500; font-size: .875rem; white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
+  .mom-cat  { font-size: .72rem; color: var(--faint); }
+  .mom-pct  { font-size: .9rem; font-weight: 700; min-width: 52px; text-align: right; }
+  .mom-rev  { font-size: .75rem; color: var(--faint); text-align: right; min-width: 60px; }
+
+  /* ── Empty state ── */
+  .empty { text-align: center; padding: 48px 20px; color: var(--faint); font-size: .875rem; }
+
+  /* ── Responsive ── */
+  @media (max-width: 640px) {
+    html { font-size: 14px; }
+    .pane { padding: 12px; }
+    th, td { padding: 7px 8px; }
+    .stat-grid { grid-template-columns: 1fr 1fr; }
+  }
 </style>
 </head>
-<body class="bg-gray-100 min-h-screen font-sans">
-
-<div id="app" class="max-w-7xl mx-auto px-4 py-6">
-  <!-- Header -->
-  <div class="flex items-center justify-between mb-4 flex-wrap gap-3">
-    <div>
-      <h1 class="text-2xl font-bold text-gray-900">BMSS Order App</h1>
-      <p id="subtitle" class="text-sm text-gray-500 mt-0.5">Bottlemart Sunshine — loading…</p>
-    </div>
-    <div class="flex gap-2 items-center">
-      <button onclick="toggleHelp()" class="px-3 py-1.5 text-sm font-medium rounded-lg border border-gray-300 bg-white hover:bg-gray-50 text-gray-700">? Briefing</button>
-      <a href="https://kh1emnguyen.github.io/nawarries-hub/" class="px-3 py-1.5 text-sm rounded-lg border border-gray-300 bg-white hover:bg-gray-50 text-gray-600">← Hub</a>
-    </div>
+<body>
+<header class="app-header">
+  <h1>BMSS <span>Order App</span></h1>
+  <div class="header-actions">
+    <button class="btn-protect" id="protectToggle" onclick="toggleProtectedView()" title="Show only profit-protected items">⭐ Protected view</button>
+    <a class="btn-hub" href="https://kh1emnguyen.github.io/nawarries-hub/">← Hub</a>
   </div>
-
-  <!-- Summary chips -->
-  <div id="summary-chips" class="flex flex-wrap gap-2 mb-4"></div>
-
-  <!-- Tab bar -->
-  <div class="bg-white rounded-t-xl border border-b-0 border-gray-200 overflow-x-auto">
-    <div id="tab-bar" class="flex px-2 pt-2"></div>
+  <div class="header-meta">
+    <span id="genMeta">Loading…</span>
   </div>
+</header>
 
-  <!-- Panel -->
-  <div class="bg-white rounded-b-xl border border-gray-200 shadow-sm p-5 min-h-64">
-    <div id="panel-content">
-      <div class="flex items-center justify-center h-40 text-gray-400">Loading data…</div>
-    </div>
+<nav class="tab-nav" id="tabNav">
+  <button class="tab-btn active" data-pane="briefing">📋 Briefing</button>
+  <button class="tab-btn" data-pane="orders">📦 Orders <span class="tab-badge" id="badge-orders"></span></button>
+  <button class="tab-btn" data-pane="margins">📊 Margins <span class="tab-badge amber" id="badge-margins"></span></button>
+  <button class="tab-btn" data-pane="pricing">💰 Pricing <span class="tab-badge green" id="badge-pricing"></span></button>
+  <button class="tab-btn" data-pane="momentum">📈 Momentum <span class="tab-badge blue" id="badge-momentum"></span></button>
+  <button class="tab-btn" data-pane="historical">📅 Historical <span class="tab-badge grey" id="badge-historical"></span></button>
+  <button class="tab-btn" data-pane="revival">🔁 Revival <span class="tab-badge purple" id="badge-revival"></span></button>
+</nav>
+
+<!-- ═══════════ BRIEFING PANE ═══════════ -->
+<div class="pane active" id="pane-briefing">
+  <div class="briefing-wrap">
+    <div class="briefing-stat-row" id="briefingStats"></div>
+    <div id="briefingContent"><p class="empty">Loading briefing…</p></div>
   </div>
-
-  <p class="text-xs text-gray-400 mt-3 text-right" id="gen-ts"></p>
 </div>
 
-<!-- Help / Briefing drawer -->
-<div id="help-overlay" onclick="toggleHelp()" class="fixed inset-0 bg-black/40 z-40 hidden"></div>
-<div id="help-drawer" class="help-drawer fixed top-0 right-0 h-full w-full max-w-lg bg-white shadow-2xl z-50 flex flex-col">
-  <div class="flex items-center justify-between px-5 py-4 border-b border-gray-200">
-    <h2 class="text-lg font-bold text-gray-800">Briefing & Guide</h2>
-    <button onclick="toggleHelp()" class="text-gray-400 hover:text-gray-700 text-2xl leading-none">&times;</button>
+<!-- ═══════════ ORDERS PANE ═══════════ -->
+<div class="pane" id="pane-orders">
+  <div class="insight-row" id="insights-orders"></div>
+  <div class="controls">
+    <input class="search-box" type="text" id="orders-search" placeholder="Search item…" oninput="renderOrders()">
+    <button class="filter-btn active" id="urgency-ALL"  onclick="setUrgencyFilter('ALL')">All</button>
+    <button class="filter-btn" id="urgency-CRITICAL" onclick="setUrgencyFilter('CRITICAL')">Critical</button>
+    <button class="filter-btn" id="urgency-HIGH"     onclick="setUrgencyFilter('HIGH')">High</button>
+    <button class="filter-btn" id="urgency-MEDIUM"   onclick="setUrgencyFilter('MEDIUM')">Medium</button>
+    <button class="filter-btn" id="urgency-LOW"      onclick="setUrgencyFilter('LOW')">Low</button>
   </div>
-  <div class="flex-1 overflow-y-auto px-5 py-4 text-sm text-gray-700 space-y-4" id="help-content"></div>
+  <div class="table-wrap">
+    <table id="orders-table">
+      <thead><tr>
+        <th class="sortable" data-col="0">Item</th>
+        <th class="sortable right" data-col="1">Stock</th>
+        <th class="sortable right" data-col="2">Wks Cover</th>
+        <th class="sortable right" data-col="3">Vel/wk</th>
+        <th class="sortable right" data-col="4" style="background:#f0fdf4">Order Cases</th>
+        <th class="sortable" data-col="5">Urgency</th>
+        <th data-col="6">Notes</th>
+        <th></th>
+      </tr></thead>
+      <tbody id="orders-body"></tbody>
+    </table>
+  </div>
+</div>
+
+<!-- ═══════════ MARGINS PANE ═══════════ -->
+<div class="pane" id="pane-margins">
+  <div class="stat-grid" id="margin-stats"></div>
+  <div class="insight-row" id="insights-margins"></div>
+  <div class="controls">
+    <input class="search-box" type="text" id="margins-search" placeholder="Search item…" oninput="renderMargins()">
+    <button class="filter-btn active" id="cause-ALL"           onclick="setCauseFilter('ALL')">All</button>
+    <button class="filter-btn" id="cause-pricing_error"        onclick="setCauseFilter('pricing_error')">Pricing Error</button>
+    <button class="filter-btn" id="cause-structural"           onclick="setCauseFilter('structural')">Structural</button>
+    <button class="filter-btn" id="cause-promotional"          onclick="setCauseFilter('promotional')">Promo</button>
+    <button class="filter-btn" id="cause-unknown"              onclick="setCauseFilter('unknown')">Unknown</button>
+  </div>
+  <div class="table-wrap">
+    <table id="margins-table">
+      <thead><tr>
+        <th class="sortable" data-col="0">Item</th>
+        <th class="sortable right" data-col="1" title="Total sales revenue this week">Rev/wk</th>
+        <th class="sortable right" data-col="2" title="Margin as reported in POS (may include promo credits)">Reported %</th>
+        <th class="sortable right" data-col="3" title="Margin after removing Bottlemart promo contributions">True %</th>
+        <th class="sortable right" data-col="4" title="Minimum target margin for this category">Floor</th>
+        <th class="sortable right" data-col="5" style="background:#fef2f2" title="Revenue × (Floor − True%). The weekly profit gap to close.">$ Drag</th>
+        <th class="sortable right" data-col="6" title="Chain-funded Bottlemart promo this week — reimbursed to you">Promo $</th>
+        <th data-col="7" title="Hover for explanation">Cause</th>
+        <th class="sortable right" data-col="8" title="Change in True % vs last week">WoW</th>
+        <th></th>
+      </tr></thead>
+      <tbody id="margins-body"></tbody>
+    </table>
+  </div>
+</div>
+
+<!-- ═══════════ PRICING PANE ═══════════ -->
+<div class="pane" id="pane-pricing">
+  <div class="card" id="pricing-headline" style="background:var(--green-light);border-color:#bbf7d0;margin-bottom:14px;"></div>
+  <div class="insight-row" id="insights-pricing"></div>
+  <div class="controls">
+    <input class="search-box" type="text" id="pricing-search" placeholder="Search item…" oninput="renderPricing()">
+    <button class="filter-btn active" id="risk-ALL"    onclick="setRiskFilter('ALL')">All Risk</button>
+    <button class="filter-btn" id="risk-low"           onclick="setRiskFilter('low')">Low Risk</button>
+    <button class="filter-btn" id="risk-medium"        onclick="setRiskFilter('medium')">Medium Risk</button>
+    <button class="filter-btn" id="risk-high"          onclick="setRiskFilter('high')">High Risk</button>
+  </div>
+  <div class="table-wrap">
+    <table id="pricing-table">
+      <thead><tr>
+        <th class="sortable" data-col="0">Item</th>
+        <th class="sortable right" data-col="1">Rev/wk</th>
+        <th class="sortable right" data-col="2">True Margin</th>
+        <th class="sortable right" data-col="3">Floor</th>
+        <th class="sortable right" data-col="4">Current $</th>
+        <th class="sortable right" data-col="5" style="background:var(--green-light)">Suggested $</th>
+        <th class="sortable right" data-col="6" style="background:var(--green-light)">Annual Gain</th>
+        <th data-col="7">Trend</th>
+        <th data-col="8">Risk</th>
+        <th></th>
+      </tr></thead>
+      <tbody id="pricing-body"></tbody>
+    </table>
+  </div>
+</div>
+
+<!-- ═══════════ MOMENTUM PANE ═══════════ -->
+<div class="pane" id="pane-momentum">
+  <div class="card" style="padding:10px 14px;margin-bottom:14px;font-size:.8rem;color:var(--muted);">
+    <strong>% change</strong> = sales velocity in the oldest week vs. the newest week (oldest → newest). Shows direction of travel, not an average. &nbsp;|&nbsp;
+    <strong>$/wk</strong> = revenue in the most recent week only. &nbsp;|&nbsp;
+    <strong>Sparkline</strong>: grey (oldest) → light blue → blue (newest). Hover a bar for volume.
+  </div>
+  <div class="controls">
+    <input class="search-box" type="text" id="momentum-search" placeholder="Search…" oninput="renderMomentum()">
+    <button class="filter-btn indigo active" id="mom-rising"  onclick="setMomTab('rising')">↑ Rising</button>
+    <button class="filter-btn indigo" id="mom-falling" onclick="setMomTab('falling')">↓ Falling</button>
+    <button class="filter-btn indigo" id="mom-stable"  onclick="setMomTab('stable')">→ Stable</button>
+  </div>
+  <div id="momentum-list"></div>
+</div>
+
+<!-- ═══════════ HISTORICAL PANE ═══════════ -->
+<div class="pane" id="pane-historical">
+  <div class="card" style="padding:10px 14px;margin-bottom:14px;font-size:.8rem;color:var(--muted);">
+    <strong>Trend badge</strong> = recent 4-week average velocity vs. Jan–Apr 2026 monthly weekly average. &nbsp;|&nbsp;
+    <span style="background:var(--green-light);color:var(--green);border:1px solid #86efac;border-radius:4px;padding:1px 6px;font-weight:600">+%</span> selling faster &nbsp;
+    <span style="background:var(--red-light);color:var(--red);border:1px solid #fca5a5;border-radius:4px;padding:1px 6px;font-weight:600">−%</span> slowing &nbsp;
+    <span style="background:#f1f5f9;color:var(--muted);border:1px solid var(--border);border-radius:4px;padding:1px 6px;font-weight:600">~0%</span> on track
+  </div>
+  <div class="controls">
+    <input class="search-box" type="text" id="historical-search" placeholder="Search item…" oninput="renderHistorical()">
+    <label style="font-size:.78rem;color:var(--muted);display:flex;align-items:center;gap:6px;cursor:pointer;">
+      <input type="checkbox" id="hist-monthly-only" onchange="renderHistorical()"> In monthly only
+    </label>
+  </div>
+  <div class="table-wrap">
+    <table id="historical-table">
+      <thead><tr>
+        <th class="sortable" data-col="0">Item</th>
+        <th class="sortable" data-col="1">Category</th>
+        <th class="sortable right" data-col="2">Monthly Rev<br><small style="font-weight:400;color:var(--faint)">Jan–Apr 2026</small></th>
+        <th class="sortable right" data-col="3">Yearly Rev<br><small style="font-weight:400;color:var(--faint)">2025</small></th>
+        <th class="sortable right" data-col="4" title="Monthly revenue ÷ weeks in Jan–Apr report (≈17 wks)">Avg $/wk (M)</th>
+        <th class="sortable right" data-col="5" title="2025 revenue ÷ 52 weeks">Avg $/wk (Y)</th>
+        <th class="sortable right" data-col="6" title="Avg cases/wk from last 4 weekly reports">Recent Vel</th>
+        <th class="sortable right" data-col="7" title="Recent 4-week pace vs Jan–Apr monthly average">Trend</th>
+      </tr></thead>
+      <tbody id="historical-body"></tbody>
+    </table>
+  </div>
+  <p id="hist-footer" style="font-size:.72rem;color:var(--faint);margin-top:8px;text-align:right;"></p>
+</div>
+
+<!-- ═══════════ REVIVAL PANE ═══════════ -->
+<div class="pane" id="pane-revival">
+  <div class="card" id="revival-headline" style="background:var(--purple-light);border-color:#c4b5fd;margin-bottom:14px;"></div>
+  <div class="insight-row" id="insights-revival"></div>
+  <div class="controls">
+    <input class="search-box" type="text" id="revival-search" placeholder="Search item…" oninput="renderRevival()">
+    <label style="font-size:.78rem;color:var(--muted);display:flex;align-items:center;gap:6px;cursor:pointer;">
+      <input type="checkbox" id="revival-in-stock" onchange="renderRevival()"> In inventory only
+    </label>
+  </div>
+  <div id="revival-content"></div>
 </div>
 
 <script>
-// ── State ─────────────────────────────────────────────────────────────────────
-const S = {
-  activeTab: 'orders',
-  search: {},
-  urgencyFilter: { orders: 'ALL' },
-  causeFilter: { margins: 'ALL' },
-  riskFilter: { pricing: 'ALL' },
-  momentumTab: { momentum: 'rising' },
-  sortBy: {},
-  showAll: { revival: false },
-  flags: JSON.parse(localStorage.getItem('bmss_flags') || '{"obsolete_items":[],"limited_edition_overrides":[]}'),
-  data: {}
+// ═══════════════════════════════════════════════════════════════════════════
+// STATE
+// ═══════════════════════════════════════════════════════════════════════════
+let DATA = {};
+let FLAGS = JSON.parse(localStorage.getItem('bmss_flags') || '{"obsolete_items":[],"seasonal_overrides":[]}');
+let PROTECTED_VIEW = false;
+let SORT = {};            // { tableId: { col, asc } }
+let urgencyFilter = 'ALL';
+let causeFilter   = 'ALL';
+let riskFilter    = 'ALL';
+let momTab        = 'rising';
+
+const URGENCY_COLOR = {
+  CRITICAL: 'badge-red', HIGH: 'badge-orange', MEDIUM: 'badge-amber', LOW: 'badge-grey'
+};
+const CAUSE_LABEL = { promotional:'Promo', structural:'Structural', pricing_error:'Pricing Error', unknown:'Unknown' };
+const CAUSE_STYLE = { promotional:'badge-amber', structural:'badge-blue', pricing_error:'badge-red', unknown:'badge-grey' };
+const CAUSE_TIP = {
+  promotional: 'Bottlemart chain-funded deal. The discount is reimbursed — not your cost.',
+  structural:  'Item is chain-price-locked (e.g. Carlton). Raising price risks losing the sale.',
+  pricing_error: 'Shelf price may be set too low. Check the tag and update in POS.',
+  unknown: 'Root cause unclear. Cross-check supplier invoice vs POS sell price.',
+};
+const RISK_COLOR = { low:'badge-green', medium:'badge-amber', high:'badge-red' };
+const RISK_TIP = {
+  low: 'Customers rarely price-shop this category. Safe to increase.',
+  medium: 'Moderate sensitivity. Consider testing a small increase first.',
+  high: 'Chain-priced or volume-sensitive. Customers will notice. Verify before acting.',
 };
 
-function saveFlags() { localStorage.setItem('bmss_flags', JSON.stringify(S.flags)); }
-
-// ── Data loading ──────────────────────────────────────────────────────────────
-const FILES = ['summary','orders','momentum','historical','margins','pricing','revival'];
-
-async function loadAll() {
-  try {
-    const results = await Promise.all(FILES.map(f =>
-      fetch(`data/${f}.json`).then(r => r.json())
-    ));
-    FILES.forEach((f,i) => S.data[f] = results[i]);
-    render();
-  } catch(e) {
-    document.getElementById('panel-content').innerHTML =
-      `<div class="text-red-500 p-4">Failed to load data: ${e.message}<br/>Make sure data/*.json files exist in the same directory.</div>`;
-  }
+// ═══════════════════════════════════════════════════════════════════════════
+// DATA LOADING
+// ═══════════════════════════════════════════════════════════════════════════
+async function loadData() {
+  const keys = ['summary','orders','margins','pricing','momentum','historical','revival','briefing'];
+  const results = await Promise.allSettled(
+    keys.map(k => fetch(`data/${k}.json`).then(r => r.json()))
+  );
+  keys.forEach((k, i) => {
+    if (results[i].status === 'fulfilled') DATA[k] = results[i].value;
+  });
+  initApp();
 }
 
-// ── Badge counts ──────────────────────────────────────────────────────────────
-function getBadge(tab) {
-  const d = S.data;
-  if (!d.summary) return 0;
-  switch(tab) {
-    case 'orders':    return (d.summary.orders_critical||0) + (d.summary.orders_high||0);
-    case 'margins':   return d.summary.margin_issues_count||0;
-    case 'pricing':   return d.summary.pricing_opportunities_count||0;
-    case 'revival':   return (d.revival||[]).filter(x=>x.top_pick).length;
-    case 'momentum':  return (d.momentum?.rising||[]).length;
-    case 'historical':return 0;
-    default: return 0;
-  }
+function initApp() {
+  const sum = DATA.summary || {};
+  const store = sum.store_margin || {};
+  document.getElementById('genMeta').textContent =
+    `Generated ${(sum.generated_at || '').replace('T',' ').slice(0,16)}`;
+
+  // Badges
+  const crit = sum.orders_critical || 0;
+  const high = sum.orders_high || 0;
+  setBadge('orders', crit > 0 ? `${crit}` : (sum.orders_total || 0));
+  if (crit > 0) document.getElementById('badge-orders').className = 'tab-badge';
+  setBadge('margins', sum.margin_issues_count || 0);
+  setBadge('pricing', sum.pricing_opportunities_count || 0);
+  const mom = DATA.momentum || {};
+  setBadge('momentum', (mom.rising||[]).length);
+  setBadge('historical', (DATA.historical||[]).length);
+  setBadge('revival', sum.revival_candidates_count || 0);
+
+  renderBriefing();
+  renderOrders();
+  renderMargins();
+  renderPricing();
+  renderMomentum();
+  renderHistorical();
+  renderRevival();
 }
 
-// ── Render ────────────────────────────────────────────────────────────────────
-const TABS = [
-  { key:'orders',    label:'Orders'    },
-  { key:'momentum',  label:'Momentum'  },
-  { key:'historical',label:'Historical'},
-  { key:'margins',   label:'Margins'   },
-  { key:'pricing',   label:'Pricing'   },
-  { key:'revival',   label:'Revival'   },
-];
-
-function render() {
-  renderSummary();
-  renderTabs();
-  renderPanel();
-  renderGenTs();
+function setBadge(id, val) {
+  const el = document.getElementById(`badge-${id}`);
+  if (el) el.textContent = val > 0 ? val : '';
 }
 
-function renderSummary() {
-  const s = S.data.summary || {};
-  const chips = [
-    { label:`$${(s.latest_week_revenue||s.store_margin?.latest_week_revenue||0).toLocaleString(undefined,{maximumFractionDigits:0})}/wk`, color:'bg-blue-50 text-blue-700', title:'Latest week revenue' },
-    { label:`${(s.store_margin?.latest_week_true_margin_pct||0).toFixed(1)}% margin`, color:'bg-green-50 text-green-700', title:'True margin this week' },
-    { label:`${s.orders_critical||0} CRITICAL`, color:'bg-red-50 text-red-700', title:'Items critically out of stock' },
-    { label:`$${(s.margin_total_dollar_drag||0).toFixed(0)} drag/wk`, color:'bg-orange-50 text-orange-700', title:'Weekly margin drag from below-floor items' },
-    { label:`$${(s.pricing_annual_upside||0).toLocaleString(undefined,{maximumFractionDigits:0})} price upside/yr`, color:'bg-emerald-50 text-emerald-700', title:'Annual gain from pricing fixes' },
-  ];
-  document.getElementById('summary-chips').innerHTML = chips.map(c =>
-    `<span class="px-3 py-1 rounded-full text-xs font-medium ${c.color}" title="${c.title}">${c.label}</span>`
-  ).join('');
-  const d = new Date(s.generated_at||'');
-  document.getElementById('subtitle').textContent =
-    `Bottlemart Sunshine${s.generated_at ? ' · Generated ' + d.toLocaleString('en-AU',{dateStyle:'medium',timeStyle:'short'}) : ''}`;
+// ═══════════════════════════════════════════════════════════════════════════
+// TAB SYSTEM
+// ═══════════════════════════════════════════════════════════════════════════
+document.querySelectorAll('.tab-btn').forEach(btn => {
+  btn.addEventListener('click', () => {
+    const pane = btn.dataset.pane;
+    document.querySelectorAll('.tab-btn').forEach(b => b.classList.remove('active'));
+    document.querySelectorAll('.pane').forEach(p => p.classList.remove('active'));
+    btn.classList.add('active');
+    document.getElementById(`pane-${pane}`).classList.add('active');
+  });
+});
+
+// ═══════════════════════════════════════════════════════════════════════════
+// PROTECTED VIEW TOGGLE
+// ═══════════════════════════════════════════════════════════════════════════
+function toggleProtectedView() {
+  PROTECTED_VIEW = !PROTECTED_VIEW;
+  document.getElementById('protectToggle').classList.toggle('active', PROTECTED_VIEW);
+  renderOrders(); renderMomentum(); renderHistorical(); renderRevival();
 }
 
-function renderGenTs() {
-  const s = S.data.summary || {};
-  const el = document.getElementById('gen-ts');
-  if (s.generated_at) el.textContent = `Data generated: ${new Date(s.generated_at).toLocaleString('en-AU')} · Run python backend/main.py to refresh`;
+// ═══════════════════════════════════════════════════════════════════════════
+// DISCARD (obsolete) SYSTEM
+// ═══════════════════════════════════════════════════════════════════════════
+function isDiscarded(name) {
+  return (FLAGS.obsolete_items || []).some(n => n.toLowerCase() === name.toLowerCase());
+}
+function toggleDiscard(name) {
+  const arr = FLAGS.obsolete_items || [];
+  const idx = arr.findIndex(n => n.toLowerCase() === name.toLowerCase());
+  if (idx >= 0) arr.splice(idx, 1);
+  else arr.push(name);
+  FLAGS.obsolete_items = arr;
+  localStorage.setItem('bmss_flags', JSON.stringify(FLAGS));
+  renderOrders(); renderRevival(); renderPricing(); renderMargins();
+}
+function discardBtn(name, label = '✕ discard') {
+  const escaped = name.replace(/'/g, "\\'").replace(/"/g, '&quot;');
+  return `<button class="discard-btn" onclick="toggleDiscard('${escaped}')" title="Exclude from this list permanently">${label}</button>`;
 }
 
-function renderTabs() {
-  const sorted = [...TABS].sort((a,b) => getBadge(b.key) - getBadge(a.key));
-  document.getElementById('tab-bar').innerHTML = sorted.map(t => {
-    const badge = getBadge(t.key);
-    const active = S.activeTab === t.key;
-    return `<button onclick="setTab('${t.key}')"
-      class="flex items-center gap-1.5 px-4 py-2 text-sm font-medium border-b-2 transition-all whitespace-nowrap ${active?'tab-active':'tab-inactive'}">
-      ${t.label}
-      ${badge > 0 ? `<span class="badge ${active?'bg-blue-600 text-white':'bg-gray-200 text-gray-600'}">${badge}</span>` : ''}
-    </button>`;
-  }).join('');
+// ═══════════════════════════════════════════════════════════════════════════
+// COLUMN SORT
+// ═══════════════════════════════════════════════════════════════════════════
+function initSort(tableId) {
+  const tbl = document.getElementById(tableId);
+  if (!tbl) return;
+  tbl.querySelectorAll('th.sortable').forEach(th => {
+    th.addEventListener('click', () => {
+      const col = +th.dataset.col;
+      const cur = SORT[tableId] || { col: -1, asc: true };
+      const asc = (cur.col === col) ? !cur.asc : true;
+      SORT[tableId] = { col, asc };
+      // Update header classes
+      tbl.querySelectorAll('th').forEach(h => h.classList.remove('sort-asc','sort-desc'));
+      th.classList.add(asc ? 'sort-asc' : 'sort-desc');
+      // Re-render
+      const renderFns = {
+        'orders-table': renderOrders,
+        'margins-table': renderMargins,
+        'pricing-table': renderPricing,
+        'historical-table': renderHistorical,
+      };
+      if (renderFns[tableId]) renderFns[tableId]();
+    });
+  });
 }
 
-function setTab(key) {
-  S.activeTab = key;
-  render();
+function sortRows(rows, tableId, getCols) {
+  const s = SORT[tableId];
+  if (!s || s.col < 0) return rows;
+  return [...rows].sort((a, b) => {
+    const av = getCols(a)[s.col] ?? '';
+    const bv = getCols(b)[s.col] ?? '';
+    const an = parseFloat(av), bn = parseFloat(bv);
+    let cmp = (!isNaN(an) && !isNaN(bn)) ? an - bn : String(av).localeCompare(String(bv));
+    return s.asc ? cmp : -cmp;
+  });
 }
 
-function renderPanel() {
-  const panel = document.getElementById('panel-content');
-  switch(S.activeTab) {
-    case 'orders':    panel.innerHTML = renderOrders();    break;
-    case 'momentum':  panel.innerHTML = renderMomentum();  break;
-    case 'historical':panel.innerHTML = renderHistorical();break;
-    case 'margins':   panel.innerHTML = renderMargins();   break;
-    case 'pricing':   panel.innerHTML = renderPricing();   break;
-    case 'revival':   panel.innerHTML = renderRevival();   break;
-  }
+// ═══════════════════════════════════════════════════════════════════════════
+// INSIGHTS HELPER
+// ═══════════════════════════════════════════════════════════════════════════
+function renderInsights(containerId, chips) {
+  const el = document.getElementById(containerId);
+  if (!el) return;
+  el.innerHTML = chips.map(c => `
+    <div class="insight-chip ${c.color || 'blue'}">
+      <span class="chip-icon">${c.icon || '💡'}</span>
+      <span>${c.text}</span>
+    </div>`).join('');
 }
 
-// ── Helpers ───────────────────────────────────────────────────────────────────
-const h = s => String(s).replace(/&/g,'&amp;').replace(/</g,'&lt;').replace(/>/g,'&gt;').replace(/"/g,'&quot;');
-const esc = s => h(s||'');
+// ═══════════════════════════════════════════════════════════════════════════
+// BRIEFING PANE
+// ═══════════════════════════════════════════════════════════════════════════
+function renderBriefing() {
+  const b = DATA.briefing;
+  if (!b) return;
+  const stats = b.stats || {};
+  const sum = DATA.summary || {};
+  const store = (sum.store_margin) || {};
 
-function sortByCategory(items, secondary) {
-  return [...items].sort((a,b) => (a.category||'').localeCompare(b.category||'') || (secondary?secondary(b)-secondary(a):0));
+  document.getElementById('briefingStats').innerHTML = [
+    { l: 'Revenue', v: '$' + fmt0(stats.weekly_revenue || store.latest_week_revenue || 0) },
+    { l: 'True Margin', v: pct(stats.true_margin_pct || store.latest_week_true_margin_pct || 0) },
+    { l: 'Critical Orders', v: stats.orders_critical || 0, red: true },
+    { l: 'Margin Drag/wk', v: '$' + fmt0(stats.margin_drag_weekly || 0), amber: true },
+    { l: 'Pricing Upside/yr', v: '$' + fmt0(stats.pricing_annual_upside || 0), green: true },
+    { l: 'Revival Picks', v: stats.revival_count || 0 },
+  ].map(s => `
+    <div class="briefing-stat">
+      <div class="bl">${s.l}</div>
+      <div class="bv" style="color:${s.red?'var(--red)':s.amber?'var(--amber)':s.green?'var(--green)':'var(--text)'}">${s.v}</div>
+    </div>`).join('');
+
+  const sections = b.sections || [];
+  document.getElementById('briefingContent').innerHTML = sections.map(s => `
+    <div class="briefing-section">
+      <h2>${s.heading}</h2>
+      <p>${s.body}</p>
+    </div>`).join('') || '<p class="empty">No briefing available.</p>';
 }
 
-function searchFilter(items, key) {
-  const q = (S.search[key]||'').toLowerCase();
-  return q ? items.filter(x => x.name.toLowerCase().includes(q)) : items;
+// ═══════════════════════════════════════════════════════════════════════════
+// ORDERS PANE
+// ═══════════════════════════════════════════════════════════════════════════
+function setUrgencyFilter(u) {
+  urgencyFilter = u;
+  ['ALL','CRITICAL','HIGH','MEDIUM','LOW'].forEach(x => {
+    document.getElementById(`urgency-${x}`)?.classList.toggle('active', x === u);
+  });
+  renderOrders();
 }
-
-function catGroupHtml(items, rowFn, cols) {
-  const g = {};
-  items.forEach(item => { (g[item.category||'Other'] = g[item.category||'Other']||[]).push(item); });
-  return Object.entries(g).sort(([a],[b])=>a.localeCompare(b)).map(([cat,its]) =>
-    `<tr class="bg-indigo-50"><td colspan="${cols}" class="px-4 py-1.5 text-xs font-bold text-indigo-700 uppercase tracking-wide">${esc(cat)} (${its.length})</td></tr>` +
-    its.map(rowFn).join('')
-  ).join('');
-}
-
-function controlBar(tabKey, extraControls='') {
-  return `<div class="flex flex-wrap gap-2 items-center mb-3">
-    <input type="text" placeholder="Search…" value="${esc(S.search[tabKey]||'')}"
-      oninput="S.search['${tabKey}']=this.value;renderPanel()"
-      class="border rounded px-3 py-1.5 text-sm w-48 focus:outline-none focus:ring-2 focus:ring-blue-300"/>
-    ${extraControls}
-  </div>`;
-}
-
-function sortBtn(tabKey, key, label) {
-  const active = (S.sortBy[tabKey]||'') === key || (!S.sortBy[tabKey] && key==='default');
-  return `<button onclick="S.sortBy['${tabKey}']='${key}';renderPanel()"
-    class="px-3 py-1 rounded text-xs font-medium border transition-all ${active?'bg-indigo-600 text-white border-indigo-600':'bg-white text-gray-600 border-gray-200 hover:bg-gray-50'}">${label}</button>`;
-}
-
-function filterBtn(stateKey, tabKey, val, label) {
-  const cur = S[stateKey][tabKey]||'ALL';
-  const active = cur===val;
-  return `<button onclick="S['${stateKey}']['${tabKey}']='${val}';renderPanel()"
-    class="px-3 py-1 rounded text-xs font-medium border transition-all ${active?'bg-gray-800 text-white border-gray-800':'bg-white text-gray-600 border-gray-200 hover:bg-gray-50'}">${label}</button>`;
-}
-
-function tbl(head, body) {
-  return `<div class="overflow-x-auto rounded-lg border border-gray-200 shadow-sm">
-    <table class="min-w-full text-sm"><thead class="bg-gray-50 border-b border-gray-200">${head}</thead><tbody>${body||'<tr><td colspan="20" class="text-center py-8 text-gray-400">No items match filters</td></tr>'}</tbody></table></div>`;
-}
-
-function th(label, tip='', extra='') {
-  return `<th class="px-4 py-2.5 text-left font-semibold text-gray-600 ${extra}" title="${esc(tip)}">${label}</th>`;
-}
-function thr(label, tip='', extra='') {
-  return `<th class="px-4 py-2.5 text-right font-semibold text-gray-600 ${extra}" title="${esc(tip)}">${label}</th>`;
-}
-
-// ── Orders ────────────────────────────────────────────────────────────────────
-const URGENCY_DOT  = {CRITICAL:'bg-red-500',HIGH:'bg-orange-400',MEDIUM:'bg-yellow-400',LOW:'bg-gray-300'};
-const URGENCY_CHIP = {CRITICAL:'bg-red-100 border-red-400 text-red-800',HIGH:'bg-orange-100 border-orange-400 text-orange-800',MEDIUM:'bg-yellow-50 border-yellow-300 text-yellow-800',LOW:'bg-gray-50 border-gray-200 text-gray-700'};
-const URGENCY_ORDER = {CRITICAL:0,HIGH:1,MEDIUM:2,LOW:3};
 
 function renderOrders() {
-  const uFilt = S.urgencyFilter.orders||'ALL';
-  const sBy   = S.sortBy.orders||'urgency';
-  const obs   = new Set((S.flags.obsolete_items||[]).map(n=>n.toLowerCase()));
+  const raw = (DATA.orders || []).filter(o => !isDiscarded(o.name));
+  const search = (document.getElementById('orders-search')?.value || '').toLowerCase();
+  let items = raw.filter(o => {
+    if (urgencyFilter !== 'ALL' && o.urgency !== urgencyFilter) return false;
+    if (PROTECTED_VIEW && !o.is_profit_protected) return false;
+    if (search && !(o.display_name || o.name).toLowerCase().includes(search)) return false;
+    return true;
+  });
 
-  let items = searchFilter(S.data.orders||[], 'orders')
-    .filter(x => uFilt==='ALL' || x.urgency===uFilt);
+  const sortCols = o => [
+    (o.display_name || o.name), o.current_cases, o.weeks_of_cover ?? 999,
+    o.weekly_velocity_cases, o.recommend_cases, o.urgency, o.notes
+  ];
+  items = sortRows(items, 'orders-table', sortCols);
 
-  if (sBy==='category') items = sortByCategory(items, x=>(URGENCY_ORDER[x.urgency]||3));
+  // Insights
+  const allRaw = DATA.orders || [];
+  const crit = allRaw.filter(o => o.urgency === 'CRITICAL').length;
+  const out  = allRaw.filter(o => o.weeks_of_cover === 0 || o.weeks_of_cover === null).length;
+  renderInsights('insights-orders', [
+    crit > 0 ? { icon:'🚨', color:'red',  text:`${crit} profit-protected items are critically low — order today.` } : null,
+    out  > 0 ? { icon:'📭', color:'amber',text:`${out} items are completely out of stock right now.` } : null,
+    { icon:'⭐', color:'blue', text:`${allRaw.filter(o=>o.is_profit_protected).length} items on your protect-at-all-costs list.` },
+  ].filter(Boolean));
 
-  const crit  = items.filter(x=>x.urgency==='CRITICAL').length;
-  const high  = items.filter(x=>x.urgency==='HIGH').length;
-  const cases = items.reduce((s,x)=>s+(x.recommend_cases||0),0);
+  const tbody = document.getElementById('orders-body');
+  if (!items.length) { tbody.innerHTML = `<tr><td colspan="8" class="empty">No items match filters.</td></tr>`; return; }
 
-  const head = `<tr>
-    ${th('#','','')} ${th('Item','','')} ${th('Category','','')}
-    ${thr('On Hand','Cases on shelf / in back','')} ${thr('Wks Cover','Weeks of stock remaining at current sales pace. OUT = zero stock.','')}
-    ${thr('Velocity','Avg cases sold per week over last 4 weekly reports','')}
-    ${thr('Order Cases','Cases to order to reach ~2 weeks of cover','bg-blue-50')}
-    ${th('Urgency','CRITICAL=out of stock or protected item near 0; HIGH=protected/under 0.5wks; MEDIUM=under 1wk','text-center')}
-    ${th('Notes','','')}
-  </tr>`;
-
-  const rowFn = (item,idx) => {
-    const dot  = URGENCY_DOT[item.urgency]||'bg-gray-300';
-    const chip = URGENCY_CHIP[item.urgency]||'bg-gray-100 text-gray-600';
-    const woc  = item.weeks_of_cover;
-    const wocHtml = woc!=null
-      ? `<span class="font-semibold ${woc<=0.5?'text-red-600':woc<=1?'text-orange-600':'text-gray-700'}">${woc.toFixed(1)}w</span>`
-      : `<span class="text-red-600 font-bold">OUT</span>`;
-    return `<tr class="border-b border-gray-100 hover:bg-gray-50 ${item.urgency==='CRITICAL'?'bg-red-50':''}">
-      <td class="px-3 py-2.5 text-gray-400 text-xs">${(idx+1)}</td>
-      <td class="px-4 py-2.5">
-        <div class="flex items-center gap-2 flex-wrap">
-          <span class="w-2 h-2 rounded-full flex-shrink-0 ${dot}"></span>
-          <span class="font-medium text-gray-800">${esc(item.name)}</span>
-          ${item.is_profit_protected?'<span class="text-xs px-1.5 py-0.5 rounded bg-purple-100 text-purple-700 font-medium" title="Top-profit item">PROFIT</span>':''}
-          ${item.is_revenue_protected?'<span class="text-xs px-1.5 py-0.5 rounded bg-blue-100 text-blue-700 font-medium" title="Top-revenue item">REV</span>':''}
-        </div>
+  tbody.innerHTML = items.map(o => {
+    const woc = o.weeks_of_cover != null ? o.weeks_of_cover.toFixed(1) : '—';
+    const prot = o.is_profit_protected ? '<span class="badge badge-purple" title="Profit-protected item">⭐ P</span> ' : '';
+    return `<tr class="${o.urgency==='CRITICAL'?'bg-amber-row':''}">
+      <td>
+        <div class="item-name">${prot}${esc(o.display_name || o.name)}</div>
+        <div class="item-sub">${esc(o.category)}</div>
       </td>
-      <td class="px-4 py-2.5 text-gray-500 text-xs">${esc(item.category)}</td>
-      <td class="px-4 py-2.5 text-right text-gray-700">${(item.current_cases||0).toFixed(1)} cs<br/><span class="text-xs text-gray-400">${item.current_units||0} units</span></td>
-      <td class="px-4 py-2.5 text-right">${wocHtml}</td>
-      <td class="px-4 py-2.5 text-right text-gray-600 text-xs">${item.weekly_velocity_cases} cs/wk</td>
-      <td class="px-4 py-2.5 text-right bg-blue-50">
-        <span class="font-bold text-blue-700 text-base">${item.recommend_cases}</span>
-        <span class="text-xs text-gray-400 ml-1">cs (${item.recommend_units} units)</span>
+      <td class="right">${o.current_cases.toFixed(1)} cs<br><small style="color:var(--faint)">${o.current_units} units</small></td>
+      <td class="right">${woc} wks</td>
+      <td class="right">${o.weekly_velocity_cases.toFixed(2)} cs/wk</td>
+      <td class="right" style="background:var(--green-light)">
+        <strong style="color:var(--green)">${o.recommend_cases} cs</strong>
+        <div style="font-size:.72rem;color:var(--faint)">${o.recommend_units} units</div>
       </td>
-      <td class="px-4 py-2.5 text-center">
-        <span class="text-xs font-semibold px-2 py-0.5 rounded-full border ${chip}">${item.urgency}</span>
-      </td>
-      <td class="px-4 py-2.5 text-xs text-gray-500 max-w-xs">
-        ${esc(item.notes)}
-        ${item.promo_savings_last_week>0?`<br/><span class="text-amber-600">$${item.promo_savings_last_week.toFixed(2)} promo</span>`:''}
-      </td>
+      <td><span class="badge ${URGENCY_COLOR[o.urgency]||'badge-grey'}">${o.urgency}</span></td>
+      <td style="max-width:220px;font-size:.8rem;color:var(--muted)">${esc(o.notes || '')}</td>
+      <td>${discardBtn(o.name)}</td>
     </tr>`;
-  };
+  }).join('');
 
-  const usBody = sBy==='category'
-    ? catGroupHtml(items, (item,_,arr)=>rowFn(item,arr?arr.indexOf(item):0), 9)
-    : items.map((item,i)=>rowFn(item,i)).join('');
-
-  return `
-    <div class="flex flex-wrap gap-2 mb-3">
-      ${crit>0?`<span class="px-3 py-1 rounded-full bg-red-100 text-red-700 text-sm font-semibold">${crit} CRITICAL</span>`:''}
-      ${high>0?`<span class="px-3 py-1 rounded-full bg-orange-100 text-orange-700 text-sm font-semibold">${high} HIGH</span>`:''}
-      <span class="px-3 py-1 rounded-full bg-blue-50 text-blue-700 text-sm"><strong>${items.length}</strong> items · <strong>${cases}</strong> cases</span>
-    </div>
-    ${controlBar('orders',
-      `<div class="flex gap-1">${['ALL','CRITICAL','HIGH','MEDIUM','LOW'].map(u=>filterBtn('urgencyFilter','orders',u,u)).join('')}</div>`+
-      `<div class="flex gap-1 ml-2 pl-2 border-l">${sortBtn('orders','urgency','Sort: Urgency')}${sortBtn('orders','category','Sort: Category')}</div>`
-    )}
-    ${tbl(`<tr>${head}</tr>`, items.length?usBody:'')}
-    <p class="text-xs text-gray-400 mt-2">Showing ${items.length} of ${(S.data.orders||[]).length} items · PROFIT/REV = protected stock (always keep stocked)</p>`;
+  initSort('orders-table');
 }
 
-// ── Momentum ──────────────────────────────────────────────────────────────────
-function renderMomentum() {
-  const subTab = S.momentumTab.momentum||'rising';
-  const sBy    = S.sortBy.momentum||'revenue';
-  const mom    = S.data.momentum||{};
-  const rising = mom.rising||[], falling = mom.falling||[], stable = mom.stable||[];
-  const subTabs = [{k:'rising',label:`↑ Rising (${rising.length})`,color:'text-green-700'},{k:'falling',label:`↓ Falling (${falling.length})`,color:'text-red-700'},{k:'stable',label:`→ Stable (${stable.length})`,color:'text-gray-600'}];
-  let items = ({rising,falling,stable})[subTab]||[];
-  if (S.search.momentum) items = items.filter(x=>x.name.toLowerCase().includes(S.search.momentum.toLowerCase()));
-  if (sBy==='category') items = sortByCategory(items, x=>x.revenue_latest_week||0);
-  else items = [...items].sort((a,b)=>(b.revenue_latest_week||0)-(a.revenue_latest_week||0));
-
-  const accent = subTab==='rising'?'text-green-700':subTab==='falling'?'text-red-700':'text-gray-600';
-
-  const rowFn = (item) => {
-    const pct = (item.pct_change_oldest_to_latest||0).toFixed(0);
-    const sign = item.pct_change_oldest_to_latest>0?'+':'';
-    const bars = (item.velocities||[]).map((v,i,arr)=>{
-      const max = Math.max(...arr,0.001);
-      const ht = Math.max(3,Math.round((v/max)*24));
-      const bg = i===arr.length-1?'#3b82f6':i===0?'#d1d5db':'#93c5fd';
-      const tip = `Week ${i+1}: ${v.toFixed(2)} cs`;
-      return `<div title="${tip}" style="width:10px;height:${ht}px;background:${bg};border-radius:2px 2px 0 0;display:inline-block;margin:0 1px"></div>`;
-    }).join('');
-    return `<tr class="border-b border-gray-100 hover:bg-gray-50">
-      <td class="px-4 py-2.5 font-medium text-gray-800">${esc(item.name)}<br/><span class="text-xs text-gray-400">${esc(item.category)}</span></td>
-      <td class="px-4 py-2.5"><div style="display:flex;align-items:flex-end;height:28px">${bars}</div></td>
-      <td class="px-4 py-2.5 text-right font-semibold ${accent}">${sign}${pct}%</td>
-      <td class="px-4 py-2.5 text-right text-gray-400 text-xs">$${(item.revenue_latest_week||0).toFixed(0)}/wk</td>
-    </tr>`;
-  };
-
-  const body = sBy==='category'
-    ? catGroupHtml(items, rowFn, 4)
-    : items.map(rowFn).join('');
-
-  return `
-    <div class="rounded-lg bg-gray-50 border border-gray-200 p-3 text-xs text-gray-600 mb-3 space-y-1">
-      <p><strong>% change</strong> = oldest week → newest week velocity change. Not an average.</p>
-      <p><strong>$/wk</strong> = most recent week's revenue only. <strong>Stable</strong> = ±15% oldest-to-newest.</p>
-      <p>Sparkline bars: grey (oldest) → light blue → <span style="color:#3b82f6">blue (newest)</span>. Hover for exact figures.</p>
-    </div>
-    <div class="flex items-center justify-between flex-wrap gap-2 mb-3">
-      <div class="flex border-b border-gray-200">
-        ${subTabs.map(t=>`<button onclick="S.momentumTab.momentum='${t.k}';renderPanel()"
-          class="px-4 py-2 text-sm font-medium border-b-2 ${S.momentumTab.momentum===t.k?'border-blue-500 text-blue-600':'border-transparent text-gray-500 hover:text-gray-700'}">${t.label}</button>`).join('')}
-      </div>
-      <div class="flex gap-1 items-center">
-        <input type="text" placeholder="Search…" value="${esc(S.search.momentum||'')}" oninput="S.search.momentum=this.value;renderPanel()"
-          class="border rounded px-2 py-1 text-xs w-36 focus:outline-none focus:ring-1 focus:ring-blue-300"/>
-        ${sortBtn('momentum','revenue','Sort: Revenue')}${sortBtn('momentum','category','Sort: Category')}
-      </div>
-    </div>
-    ${tbl(`<tr>${th('Item')}${th('Last 4 Weeks')}${thr('% Change','Oldest → newest week')}${thr('Latest Rev','Most recent weekly revenue')}</tr>`, body)}`;
+// ═══════════════════════════════════════════════════════════════════════════
+// MARGINS PANE
+// ═══════════════════════════════════════════════════════════════════════════
+function setCauseFilter(c) {
+  causeFilter = c;
+  ['ALL','pricing_error','structural','promotional','unknown'].forEach(x => {
+    document.getElementById(`cause-${x}`)?.classList.toggle('active', x === c);
+  });
+  renderMargins();
 }
-
-// ── Historical ─────────────────────────────────────────────────────────────────
-function renderHistorical() {
-  const sBy = S.sortBy.historical||'monthly';
-  let items = searchFilter(S.data.historical||[], 'historical');
-  if (sBy==='monthly')  items=[...items].sort((a,b)=>(b.monthly_revenue||0)-(a.monthly_revenue||0));
-  else if(sBy==='yearly') items=[...items].sort((a,b)=>(b.yearly_revenue||0)-(a.yearly_revenue||0));
-  else if(sBy==='trend')  items=[...items].sort((a,b)=>(b.trend_vs_monthly||0)-(a.trend_vs_monthly||0));
-  else if(sBy==='category') items=sortByCategory(items,x=>x.monthly_revenue||0);
-
-  const trendBadge = (pct) => {
-    if(pct==null) return '<span class="text-gray-300">—</span>';
-    const cls = pct>10?'text-green-700 bg-green-50 border-green-200':pct<-10?'text-red-700 bg-red-50 border-red-200':'text-gray-600 bg-gray-50 border-gray-200';
-    return `<span class="text-xs font-semibold px-1.5 py-0.5 rounded border ${cls}" title="Recent 4-wk pace vs Jan–Apr avg">${pct>0?'+':''}${pct.toFixed(0)}%</span>`;
-  };
-
-  const rowFn = (item) => `<tr class="border-b border-gray-100 hover:bg-gray-50">
-    <td class="px-4 py-2.5 font-medium text-gray-800 max-w-xs">
-      <span class="block truncate">${esc(item.name)}</span>
-      <div class="flex gap-1 mt-0.5">
-        ${item.in_monthly?'<span class="text-xs px-1 rounded bg-green-100 text-green-700">monthly</span>':''}
-        ${item.in_yearly?'<span class="text-xs px-1 rounded bg-blue-100 text-blue-700">yearly</span>':''}
-      </div>
-    </td>
-    <td class="px-4 py-2.5 text-xs text-gray-400">${esc(item.category)}</td>
-    <td class="px-4 py-2.5 text-right text-gray-700">${item.monthly_revenue?'$'+item.monthly_revenue.toLocaleString():'—'}</td>
-    <td class="px-4 py-2.5 text-right text-gray-500">${item.yearly_revenue?'$'+item.yearly_revenue.toLocaleString():'—'}</td>
-    <td class="px-4 py-2.5 text-right text-gray-600">${item.est_weekly_from_monthly?'$'+item.est_weekly_from_monthly.toFixed(0):'—'}</td>
-    <td class="px-4 py-2.5 text-right text-blue-600 font-medium">${item.recent_weekly_velocity>0?item.recent_weekly_velocity.toFixed(2)+' cs':'—'}</td>
-    <td class="px-4 py-2.5 text-center">${trendBadge(item.trend_vs_monthly)}</td>
-  </tr>`;
-
-  const body = sBy==='category'?catGroupHtml(items,rowFn,7):items.slice(0,200).map(rowFn).join('');
-
-  return `
-    <div class="rounded-lg bg-gray-50 border border-gray-200 p-3 text-xs text-gray-600 mb-3">
-      <strong>Trend badge</strong> = recent 4-week weekly pace vs Jan–Apr monthly avg.
-      <span class="inline-block px-1.5 rounded bg-green-50 text-green-700 border border-green-200 font-semibold mx-1">+%</span> faster recently.
-      <span class="inline-block px-1.5 rounded bg-red-50 text-red-700 border border-red-200 font-semibold mx-1">−%</span> slowing.
-    </div>
-    ${controlBar('historical',
-      `<div class="flex gap-1">${['monthly','yearly','trend','category'].map(k=>sortBtn('historical',k,
-        k==='monthly'?'Monthly Rev':k==='yearly'?'Yearly Rev':k==='trend'?'Trend':k.charAt(0).toUpperCase()+k.slice(1))).join('')}</div>`
-    )}
-    ${tbl(`<tr>${th('Item')}${th('Category')}${thr('Monthly Rev','Jan–Apr 2026')}${thr('Yearly Rev','2025')}${thr('Avg $/wk (M)','Monthly revenue ÷ period weeks')}${thr('Recent Vel','Avg cases/wk last 4 reports')}${th('Trend vs Monthly','',('text-center'))}</tr>`,body)}
-    <p class="text-xs text-gray-400 mt-2 text-right">Showing ${Math.min(items.length,200)} of ${items.length}</p>`;
-}
-
-// ── Margins ───────────────────────────────────────────────────────────────────
-const CAUSE_STYLE = {promotional:'bg-amber-100 text-amber-700',structural:'bg-blue-100 text-blue-700',pricing_error:'bg-red-100 text-red-700',unknown:'bg-gray-100 text-gray-600'};
-const CAUSE_LABEL = {promotional:'Promo',structural:'Structural',pricing_error:'Pricing Error',unknown:'Unknown'};
-const CAUSE_TIP   = {
-  promotional:'Bottlemart chain-funded deal — reimbursed to you. No action needed.',
-  structural:'Chain-price-locked item (e.g. Carlton). Hard to raise. Flag for supplier negotiation.',
-  pricing_error:'Your shelf price may be too low. Check POS.',
-  unknown:'Root cause unclear — cross-check supplier invoice vs sell price.'
-};
 
 function renderMargins() {
-  const cFilt = S.causeFilter.margins||'ALL';
-  const sBy   = S.sortBy.margins||'drag';
-  const s     = S.data.summary||{};
-  const store = s.store_margin||{};
+  const sum = DATA.summary?.store_margin || {};
+  document.getElementById('margin-stats').innerHTML = [
+    { l:'Reported Margin', v: pct(sum.latest_week_margin_pct||0),
+      d: sum.wow_margin_delta_pts, ds: 'pts WoW' },
+    { l:'True Margin', v: pct(sum.latest_week_true_margin_pct||0),
+      d: sum.wow_true_margin_delta_pts, ds: 'pts WoW' },
+    { l:'Weekly Revenue', v: '$'+fmt0(sum.latest_week_revenue||0) },
+    { l:'Chain Promo Total', v: '$'+fmt0(sum.latest_week_promo_total||0), note:'Chain-funded' },
+  ].map(s => `
+    <div class="stat-card">
+      <div class="label">${s.l}</div>
+      <div class="value">${s.v}</div>
+      ${s.d != null ? `<div class="delta ${s.d>0?'delta-up':s.d<0?'delta-down':'delta-flat'}">${s.d>0?'+':''}${s.d.toFixed(2)} ${s.ds||''}</div>` : ''}
+      ${s.note ? `<div style="font-size:.72rem;color:var(--faint)">${s.note}</div>` : ''}
+    </div>`).join('');
 
-  let items = searchFilter(S.data.margins||[], 'margins')
-    .filter(x=>cFilt==='ALL'||x.cause===cFilt);
-  if (sBy==='category') items=sortByCategory(items,x=>x.dollar_drag||0);
-  else items=[...items].sort((a,b)=>b.dollar_drag-a.dollar_drag);
+  const raw = DATA.margins || [];
+  const totalDrag = raw.reduce((s,x)=>s+x.dollar_drag,0);
+  const search = (document.getElementById('margins-search')?.value||'').toLowerCase();
+  let items = raw.filter(m => {
+    if (isDiscarded(m.name)) return false;
+    if (causeFilter !== 'ALL' && m.cause !== causeFilter) return false;
+    if (search && !(m.display_name||m.name).toLowerCase().includes(search)) return false;
+    return true;
+  });
 
-  const totalDrag = (S.data.margins||[]).reduce((s,x)=>s+x.dollar_drag,0);
-  const viewDrag  = items.reduce((s,x)=>s+x.dollar_drag,0);
+  const sortCols = m => [
+    (m.display_name||m.name), m.revenue, m.reported_margin_pct, m.true_margin_pct,
+    m.floor_pct, m.dollar_drag, m.promo_savings, m.cause, m.wow_margin_delta_pts
+  ];
+  items = sortRows(items, 'margins-table', sortCols);
 
-  const rowFn = (item) => `<tr class="border-b border-gray-100 hover:bg-gray-50">
-    <td class="px-4 py-2.5 font-medium text-gray-800">${esc(item.name)}<br/><span class="text-xs text-gray-400">${esc(item.category)}</span></td>
-    <td class="px-4 py-2.5 text-right text-gray-700">$${item.revenue.toLocaleString()}</td>
-    <td class="px-4 py-2.5 text-right text-gray-600">${item.reported_margin_pct.toFixed(1)}%</td>
-    <td class="px-4 py-2.5 text-right font-semibold text-orange-600">${item.true_margin_pct.toFixed(1)}%</td>
-    <td class="px-4 py-2.5 text-right text-gray-500">${item.floor_pct.toFixed(0)}%</td>
-    <td class="px-4 py-2.5 text-right bg-red-50">
-      <span class="font-bold text-red-600">$${item.dollar_drag.toFixed(2)}</span>
-      <span class="block text-xs text-gray-400">${(item.pct_of_total_drag||0).toFixed(1)}% of drag</span>
-    </td>
-    <td class="px-4 py-2.5 text-right text-amber-600 text-xs">${item.promo_savings>0?'$'+item.promo_savings.toFixed(2):'—'}</td>
-    <td class="px-4 py-2.5 text-center">
-      <span title="${esc(CAUSE_TIP[item.cause]||'')}" class="text-xs font-medium px-2 py-0.5 rounded-full cursor-help ${CAUSE_STYLE[item.cause]||'bg-gray-100 text-gray-500'}">
-        ${CAUSE_LABEL[item.cause]||item.cause}
-      </span>
-    </td>
-    <td class="px-4 py-2.5 text-right text-xs">
-      ${item.wow_margin_delta_pts!=null?`<span class="${item.wow_margin_delta_pts<-2?'text-red-500 font-semibold':item.wow_margin_delta_pts>2?'text-green-600':'text-gray-400'}">${item.wow_margin_delta_pts>0?'+':''}${item.wow_margin_delta_pts.toFixed(1)} pts</span>`:'—'}
-    </td>
-  </tr>`;
+  // Insights
+  const chainLoss = raw.filter(m=>m.chain_subsidised_loss);
+  const pErrors   = raw.filter(m=>m.cause==='pricing_error');
+  renderInsights('insights-margins', [
+    { icon:'🔴', color:'red', text:`$${totalDrag.toFixed(0)}/wk in total profit drag across ${raw.length} below-floor items — $${fmt0(totalDrag*52)}/yr annualised.` },
+    pErrors.length ? { icon:'⚠️', color:'amber', text:`${pErrors.length} pricing error${pErrors.length>1?'s':''} — these items may have an incorrect shelf price in the POS. Action required.` } : null,
+    chainLoss.length ? { icon:'🔗', color:'blue', text:`${chainLoss.length} items are only profitable because of Bottlemart chain subsidies. Their true margin is negative without that support.` } : null,
+  ].filter(Boolean));
 
-  const body = sBy==='category'?catGroupHtml(items,rowFn,9):items.map(rowFn).join('');
+  const tbody = document.getElementById('margins-body');
+  if (!items.length) { tbody.innerHTML = `<tr><td colspan="10" class="empty">No items match filters.</td></tr>`; return; }
 
-  const sumCards = store.latest_week_revenue ? `
-    <div class="grid grid-cols-2 md:grid-cols-4 gap-3 mb-4">
-      ${[
-        ['Reported Margin',(store.latest_week_margin_pct||0).toFixed(2)+'%'],
-        ['True Margin (excl promo)',(store.latest_week_true_margin_pct||0).toFixed(2)+'%'],
-        ['Weekly Revenue','$'+(store.latest_week_revenue||0).toLocaleString()],
-        ['Promo Savings','$'+(store.latest_week_promo_total||0).toFixed(0)+' (chain-funded)'],
-      ].map(([l,v])=>`<div class="rounded-lg border border-gray-200 p-3 bg-white"><p class="text-xs text-gray-500 mb-1">${l}</p><p class="text-xl font-bold text-gray-800">${v}</p></div>`).join('')}
-    </div>` : '';
+  tbody.innerHTML = items.map(m => {
+    const chainLoss = m.chain_subsidised_loss;
+    const wow = m.wow_margin_delta_pts;
+    const wowCls = wow < -2 ? 'color:var(--red);font-weight:600' : wow > 2 ? 'color:var(--green)' : 'color:var(--faint)';
+    return `<tr>
+      <td>
+        <div class="item-name">${esc(m.display_name||m.name)}</div>
+        <div class="item-sub">${esc(m.category)}</div>
+        ${chainLoss ? `<span class="badge badge-orange" title="True margin is negative — item is only profitable because of Bottlemart chain subsidy. Without that support, you'd sell at a loss.">⚠ Chain loss</span>` : ''}
+      </td>
+      <td class="right">$${fmt0(m.revenue)}</td>
+      <td class="right">${pct(m.reported_margin_pct)}</td>
+      <td class="right" style="font-weight:600;color:var(--amber)">${pct(m.true_margin_pct)}</td>
+      <td class="right" style="color:var(--muted)">${m.floor_pct.toFixed(0)}%</td>
+      <td class="right" style="background:var(--red-light)">
+        <strong style="color:var(--red)">$${m.dollar_drag.toFixed(2)}</strong>
+        <div style="font-size:.72rem;color:var(--faint)">${(m.pct_of_total_drag||0).toFixed(1)}% of drag</div>
+      </td>
+      <td class="right" style="color:var(--amber);font-size:.8rem">${m.promo_savings>0?'$'+m.promo_savings.toFixed(2):'—'}</td>
+      <td>
+        <span class="badge ${CAUSE_STYLE[m.cause]||'badge-grey'}" title="${CAUSE_TIP[m.cause]||''}">${CAUSE_LABEL[m.cause]||m.cause}</span>
+      </td>
+      <td class="right" style="font-size:.8rem"><span style="${wowCls}">${wow!=null?(wow>0?'+':'')+wow.toFixed(1)+' pts':'—'}</span></td>
+      <td>${discardBtn(m.name)}</td>
+    </tr>`;
+  }).join('');
 
-  return `
-    ${sumCards}
-    <details class="mb-3"><summary class="text-xs text-blue-500 cursor-pointer">▼ Column glossary</summary>
-    <div class="mt-2 rounded-lg bg-blue-50 border border-blue-200 p-3 text-xs text-gray-700 space-y-1">
-      <p><strong>Revenue</strong> — total sales this week. <strong>Reported %</strong> — margin in POS (may include promo credits).</p>
-      <p><strong>True %</strong> — margin after stripping Bottlemart promo contributions. Your actual profitability.</p>
-      <p><strong>Floor</strong> — minimum margin target for this category. <strong>$ Drag</strong> — Revenue × (Floor − True%). Extra profit if you hit floor.</p>
-      <p><strong>Promo $</strong> — chain-funded discount (reimbursed, not your cost). <strong>WoW</strong> — True% change vs last week (pts = percentage points).</p>
-      <p><strong>Cause badges:</strong> <em>Promo</em> = no action. <em>Structural</em> = chain-locked price. <em>Pricing Error</em> = fix your shelf price. Hover each badge for detail.</p>
-    </div></details>
-    <div class="text-sm mb-3 text-gray-500">
-      <strong class="text-red-600">$${totalDrag.toFixed(2)}</strong> total weekly drag across <strong>${(S.data.margins||[]).length}</strong> items
-      ${viewDrag<totalDrag?` · <strong>$${viewDrag.toFixed(2)}</strong> in view`:''}
-    </div>
-    ${controlBar('margins',
-      `<div class="flex gap-1">${['ALL','pricing_error','structural','promotional','unknown'].map(c=>filterBtn('causeFilter','margins',c,c==='ALL'?'All':(CAUSE_LABEL[c]||c))).join('')}</div>`+
-      `<div class="flex gap-1 ml-2 pl-2 border-l">${sortBtn('margins','drag','Sort: $ Drag')}${sortBtn('margins','category','Sort: Category')}</div>`
-    )}
-    ${tbl(`<tr>${th('Item')}${thr('Revenue')}${thr('Reported %','Margin in POS')}${thr('True %','After promo adjustment')}${thr('Floor','Category minimum')}${thr('$ Drag','Weekly profit gap','bg-red-50')}${thr('Promo $','Chain-funded discount')}${th('Cause','Hover for explanation','text-center')}${thr('WoW Margin','Change vs last week in ppts')}</tr>`,body)}`;
+  initSort('margins-table');
 }
 
-// ── Pricing ────────────────────────────────────────────────────────────────────
-const RISK_STYLE = {low:'bg-green-100 text-green-700',medium:'bg-yellow-100 text-yellow-800',high:'bg-red-100 text-red-700'};
-const RISK_TIP   = {low:'Low price sensitivity — safe to increase.',medium:'Moderate sensitivity — consider a small test first.',high:'Chain-priced or volume-sensitive — customers will notice. Verify first.'};
+// ═══════════════════════════════════════════════════════════════════════════
+// PRICING PANE
+// ═══════════════════════════════════════════════════════════════════════════
+function setRiskFilter(r) {
+  riskFilter = r;
+  ['ALL','low','medium','high'].forEach(x => {
+    document.getElementById(`risk-${x}`)?.classList.toggle('active', x === r);
+  });
+  renderPricing();
+}
 
 function renderPricing() {
-  const rFilt = S.riskFilter.pricing||'ALL';
-  const sBy   = S.sortBy.pricing||'gain';
+  const raw = DATA.pricing || [];
+  const totalUpside = raw.reduce((s,x)=>s+x.annual_profit_gain,0);
+  document.getElementById('pricing-headline').innerHTML = `
+    <p style="font-size:.875rem;color:var(--green)">
+      <strong style="font-size:1.2rem;color:#15803d">$${fmt0(totalUpside)}</strong> potential annual profit gain
+      from ${raw.length} price increase candidates.
+    </p>
+    <p style="font-size:.75rem;color:#16a34a;margin-top:4px;">
+      Excludes: promotional items · falling-momentum SKUs · increases capped at 15% · rounded to nearest $0.50 · increases &lt;$0.50 removed
+    </p>`;
 
-  let items = searchFilter(S.data.pricing||[], 'pricing')
-    .filter(x=>rFilt==='ALL'||x.risk_level===rFilt);
-  const riskOrder={low:0,medium:1,high:2};
-  if(sBy==='category') items=sortByCategory(items,x=>x.annual_profit_gain||0);
-  else items=[...items].sort((a,b)=>(riskOrder[a.risk_level]||1)-(riskOrder[b.risk_level]||1)||b.annual_profit_gain-a.annual_profit_gain);
+  const search = (document.getElementById('pricing-search')?.value||'').toLowerCase();
+  let items = raw.filter(p => {
+    if (isDiscarded(p.name)) return false;
+    if (riskFilter !== 'ALL' && p.risk_level !== riskFilter) return false;
+    if (search && !(p.display_name||p.name).toLowerCase().includes(search)) return false;
+    return true;
+  });
 
-  const totalUpside = (S.data.pricing||[]).reduce((s,x)=>s+(x.annual_profit_gain||0),0);
-  const viewUpside  = items.reduce((s,x)=>s+(x.annual_profit_gain||0),0);
+  const sortCols = p => [
+    (p.display_name||p.name), p.revenue_per_week, p.current_margin_pct,
+    p.floor_margin_pct, p.current_unit_price, p.suggested_price, p.annual_profit_gain,
+    p.momentum, p.risk_level
+  ];
+  items = sortRows(items, 'pricing-table', sortCols);
 
-  const rowFn = (item) => `<tr class="border-b border-gray-100 hover:bg-gray-50">
-    <td class="px-4 py-2.5 font-medium text-gray-800">
-      ${esc(item.name)}<br/><span class="text-xs text-gray-400">${esc(item.category)}</span>
-      ${item.cause==='structural'?'<br/><span class="text-xs px-1.5 rounded bg-blue-100 text-blue-700">chain-priced</span>':''}
-    </td>
-    <td class="px-4 py-2.5 text-right text-gray-600">$${(item.revenue_per_week||0).toFixed(0)}</td>
-    <td class="px-4 py-2.5 text-right text-orange-600 font-medium">${(item.current_margin_pct||0).toFixed(1)}%</td>
-    <td class="px-4 py-2.5 text-right text-gray-500">${(item.floor_margin_pct||0).toFixed(0)}%</td>
-    <td class="px-4 py-2.5 text-right">
-      <span class="font-medium text-gray-800">$${(item.current_unit_price||0).toFixed(2)}</span>
-      <span class="block text-xs ${item.price_source==='avg_txn'?'text-amber-600':'text-gray-400'}">${item.price_source==='avg_txn'?'≈ avg txn':'shelf price'}</span>
-    </td>
-    <td class="px-4 py-2.5 text-right bg-green-50">
-      <span class="font-bold text-green-700">$${(item.suggested_price||0).toFixed(2)}</span>
-      <span class="block text-xs text-green-600">+$${(item.price_increase_dollar||0).toFixed(2)} (${(item.price_increase_pct||0).toFixed(1)}%)</span>
-    </td>
-    <td class="px-4 py-2.5 text-right bg-green-50">
-      <span class="font-bold text-green-700">$${(item.annual_profit_gain||0).toLocaleString(undefined,{maximumFractionDigits:0})}</span>
-      <span class="block text-xs text-gray-400">$${(item.weekly_profit_gain||0).toFixed(2)}/wk</span>
-    </td>
-    <td class="px-4 py-2.5 text-center text-xs text-gray-600">${esc(item.momentum)}</td>
-    <td class="px-4 py-2.5 text-center">
-      <span title="${esc(RISK_TIP[item.risk_level]||'')}" class="text-xs font-medium px-2 py-0.5 rounded-full cursor-help ${RISK_STYLE[item.risk_level]||'bg-gray-100 text-gray-500'}">
-        ${item.risk_level}
-      </span>
-    </td>
-  </tr>`;
+  // Insights
+  const lowRisk = raw.filter(p=>p.risk_level==='low');
+  renderInsights('insights-pricing', [
+    lowRisk.length ? { icon:'💚', color:'green', text:`${lowRisk.length} low-risk opportunities — safe to raise prices today without customer pushback.` } : null,
+    { icon:'📅', color:'amber', text:`Annual gain estimate assumes current weekly volume stays the same. Actual result may vary.` },
+  ].filter(Boolean));
 
-  const body = sBy==='category'?catGroupHtml(items,rowFn,8):items.map(rowFn).join('');
+  const tbody = document.getElementById('pricing-body');
+  if (!items.length) { tbody.innerHTML = `<tr><td colspan="10" class="empty">No items match filters.</td></tr>`; return; }
 
-  return `
-    <div class="rounded-lg bg-green-50 border border-green-200 p-4 mb-4">
-      <p class="text-sm text-green-700">
-        <strong class="text-lg text-green-800">$${totalUpside.toLocaleString(undefined,{maximumFractionDigits:0})}</strong>
-        potential annual profit gain from ${(S.data.pricing||[]).length} price increase candidates
-        ${viewUpside<totalUpside?` · <span class="font-medium">$${viewUpside.toLocaleString(undefined,{maximumFractionDigits:0})} in view</span>`:''}
-      </p>
-      <p class="text-xs text-green-600 mt-1">Excludes promo items · excludes falling momentum · capped at +15% · rounded to $0.50</p>
-    </div>
-    <details class="mb-3"><summary class="text-xs text-blue-500 cursor-pointer">▼ How to read this table</summary>
-    <div class="mt-2 rounded-lg bg-blue-50 border border-blue-200 p-3 text-xs text-gray-700 space-y-1">
-      <p><strong>Current $</strong> = single-unit shelf price from inventory. "≈ avg txn" = no shelf price found, using transaction average.</p>
-      <p><strong>Suggested $</strong> = price to hit floor margin. Capped +15%, rounded $0.50. <strong>Annual Gain</strong> = weekly gain × 52 at current volume.</p>
-      <p><strong>Risk LOW</strong> = spirits/cognac/tequila/sparkling wine — safe to raise. <strong>HIGH</strong> = beer or chain-priced — verify first.</p>
-    </div></details>
-    ${controlBar('pricing',
-      `<div class="flex gap-1">${['ALL','low','medium','high'].map(r=>filterBtn('riskFilter','pricing',r,r==='ALL'?'All Risk':r.charAt(0).toUpperCase()+r.slice(1)+' Risk')).join('')}</div>`+
-      `<div class="flex gap-1 ml-2 pl-2 border-l">${sortBtn('pricing','gain','Sort: Gain')}${sortBtn('pricing','category','Sort: Category')}</div>`
-    )}
-    ${tbl(`<tr>${th('Item')}${thr('Rev/wk')}${thr('True Margin')}${thr('Floor')}${thr('Current $','Shelf price from inventory')}${thr('Suggested $','','bg-green-50')}${thr('Annual Gain','At current volume','bg-green-50')}${th('Momentum','','')}${th('Risk','Hover for explanation','text-center')}</tr>`,body)}`;
-}
-
-// ── Revival ────────────────────────────────────────────────────────────────────
-function renderRevival() {
-  const sBy    = S.sortBy.revival||'revenue';
-  const obs    = new Set((S.flags.obsolete_items||[]).map(n=>n.toLowerCase()));
-  const ltd    = new Set((S.flags.limited_edition_overrides||[]).map(n=>n.toLowerCase()));
-  const inStockOnly = S.revivalInStock||false;
-
-  const all    = S.data.revival||[];
-  const tops   = searchFilter(all.filter(x=>x.top_pick), 'revival').filter(x=>!inStockOnly||x.in_inventory);
-  const rest   = searchFilter(all.filter(x=>!x.top_pick), 'revival').filter(x=>!inStockOnly||x.in_inventory);
-  const totalRev = all.reduce((s,x)=>s+(x.est_weekly_revenue||0),0);
-  const showAll  = S.showAll.revival||false;
-
-  function revRow(item) {
-    const isLtdOv = ltd.has(item.name.toLowerCase());
-    return `<tr class="border-b border-gray-100 hover:bg-gray-50 ${item.top_pick?'bg-yellow-50/30':''}">
-      <td class="px-3 py-2.5 text-xs text-gray-400">${item.revival_rank}</td>
-      <td class="px-4 py-2.5 font-medium text-gray-800">
-        ${esc(item.name)}<br/><span class="text-xs text-gray-400">${esc(item.category)}</span>
-        ${item.is_limited_edition?'<span class="text-xs px-1 rounded bg-amber-100 text-amber-700 ml-1">limited</span>':''}
+  tbody.innerHTML = items.map(p => {
+    const srcNote = p.price_source === 'avg_txn'
+      ? `<div style="font-size:.7rem;color:var(--amber)" title="No shelf price found — using average transaction price">≈ avg txn</div>`
+      : `<div style="font-size:.7rem;color:var(--faint)">shelf price</div>`;
+    return `<tr>
+      <td>
+        <div class="item-name">${esc(p.display_name||p.name)}</div>
+        <div class="item-sub">${esc(p.category)}</div>
       </td>
-      <td class="px-4 py-2.5 text-right text-gray-700">$${(item.yearly_revenue||0).toLocaleString()}</td>
-      <td class="px-4 py-2.5 text-right text-gray-500">${item.yearly_txns}</td>
-      <td class="px-4 py-2.5 text-right font-semibold text-purple-700">$${(item.est_weekly_revenue||0).toFixed(0)}</td>
-      <td class="px-4 py-2.5 text-right text-gray-600">${item.margin_pct_historical>0?item.margin_pct_historical.toFixed(1)+'%':'—'}</td>
-      <td class="px-4 py-2.5 text-center">${item.in_inventory?'<span class="text-green-600 text-xs font-medium">✓ Yes</span>':'<span class="text-red-400 text-xs">✗ No</span>'}</td>
-      <td class="px-4 py-2.5 text-right text-gray-600">${item.in_inventory?item.current_stock_cases.toFixed(1)+' cs':'—'}</td>
-      <td class="px-4 py-2.5 text-right bg-purple-50">
-        <span class="font-bold text-purple-700">${item.suggested_order_cases}</span>
-        <span class="text-xs text-gray-400 ml-1">cs (${(item.suggested_order_cases*(item.case_qty||24)).toLocaleString()} units)</span>
+      <td class="right">$${fmt0(p.revenue_per_week)}</td>
+      <td class="right" style="color:var(--amber);font-weight:600">${pct(p.current_margin_pct)}</td>
+      <td class="right" style="color:var(--muted)">${p.floor_margin_pct.toFixed(0)}%</td>
+      <td class="right">
+        <span style="font-weight:500">$${p.current_unit_price.toFixed(2)}</span>
+        ${srcNote}
       </td>
-      <td class="px-4 py-2.5 text-xs text-gray-500 max-w-xs">${esc(item.revival_rationale)}</td>
-      <td class="px-4 py-2.5 text-center text-xs space-y-1">
-        ${item.is_limited_edition?`<button onclick="toggleLtdOverride('${esc(item.name)}')" class="${isLtdOv?'text-amber-600 hover:text-amber-800':'text-gray-300 hover:text-amber-500'} block w-full">${isLtdOv?'★ override':'☆ override'}</button>`:''}
+      <td class="right" style="background:var(--green-light)">
+        <strong style="color:var(--green)">$${p.suggested_price.toFixed(2)}</strong>
+        <div style="font-size:.72rem;color:var(--green)">+$${p.price_increase_dollar.toFixed(2)} (${p.price_increase_pct.toFixed(1)}%)</div>
       </td>
+      <td class="right" style="background:var(--green-light)">
+        <strong style="color:var(--green)">$${fmt0(p.annual_profit_gain)}</strong>
+        <div style="font-size:.72rem;color:var(--faint)">$${p.weekly_profit_gain.toFixed(2)}/wk</div>
+      </td>
+      <td style="font-size:.8rem">${esc(p.momentum||'')}</td>
+      <td>
+        <span class="badge ${RISK_COLOR[p.risk_level]||'badge-grey'}" title="${RISK_TIP[p.risk_level]||''}">${p.risk_level}</span>
+      </td>
+      <td>${discardBtn(p.name)}</td>
     </tr>`;
+  }).join('');
+
+  initSort('pricing-table');
+}
+
+// ═══════════════════════════════════════════════════════════════════════════
+// MOMENTUM PANE
+// ═══════════════════════════════════════════════════════════════════════════
+function setMomTab(t) {
+  momTab = t;
+  ['rising','falling','stable'].forEach(x => {
+    document.getElementById(`mom-${x}`)?.classList.toggle('active', x === t);
+  });
+  renderMomentum();
+}
+
+function sparkline(velocities, caseQty = 24, category = '') {
+  if (!velocities || !velocities.length) return '';
+  const max = Math.max(...velocities, 0.001);
+  const bars = velocities.map((v, i) => {
+    const h = Math.max(2, (v / max) * 24);
+    const col = i === velocities.length-1 ? '#3b82f6' : i === 0 ? '#d1d5db' : '#93c5fd';
+    const units = smartUnits(v, caseQty, category);
+    return `<div class="spark-bar" title="Week ${i+1}: ${units}"
+      style="height:${h}px;background:${col};width:10px;border-radius:2px 2px 0 0"></div>`;
+  }).join('');
+  return `<div class="sparkline">${bars}</div>`;
+}
+
+function smartUnits(cases, caseQty = 24, category = '') {
+  const cat = (category||'').toLowerCase();
+  if (cat.includes('keg')) return `${Math.round(cases*caseQty)} units`;
+  if (cases < 0.95) {
+    const b = cases * caseQty;
+    return `${b.toFixed(1)} bottle${b !== 1 ? 's' : ''}`;
+  }
+  return `${cases.toFixed(2)} case${cases !== 1 ? 's' : ''}`;
+}
+
+function renderMomentum() {
+  const mom = DATA.momentum || {};
+  const rising  = mom.rising  || [];
+  const falling = mom.falling || [];
+  const stable  = mom.stable  || [];
+  const map = { rising, falling, stable };
+  const counts = { rising:rising.length, falling:falling.length, stable:stable.length };
+  ['rising','falling','stable'].forEach(t => {
+    const btn = document.getElementById(`mom-${t}`);
+    if (btn) btn.textContent = { rising:'↑ Rising', falling:'↓ Falling', stable:'→ Stable' }[t] + ` (${counts[t]})`;
+    if (btn) btn.classList.toggle('active', t === momTab);
+  });
+
+  const search = (document.getElementById('momentum-search')?.value||'').toLowerCase();
+  let items = (map[momTab]||[]).filter(item => {
+    if (PROTECTED_VIEW && !item.is_profit_protected) return false;
+    if (search && !(item.display_name||item.name).toLowerCase().includes(search)) return false;
+    return true;
+  });
+  items = [...items].sort((a,b) => (b.revenue_latest_week||0)-(a.revenue_latest_week||0));
+
+  const accent = momTab === 'rising' ? 'var(--green)' : momTab === 'falling' ? 'var(--red)' : 'var(--muted)';
+  const container = document.getElementById('momentum-list');
+  if (!items.length) { container.innerHTML = '<p class="empty">No items in this category.</p>'; return; }
+
+  container.innerHTML = `<div style="max-height:520px;overflow-y:auto;padding-right:4px;">${
+    items.map(item => `
+      <div class="mom-item">
+        <div class="mom-info">
+          <div class="mom-name">${esc(item.display_name||item.name)}</div>
+          <div class="mom-cat">${esc(item.category||'')}</div>
+        </div>
+        ${sparkline(item.velocities, item.case_qty||24, item.category||'')}
+        <div class="mom-pct" style="color:${accent}">
+          ${(item.pct_change_oldest_to_latest||0) > 0 ? '+' : ''}${(item.pct_change_oldest_to_latest||0).toFixed(0)}%
+        </div>
+        <div class="mom-rev">$${fmt0(item.revenue_latest_week||0)}/wk</div>
+      </div>`).join('')
+  }</div>`;
+}
+
+// ═══════════════════════════════════════════════════════════════════════════
+// HISTORICAL PANE
+// ═══════════════════════════════════════════════════════════════════════════
+function renderHistorical() {
+  const all  = DATA.historical || [];
+  const search = (document.getElementById('historical-search')?.value||'').toLowerCase();
+  const monthOnly = document.getElementById('hist-monthly-only')?.checked;
+  let items = all.filter(item => {
+    if (PROTECTED_VIEW && !item.is_profit_protected && !item.is_revenue_protected) return false;
+    if (monthOnly && !item.in_monthly) return false;
+    if (search && !(item.display_name||item.name).toLowerCase().includes(search)) return false;
+    return true;
+  });
+
+  const sortCols = item => [
+    (item.display_name||item.name), item.category, item.monthly_revenue||0,
+    item.yearly_revenue||0, item.est_weekly_from_monthly||0,
+    item.est_weekly_from_yearly||0, item.recent_weekly_velocity||0, item.trend_vs_monthly||0
+  ];
+  items = sortRows(items, 'historical-table', sortCols);
+  if (!SORT['historical-table']) items = [...items].sort((a,b)=>(b.monthly_revenue||0)-(a.monthly_revenue||0));
+
+  const tbody = document.getElementById('historical-body');
+  if (!items.length) { tbody.innerHTML = `<tr><td colspan="8" class="empty">No items match filters.</td></tr>`; return; }
+
+  tbody.innerHTML = items.slice(0, 200).map(item => {
+    const t = item.trend_vs_monthly;
+    let trendHtml = '—';
+    if (t != null) {
+      const cls = t > 10 ? 'color:var(--green);background:var(--green-light);border-color:#86efac'
+                 : t < -10 ? 'color:var(--red);background:var(--red-light);border-color:#fca5a5'
+                 : 'color:var(--muted);background:#f1f5f9;border-color:var(--border)';
+      trendHtml = `<span style="font-size:.75rem;font-weight:600;padding:1px 6px;border-radius:4px;border:1px solid;${cls}">${t>0?'+':''}${t.toFixed(0)}%</span>`;
+    }
+    const badges = [
+      item.in_monthly ? `<span class="badge badge-green" style="font-size:.65rem">monthly</span>` : '',
+      item.in_yearly  ? `<span class="badge badge-blue"  style="font-size:.65rem">yearly</span>`  : '',
+    ].join(' ');
+    return `<tr>
+      <td>
+        <div class="item-name">${esc(item.display_name||item.name)}</div>
+        <div style="margin-top:2px">${badges}</div>
+      </td>
+      <td style="font-size:.78rem;color:var(--faint)">${esc(item.category||'')}</td>
+      <td class="right">${item.monthly_revenue ? '$'+fmt0(item.monthly_revenue) : '—'}</td>
+      <td class="right">${item.yearly_revenue  ? '$'+fmt0(item.yearly_revenue)  : '—'}</td>
+      <td class="right">${item.est_weekly_from_monthly ? '$'+item.est_weekly_from_monthly.toFixed(0) : '—'}</td>
+      <td class="right">${item.est_weekly_from_yearly  ? '$'+item.est_weekly_from_yearly.toFixed(0)  : '—'}</td>
+      <td class="right" style="color:var(--blue);font-weight:500">${item.recent_weekly_velocity > 0 ? item.recent_weekly_velocity.toFixed(2)+' cs' : '—'}</td>
+      <td class="right">${trendHtml}</td>
+    </tr>`;
+  }).join('');
+
+  document.getElementById('hist-footer').textContent =
+    `Showing ${Math.min(items.length,200)} of ${items.length} items`;
+  initSort('historical-table');
+}
+
+// ═══════════════════════════════════════════════════════════════════════════
+// REVIVAL PANE
+// ═══════════════════════════════════════════════════════════════════════════
+function renderRevival() {
+  const raw = DATA.revival || [];
+  const allFiltered = raw.filter(r => !isDiscarded(r.name));
+  const totalRev = allFiltered.reduce((s,x)=>s+(x.est_weekly_revenue||0),0);
+  document.getElementById('revival-headline').innerHTML = `
+    <p style="font-size:.875rem;color:var(--purple)">
+      <strong style="font-size:1.2rem;color:#5b21b6">${allFiltered.length}</strong> items sold in 2025 but absent from Jan–Apr 2026 and all recent weeks.
+      <strong>≈$${fmt0(totalRev)}/wk</strong> in potential recovered revenue.
+    </p>
+    <p style="font-size:.75rem;color:#7c3aed;margin-top:4px;">
+      Est. revenue = 2025 total ÷ weeks in report. Order qty = 2 weeks of historical pace minus current stock.
+    </p>`;
+
+  const search = (document.getElementById('revival-search')?.value||'').toLowerCase();
+  const inStockOnly = document.getElementById('revival-in-stock')?.checked;
+  let items = allFiltered.filter(r => {
+    if (PROTECTED_VIEW && !r.is_profit_protected && !r.is_revenue_protected) return false;
+    if (inStockOnly && !r.in_inventory) return false;
+    if (search && !(r.display_name||r.name).toLowerCase().includes(search)) return false;
+    return true;
+  });
+
+  const tops = items.filter(r=>r.top_pick);
+  const rest = items.filter(r=>!r.top_pick);
+
+  // Insights
+  const topRev = tops.slice(0,3).map(r=>r.display_name||r.name).join(', ');
+  renderInsights('insights-revival', [
+    tops.length ? { icon:'⭐', color:'amber', text:`Top 20 picks include ${topRev} — highest historical revenue, most worth chasing with your rep.` } : null,
+    { icon:'📦', color:'purple', text:`${items.filter(r=>r.in_inventory).length} revival items are still in your system — just need to be reordered.` },
+  ].filter(Boolean));
+
+  const tHead = `<thead><tr>
+    <th style="width:30px">#</th>
+    <th>Item</th>
+    <th class="right">2025 Rev</th>
+    <th class="right">Est $/wk</th>
+    <th class="right">Hist. Margin</th>
+    <th class="right">In System?</th>
+    <th class="right">Stock</th>
+    <th class="right" style="background:var(--purple-light)">Order Cases</th>
+    <th>Rationale</th>
+    <th></th>
+  </tr></thead>`;
+
+  function revRows(arr, highlight = false) {
+    return arr.map(r => `<tr style="${highlight?'background:#fefce8':'}">
+      <td style="color:var(--faint);font-size:.78rem">${r.revival_rank}</td>
+      <td>
+        <div class="item-name">${esc(r.display_name||r.name)}</div>
+        <div class="item-sub">${esc(r.category||'')}</div>
+        ${r.is_limited_edition ? `<span class="badge badge-amber" style="font-size:.65rem">limited</span>` : ''}
+      </td>
+      <td class="right">$${fmt0(r.yearly_revenue||0)}</td>
+      <td class="right" style="font-weight:600;color:var(--purple)">$${(r.est_weekly_revenue||0).toFixed(0)}</td>
+      <td class="right">${r.margin_pct_historical>0?pct(r.margin_pct_historical):'—'}</td>
+      <td class="right">${r.in_inventory
+        ? `<span style="color:var(--green);font-weight:600">✓ Yes</span>`
+        : `<span style="color:var(--faint)">✗ No</span>`}</td>
+      <td class="right">${r.in_inventory ? (r.current_stock_cases||0).toFixed(1)+' cs' : '—'}</td>
+      <td class="right" style="background:var(--purple-light)">
+        <strong style="color:var(--purple)">${r.suggested_order_cases}</strong>
+        <span style="font-size:.72rem;color:var(--faint)"> cs</span>
+      </td>
+      <td style="font-size:.78rem;color:var(--muted);max-width:160px">${esc(r.revival_rationale||'')}</td>
+      <td>${discardBtn(r.name)}</td>
+    </tr>`).join('');
   }
 
-  const revHead = `<tr>
-    ${th('#','')} ${th('Item','')} ${thr('2025 Revenue','Total 2025 revenue')} ${thr('Txns','')} ${thr('Est $/wk','2025 revenue ÷ report weeks')}
-    ${thr('Hist Margin','')} ${th('In System?','','text-center')} ${thr('Stock','')} ${thr('Order Cases','2 wks velocity – current stock','bg-purple-50')} ${th('Rationale','')} ${th('','')}
-  </tr>`;
-
-  const topsBody = sBy==='category'?catGroupHtml(tops,revRow,11):tops.map(revRow).join('');
-  const restItems = showAll?rest:rest.slice(0,30);
-  const restBody  = sBy==='category'?catGroupHtml(restItems,revRow,11):restItems.map(revRow).join('');
-
-  return `
-    <div class="rounded-lg bg-purple-50 border border-purple-200 p-4 mb-4">
-      <p class="text-sm text-purple-700">
-        <strong class="text-lg text-purple-800">${all.length}</strong> items sold in 2025 but absent from Jan–Apr 2026 and recent weekly reports.
-        <strong>≈$${totalRev.toFixed(0)}/wk</strong> in potential recovered revenue.
-      </p>
-    </div>
-    ${controlBar('revival',
-      `<label class="flex items-center gap-1.5 text-xs text-gray-500 cursor-pointer">
-        <input type="checkbox" ${inStockOnly?'checked':''} onchange="S.revivalInStock=this.checked;renderPanel()"/> In inventory only
-       </label>`+
-      `<div class="flex gap-1 ml-2 pl-2 border-l">${sortBtn('revival','revenue','Sort: Revenue')}${sortBtn('revival','category','Sort: Category')}</div>`
-    )}
-
-    ${tops.length?`
-    <div class="mb-6">
-      <div class="flex items-center gap-2 mb-2">
-        <span class="text-base font-bold text-yellow-700">⭐ Top 20 Revival Picks</span>
-        <span class="text-xs text-gray-400">— highest historical weekly revenue</span>
-      </div>
-      <div class="rounded-lg border-2 border-yellow-300 overflow-hidden shadow-sm">
-        ${tbl(`${revHead}`,topsBody)}
-      </div>
-    </div>`:''}
-
-    ${rest.length?`
-    <div>
-      <div class="flex items-center gap-2 mb-2">
-        <span class="text-sm font-semibold text-gray-600">Other candidates (${rest.length})</span>
-        ${!showAll&&rest.length>30?`<button onclick="S.showAll.revival=true;renderPanel()" class="text-xs text-blue-500 underline">Show all</button>`:''}
-      </div>
-      <div class="rounded-lg border border-gray-200 overflow-hidden shadow-sm">
-        ${tbl(`${revHead}`,restBody)}
-      </div>
-      ${!showAll&&rest.length>30?`<button onclick="S.showAll.revival=true;renderPanel()" class="mt-2 text-xs text-blue-500 underline">+ ${rest.length-30} more…</button>`:''}
-    </div>`:''}
-
-    <p class="text-xs text-gray-400 mt-3">☆ override = include this limited/vintage item anyway. Flags saved to browser (localStorage).</p>`;
-}
-
-function toggleLtdOverride(name) {
-  const lc = name.toLowerCase();
-  const cur = S.flags.limited_edition_overrides||[];
-  if(cur.map(n=>n.toLowerCase()).includes(lc)) {
-    S.flags.limited_edition_overrides = cur.filter(n=>n.toLowerCase()!==lc);
-  } else {
-    S.flags.limited_edition_overrides = [...cur, name];
+  const html = [];
+  if (tops.length) {
+    html.push(`
+      <div style="margin-bottom:20px;">
+        <div style="display:flex;align-items:center;gap:8px;margin-bottom:8px;">
+          <span style="font-size:1rem;font-weight:700;color:#b45309">⭐ Top 20 Revival Picks</span>
+          <span style="font-size:.78rem;color:var(--faint)">— highest historical revenue</span>
+        </div>
+        <div class="table-wrap" style="border:2px solid #fcd34d">
+          <table>${tHead}<tbody>${revRows(tops, true)}</tbody></table>
+        </div>
+      </div>`);
   }
-  saveFlags(); renderPanel();
-}
-
-// ── Help / Briefing ───────────────────────────────────────────────────────────
-function toggleHelp() {
-  const overlay = document.getElementById('help-overlay');
-  const drawer  = document.getElementById('help-drawer');
-  const isOpen  = drawer.classList.contains('open');
-  if(isOpen) {
-    drawer.classList.remove('open'); overlay.classList.add('hidden');
-  } else {
-    document.getElementById('help-content').innerHTML = getBriefingHtml();
-    drawer.classList.add('open'); overlay.classList.remove('hidden');
+  if (rest.length) {
+    html.push(`
+      <div>
+        <div style="font-size:.875rem;font-weight:600;color:var(--muted);margin-bottom:8px;">
+          Other candidates (${rest.length})
+        </div>
+        <div class="table-wrap">
+          <table>${tHead}<tbody>${revRows(rest)}</tbody></table>
+        </div>
+      </div>`);
   }
+
+  document.getElementById('revival-content').innerHTML = html.join('') ||
+    '<p class="empty">No revival candidates match filters.</p>';
 }
 
-function getBriefingHtml() {
-  const s = S.data.summary||{};
-  const sm = s.store_margin||{};
-  return `
-    <div class="space-y-5">
-      <div class="rounded-lg bg-blue-50 border border-blue-200 p-3">
-        <h3 class="font-bold text-blue-800 mb-1">This Week at a Glance</h3>
-        <p class="text-sm text-blue-700">Revenue: <strong>$${(sm.latest_week_revenue||0).toLocaleString()}</strong> · True margin: <strong>${(sm.latest_week_true_margin_pct||0).toFixed(1)}%</strong></p>
-        <p class="text-sm text-blue-700">Orders needed: <strong>${s.orders_critical||0} CRITICAL + ${s.orders_high||0} HIGH</strong></p>
-        <p class="text-sm text-blue-700">Margin drag: <strong>$${(s.margin_total_dollar_drag||0).toFixed(0)}/wk</strong> · Pricing upside: <strong>$${(s.pricing_annual_upside||0).toLocaleString(undefined,{maximumFractionDigits:0})}/yr</strong></p>
-      </div>
-
-      <div>
-        <h3 class="font-bold text-gray-800 mb-2">📦 Orders Tab</h3>
-        <p>Items flagged because stock will run out within 1–2 weeks at current sales pace. CRITICAL = already out or a top-profit item nearly out. Order cases shown = what to buy to reach ~2 weeks of stock.</p>
-        <p class="mt-1 text-gray-500 text-xs">PROFIT badge = top-profit item (always prioritise). REV badge = top-revenue item.</p>
-      </div>
-
-      <div>
-        <h3 class="font-bold text-gray-800 mb-2">📈 Momentum Tab</h3>
-        <p>Shows which items are trending up or down over the last 4 weeks. Use Rising for products to push and double-stock; use Falling as an early warning to cut orders.</p>
-        <p class="mt-1 text-gray-500 text-xs">% = oldest week vs newest week velocity. $/wk = latest week revenue only.</p>
-      </div>
-
-      <div>
-        <h3 class="font-bold text-gray-800 mb-2">📊 Historical Tab</h3>
-        <p>Baseline comparison between Jan–Apr 2026 monthly data and full-year 2025. The Trend badge shows if an item is selling faster or slower recently vs its Jan–Apr average.</p>
-      </div>
-
-      <div>
-        <h3 class="font-bold text-gray-800 mb-2">💸 Margins Tab</h3>
-        <p>Items below their category minimum margin floor. $ Drag = the weekly profit you're leaving on the table.</p>
-        <ul class="mt-1 space-y-0.5 text-xs text-gray-500">
-          <li><strong>Pricing Error</strong> — your shelf price is too low. Fix it in POS.</li>
-          <li><strong>Structural</strong> — chain-priced item (e.g. Carlton). Hard to raise without losing sales.</li>
-          <li><strong>Promo</strong> — Bottlemart deal running. Chain reimburses you. No action needed.</li>
-        </ul>
-      </div>
-
-      <div>
-        <h3 class="font-bold text-gray-800 mb-2">💰 Pricing Tab</h3>
-        <p>Items where raising the price would bring margin up to the floor. Only shows stable/rising items — falling items excluded. Risk LOW = safe to increase; HIGH = verify first.</p>
-        <p class="mt-1 text-gray-500 text-xs">Current $ = single-unit shelf price from inventory. Suggested $ capped at +15%, rounded to $0.50.</p>
-      </div>
-
-      <div>
-        <h3 class="font-bold text-gray-800 mb-2">🔄 Revival Tab</h3>
-        <p>Items that were selling in 2025 but haven't appeared in any 2026 data. Top 20 are ranked by estimated weekly revenue recovery. Order suggested = 2 weeks of historical pace.</p>
-        <p class="mt-1 text-gray-500 text-xs">Kegs and limited/vintage editions are auto-excluded. Use ☆ override to include a limited item you still want to stock.</p>
-      </div>
-
-      <div class="rounded-lg bg-gray-50 border border-gray-200 p-3">
-        <h3 class="font-bold text-gray-800 mb-1">Handover Notes</h3>
-        <p class="text-xs text-gray-600">To refresh data: run <code class="bg-gray-200 px-1 rounded">python run_analysis.py</code> in the BMSS Order App folder, then copy the data/ JSON files here and push.</p>
-        <p class="text-xs text-gray-600 mt-1">Obsolete/override flags are saved to your browser (localStorage). They won't transfer between devices.</p>
-      </div>
-    </div>`;
+// ═══════════════════════════════════════════════════════════════════════════
+// UTILS
+// ═══════════════════════════════════════════════════════════════════════════
+function esc(s) {
+  return String(s||'').replace(/&/g,'&amp;').replace(/</g,'&lt;').replace(/>/g,'&gt;').replace(/"/g,'&quot;');
 }
+function fmt0(n) { return Number(n||0).toLocaleString(undefined,{maximumFractionDigits:0}); }
+function pct(n) { return (n||0).toFixed(1)+'%'; }
 
-// ── Boot ──────────────────────────────────────────────────────────────────────
-document.addEventListener('DOMContentLoaded', loadAll);
+// ═══════════════════════════════════════════════════════════════════════════
+// INIT
+// ═══════════════════════════════════════════════════════════════════════════
+loadData();
 </script>
 </body>
 </html>

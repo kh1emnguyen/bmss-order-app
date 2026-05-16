@@ -11,7 +11,8 @@
     "recent_weekly_velocity": 44.25,
     "trend_vs_monthly": -95.6,
     "in_monthly": true,
-    "in_yearly": true
+    "in_yearly": true,
+    "display_name": "Carlton Draught Keg JUG 1140ml"
   },
   {
     "name": "Carlton Draught Can 375ml 24pk",
@@ -25,7 +26,8 @@
     "recent_weekly_velocity": 8.729,
     "trend_vs_monthly": -99.1,
     "in_monthly": true,
-    "in_yearly": true
+    "in_yearly": true,
+    "display_name": "Carlton Draught Can 375ml"
   },
   {
     "name": "Carlton Draught Bt 375ml 24pk",
@@ -39,7 +41,8 @@
     "recent_weekly_velocity": 7.802,
     "trend_vs_monthly": -99.1,
     "in_monthly": true,
-    "in_yearly": true
+    "in_yearly": true,
+    "display_name": "Carlton Draught Bt 375ml"
   },
   {
     "name": "Victoria Bitter Bt 375ml 24pk",
@@ -53,7 +56,8 @@
     "recent_weekly_velocity": 13.719,
     "trend_vs_monthly": -98.5,
     "in_monthly": true,
-    "in_yearly": true
+    "in_yearly": true,
+    "display_name": "Victoria Bitter Bt 375ml"
   },
   {
     "name": "Victoria Bitter Can 375ml",
@@ -67,7 +71,8 @@
     "recent_weekly_velocity": 6.51,
     "trend_vs_monthly": -99.3,
     "in_monthly": true,
-    "in_yearly": true
+    "in_yearly": true,
+    "display_name": "Victoria Bitter Can 375ml"
   },
   {
     "name": "Woodstock Bourbon & Cola Reserve 12% Can 200ml 24p",
@@ -81,7 +86,8 @@
     "recent_weekly_velocity": 4.0,
     "trend_vs_monthly": -99.5,
     "in_monthly": true,
-    "in_yearly": true
+    "in_yearly": true,
+    "display_name": "Woodstock Bourbon & Cola Reserve 12% Can 200ml"
   },
   {
     "name": "Corona Extra Bt 355ml",
@@ -95,7 +101,8 @@
     "recent_weekly_velocity": 9.281,
     "trend_vs_monthly": -98.7,
     "in_monthly": true,
-    "in_yearly": true
+    "in_yearly": true,
+    "display_name": "Corona Extra Bt 355ml"
   },
   {
     "name": "Johnnie Walker Blue Chinese New Year Dragon 2024 750ml",
@@ -109,7 +116,8 @@
     "recent_weekly_velocity": 0.0,
     "trend_vs_monthly": null,
     "in_monthly": false,
-    "in_yearly": true
+    "in_yearly": true,
+    "display_name": "Johnnie Walker Blue Chinese New Year Dragon 2024 750ml"
   },
   {
     "name": "Martell Cognac Blue Swift 700ml",
@@ -123,7 +131,8 @@
     "recent_weekly_velocity": 0.792,
     "trend_vs_monthly": -99.9,
     "in_monthly": true,
-    "in_yearly": true
+    "in_yearly": true,
+    "display_name": "Martell Cognac Blue Swift 700ml"
   },
   {
     "name": "Drink Here-$2",
@@ -137,7 +146,8 @@
     "recent_weekly_velocity": 281.25,
     "trend_vs_monthly": -50.1,
     "in_monthly": true,
-    "in_yearly": true
+    "in_yearly": true,
+    "display_name": "Drink Here-$2"
   },
   {
     "name": "Johnnie Walker Blue LNY Snake 2025 750ml",
@@ -151,7 +161,8 @@
     "recent_weekly_velocity": 0.0,
     "trend_vs_monthly": null,
     "in_monthly": false,
-    "in_yearly": true
+    "in_yearly": true,
+    "display_name": "Johnnie Walker Blue LNY Snake 2025 750ml"
   },
   {
     "name": "Wild Boar 15% Bourbon&Cola 375ml",
@@ -165,7 +176,8 @@
     "recent_weekly_velocity": 0.76,
     "trend_vs_monthly": -99.8,
     "in_monthly": true,
-    "in_yearly": true
+    "in_yearly": true,
+    "display_name": "Wild Boar 15% Bourbon&Cola 375ml"
   },
   {
     "name": "Heineken Bt 330ml",
@@ -179,7 +191,8 @@
     "recent_weekly_velocity": 6.49,
     "trend_vs_monthly": -98.5,
     "in_monthly": true,
-    "in_yearly": true
+    "in_yearly": true,
+    "display_name": "Heineken Bt 330ml"
   },
   {
     "name": "Mercury Blackcurrant Cider Can 375ml",
@@ -193,7 +206,8 @@
     "recent_weekly_velocity": 0.0,
     "trend_vs_monthly": null,
     "in_monthly": false,
-    "in_yearly": true
+    "in_yearly": true,
+    "display_name": "Mercury Blackcurrant Cider Can 375ml"
   },
   {
     "name": "Martell LNY 2025 Cordon Bleu 750ml",
@@ -207,7 +221,8 @@
     "recent_weekly_velocity": 0.0,
     "trend_vs_monthly": null,
     "in_monthly": false,
-    "in_yearly": true
+    "in_yearly": true,
+    "display_name": "Martell LNY 2025 Cordon Bleu 750ml"
   },
   {
     "name": "Jim Beam White & Cola Can 375ml 30pk",
@@ -221,7 +236,8 @@
     "recent_weekly_velocity": 1.604,
     "trend_vs_monthly": -99.5,
     "in_monthly": true,
-    "in_yearly": true
+    "in_yearly": true,
+    "display_name": "Jim Beam White & Cola Can 375ml"
   },
   {
     "name": "Asahi Super Dry Bt 330ml",
@@ -235,7 +251,8 @@
     "recent_weekly_velocity": 4.25,
     "trend_vs_monthly": -98.7,
     "in_monthly": true,
-    "in_yearly": true
+    "in_yearly": true,
+    "display_name": "Asahi Super Dry Bt 330ml"
   },
   {
     "name": "Jim Beam Black Double Serve & Cola 6.9% Can 375ml",
@@ -249,7 +266,8 @@
     "recent_weekly_velocity": 0.896,
     "trend_vs_monthly": -99.7,
     "in_monthly": true,
-    "in_yearly": true
+    "in_yearly": true,
+    "display_name": "Jim Beam Black Double Serve & Cola 6.9% Can 375ml"
   },
   {
     "name": "Carlton Dry Btl 330ml",
@@ -263,7 +281,8 @@
     "recent_weekly_velocity": 3.365,
     "trend_vs_monthly": -98.9,
     "in_monthly": true,
-    "in_yearly": true
+    "in_yearly": true,
+    "display_name": "Carlton Dry Btl 330ml"
   },
   {
     "name": "Penfolds B389 Cab Shiraz 2019 750ml",
@@ -277,7 +296,8 @@
     "recent_weekly_velocity": 0.0,
     "trend_vs_monthly": null,
     "in_monthly": false,
-    "in_yearly": true
+    "in_yearly": true,
+    "display_name": "Penfolds B389 Cab Shiraz 2019 750ml"
   },
   {
     "name": "Woodstock Bourbon & Cola 4.8% Can 375ml 30pk",
@@ -291,7 +311,8 @@
     "recent_weekly_velocity": 1.177,
     "trend_vs_monthly": -99.6,
     "in_monthly": true,
-    "in_yearly": true
+    "in_yearly": true,
+    "display_name": "Woodstock Bourbon & Cola 4.8% Can 375ml"
   },
   {
     "name": "Carlton Pure Blonde Bt 330ml",
@@ -305,7 +326,8 @@
     "recent_weekly_velocity": 2.99,
     "trend_vs_monthly": -99.0,
     "in_monthly": true,
-    "in_yearly": true
+    "in_yearly": true,
+    "display_name": "Carlton Pure Blonde Bt 330ml"
   },
   {
     "name": "Great Northern BC Original Lager 4.2% Bt 330ml 24p",
@@ -319,7 +341,8 @@
     "recent_weekly_velocity": 5.25,
     "trend_vs_monthly": -98.2,
     "in_monthly": true,
-    "in_yearly": true
+    "in_yearly": true,
+    "display_name": "Great Northern BC Original Lager 4.2% Bt 330ml"
   },
   {
     "name": "Crown Lager Bt 375ml 24pk",
@@ -333,7 +356,8 @@
     "recent_weekly_velocity": 2.729,
     "trend_vs_monthly": -99.1,
     "in_monthly": true,
-    "in_yearly": true
+    "in_yearly": true,
+    "display_name": "Crown Lager Bt 375ml"
   },
   {
     "name": "Macallan 18YO Double Cask 700ml",
@@ -347,7 +371,8 @@
     "recent_weekly_velocity": 0.0,
     "trend_vs_monthly": null,
     "in_monthly": false,
-    "in_yearly": true
+    "in_yearly": true,
+    "display_name": "Macallan 18YO Double Cask 700ml"
   },
   {
     "name": "Macallan Rare Cask 700ml",
@@ -361,7 +386,8 @@
     "recent_weekly_velocity": 0.0,
     "trend_vs_monthly": null,
     "in_monthly": false,
-    "in_yearly": true
+    "in_yearly": true,
+    "display_name": "Macallan Rare Cask 700ml"
   },
   {
     "name": "Wyndham Est Bin 999 Merlot 750ml",
@@ -375,7 +401,8 @@
     "recent_weekly_velocity": 0.0,
     "trend_vs_monthly": null,
     "in_monthly": false,
-    "in_yearly": true
+    "in_yearly": true,
+    "display_name": "Wyndham Est Bin 999 Merlot 750ml"
   },
   {
     "name": "Grants Fam Reserve Scotch Whisky 1L 6pk",
@@ -389,7 +416,8 @@
     "recent_weekly_velocity": 0.135,
     "trend_vs_monthly": -100.0,
     "in_monthly": true,
-    "in_yearly": true
+    "in_yearly": true,
+    "display_name": "Grants Fam Reserve Scotch Whisky 1L"
   },
   {
     "name": "Woodstock Bourbon & Cola 8% Can 375ml 30pk",
@@ -403,7 +431,8 @@
     "recent_weekly_velocity": 0.792,
     "trend_vs_monthly": -99.7,
     "in_monthly": true,
-    "in_yearly": true
+    "in_yearly": true,
+    "display_name": "Woodstock Bourbon & Cola 8% Can 375ml"
   },
   {
     "name": "Macallan 18YO Sherry Oak 700ml",
@@ -417,7 +446,8 @@
     "recent_weekly_velocity": 0.0,
     "trend_vs_monthly": null,
     "in_monthly": false,
-    "in_yearly": true
+    "in_yearly": true,
+    "display_name": "Macallan 18YO Sherry Oak 700ml"
   },
   {
     "name": "Kingfisher Extra Strong Can 500ml",
@@ -431,7 +461,8 @@
     "recent_weekly_velocity": 0.0,
     "trend_vs_monthly": null,
     "in_monthly": false,
-    "in_yearly": true
+    "in_yearly": true,
+    "display_name": "Kingfisher Extra Strong Can 500ml"
   },
   {
     "name": "Asahi Super Dry Can 500ml",
@@ -445,7 +476,8 @@
     "recent_weekly_velocity": 2.177,
     "trend_vs_monthly": -99.1,
     "in_monthly": true,
-    "in_yearly": true
+    "in_yearly": true,
+    "display_name": "Asahi Super Dry Can 500ml"
   },
   {
     "name": "Woodstock Bourbon & Cola 6% Can 375ml 30pk",
@@ -459,7 +491,8 @@
     "recent_weekly_velocity": 1.833,
     "trend_vs_monthly": -99.3,
     "in_monthly": true,
-    "in_yearly": true
+    "in_yearly": true,
+    "display_name": "Woodstock Bourbon & Cola 6% Can 375ml"
   },
   {
     "name": "Martell Blue Swift LNY 2025 Gift Box 700ml",
@@ -473,7 +506,8 @@
     "recent_weekly_velocity": 0.0,
     "trend_vs_monthly": null,
     "in_monthly": false,
-    "in_yearly": true
+    "in_yearly": true,
+    "display_name": "Martell Blue Swift LNY 2025 Gift Box 700ml"
   },
   {
     "name": "Carlton Draught Keg Schooner",
@@ -487,7 +521,8 @@
     "recent_weekly_velocity": 14.75,
     "trend_vs_monthly": -93.8,
     "in_monthly": true,
-    "in_yearly": true
+    "in_yearly": true,
+    "display_name": "Carlton Draught Keg Schooner"
   },
   {
     "name": "Johnnie Walker Red Label 375ml",
@@ -501,7 +536,8 @@
     "recent_weekly_velocity": 0.0,
     "trend_vs_monthly": null,
     "in_monthly": false,
-    "in_yearly": true
+    "in_yearly": true,
+    "display_name": "Johnnie Walker Red Label 375ml"
   },
   {
     "name": "Carlton Draught Kegs Pint 570ml",
@@ -515,7 +551,8 @@
     "recent_weekly_velocity": 14.0,
     "trend_vs_monthly": -93.8,
     "in_monthly": true,
-    "in_yearly": true
+    "in_yearly": true,
+    "display_name": "Carlton Draught Kegs Pint 570ml"
   },
   {
     "name": "Divas Retro Ruby Raspberry Bt 330ml 24pk",
@@ -529,7 +566,8 @@
     "recent_weekly_velocity": 1.354,
     "trend_vs_monthly": -99.4,
     "in_monthly": true,
-    "in_yearly": true
+    "in_yearly": true,
+    "display_name": "Divas Retro Ruby Raspberry Bt 330ml"
   },
   {
     "name": "Jim Beam White Bourbon 375ml",
@@ -543,7 +581,8 @@
     "recent_weekly_velocity": 0.229,
     "trend_vs_monthly": -99.9,
     "in_monthly": true,
-    "in_yearly": true
+    "in_yearly": true,
+    "display_name": "Jim Beam White Bourbon 375ml"
   },
   {
     "name": "Jim Beam White Bourbon 200ml",
@@ -557,7 +596,8 @@
     "recent_weekly_velocity": 0.188,
     "trend_vs_monthly": -99.9,
     "in_monthly": true,
-    "in_yearly": true
+    "in_yearly": true,
+    "display_name": "Jim Beam White Bourbon 200ml"
   },
   {
     "name": "Jack Daniels Black Label 700ml 12pk",
@@ -571,7 +611,8 @@
     "recent_weekly_velocity": 0.198,
     "trend_vs_monthly": -99.9,
     "in_monthly": true,
-    "in_yearly": true
+    "in_yearly": true,
+    "display_name": "Jack Daniels Black Label 700ml"
   },
   {
     "name": "Sapporo Premium Beer Bt 355ml 24pk",
@@ -585,7 +626,8 @@
     "recent_weekly_velocity": 3.531,
     "trend_vs_monthly": -98.2,
     "in_monthly": true,
-    "in_yearly": true
+    "in_yearly": true,
+    "display_name": "Sapporo Premium Beer Bt 355ml"
   },
   {
     "name": "Smirnoff Vodka Red 700ml",
@@ -599,7 +641,8 @@
     "recent_weekly_velocity": 0.146,
     "trend_vs_monthly": -99.9,
     "in_monthly": true,
-    "in_yearly": true
+    "in_yearly": true,
+    "display_name": "Smirnoff Vodka Red 700ml"
   },
   {
     "name": "Canadian Club Whisky 1L",
@@ -613,7 +656,8 @@
     "recent_weekly_velocity": 0.365,
     "trend_vs_monthly": -99.8,
     "in_monthly": true,
-    "in_yearly": true
+    "in_yearly": true,
+    "display_name": "Canadian Club Whisky 1L"
   },
   {
     "name": "Smirnoff Vodka Red 1L 6pk",
@@ -627,7 +671,8 @@
     "recent_weekly_velocity": 0.139,
     "trend_vs_monthly": -99.9,
     "in_monthly": true,
-    "in_yearly": true
+    "in_yearly": true,
+    "display_name": "Smirnoff Vodka Red 1L"
   },
   {
     "name": "Heineken Can 500ml 24pk",
@@ -641,7 +686,8 @@
     "recent_weekly_velocity": 1.49,
     "trend_vs_monthly": -99.2,
     "in_monthly": true,
-    "in_yearly": true
+    "in_yearly": true,
+    "display_name": "Heineken Can 500ml"
   },
   {
     "name": "Chivas 25YO 700ml",
@@ -655,7 +701,8 @@
     "recent_weekly_velocity": 0.0,
     "trend_vs_monthly": null,
     "in_monthly": false,
-    "in_yearly": true
+    "in_yearly": true,
+    "display_name": "Chivas 25YO 700ml"
   },
   {
     "name": "Johnnie Walker Blue LNY Horse 750ml",
@@ -669,7 +716,8 @@
     "recent_weekly_velocity": 0.0,
     "trend_vs_monthly": -100.0,
     "in_monthly": true,
-    "in_yearly": true
+    "in_yearly": true,
+    "display_name": "Johnnie Walker Blue LNY Horse 750ml"
   },
   {
     "name": "Martell Noblige 1L",
@@ -683,7 +731,8 @@
     "recent_weekly_velocity": 0.0,
     "trend_vs_monthly": null,
     "in_monthly": false,
-    "in_yearly": true
+    "in_yearly": true,
+    "display_name": "Martell Noblige 1L"
   },
   {
     "name": "Macallan Rare Cask Nuco 700ml",
@@ -697,7 +746,8 @@
     "recent_weekly_velocity": 0.0,
     "trend_vs_monthly": null,
     "in_monthly": false,
-    "in_yearly": true
+    "in_yearly": true,
+    "display_name": "Macallan Rare Cask Nuco 700ml"
   },
   {
     "name": "Penfolds B28 Shiraz 2022 750ml",
@@ -711,7 +761,8 @@
     "recent_weekly_velocity": 0.0,
     "trend_vs_monthly": null,
     "in_monthly": false,
-    "in_yearly": true
+    "in_yearly": true,
+    "display_name": "Penfolds B28 Shiraz 2022 750ml"
   },
   {
     "name": "Hard Rated Lemon Seltzer 375ml",
@@ -725,7 +776,8 @@
     "recent_weekly_velocity": 0.802,
     "trend_vs_monthly": -99.5,
     "in_monthly": true,
-    "in_yearly": true
+    "in_yearly": true,
+    "display_name": "Hard Rated Lemon Seltzer 375ml"
   },
   {
     "name": "Johnnie Walker Ghost & Rare Port Dundas 750ml",
@@ -739,7 +791,8 @@
     "recent_weekly_velocity": 0.0,
     "trend_vs_monthly": null,
     "in_monthly": false,
-    "in_yearly": true
+    "in_yearly": true,
+    "display_name": "Johnnie Walker Ghost & Rare Port Dundas 750ml"
   },
   {
     "name": "Vodka O Nuco 700ml",
@@ -753,7 +806,8 @@
     "recent_weekly_velocity": 0.0,
     "trend_vs_monthly": null,
     "in_monthly": false,
-    "in_yearly": true
+    "in_yearly": true,
+    "display_name": "Vodka O Nuco 700ml"
   },
   {
     "name": "Carlton Dry Can 375ml",
@@ -767,7 +821,8 @@
     "recent_weekly_velocity": 1.0,
     "trend_vs_monthly": -99.4,
     "in_monthly": true,
-    "in_yearly": true
+    "in_yearly": true,
+    "display_name": "Carlton Dry Can 375ml"
   },
   {
     "name": "Jim Beam White Bourbon 700ml 12pk",
@@ -781,7 +836,8 @@
     "recent_weekly_velocity": 0.104,
     "trend_vs_monthly": -99.9,
     "in_monthly": true,
-    "in_yearly": true
+    "in_yearly": true,
+    "display_name": "Jim Beam White Bourbon 700ml"
   },
   {
     "name": "MACALLAN CLASSIC CUT 51% 700ML",
@@ -795,7 +851,8 @@
     "recent_weekly_velocity": 0.0,
     "trend_vs_monthly": null,
     "in_monthly": false,
-    "in_yearly": true
+    "in_yearly": true,
+    "display_name": "MACALLAN CLASSIC CUT 51% 700ML"
   },
   {
     "name": "Coronita Extra Bt 210ml 24pk",
@@ -809,7 +866,8 @@
     "recent_weekly_velocity": 2.0,
     "trend_vs_monthly": -98.7,
     "in_monthly": true,
-    "in_yearly": true
+    "in_yearly": true,
+    "display_name": "Coronita Extra Bt 210ml"
   },
   {
     "name": "Jameson Irish Whisky 700ml",
@@ -823,7 +881,8 @@
     "recent_weekly_velocity": 0.344,
     "trend_vs_monthly": -99.8,
     "in_monthly": true,
-    "in_yearly": true
+    "in_yearly": true,
+    "display_name": "Jameson Irish Whisky 700ml"
   },
   {
     "name": "Balter XPA PINT",
@@ -837,7 +896,8 @@
     "recent_weekly_velocity": 0.0,
     "trend_vs_monthly": null,
     "in_monthly": false,
-    "in_yearly": true
+    "in_yearly": true,
+    "display_name": "Balter XPA PINT"
   },
   {
     "name": "Jack Daniels Black Label 350ml Promo",
@@ -851,7 +911,8 @@
     "recent_weekly_velocity": 0.156,
     "trend_vs_monthly": -99.9,
     "in_monthly": true,
-    "in_yearly": true
+    "in_yearly": true,
+    "display_name": "Jack Daniels Black Label 350ml Promo"
   },
   {
     "name": "-196 Lemon 9% 250ml",
@@ -865,7 +926,8 @@
     "recent_weekly_velocity": 1.615,
     "trend_vs_monthly": -98.9,
     "in_monthly": true,
-    "in_yearly": true
+    "in_yearly": true,
+    "display_name": "-196 Lemon 9% 250ml"
   },
   {
     "name": "Lion Strong Beer 8.8% Bt 625ml",
@@ -879,7 +941,8 @@
     "recent_weekly_velocity": 0.469,
     "trend_vs_monthly": -99.7,
     "in_monthly": true,
-    "in_yearly": true
+    "in_yearly": true,
+    "display_name": "Lion Strong Beer 8.8% Bt 625ml"
   },
   {
     "name": "Smirnoff Ice Double Black 6.5% Can 375ml 30pk",
@@ -893,7 +956,8 @@
     "recent_weekly_velocity": 1.083,
     "trend_vs_monthly": -99.3,
     "in_monthly": true,
-    "in_yearly": true
+    "in_yearly": true,
+    "display_name": "Smirnoff Ice Double Black 6.5% Can 375ml"
   },
   {
     "name": "Hennessy VSOP LNY 2025 700ml",
@@ -907,7 +971,8 @@
     "recent_weekly_velocity": 0.0,
     "trend_vs_monthly": null,
     "in_monthly": false,
-    "in_yearly": true
+    "in_yearly": true,
+    "display_name": "Hennessy VSOP LNY 2025 700ml"
   },
   {
     "name": "Carlton Draught Bt 750ml 12pk",
@@ -921,7 +986,8 @@
     "recent_weekly_velocity": 0.646,
     "trend_vs_monthly": -99.6,
     "in_monthly": true,
-    "in_yearly": true
+    "in_yearly": true,
+    "display_name": "Carlton Draught Bt 750ml"
   },
   {
     "name": "Mercury Double Cider 250ml",
@@ -935,7 +1001,8 @@
     "recent_weekly_velocity": 1.844,
     "trend_vs_monthly": -98.7,
     "in_monthly": true,
-    "in_yearly": true
+    "in_yearly": true,
+    "display_name": "Mercury Double Cider 250ml"
   },
   {
     "name": "Hennessy XO Year of the Horse 750ml",
@@ -949,7 +1016,8 @@
     "recent_weekly_velocity": 0.0,
     "trend_vs_monthly": -100.0,
     "in_monthly": true,
-    "in_yearly": false
+    "in_yearly": false,
+    "display_name": "Hennessy XO Year of the Horse 750ml"
   },
   {
     "name": "THREE OAKS CIDER 10% 10PK375ML",
@@ -963,7 +1031,8 @@
     "recent_weekly_velocity": 1.625,
     "trend_vs_monthly": -98.9,
     "in_monthly": true,
-    "in_yearly": true
+    "in_yearly": true,
+    "display_name": "THREE OAKS CIDER 10% 10PK375ML"
   },
   {
     "name": "Martell Blue Swift Gift Pack 700ml",
@@ -977,7 +1046,8 @@
     "recent_weekly_velocity": 0.0,
     "trend_vs_monthly": -100.0,
     "in_monthly": true,
-    "in_yearly": false
+    "in_yearly": false,
+    "display_name": "Martell Blue Swift Gift Pack 700ml"
   },
   {
     "name": "Canadian Club Whisky 700ml 12pk",
@@ -991,7 +1061,8 @@
     "recent_weekly_velocity": 0.104,
     "trend_vs_monthly": -99.9,
     "in_monthly": true,
-    "in_yearly": true
+    "in_yearly": true,
+    "display_name": "Canadian Club Whisky 700ml"
   },
   {
     "name": "Jim Beam White Double Serve & Cola 6.7% Can 375ml 30pk",
@@ -1005,7 +1076,8 @@
     "recent_weekly_velocity": 1.125,
     "trend_vs_monthly": -99.2,
     "in_monthly": true,
-    "in_yearly": true
+    "in_yearly": true,
+    "display_name": "Jim Beam White Double Serve & Cola 6.7% Can 375ml"
   },
   {
     "name": "Martell Cognac XO Supreme 700ml 12pk",
@@ -1019,7 +1091,8 @@
     "recent_weekly_velocity": 0.083,
     "trend_vs_monthly": -99.9,
     "in_monthly": true,
-    "in_yearly": true
+    "in_yearly": true,
+    "display_name": "Martell Cognac XO Supreme 700ml"
   },
   {
     "name": "Coopers Sparkling Ale Bt 375ml 24pk",
@@ -1033,7 +1106,8 @@
     "recent_weekly_velocity": 0.708,
     "trend_vs_monthly": -99.5,
     "in_monthly": true,
-    "in_yearly": true
+    "in_yearly": true,
+    "display_name": "Coopers Sparkling Ale Bt 375ml"
   },
   {
     "name": "Johnnie Walker Green Malt 700ml",
@@ -1047,7 +1121,8 @@
     "recent_weekly_velocity": 0.0,
     "trend_vs_monthly": null,
     "in_monthly": false,
-    "in_yearly": true
+    "in_yearly": true,
+    "display_name": "Johnnie Walker Green Malt 700ml"
   },
   {
     "name": "Remy Martin XO Gift Bag 2024 700ML",
@@ -1061,7 +1136,8 @@
     "recent_weekly_velocity": 0.0,
     "trend_vs_monthly": null,
     "in_monthly": false,
-    "in_yearly": true
+    "in_yearly": true,
+    "display_name": "Remy Martin XO Gift Bag 2024 700ML"
   },
   {
     "name": "Hennessy XO LNY 2025 700ml",
@@ -1075,7 +1151,8 @@
     "recent_weekly_velocity": 0.0,
     "trend_vs_monthly": null,
     "in_monthly": false,
-    "in_yearly": true
+    "in_yearly": true,
+    "display_name": "Hennessy XO LNY 2025 700ml"
   },
   {
     "name": "Baileys Irish Cream 700ml",
@@ -1089,7 +1166,8 @@
     "recent_weekly_velocity": 0.0,
     "trend_vs_monthly": null,
     "in_monthly": false,
-    "in_yearly": true
+    "in_yearly": true,
+    "display_name": "Baileys Irish Cream 700ml"
   },
   {
     "name": "Absolut Vodka 1L 6pk",
@@ -1103,7 +1181,8 @@
     "recent_weekly_velocity": 0.069,
     "trend_vs_monthly": -99.9,
     "in_monthly": true,
-    "in_yearly": true
+    "in_yearly": true,
+    "display_name": "Absolut Vodka 1L"
   },
   {
     "name": "Strongbow Original Bt 355ml 24pk",
@@ -1117,7 +1196,8 @@
     "recent_weekly_velocity": 0.312,
     "trend_vs_monthly": -99.7,
     "in_monthly": true,
-    "in_yearly": true
+    "in_yearly": true,
+    "display_name": "Strongbow Original Bt 355ml"
   },
   {
     "name": "Jack Daniel & Cola Amer Ser 10% Can 250ml 20pk",
@@ -1131,7 +1211,8 @@
     "recent_weekly_velocity": 0.323,
     "trend_vs_monthly": -99.7,
     "in_monthly": true,
-    "in_yearly": true
+    "in_yearly": true,
+    "display_name": "Jack Daniel & Cola Amer Ser 10% Can 250ml"
   },
   {
     "name": "Hennessy VSOP Cognac 700ml 6pk",
@@ -1145,7 +1226,8 @@
     "recent_weekly_velocity": 0.083,
     "trend_vs_monthly": -99.9,
     "in_monthly": true,
-    "in_yearly": true
+    "in_yearly": true,
+    "display_name": "Hennessy VSOP Cognac 700ml"
   },
   {
     "name": "Little Fat Lamb Fireball 1.25L",
@@ -1159,7 +1241,8 @@
     "recent_weekly_velocity": 0.0,
     "trend_vs_monthly": null,
     "in_monthly": false,
-    "in_yearly": true
+    "in_yearly": true,
+    "display_name": "Little Fat Lamb Fireball 1.25L"
   },
   {
     "name": "Little Fat Lamb Brewed Pineapple Bt 1.25L",
@@ -1173,7 +1256,8 @@
     "recent_weekly_velocity": 0.0,
     "trend_vs_monthly": null,
     "in_monthly": false,
-    "in_yearly": true
+    "in_yearly": true,
+    "display_name": "Little Fat Lamb Brewed Pineapple Bt 1.25L"
   },
   {
     "name": "Penfolds B407 Cab Saub 2020 750ml",
@@ -1187,7 +1271,8 @@
     "recent_weekly_velocity": 0.0,
     "trend_vs_monthly": null,
     "in_monthly": false,
-    "in_yearly": true
+    "in_yearly": true,
+    "display_name": "Penfolds B407 Cab Saub 2020 750ml"
   },
   {
     "name": "Coopers Pale Ale PINT",
@@ -1201,7 +1286,8 @@
     "recent_weekly_velocity": 4.25,
     "trend_vs_monthly": -96.4,
     "in_monthly": true,
-    "in_yearly": true
+    "in_yearly": true,
+    "display_name": "Coopers Pale Ale PINT"
   },
   {
     "name": "Muhak Good Day Soju Green Grape Bt 360ml 20pk",
@@ -1215,7 +1301,8 @@
     "recent_weekly_velocity": 0.0,
     "trend_vs_monthly": null,
     "in_monthly": false,
-    "in_yearly": true
+    "in_yearly": true,
+    "display_name": "Muhak Good Day Soju Green Grape Bt 360ml"
   },
   {
     "name": "W/Turkey Rare Cola 8% Can 375ml 30pk",
@@ -1229,7 +1316,8 @@
     "recent_weekly_velocity": 0.667,
     "trend_vs_monthly": -99.4,
     "in_monthly": true,
-    "in_yearly": true
+    "in_yearly": true,
+    "display_name": "W/Turkey Rare Cola 8% Can 375ml"
   },
   {
     "name": "Singleton Malt Master 700ml",
@@ -1243,7 +1331,8 @@
     "recent_weekly_velocity": 0.0,
     "trend_vs_monthly": null,
     "in_monthly": false,
-    "in_yearly": true
+    "in_yearly": true,
+    "display_name": "Singleton Malt Master 700ml"
   },
   {
     "name": "MACALLAN HARMONY 44% 700ML",
@@ -1257,7 +1346,8 @@
     "recent_weekly_velocity": 0.0,
     "trend_vs_monthly": null,
     "in_monthly": false,
-    "in_yearly": true
+    "in_yearly": true,
+    "display_name": "MACALLAN HARMONY 44% 700ML"
   },
   {
     "name": "Guru Vietnamese Coffee 500g",
@@ -1271,7 +1361,8 @@
     "recent_weekly_velocity": 0.0,
     "trend_vs_monthly": null,
     "in_monthly": false,
-    "in_yearly": true
+    "in_yearly": true,
+    "display_name": "Guru Vietnamese Coffee 500g"
   },
   {
     "name": "333 Export Beer Bt 355ml 24pk",
@@ -1285,7 +1376,8 @@
     "recent_weekly_velocity": 0.778,
     "trend_vs_monthly": -99.3,
     "in_monthly": true,
-    "in_yearly": true
+    "in_yearly": true,
+    "display_name": "333 Export Beer Bt 355ml"
   },
   {
     "name": "Jack Daniels Double Jack & Cola Can 6.9% 375ml 20pk",
@@ -1299,7 +1391,8 @@
     "recent_weekly_velocity": 0.698,
     "trend_vs_monthly": -99.4,
     "in_monthly": true,
-    "in_yearly": true
+    "in_yearly": true,
+    "display_name": "Jack Daniels Double Jack & Cola Can 6.9% 375ml"
   },
   {
     "name": "Jack Daniels Honey Whiskey 700ml",
@@ -1313,7 +1406,8 @@
     "recent_weekly_velocity": 0.062,
     "trend_vs_monthly": -99.9,
     "in_monthly": true,
-    "in_yearly": true
+    "in_yearly": true,
+    "display_name": "Jack Daniels Honey Whiskey 700ml"
   },
   {
     "name": "Sierra Tequila Blanco 700ml",
@@ -1327,7 +1421,8 @@
     "recent_weekly_velocity": 0.056,
     "trend_vs_monthly": -99.9,
     "in_monthly": true,
-    "in_yearly": true
+    "in_yearly": true,
+    "display_name": "Sierra Tequila Blanco 700ml"
   },
   {
     "name": "Hennessy VS Cognac 700ml 6pk",
@@ -1341,7 +1436,8 @@
     "recent_weekly_velocity": 0.104,
     "trend_vs_monthly": -99.9,
     "in_monthly": true,
-    "in_yearly": true
+    "in_yearly": true,
+    "display_name": "Hennessy VS Cognac 700ml"
   },
   {
     "name": "Sapporo Premium Beer Silver Can 650ml 12pk",
@@ -1355,7 +1451,8 @@
     "recent_weekly_velocity": 0.0,
     "trend_vs_monthly": null,
     "in_monthly": false,
-    "in_yearly": true
+    "in_yearly": true,
+    "display_name": "Sapporo Premium Beer Silver Can 650ml"
   },
   {
     "name": "Wild Turkey American Honey Liqueur 700ml",
@@ -1369,7 +1466,8 @@
     "recent_weekly_velocity": 0.042,
     "trend_vs_monthly": null,
     "in_monthly": false,
-    "in_yearly": true
+    "in_yearly": true,
+    "display_name": "Wild Turkey American Honey Liqueur 700ml"
   },
   {
     "name": "Woodstock Bourbon & Cola 10% Can 200ml",
@@ -1383,7 +1481,8 @@
     "recent_weekly_velocity": 0.75,
     "trend_vs_monthly": -99.3,
     "in_monthly": true,
-    "in_yearly": true
+    "in_yearly": true,
+    "display_name": "Woodstock Bourbon & Cola 10% Can 200ml"
   },
   {
     "name": "Muhak Good Day Soju Peach Bt 360ml",
@@ -1397,6 +1496,7 @@
     "recent_weekly_velocity": 0.0,
     "trend_vs_monthly": null,
     "in_monthly": false,
-    "in_yearly": true
+    "in_yearly": true,
+    "display_name": "Muhak Good Day Soju Peach Bt 360ml"
   }
 ]

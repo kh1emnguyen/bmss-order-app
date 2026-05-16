@@ -11,12 +11,14 @@
         290.0,
         324.0
       ],
+      "case_qty": 24,
       "momentum_score": 26.5,
       "momentum_direction": "rising",
       "momentum_label": "\u2191 Rising",
       "pct_change_oldest_to_latest": 33.3,
       "wow_revenue_delta": 68.0,
-      "wow_margin_delta_pts": 0.0
+      "wow_margin_delta_pts": 0.0,
+      "display_name": "Drink Here-$2"
     },
     {
       "name": "No Worries Sunshine Lager SCNR",
@@ -27,12 +29,14 @@
         2.0,
         18.0
       ],
+      "case_qty": 24,
       "momentum_score": 16.0,
       "momentum_direction": "rising",
       "momentum_label": "\u2191 Rising",
       "pct_change_oldest_to_latest": 800.0,
       "wow_revenue_delta": 133.84,
-      "wow_margin_delta_pts": -1.91
+      "wow_margin_delta_pts": -1.91,
+      "display_name": "No Worries Sunshine Lager SCNR"
     },
     {
       "name": "No Worries Sunshine Lager PINT",
@@ -44,12 +48,14 @@
         9.0,
         11.0
       ],
+      "case_qty": 24,
       "momentum_score": 5.0,
       "momentum_direction": "rising",
       "momentum_label": "\u2191 Rising",
       "pct_change_oldest_to_latest": 1000.0,
       "wow_revenue_delta": 21.98,
-      "wow_margin_delta_pts": 0.18
+      "wow_margin_delta_pts": 0.18,
+      "display_name": "No Worries Sunshine Lager PINT"
     },
     {
       "name": "Carlton Draught Keg JUG 1140ml",
@@ -62,12 +68,14 @@
         45.0,
         55.0
       ],
+      "case_qty": 24,
       "momentum_score": 3.7,
       "momentum_direction": "rising",
       "momentum_label": "\u2191 Rising",
       "pct_change_oldest_to_latest": 14.6,
       "wow_revenue_delta": 189.9,
-      "wow_margin_delta_pts": -1.29
+      "wow_margin_delta_pts": -1.29,
+      "display_name": "Carlton Draught Keg JUG 1140ml"
     },
     {
       "name": "Weihenstephan Dunkel PINT",
@@ -80,12 +88,14 @@
         6.0,
         8.0
       ],
+      "case_qty": 24,
       "momentum_score": 2.3,
       "momentum_direction": "rising",
       "momentum_label": "\u2191 Rising",
       "pct_change_oldest_to_latest": 300.0,
       "wow_revenue_delta": 27.98,
-      "wow_margin_delta_pts": 1.75
+      "wow_margin_delta_pts": 1.75,
+      "display_name": "Weihenstephan Dunkel PINT"
     },
     {
       "name": "Ice Bag 5kg",
@@ -98,12 +108,14 @@
         15.0,
         12.0
       ],
+      "case_qty": 24,
       "momentum_score": 1.8,
       "momentum_direction": "rising",
       "momentum_label": "\u2191 Rising",
       "pct_change_oldest_to_latest": 71.4,
       "wow_revenue_delta": -13.5,
-      "wow_margin_delta_pts": -0.51
+      "wow_margin_delta_pts": -0.51,
+      "display_name": "Ice Bag 5kg"
     },
     {
       "name": "Victoria Bitter Bt 375ml 24pk",
@@ -116,12 +128,14 @@
         10.375,
         16.375
       ],
+      "case_qty": 24,
       "momentum_score": 1.4875,
       "momentum_direction": "rising",
       "momentum_label": "\u2191 Rising",
       "pct_change_oldest_to_latest": 98.5,
       "wow_revenue_delta": 391.9,
-      "wow_margin_delta_pts": -4.06
+      "wow_margin_delta_pts": -4.06,
+      "display_name": "Victoria Bitter Bt 375ml"
     },
     {
       "name": "Victoria Bitter Bt 250ml 24pk",
@@ -132,12 +146,14 @@
         3.0,
         4.083
       ],
+      "case_qty": 24,
       "momentum_score": 1.0833,
       "momentum_direction": "rising",
       "momentum_label": "\u2191 Rising",
       "pct_change_oldest_to_latest": 36.1,
       "wow_revenue_delta": 63.77,
-      "wow_margin_delta_pts": 0.8
+      "wow_margin_delta_pts": 0.8,
+      "display_name": "Victoria Bitter Bt 250ml"
     },
     {
       "name": "Tiger PINT",
@@ -150,12 +166,14 @@
         11.0,
         9.0
       ],
+      "case_qty": 24,
       "momentum_score": 0.9,
       "momentum_direction": "rising",
       "momentum_label": "\u2191 Rising",
       "pct_change_oldest_to_latest": 0.0,
       "wow_revenue_delta": -19.98,
-      "wow_margin_delta_pts": 0.53
+      "wow_margin_delta_pts": 0.53,
+      "display_name": "Tiger PINT"
     },
     {
       "name": "Absolut Vodka 200ml",
@@ -168,12 +186,14 @@
         1.083,
         2.0
       ],
+      "case_qty": 24,
       "momentum_score": 0.6667,
       "momentum_direction": "rising",
       "momentum_label": "\u2191 Rising",
       "pct_change_oldest_to_latest": 2300.0,
       "wow_revenue_delta": 95.96,
-      "wow_margin_delta_pts": -1.76
+      "wow_margin_delta_pts": -1.76,
+      "display_name": "Absolut Vodka 200ml"
     },
     {
       "name": "-196 Peach 330ml",
@@ -184,12 +204,14 @@
         0.042,
         0.708
       ],
+      "case_qty": 24,
       "momentum_score": 0.6667,
       "momentum_direction": "rising",
       "momentum_label": "\u2191 Rising",
       "pct_change_oldest_to_latest": 1600.0,
       "wow_revenue_delta": 102.5,
-      "wow_margin_delta_pts": -4.71
+      "wow_margin_delta_pts": -4.71,
+      "display_name": "-196 Peach 330ml"
     },
     {
       "name": "Passion Pop Original 750ml",
@@ -202,12 +224,14 @@
         1.208,
         2.042
       ],
+      "case_qty": 24,
       "momentum_score": 0.6125,
       "momentum_direction": "rising",
       "momentum_label": "\u2191 Rising",
       "pct_change_oldest_to_latest": 4800.0,
       "wow_revenue_delta": 17.97,
-      "wow_margin_delta_pts": 0.39
+      "wow_margin_delta_pts": 0.39,
+      "display_name": "Passion Pop Original 750ml"
     },
     {
       "name": "De Bortoli Prem Shiraz Cabernet Cask 4L",
@@ -220,12 +244,14 @@
         1.083,
         2.0
       ],
+      "case_qty": 24,
       "momentum_score": 0.5875,
       "momentum_direction": "rising",
       "momentum_label": "\u2191 Rising",
       "pct_change_oldest_to_latest": 4700.0,
       "wow_revenue_delta": 34.99,
-      "wow_margin_delta_pts": 9.2
+      "wow_margin_delta_pts": 9.2,
+      "display_name": "De Bortoli Prem Shiraz Cabernet Cask 4L"
     },
     {
       "name": "-196 Lemon & Passionfruit 330ml",
@@ -238,12 +264,14 @@
         1.958,
         1.583
       ],
+      "case_qty": 24,
       "momentum_score": 0.5458,
       "momentum_direction": "rising",
       "momentum_label": "\u2191 Rising",
       "pct_change_oldest_to_latest": 850.0,
       "wow_revenue_delta": -72.12,
-      "wow_margin_delta_pts": -27.87
+      "wow_margin_delta_pts": -27.87,
+      "display_name": "-196 Lemon & Passionfruit 330ml"
     },
     {
       "name": "Sovereign PT Dry White Csk 4.4L",
@@ -256,12 +284,14 @@
         2.042,
         3.083
       ],
+      "case_qty": 24,
       "momentum_score": 0.4833,
       "momentum_direction": "rising",
       "momentum_label": "\u2191 Rising",
       "pct_change_oldest_to_latest": 174.1,
       "wow_revenue_delta": 65.95,
-      "wow_margin_delta_pts": -3.04
+      "wow_margin_delta_pts": -3.04,
+      "display_name": "Sovereign PT Dry White Csk 4.4L"
     },
     {
       "name": "Kirin Ichiban Btl 330ml",
@@ -274,12 +304,14 @@
         1.083,
         2.083
       ],
+      "case_qty": 24,
       "momentum_score": 0.45,
       "momentum_direction": "rising",
       "momentum_label": "\u2191 Rising",
       "pct_change_oldest_to_latest": 177.8,
       "wow_revenue_delta": 62.99,
-      "wow_margin_delta_pts": -7.18
+      "wow_margin_delta_pts": -7.18,
+      "display_name": "Kirin Ichiban Btl 330ml"
     },
     {
       "name": "Asahi Super Dry Can 500ml",
@@ -292,12 +324,14 @@
         1.667,
         3.167
       ],
+      "case_qty": 24,
       "momentum_score": 0.4292,
       "momentum_direction": "rising",
       "momentum_label": "\u2191 Rising",
       "pct_change_oldest_to_latest": 111.1,
       "wow_revenue_delta": 177.84,
-      "wow_margin_delta_pts": -3.74
+      "wow_margin_delta_pts": -3.74,
+      "display_name": "Asahi Super Dry Can 500ml"
     },
     {
       "name": "LFL Orange 375ml",
@@ -308,12 +342,14 @@
         0.167,
         0.583
       ],
+      "case_qty": 24,
       "momentum_score": 0.4167,
       "momentum_direction": "rising",
       "momentum_label": "\u2191 Rising",
       "pct_change_oldest_to_latest": 250.0,
       "wow_revenue_delta": 33.96,
-      "wow_margin_delta_pts": -6.46
+      "wow_margin_delta_pts": -6.46,
+      "display_name": "LFL Orange 375ml"
     },
     {
       "name": "THREE OAKS CIDER 10% 10PK375ML",
@@ -326,12 +362,14 @@
         1.0,
         2.583
       ],
+      "case_qty": 24,
       "momentum_score": 0.4,
       "momentum_direction": "rising",
       "momentum_label": "\u2191 Rising",
       "pct_change_oldest_to_latest": 181.8,
       "wow_revenue_delta": 146.95,
-      "wow_margin_delta_pts": -5.01
+      "wow_margin_delta_pts": -5.01,
+      "display_name": "THREE OAKS CIDER 10% 10PK375ML"
     },
     {
       "name": "Gossips Shiraz 750ml 6pk",
@@ -344,12 +382,14 @@
         1.083,
         1.042
       ],
+      "case_qty": 24,
       "momentum_score": 0.35,
       "momentum_direction": "rising",
       "momentum_label": "\u2191 Rising",
       "pct_change_oldest_to_latest": 400.0,
       "wow_revenue_delta": -5.01,
-      "wow_margin_delta_pts": 1.73
+      "wow_margin_delta_pts": 1.73,
+      "display_name": "Gossips Shiraz 750ml"
     },
     {
       "name": "-196 Lemon 9% 250ml",
@@ -362,12 +402,14 @@
         1.625,
         2.292
       ],
+      "case_qty": 24,
       "momentum_score": 0.3375,
       "momentum_direction": "rising",
       "momentum_label": "\u2191 Rising",
       "pct_change_oldest_to_latest": 77.4,
       "wow_revenue_delta": 79.96,
-      "wow_margin_delta_pts": -3.24
+      "wow_margin_delta_pts": -3.24,
+      "display_name": "-196 Lemon 9% 250ml"
     },
     {
       "name": "Weihenstephan Original Btl 500ml",
@@ -378,12 +420,14 @@
         0.042,
         0.375
       ],
+      "case_qty": 24,
       "momentum_score": 0.3333,
       "momentum_direction": "rising",
       "momentum_label": "\u2191 Rising",
       "pct_change_oldest_to_latest": 800.0,
       "wow_revenue_delta": 60.79,
-      "wow_margin_delta_pts": 2.31
+      "wow_margin_delta_pts": 2.31,
+      "display_name": "Weihenstephan Original Btl 500ml"
     },
     {
       "name": "Mercury Hard Cider Can 375ml",
@@ -396,12 +440,14 @@
         0.917,
         1.333
       ],
+      "case_qty": 24,
       "momentum_score": 0.3208,
       "momentum_direction": "rising",
       "momentum_label": "\u2191 Rising",
       "pct_change_oldest_to_latest": 255.6,
       "wow_revenue_delta": 26.03,
-      "wow_margin_delta_pts": -7.16
+      "wow_margin_delta_pts": -7.16,
+      "display_name": "Mercury Hard Cider Can 375ml"
     },
     {
       "name": "Mountain Culture Juice Trip SCNR",
@@ -414,12 +460,14 @@
         8.0,
         3.0
       ],
+      "case_qty": 24,
       "momentum_score": 0.3,
       "momentum_direction": "rising",
       "momentum_label": "\u2191 Rising",
       "pct_change_oldest_to_latest": 50.0,
       "wow_revenue_delta": -49.95,
-      "wow_margin_delta_pts": 3.22
+      "wow_margin_delta_pts": 3.22,
+      "display_name": "Mountain Culture Juice Trip SCNR"
     },
     {
       "name": "Weihenstephaner Festbier 500ml",
@@ -432,12 +480,14 @@
         0.25,
         1.042
       ],
+      "case_qty": 24,
       "momentum_score": 0.2917,
       "momentum_direction": "rising",
       "momentum_label": "\u2191 Rising",
       "pct_change_oldest_to_latest": 733.3,
       "wow_revenue_delta": 55.95,
-      "wow_margin_delta_pts": 1.41
+      "wow_margin_delta_pts": 1.41,
+      "display_name": "Weihenstephaner Festbier 500ml"
     },
     {
       "name": "-196 Lemon 4.5% 330ml",
@@ -448,12 +498,14 @@
         0.042,
         0.333
       ],
+      "case_qty": 24,
       "momentum_score": 0.2917,
       "momentum_direction": "rising",
       "momentum_label": "\u2191 Rising",
       "pct_change_oldest_to_latest": 700.0,
       "wow_revenue_delta": 33.99,
-      "wow_margin_delta_pts": -11.45
+      "wow_margin_delta_pts": -11.45,
+      "display_name": "-196 Lemon 4.5% 330ml"
     },
     {
       "name": "Coopers Original Pale Ale Can 375ml 24pk",
@@ -464,12 +516,14 @@
         0.042,
         0.333
       ],
+      "case_qty": 24,
       "momentum_score": 0.2917,
       "momentum_direction": "rising",
       "momentum_label": "\u2191 Rising",
       "pct_change_oldest_to_latest": 700.0,
       "wow_revenue_delta": 23.78,
-      "wow_margin_delta_pts": -5.79
+      "wow_margin_delta_pts": -5.79,
+      "display_name": "Coopers Original Pale Ale Can 375ml"
     },
     {
       "name": "Winesmiths Shiraz 2L",
@@ -482,12 +536,14 @@
         0.125,
         1.083
       ],
+      "case_qty": 24,
       "momentum_score": 0.2792,
       "momentum_direction": "rising",
       "momentum_label": "\u2191 Rising",
       "pct_change_oldest_to_latest": 550.0,
       "wow_revenue_delta": 75.95,
-      "wow_margin_delta_pts": 3.44
+      "wow_margin_delta_pts": 3.44,
+      "display_name": "Winesmiths Shiraz 2L"
     },
     {
       "name": "Stella Artois Bt 330ml 24pk",
@@ -500,12 +556,14 @@
         0.917,
         1.75
       ],
+      "case_qty": 24,
       "momentum_score": 0.2667,
       "momentum_direction": "rising",
       "momentum_label": "\u2191 Rising",
       "pct_change_oldest_to_latest": 200.0,
       "wow_revenue_delta": 41.08,
-      "wow_margin_delta_pts": -14.4
+      "wow_margin_delta_pts": -14.4,
+      "display_name": "Stella Artois Bt 330ml"
     },
     {
       "name": "Weihenstephan Traditional Dunkel 500ml",
@@ -516,12 +574,14 @@
         0.125,
         0.375
       ],
+      "case_qty": 24,
       "momentum_score": 0.25,
       "momentum_direction": "rising",
       "momentum_label": "\u2191 Rising",
       "pct_change_oldest_to_latest": 200.0,
       "wow_revenue_delta": 46.13,
-      "wow_margin_delta_pts": 2.24
+      "wow_margin_delta_pts": 2.24,
+      "display_name": "Weihenstephan Traditional Dunkel 500ml"
     }
   ],
   "falling": [
@@ -536,12 +596,14 @@
         10.0,
         4.0
       ],
+      "case_qty": 24,
       "momentum_score": -4.7,
       "momentum_direction": "falling",
       "momentum_label": "\u2193 Falling",
       "pct_change_oldest_to_latest": -66.7,
       "wow_revenue_delta": -55.94,
-      "wow_margin_delta_pts": -7.91
+      "wow_margin_delta_pts": -7.91,
+      "display_name": "Carlton Draught Keg Schooner"
     },
     {
       "name": "Carlton Draught Kegs Pint 570ml",
@@ -554,12 +616,14 @@
         11.0,
         4.0
       ],
+      "case_qty": 24,
       "momentum_score": -4.6,
       "momentum_direction": "falling",
       "momentum_label": "\u2193 Falling",
       "pct_change_oldest_to_latest": -71.4,
       "wow_revenue_delta": -75.93,
-      "wow_margin_delta_pts": 0.31
+      "wow_margin_delta_pts": 0.31,
+      "display_name": "Carlton Draught Kegs Pint 570ml"
     },
     {
       "name": "Credit Card Surcharge",
@@ -572,12 +636,14 @@
         121.0,
         114.0
       ],
+      "case_qty": 24,
       "momentum_score": -3.3,
       "momentum_direction": "falling",
       "momentum_label": "\u2193 Falling",
       "pct_change_oldest_to_latest": -2.6,
       "wow_revenue_delta": -3.5,
-      "wow_margin_delta_pts": 0.0
+      "wow_margin_delta_pts": 0.0,
+      "display_name": "Credit Card Surcharge"
     },
     {
       "name": "Heineken Bt 330ml",
@@ -590,12 +656,14 @@
         5.958,
         2.75
       ],
+      "case_qty": 24,
       "momentum_score": -2.9042,
       "momentum_direction": "falling",
       "momentum_label": "\u2193 Falling",
       "pct_change_oldest_to_latest": -78.8,
       "wow_revenue_delta": -212.44,
-      "wow_margin_delta_pts": -4.45
+      "wow_margin_delta_pts": -4.45,
+      "display_name": "Heineken Bt 330ml"
     },
     {
       "name": "Carlton Draught Can 375ml 24pk",
@@ -608,12 +676,14 @@
         7.417,
         5.833
       ],
+      "case_qty": 24,
       "momentum_score": -1.8167,
       "momentum_direction": "falling",
       "momentum_label": "\u2193 Falling",
       "pct_change_oldest_to_latest": -45.5,
       "wow_revenue_delta": -114.92,
-      "wow_margin_delta_pts": -3.57
+      "wow_margin_delta_pts": -3.57,
+      "display_name": "Carlton Draught Can 375ml"
     },
     {
       "name": "Weihenstephan Dunkel SCNR",
@@ -625,12 +695,14 @@
         1.0,
         2.0
       ],
+      "case_qty": 24,
       "momentum_score": -1.5,
       "momentum_direction": "falling",
       "momentum_label": "\u2193 Falling",
       "pct_change_oldest_to_latest": -60.0,
       "wow_revenue_delta": 12.99,
-      "wow_margin_delta_pts": 7.69
+      "wow_margin_delta_pts": 7.69,
+      "display_name": "Weihenstephan Dunkel SCNR"
     },
     {
       "name": "Coopers Pale Ale PINT",
@@ -643,12 +715,14 @@
         6.0,
         2.0
       ],
+      "case_qty": 24,
       "momentum_score": -1.1,
       "momentum_direction": "falling",
       "momentum_label": "\u2193 Falling",
       "pct_change_oldest_to_latest": -71.4,
       "wow_revenue_delta": -47.96,
-      "wow_margin_delta_pts": 0.0
+      "wow_margin_delta_pts": 0.0,
+      "display_name": "Coopers Pale Ale PINT"
     },
     {
       "name": "Great Northern BC Original Lager 4.2% Bt 330ml 24p",
@@ -661,12 +735,14 @@
         6.25,
         2.75
       ],
+      "case_qty": 24,
       "momentum_score": -1.0,
       "momentum_direction": "falling",
       "momentum_label": "\u2193 Falling",
       "pct_change_oldest_to_latest": -56.0,
       "wow_revenue_delta": -237.1,
-      "wow_margin_delta_pts": -0.23
+      "wow_margin_delta_pts": -0.23,
+      "display_name": "Great Northern BC Original Lager 4.2% Bt 330ml"
     },
     {
       "name": "Carlton Draught Bt 375ml 24pk",
@@ -679,12 +755,14 @@
         8.75,
         5.5
       ],
+      "case_qty": 24,
       "momentum_score": -0.9208,
       "momentum_direction": "falling",
       "momentum_label": "\u2193 Falling",
       "pct_change_oldest_to_latest": -37.1,
       "wow_revenue_delta": -246.75,
-      "wow_margin_delta_pts": 8.13
+      "wow_margin_delta_pts": 8.13,
+      "display_name": "Carlton Draught Bt 375ml"
     },
     {
       "name": "Hard Rated Lemon 6% 375ml",
@@ -697,12 +775,14 @@
         0.625,
         0.167
       ],
+      "case_qty": 24,
       "momentum_score": -0.55,
       "momentum_direction": "falling",
       "momentum_label": "\u2193 Falling",
       "pct_change_oldest_to_latest": -91.1,
       "wow_revenue_delta": -63.48,
-      "wow_margin_delta_pts": 3.7
+      "wow_margin_delta_pts": 3.7,
+      "display_name": "Hard Rated Lemon 6% 375ml"
     },
     {
       "name": "Heineken Can 500ml 24pk",
@@ -715,12 +795,14 @@
         1.875,
         0.333
       ],
+      "case_qty": 24,
       "momentum_score": -0.5042,
       "momentum_direction": "falling",
       "momentum_label": "\u2193 Falling",
       "pct_change_oldest_to_latest": -84.0,
       "wow_revenue_delta": -176.41,
-      "wow_margin_delta_pts": 8.29
+      "wow_margin_delta_pts": 8.29,
+      "display_name": "Heineken Can 500ml"
     },
     {
       "name": "Coronita Extra Bt 210ml 24pk",
@@ -732,12 +814,14 @@
         3.0,
         1.0
       ],
+      "case_qty": 24,
       "momentum_score": -0.5,
       "momentum_direction": "falling",
       "momentum_label": "\u2193 Falling",
       "pct_change_oldest_to_latest": -50.0,
       "wow_revenue_delta": -109.98,
-      "wow_margin_delta_pts": 0.0
+      "wow_margin_delta_pts": 0.0,
+      "display_name": "Coronita Extra Bt 210ml"
     },
     {
       "name": "Somersby Apple Cider Bt 330ml 24pk",
@@ -748,12 +832,14 @@
         0.917,
         0.5
       ],
+      "case_qty": 24,
       "momentum_score": -0.4167,
       "momentum_direction": "falling",
       "momentum_label": "\u2193 Falling",
       "pct_change_oldest_to_latest": -45.5,
       "wow_revenue_delta": -34.65,
-      "wow_margin_delta_pts": -1.2
+      "wow_margin_delta_pts": -1.2,
+      "display_name": "Somersby Apple Cider Bt 330ml"
     },
     {
       "name": "Absolut Vodka 700ml 6pk",
@@ -765,12 +851,14 @@
         0.083,
         0.208
       ],
+      "case_qty": 24,
       "momentum_score": -0.3958,
       "momentum_direction": "falling",
       "momentum_label": "\u2193 Falling",
       "pct_change_oldest_to_latest": -79.2,
       "wow_revenue_delta": 155.97,
-      "wow_margin_delta_pts": -5.61
+      "wow_margin_delta_pts": -5.61,
+      "display_name": "Absolut Vodka 700ml"
     },
     {
       "name": "Carlton Dry Btl 330ml",
@@ -783,12 +871,14 @@
         4.0,
         2.208
       ],
+      "case_qty": 24,
       "momentum_score": -0.3708,
       "momentum_direction": "falling",
       "momentum_label": "\u2193 Falling",
       "pct_change_oldest_to_latest": -37.6,
       "wow_revenue_delta": -105.48,
-      "wow_margin_delta_pts": 12.31
+      "wow_margin_delta_pts": 12.31,
+      "display_name": "Carlton Dry Btl 330ml"
     },
     {
       "name": "Sapporo Premium Can 500ml",
@@ -800,12 +890,14 @@
         0.75,
         0.708
       ],
+      "case_qty": 24,
       "momentum_score": -0.3542,
       "momentum_direction": "falling",
       "momentum_label": "\u2193 Falling",
       "pct_change_oldest_to_latest": -50.0,
       "wow_revenue_delta": 2.45,
-      "wow_margin_delta_pts": 5.49
+      "wow_margin_delta_pts": 5.49,
+      "display_name": "Sapporo Premium Can 500ml"
     },
     {
       "name": "Crown Lager Bt 375ml 24pk",
@@ -818,12 +910,14 @@
         1.875,
         3.333
       ],
+      "case_qty": 24,
       "momentum_score": -0.35,
       "momentum_direction": "falling",
       "momentum_label": "\u2193 Falling",
       "pct_change_oldest_to_latest": -31.0,
       "wow_revenue_delta": 80.06,
-      "wow_margin_delta_pts": -10.47
+      "wow_margin_delta_pts": -10.47,
+      "display_name": "Crown Lager Bt 375ml"
     },
     {
       "name": "Jim Beam White & Cola Can 375ml 30pk",
@@ -836,12 +930,14 @@
         1.667,
         1.0
       ],
+      "case_qty": 24,
       "momentum_score": -0.3417,
       "momentum_direction": "falling",
       "momentum_label": "\u2193 Falling",
       "pct_change_oldest_to_latest": -53.8,
       "wow_revenue_delta": -87.96,
-      "wow_margin_delta_pts": 0.77
+      "wow_margin_delta_pts": 0.77,
+      "display_name": "Jim Beam White & Cola Can 375ml"
     },
     {
       "name": "Carlton Pure Blonde Bt 330ml",
@@ -854,12 +950,14 @@
         2.417,
         2.667
       ],
+      "case_qty": 24,
       "momentum_score": -0.3375,
       "momentum_direction": "falling",
       "momentum_label": "\u2193 Falling",
       "pct_change_oldest_to_latest": -22.9,
       "wow_revenue_delta": 17.1,
-      "wow_margin_delta_pts": -2.53
+      "wow_margin_delta_pts": -2.53,
+      "display_name": "Carlton Pure Blonde Bt 330ml"
     },
     {
       "name": "Mercury Double Cider 250ml",
@@ -872,12 +970,14 @@
         1.625,
         1.167
       ],
+      "case_qty": 24,
       "momentum_score": -0.3375,
       "momentum_direction": "falling",
       "momentum_label": "\u2193 Falling",
       "pct_change_oldest_to_latest": -40.4,
       "wow_revenue_delta": -48.95,
-      "wow_margin_delta_pts": -0.43
+      "wow_margin_delta_pts": -0.43,
+      "display_name": "Mercury Double Cider 250ml"
     },
     {
       "name": "Jack Daniels & Cola Can 375ml",
@@ -890,12 +990,14 @@
         1.375,
         0.458
       ],
+      "case_qty": 24,
       "momentum_score": -0.3292,
       "momentum_direction": "falling",
       "momentum_label": "\u2193 Falling",
       "pct_change_oldest_to_latest": -74.4,
       "wow_revenue_delta": -121.94,
-      "wow_margin_delta_pts": -3.17
+      "wow_margin_delta_pts": -3.17,
+      "display_name": "Jack Daniels & Cola Can 375ml"
     },
     {
       "name": "Jacobs Creek Classic Shiraz Cabernet 750ml",
@@ -908,12 +1010,14 @@
         0.25,
         0.292
       ],
+      "case_qty": 24,
       "momentum_score": -0.3208,
       "momentum_direction": "falling",
       "momentum_label": "\u2193 Falling",
       "pct_change_oldest_to_latest": -77.4,
       "wow_revenue_delta": 16.99,
-      "wow_margin_delta_pts": 6.91
+      "wow_margin_delta_pts": 6.91,
+      "display_name": "Jacobs Creek Classic Shiraz Cabernet 750ml"
     },
     {
       "name": "Sovereign PT Fruity Lexia Cask 4.4L",
@@ -926,12 +1030,14 @@
         1.0,
         0.125
       ],
+      "case_qty": 24,
       "momentum_score": -0.3042,
       "momentum_direction": "falling",
       "momentum_label": "\u2193 Falling",
       "pct_change_oldest_to_latest": -88.9,
       "wow_revenue_delta": -16.99,
-      "wow_margin_delta_pts": -3.11
+      "wow_margin_delta_pts": -3.11,
+      "display_name": "Sovereign PT Fruity Lexia Cask 4.4L"
     },
     {
       "name": "Carlton Dry Mid 3.5% Btl 330ml",
@@ -943,12 +1049,14 @@
         0.625,
         0.417
       ],
+      "case_qty": 24,
       "momentum_score": -0.2917,
       "momentum_direction": "falling",
       "momentum_label": "\u2193 Falling",
       "pct_change_oldest_to_latest": -58.3,
       "wow_revenue_delta": -13.0,
-      "wow_margin_delta_pts": -0.51
+      "wow_margin_delta_pts": -0.51,
+      "display_name": "Carlton Dry Mid 3.5% Btl 330ml"
     },
     {
       "name": "Weihenstephan Dunkel Btl 500ml",
@@ -961,12 +1069,14 @@
         1.042,
         0.167
       ],
+      "case_qty": 24,
       "momentum_score": -0.2792,
       "momentum_direction": "falling",
       "momentum_label": "\u2193 Falling",
       "pct_change_oldest_to_latest": -83.3,
       "wow_revenue_delta": -73.1,
-      "wow_margin_delta_pts": -1.94
+      "wow_margin_delta_pts": -1.94,
+      "display_name": "Weihenstephan Dunkel Btl 500ml"
     },
     {
       "name": "Jack Daniels Double Jack & Cola Can 6.9% 375ml 20pk",
@@ -979,12 +1089,14 @@
         0.25,
         0.667
       ],
+      "case_qty": 24,
       "momentum_score": -0.2542,
       "momentum_direction": "falling",
       "momentum_label": "\u2193 Falling",
       "pct_change_oldest_to_latest": -54.3,
       "wow_revenue_delta": 65.02,
-      "wow_margin_delta_pts": -11.59
+      "wow_margin_delta_pts": -11.59,
+      "display_name": "Jack Daniels Double Jack & Cola Can 6.9% 375ml"
     },
     {
       "name": "Heineken SILVER Bt 330ml",
@@ -997,12 +1109,14 @@
         0.5,
         0.25
       ],
+      "case_qty": 24,
       "momentum_score": -0.25,
       "momentum_direction": "falling",
       "momentum_label": "\u2193 Falling",
       "pct_change_oldest_to_latest": -76.9,
       "wow_revenue_delta": -16.99,
-      "wow_margin_delta_pts": 4.55
+      "wow_margin_delta_pts": 4.55,
+      "display_name": "Heineken SILVER Bt 330ml"
     },
     {
       "name": "Sapporo Premium Beer Bt 355ml 24pk",
@@ -1015,12 +1129,14 @@
         2.958,
         3.375
       ],
+      "case_qty": 24,
       "momentum_score": -0.2458,
       "momentum_direction": "falling",
       "momentum_label": "\u2193 Falling",
       "pct_change_oldest_to_latest": -12.9,
       "wow_revenue_delta": 16.88,
-      "wow_margin_delta_pts": -4.38
+      "wow_margin_delta_pts": -4.38,
+      "display_name": "Sapporo Premium Beer Bt 355ml"
     },
     {
       "name": "De Bortoli Sacred Hill Old Tawny Port 750ml",
@@ -1033,12 +1149,14 @@
         0.167,
         0.167
       ],
+      "case_qty": 24,
       "momentum_score": -0.2375,
       "momentum_direction": "falling",
       "momentum_label": "\u2193 Falling",
       "pct_change_oldest_to_latest": -83.3,
       "wow_revenue_delta": 1.5,
-      "wow_margin_delta_pts": 1.21
+      "wow_margin_delta_pts": 1.21,
+      "display_name": "De Bortoli Sacred Hill Old Tawny Port 750ml"
     },
     {
       "name": "Lion Strong Beer 8.8% Bt 625ml",
@@ -1051,12 +1169,14 @@
         0.25,
         0.375
       ],
+      "case_qty": 24,
       "momentum_score": -0.2208,
       "momentum_direction": "falling",
       "momentum_label": "\u2193 Falling",
       "pct_change_oldest_to_latest": -67.9,
       "wow_revenue_delta": 32.99,
-      "wow_margin_delta_pts": -3.03
+      "wow_margin_delta_pts": -3.03,
+      "display_name": "Lion Strong Beer 8.8% Bt 625ml"
     }
   ],
   "stable": [
@@ -1071,12 +1191,14 @@
         0.042,
         0.25
       ],
+      "case_qty": 24,
       "momentum_score": 0.05,
       "momentum_direction": "stable",
       "momentum_label": "\u2192 Stable",
       "pct_change_oldest_to_latest": 200.0,
       "wow_revenue_delta": 244.95,
-      "wow_margin_delta_pts": -2.97
+      "wow_margin_delta_pts": -2.97,
+      "display_name": "Jim Beam White Bourbon 700ml"
     },
     {
       "name": "Johnnie Walker Black 700ml",
@@ -1089,12 +1211,14 @@
         0.083,
         0.208
       ],
+      "case_qty": 24,
       "momentum_score": -0.0125,
       "momentum_direction": "stable",
       "momentum_label": "\u2192 Stable",
       "pct_change_oldest_to_latest": -16.7,
       "wow_revenue_delta": 154.97,
-      "wow_margin_delta_pts": -8.09
+      "wow_margin_delta_pts": -8.09,
+      "display_name": "Johnnie Walker Black 700ml"
     },
     {
       "name": "Gordons London Dry Gin 1L",
@@ -1107,12 +1231,14 @@
         0.167,
         0.167
       ],
+      "case_qty": 24,
       "momentum_score": 0.0208,
       "momentum_direction": "stable",
       "momentum_label": "\u2192 Stable",
       "pct_change_oldest_to_latest": 33.3,
       "wow_revenue_delta": -12.0,
-      "wow_margin_delta_pts": -9.05
+      "wow_margin_delta_pts": -9.05,
+      "display_name": "Gordons London Dry Gin 1L"
     },
     {
       "name": "Johnnie Walker Gold 750ml",
@@ -1124,12 +1250,14 @@
         0.125,
         0.125
       ],
+      "case_qty": 24,
       "momentum_score": 0.0,
       "momentum_direction": "stable",
       "momentum_label": "\u2192 Stable",
       "pct_change_oldest_to_latest": 0.0,
       "wow_revenue_delta": -57.0,
-      "wow_margin_delta_pts": -15.53
+      "wow_margin_delta_pts": -15.53,
+      "display_name": "Johnnie Walker Gold 750ml"
     },
     {
       "name": "Hennessy VS Cognac 700ml 6pk",
@@ -1140,12 +1268,14 @@
         0.083,
         0.125
       ],
+      "case_qty": 24,
       "momentum_score": 0.0417,
       "momentum_direction": "stable",
       "momentum_label": "\u2192 Stable",
       "pct_change_oldest_to_latest": 50.0,
       "wow_revenue_delta": 78.99,
-      "wow_margin_delta_pts": -1.92
+      "wow_margin_delta_pts": -1.92,
+      "display_name": "Hennessy VS Cognac 700ml"
     },
     {
       "name": "Wild Boar 15% Bourbon&Cola 375ml",
@@ -1158,12 +1288,14 @@
         0.875,
         0.708
       ],
+      "case_qty": 24,
       "momentum_score": -0.0458,
       "momentum_direction": "stable",
       "momentum_label": "\u2192 Stable",
       "pct_change_oldest_to_latest": -29.2,
       "wow_revenue_delta": -71.94,
-      "wow_margin_delta_pts": -2.94
+      "wow_margin_delta_pts": -2.94,
+      "display_name": "Wild Boar 15% Bourbon&Cola 375ml"
     },
     {
       "name": "Jack Daniels Black Label 700ml 12pk",
@@ -1176,12 +1308,14 @@
         0.333,
         0.167
       ],
+      "case_qty": 24,
       "momentum_score": 0.0208,
       "momentum_direction": "stable",
       "momentum_label": "\u2192 Stable",
       "pct_change_oldest_to_latest": 0.0,
       "wow_revenue_delta": -229.96,
-      "wow_margin_delta_pts": 1.63
+      "wow_margin_delta_pts": 1.63,
+      "display_name": "Jack Daniels Black Label 700ml"
     },
     {
       "name": "Tom Cobb Whisky 700ml",
@@ -1194,12 +1328,14 @@
         0.083,
         0.208
       ],
+      "case_qty": 24,
       "momentum_score": 0.0083,
       "momentum_direction": "stable",
       "momentum_label": "\u2192 Stable",
       "pct_change_oldest_to_latest": 25.0,
       "wow_revenue_delta": 119.97,
-      "wow_margin_delta_pts": 0.0
+      "wow_margin_delta_pts": 0.0,
+      "display_name": "Tom Cobb Whisky 700ml"
     },
     {
       "name": "Grants Fam Reserve Scotch Whisky 1L 6pk",
@@ -1212,12 +1348,14 @@
         0.167,
         0.125
       ],
+      "case_qty": 24,
       "momentum_score": 0.0208,
       "momentum_direction": "stable",
       "momentum_label": "\u2192 Stable",
       "pct_change_oldest_to_latest": 200.0,
       "wow_revenue_delta": -47.99,
-      "wow_margin_delta_pts": 2.69
+      "wow_margin_delta_pts": 2.69,
+      "display_name": "Grants Fam Reserve Scotch Whisky 1L"
     },
     {
       "name": "Smirnoff Vodka Red 1L 6pk",
@@ -1229,12 +1367,14 @@
         0.125,
         0.125
       ],
+      "case_qty": 24,
       "momentum_score": -0.0208,
       "momentum_direction": "stable",
       "momentum_label": "\u2192 Stable",
       "pct_change_oldest_to_latest": -25.0,
       "wow_revenue_delta": -27.0,
-      "wow_margin_delta_pts": -8.18
+      "wow_margin_delta_pts": -8.18,
+      "display_name": "Smirnoff Vodka Red 1L"
     },
     {
       "name": "Johnnie Walker Black 1L",
@@ -1247,12 +1387,14 @@
         0.042,
         0.083
       ],
+      "case_qty": 24,
       "momentum_score": -0.0042,
       "momentum_direction": "stable",
       "momentum_label": "\u2192 Stable",
       "pct_change_oldest_to_latest": 0.0,
       "wow_revenue_delta": 88.99,
-      "wow_margin_delta_pts": 0.96
+      "wow_margin_delta_pts": 0.96,
+      "display_name": "Johnnie Walker Black 1L"
     },
     {
       "name": "Chivas Regal 12YO 700ml",
@@ -1265,12 +1407,14 @@
         0.083,
         0.125
       ],
+      "case_qty": 24,
       "momentum_score": 0.0083,
       "momentum_direction": "stable",
       "momentum_label": "\u2192 Stable",
       "pct_change_oldest_to_latest": 50.0,
       "wow_revenue_delta": 58.99,
-      "wow_margin_delta_pts": -1.19
+      "wow_margin_delta_pts": -1.19,
+      "display_name": "Chivas Regal 12YO 700ml"
     },
     {
       "name": "Captain Morgan Rum Original Spiced Gold 700ml",
@@ -1282,12 +1426,14 @@
         0.083,
         0.125
       ],
+      "case_qty": 24,
       "momentum_score": 0.0417,
       "momentum_direction": "stable",
       "momentum_label": "\u2192 Stable",
       "pct_change_oldest_to_latest": 200.0,
       "wow_revenue_delta": 64.99,
-      "wow_margin_delta_pts": 5.0
+      "wow_margin_delta_pts": 5.0,
+      "display_name": "Captain Morgan Rum Original Spiced Gold 700ml"
     },
     {
       "name": "Jameson Irish Whisky 1L",
@@ -1299,12 +1445,14 @@
         0.042,
         0.083
       ],
+      "case_qty": 24,
       "momentum_score": 0.0208,
       "momentum_direction": "stable",
       "momentum_label": "\u2192 Stable",
       "pct_change_oldest_to_latest": 100.0,
       "wow_revenue_delta": 66.99,
-      "wow_margin_delta_pts": -8.52
+      "wow_margin_delta_pts": -8.52,
+      "display_name": "Jameson Irish Whisky 1L"
     },
     {
       "name": "Jim Beam White Bourbon 375ml",
@@ -1317,12 +1465,14 @@
         0.083,
         0.208
       ],
+      "case_qty": 24,
       "momentum_score": -0.0417,
       "momentum_direction": "stable",
       "momentum_label": "\u2192 Stable",
       "pct_change_oldest_to_latest": -16.7,
       "wow_revenue_delta": 89.97,
-      "wow_margin_delta_pts": 0.0
+      "wow_margin_delta_pts": 0.0,
+      "display_name": "Jim Beam White Bourbon 375ml"
     },
     {
       "name": "Canadian Club Whisky 700ml 12pk",
@@ -1335,12 +1485,14 @@
         0.042,
         0.125
       ],
+      "case_qty": 24,
       "momentum_score": -0.0167,
       "momentum_direction": "stable",
       "momentum_label": "\u2192 Stable",
       "pct_change_oldest_to_latest": -25.0,
       "wow_revenue_delta": 93.98,
-      "wow_margin_delta_pts": -2.54
+      "wow_margin_delta_pts": -2.54,
+      "display_name": "Canadian Club Whisky 700ml"
     },
     {
       "name": "Jim Beam White Double Serve & Cola 6.7% Can 375ml 30pk",
@@ -1353,12 +1505,14 @@
         1.667,
         0.792
       ],
+      "case_qty": 24,
       "momentum_score": -0.0083,
       "momentum_direction": "stable",
       "momentum_label": "\u2192 Stable",
       "pct_change_oldest_to_latest": -24.0,
       "wow_revenue_delta": -175.38,
-      "wow_margin_delta_pts": 5.08
+      "wow_margin_delta_pts": 5.08,
+      "display_name": "Jim Beam White Double Serve & Cola 6.7% Can 375ml"
     },
     {
       "name": "Macallan 12YO Double Cask Single Malt 700ml",
@@ -1369,12 +1523,14 @@
         0.083,
         0.042
       ],
+      "case_qty": 24,
       "momentum_score": -0.0417,
       "momentum_direction": "stable",
       "momentum_label": "\u2192 Stable",
       "pct_change_oldest_to_latest": -50.0,
       "wow_revenue_delta": -139.99,
-      "wow_margin_delta_pts": 0.0
+      "wow_margin_delta_pts": 0.0,
+      "display_name": "Macallan 12YO Double Cask Single Malt 700ml"
     },
     {
       "name": "Skyy Vodka 700ml",
@@ -1386,12 +1542,14 @@
         0.208,
         0.125
       ],
+      "case_qty": 24,
       "momentum_score": 0.0417,
       "momentum_direction": "stable",
       "momentum_label": "\u2192 Stable",
       "pct_change_oldest_to_latest": 200.0,
       "wow_revenue_delta": -100.98,
-      "wow_margin_delta_pts": -3.7
+      "wow_margin_delta_pts": -3.7,
+      "display_name": "Skyy Vodka 700ml"
     },
     {
       "name": "Jim Beam White Bourbon 1L",
@@ -1402,12 +1560,14 @@
         0.125,
         0.083
       ],
+      "case_qty": 24,
       "momentum_score": -0.0417,
       "momentum_direction": "stable",
       "momentum_label": "\u2192 Stable",
       "pct_change_oldest_to_latest": -33.3,
       "wow_revenue_delta": -47.99,
-      "wow_margin_delta_pts": 5.47
+      "wow_margin_delta_pts": 5.47,
+      "display_name": "Jim Beam White Bourbon 1L"
     }
   ]
 }
