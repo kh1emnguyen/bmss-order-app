@@ -21,27 +21,6 @@
     "display_name": "Mercury Blackcurrant Cider Can 375ml"
   },
   {
-    "name": "Wyndham Est Bin 999 Merlot 750ml",
-    "category": "Wine Red",
-    "yearly_revenue": 3986.9,
-    "yearly_txns": 406,
-    "yearly_cases": 147.0,
-    "est_weekly_revenue": 76.67,
-    "est_weekly_cases": 2.827,
-    "margin_pct_historical": 100.0,
-    "in_inventory": false,
-    "current_stock_cases": 0.0,
-    "case_qty": 24,
-    "suggested_order_cases": 6,
-    "revival_rationale": "Good margin (100.0%); Not currently stocked - needs to be reordered from supplier",
-    "last_seen": "2025 yearly report",
-    "is_limited_edition": false,
-    "source": "historical",
-    "revival_rank": 2,
-    "top_pick": true,
-    "display_name": "Wyndham Est Bin 999 Merlot 750ml"
-  },
-  {
     "name": "Kingfisher Extra Strong Can 500ml",
     "category": "Beer International",
     "yearly_revenue": 3466.63,
@@ -58,7 +37,7 @@
     "last_seen": "2025 yearly report",
     "is_limited_edition": false,
     "source": "historical",
-    "revival_rank": 3,
+    "revival_rank": 2,
     "top_pick": true,
     "display_name": "Kingfisher Extra Strong Can 500ml"
   },
@@ -79,9 +58,51 @@
     "last_seen": "2025 yearly report",
     "is_limited_edition": false,
     "source": "historical",
-    "revival_rank": 4,
+    "revival_rank": 3,
     "top_pick": true,
     "display_name": "Johnnie Walker Red Label 375ml"
+  },
+  {
+    "name": "Sierra Tequila Blanco 700ml",
+    "category": "Tequila",
+    "yearly_revenue": 0.0,
+    "yearly_txns": 4,
+    "yearly_cases": 0.0,
+    "est_weekly_revenue": 57.74,
+    "est_weekly_cases": 0.0,
+    "margin_pct_historical": 17.6,
+    "in_inventory": true,
+    "current_stock_cases": 0.8,
+    "case_qty": 6,
+    "suggested_order_cases": 1,
+    "revival_rationale": "Archived from orders \u2014 consider whether to stock again",
+    "last_seen": "Recent weekly reports",
+    "is_limited_edition": false,
+    "source": "archived_from_orders",
+    "revival_rank": 4,
+    "top_pick": true,
+    "display_name": "Sierra Tequila Blanco 700ml"
+  },
+  {
+    "name": "Coca Cola Bt 600ml 24pk",
+    "category": "Soft Drinks",
+    "yearly_revenue": 0.0,
+    "yearly_txns": 24,
+    "yearly_cases": 0.0,
+    "est_weekly_revenue": 48.27,
+    "est_weekly_cases": 0.25,
+    "margin_pct_historical": 33.7,
+    "in_inventory": true,
+    "current_stock_cases": 0.1,
+    "case_qty": 24,
+    "suggested_order_cases": 1,
+    "revival_rationale": "Archived from orders \u2014 consider whether to stock again",
+    "last_seen": "Recent weekly reports",
+    "is_limited_edition": false,
+    "source": "archived_from_orders",
+    "revival_rank": 5,
+    "top_pick": true,
+    "display_name": "Coca Cola Bt 600ml"
   },
   {
     "name": "Vodka O Nuco 700ml",
@@ -100,7 +121,7 @@
     "last_seen": "2025 yearly report",
     "is_limited_edition": false,
     "source": "historical",
-    "revival_rank": 5,
+    "revival_rank": 6,
     "top_pick": true,
     "display_name": "Vodka O Nuco 700ml"
   },
@@ -121,7 +142,7 @@
     "last_seen": "2025 yearly report",
     "is_limited_edition": false,
     "source": "historical",
-    "revival_rank": 6,
+    "revival_rank": 7,
     "top_pick": true,
     "display_name": "MACALLAN CLASSIC CUT 51% 700ML"
   },
@@ -142,7 +163,7 @@
     "last_seen": "2025 yearly report",
     "is_limited_edition": false,
     "source": "historical",
-    "revival_rank": 7,
+    "revival_rank": 8,
     "top_pick": true,
     "display_name": "Johnnie Walker Green Malt 700ml"
   },
@@ -163,72 +184,9 @@
     "last_seen": "2025 yearly report",
     "is_limited_edition": false,
     "source": "historical",
-    "revival_rank": 8,
-    "top_pick": true,
-    "display_name": "Baileys Irish Cream 700ml"
-  },
-  {
-    "name": "Little Fat Lamb Fireball 1.25L",
-    "category": "Cider",
-    "yearly_revenue": 1730.46,
-    "yearly_txns": 199,
-    "yearly_cases": 16.0,
-    "est_weekly_revenue": 33.28,
-    "est_weekly_cases": 0.308,
-    "margin_pct_historical": 34.2,
-    "in_inventory": true,
-    "current_stock_cases": 0.6,
-    "case_qty": 12,
-    "suggested_order_cases": 1,
-    "revival_rationale": "Good margin (34.2%); Currently 0.6 cases on hand",
-    "last_seen": "2025 yearly report",
-    "is_limited_edition": false,
-    "source": "historical",
     "revival_rank": 9,
     "top_pick": true,
-    "display_name": "Little Fat Lamb Fireball 1.25L"
-  },
-  {
-    "name": "Little Fat Lamb Brewed Pineapple Bt 1.25L",
-    "category": "Cider",
-    "yearly_revenue": 1716.46,
-    "yearly_txns": 159,
-    "yearly_cases": 17.0,
-    "est_weekly_revenue": 33.01,
-    "est_weekly_cases": 0.327,
-    "margin_pct_historical": 66.8,
-    "in_inventory": true,
-    "current_stock_cases": 0.0,
-    "case_qty": 12,
-    "suggested_order_cases": 1,
-    "revival_rationale": "Good margin (66.8%); In system but zero stock",
-    "last_seen": "2025 yearly report",
-    "is_limited_edition": false,
-    "source": "historical",
-    "revival_rank": 10,
-    "top_pick": true,
-    "display_name": "Little Fat Lamb Brewed Pineapple Bt 1.25L"
-  },
-  {
-    "name": "Muhak Good Day Soju Green Grape Bt 360ml 20pk",
-    "category": "Soju",
-    "yearly_revenue": 1622.45,
-    "yearly_txns": 106,
-    "yearly_cases": 8.0,
-    "est_weekly_revenue": 31.2,
-    "est_weekly_cases": 0.154,
-    "margin_pct_historical": 41.7,
-    "in_inventory": true,
-    "current_stock_cases": 0.0,
-    "case_qty": 20,
-    "suggested_order_cases": 1,
-    "revival_rationale": "Good margin (41.7%); In system but zero stock",
-    "last_seen": "2025 yearly report",
-    "is_limited_edition": false,
-    "source": "historical",
-    "revival_rank": 11,
-    "top_pick": true,
-    "display_name": "Muhak Good Day Soju Green Grape Bt 360ml"
+    "display_name": "Baileys Irish Cream 700ml"
   },
   {
     "name": "Singleton Malt Master 700ml",
@@ -247,7 +205,7 @@
     "last_seen": "2025 yearly report",
     "is_limited_edition": false,
     "source": "historical",
-    "revival_rank": 12,
+    "revival_rank": 10,
     "top_pick": true,
     "display_name": "Singleton Malt Master 700ml"
   },
@@ -268,30 +226,9 @@
     "last_seen": "2025 yearly report",
     "is_limited_edition": false,
     "source": "historical",
-    "revival_rank": 13,
+    "revival_rank": 11,
     "top_pick": true,
     "display_name": "Sapporo Premium Beer Silver Can 650ml"
-  },
-  {
-    "name": "Muhak Good Day Soju Peach Bt 360ml",
-    "category": "Soju",
-    "yearly_revenue": 1466.01,
-    "yearly_txns": 97,
-    "yearly_cases": 7.0,
-    "est_weekly_revenue": 28.19,
-    "est_weekly_cases": 0.135,
-    "margin_pct_historical": 41.5,
-    "in_inventory": true,
-    "current_stock_cases": 0.0,
-    "case_qty": 20,
-    "suggested_order_cases": 1,
-    "revival_rationale": "Good margin (41.5%); In system but zero stock",
-    "last_seen": "2025 yearly report",
-    "is_limited_edition": false,
-    "source": "historical",
-    "revival_rank": 14,
-    "top_pick": true,
-    "display_name": "Muhak Good Day Soju Peach Bt 360ml"
   },
   {
     "name": "Jagermeister 1Ll",
@@ -310,30 +247,9 @@
     "last_seen": "2025 yearly report",
     "is_limited_edition": false,
     "source": "historical",
-    "revival_rank": 15,
+    "revival_rank": 12,
     "top_pick": true,
     "display_name": "Jagermeister 1Ll"
-  },
-  {
-    "name": "Muhak Good Day Soju Guava Bt 360ml",
-    "category": "Soju",
-    "yearly_revenue": 1397.6,
-    "yearly_txns": 112,
-    "yearly_cases": 7.0,
-    "est_weekly_revenue": 26.88,
-    "est_weekly_cases": 0.135,
-    "margin_pct_historical": 41.5,
-    "in_inventory": true,
-    "current_stock_cases": 0.0,
-    "case_qty": 20,
-    "suggested_order_cases": 1,
-    "revival_rationale": "Good margin (41.5%); In system but zero stock",
-    "last_seen": "2025 yearly report",
-    "is_limited_edition": false,
-    "source": "historical",
-    "revival_rank": 16,
-    "top_pick": true,
-    "display_name": "Muhak Good Day Soju Guava Bt 360ml"
   },
   {
     "name": "Suntory Whisky Toki 700ml",
@@ -352,7 +268,7 @@
     "last_seen": "2025 yearly report",
     "is_limited_edition": false,
     "source": "historical",
-    "revival_rank": 17,
+    "revival_rank": 13,
     "top_pick": true,
     "display_name": "Suntory Whisky Toki 700ml"
   },
@@ -373,7 +289,7 @@
     "last_seen": "2025 yearly report",
     "is_limited_edition": false,
     "source": "historical",
-    "revival_rank": 18,
+    "revival_rank": 14,
     "top_pick": true,
     "display_name": "Kopparberg Hard Apple Cider Can 440ml"
   },
@@ -394,7 +310,7 @@
     "last_seen": "2025 yearly report",
     "is_limited_edition": false,
     "source": "historical",
-    "revival_rank": 19,
+    "revival_rank": 15,
     "top_pick": true,
     "display_name": "Penfolds B8 Cab Shiraz 750ml"
   },
@@ -415,51 +331,9 @@
     "last_seen": "2025 yearly report",
     "is_limited_edition": false,
     "source": "historical",
-    "revival_rank": 20,
+    "revival_rank": 16,
     "top_pick": true,
     "display_name": "SMIRNOFF IDB ZERO 6.5% 375ML"
-  },
-  {
-    "name": "Muhak Good Day Soju Strawberry Bt 360ml",
-    "category": "Soju",
-    "yearly_revenue": 1228.77,
-    "yearly_txns": 81,
-    "yearly_cases": 6.0,
-    "est_weekly_revenue": 23.63,
-    "est_weekly_cases": 0.115,
-    "margin_pct_historical": 41.8,
-    "in_inventory": true,
-    "current_stock_cases": 0.0,
-    "case_qty": 20,
-    "suggested_order_cases": 1,
-    "revival_rationale": "Good margin (41.8%); In system but zero stock",
-    "last_seen": "2025 yearly report",
-    "is_limited_edition": false,
-    "source": "historical",
-    "revival_rank": 21,
-    "top_pick": false,
-    "display_name": "Muhak Good Day Soju Strawberry Bt 360ml"
-  },
-  {
-    "name": "Muhak Good Day  Soju Orange Bt 360ml 20pk",
-    "category": "Soju",
-    "yearly_revenue": 1222.78,
-    "yearly_txns": 98,
-    "yearly_cases": 5.0,
-    "est_weekly_revenue": 23.52,
-    "est_weekly_cases": 0.096,
-    "margin_pct_historical": 41.6,
-    "in_inventory": true,
-    "current_stock_cases": 0.0,
-    "case_qty": 20,
-    "suggested_order_cases": 1,
-    "revival_rationale": "Good margin (41.6%); In system but zero stock",
-    "last_seen": "2025 yearly report",
-    "is_limited_edition": false,
-    "source": "historical",
-    "revival_rank": 22,
-    "top_pick": false,
-    "display_name": "Muhak Good Day  Soju Orange Bt 360ml"
   },
   {
     "name": "Vat 69 Scotch 700ml",
@@ -478,30 +352,9 @@
     "last_seen": "2025 yearly report",
     "is_limited_edition": false,
     "source": "historical",
-    "revival_rank": 23,
-    "top_pick": false,
+    "revival_rank": 17,
+    "top_pick": true,
     "display_name": "Vat 69 Scotch 700ml"
-  },
-  {
-    "name": "Muhak Good Day Soju Apple Bt 360ml 20pk",
-    "category": "Soju",
-    "yearly_revenue": 1176.82,
-    "yearly_txns": 82,
-    "yearly_cases": 5.0,
-    "est_weekly_revenue": 22.63,
-    "est_weekly_cases": 0.096,
-    "margin_pct_historical": 41.4,
-    "in_inventory": true,
-    "current_stock_cases": 0.0,
-    "case_qty": 20,
-    "suggested_order_cases": 1,
-    "revival_rationale": "Good margin (41.4%); In system but zero stock",
-    "last_seen": "2025 yearly report",
-    "is_limited_edition": false,
-    "source": "historical",
-    "revival_rank": 24,
-    "top_pick": false,
-    "display_name": "Muhak Good Day Soju Apple Bt 360ml"
   },
   {
     "name": "Espolon Tequila Blanco 700ml",
@@ -520,8 +373,8 @@
     "last_seen": "2025 yearly report",
     "is_limited_edition": false,
     "source": "historical",
-    "revival_rank": 25,
-    "top_pick": false,
+    "revival_rank": 18,
+    "top_pick": true,
     "display_name": "Espolon Tequila Blanco 700ml"
   },
   {
@@ -541,8 +394,8 @@
     "last_seen": "2025 yearly report",
     "is_limited_edition": false,
     "source": "historical",
-    "revival_rank": 26,
-    "top_pick": false,
+    "revival_rank": 19,
+    "top_pick": true,
     "display_name": "Roku Gin 43% 700ml"
   },
   {
@@ -562,8 +415,8 @@
     "last_seen": "2025 yearly report",
     "is_limited_edition": false,
     "source": "historical",
-    "revival_rank": 27,
-    "top_pick": false,
+    "revival_rank": 20,
+    "top_pick": true,
     "display_name": "Saigon Special Beer Can 330ml"
   },
   {
@@ -583,7 +436,7 @@
     "last_seen": "2025 yearly report",
     "is_limited_edition": false,
     "source": "historical",
-    "revival_rank": 28,
+    "revival_rank": 21,
     "top_pick": false,
     "display_name": "Polmos Belvedere Vodka 700ml"
   },
@@ -604,7 +457,7 @@
     "last_seen": "2025 yearly report",
     "is_limited_edition": false,
     "source": "historical",
-    "revival_rank": 29,
+    "revival_rank": 22,
     "top_pick": false,
     "display_name": "Little Fat Lamb Watermelon Bt 1.25L"
   },
@@ -625,7 +478,7 @@
     "last_seen": "2025 yearly report",
     "is_limited_edition": false,
     "source": "historical",
-    "revival_rank": 30,
+    "revival_rank": 23,
     "top_pick": false,
     "display_name": "Skyy 1L"
   },
@@ -646,7 +499,7 @@
     "last_seen": "2025 yearly report",
     "is_limited_edition": false,
     "source": "historical",
-    "revival_rank": 31,
+    "revival_rank": 24,
     "top_pick": false,
     "display_name": "Muhak Good Day Soju Pomegranate Bt 360ml"
   },
@@ -667,7 +520,7 @@
     "last_seen": "2025 yearly report",
     "is_limited_edition": false,
     "source": "historical",
-    "revival_rank": 32,
+    "revival_rank": 25,
     "top_pick": false,
     "display_name": "Muhak Good Day Pineapple Soju Bt 360ml"
   },
@@ -688,30 +541,9 @@
     "last_seen": "2025 yearly report",
     "is_limited_edition": false,
     "source": "historical",
-    "revival_rank": 33,
+    "revival_rank": 26,
     "top_pick": false,
     "display_name": "Jack Daniels Gentleman & Cola Bt 330ml"
-  },
-  {
-    "name": "Russian Standard Original 700ml",
-    "category": "Vodka",
-    "yearly_revenue": 1011.81,
-    "yearly_txns": 18,
-    "yearly_cases": 3.0,
-    "est_weekly_revenue": 19.46,
-    "est_weekly_cases": 0.058,
-    "margin_pct_historical": 47.2,
-    "in_inventory": true,
-    "current_stock_cases": 0.0,
-    "case_qty": 6,
-    "suggested_order_cases": 1,
-    "revival_rationale": "Good margin (47.2%); In system but zero stock",
-    "last_seen": "2025 yearly report",
-    "is_limited_edition": false,
-    "source": "historical",
-    "revival_rank": 34,
-    "top_pick": false,
-    "display_name": "Russian Standard Original 700ml"
   },
   {
     "name": "Muhak Good Day Melon 350ml 20pk",
@@ -730,7 +562,7 @@
     "last_seen": "2025 yearly report",
     "is_limited_edition": false,
     "source": "historical",
-    "revival_rank": 35,
+    "revival_rank": 27,
     "top_pick": false,
     "display_name": "Muhak Good Day Melon 350ml"
   },
@@ -751,7 +583,7 @@
     "last_seen": "2025 yearly report",
     "is_limited_edition": false,
     "source": "historical",
-    "revival_rank": 36,
+    "revival_rank": 28,
     "top_pick": false,
     "display_name": "Cointreau Liqueur 700ml"
   },
@@ -772,7 +604,7 @@
     "last_seen": "2025 yearly report",
     "is_limited_edition": false,
     "source": "historical",
-    "revival_rank": 37,
+    "revival_rank": 29,
     "top_pick": false,
     "display_name": "Woodford Reserve Double Oaked Bourbon 700ml"
   },
@@ -793,7 +625,7 @@
     "last_seen": "2025 yearly report",
     "is_limited_edition": false,
     "source": "historical",
-    "revival_rank": 38,
+    "revival_rank": 30,
     "top_pick": false,
     "display_name": "Johnnie Walker Black Ruby 700ml"
   },
@@ -814,7 +646,7 @@
     "last_seen": "2025 yearly report",
     "is_limited_edition": false,
     "source": "historical",
-    "revival_rank": 39,
+    "revival_rank": 31,
     "top_pick": false,
     "display_name": "Sugarcane Wholesale Bunch 10kg"
   },
@@ -835,7 +667,7 @@
     "last_seen": "2025 yearly report",
     "is_limited_edition": false,
     "source": "historical",
-    "revival_rank": 40,
+    "revival_rank": 32,
     "top_pick": false,
     "display_name": "Muhak Good Day Soju Mango Bt 360ml"
   },
@@ -856,7 +688,7 @@
     "last_seen": "2025 yearly report",
     "is_limited_edition": false,
     "source": "historical",
-    "revival_rank": 41,
+    "revival_rank": 33,
     "top_pick": false,
     "display_name": "Chivas Regal Scotch XV 700ml"
   },
@@ -877,30 +709,9 @@
     "last_seen": "2025 yearly report",
     "is_limited_edition": false,
     "source": "historical",
-    "revival_rank": 42,
+    "revival_rank": 34,
     "top_pick": false,
     "display_name": "Teachers Scotch Whisky Bis 700ml"
-  },
-  {
-    "name": "DIVAS Vkat Vanilla 700ml",
-    "category": "Cheap Spirits",
-    "yearly_revenue": 845.82,
-    "yearly_txns": 60,
-    "yearly_cases": 4.0,
-    "est_weekly_revenue": 16.27,
-    "est_weekly_cases": 0.077,
-    "margin_pct_historical": 29.8,
-    "in_inventory": true,
-    "current_stock_cases": 0.0,
-    "case_qty": 12,
-    "suggested_order_cases": 1,
-    "revival_rationale": "In system but zero stock",
-    "last_seen": "2025 yearly report",
-    "is_limited_edition": false,
-    "source": "historical",
-    "revival_rank": 43,
-    "top_pick": false,
-    "display_name": "DIVAS Vkat Vanilla 700ml"
   },
   {
     "name": "Mercury Dry Cider Btl 375ml",
@@ -919,7 +730,7 @@
     "last_seen": "2025 yearly report",
     "is_limited_edition": false,
     "source": "historical",
-    "revival_rank": 44,
+    "revival_rank": 35,
     "top_pick": false,
     "display_name": "Mercury Dry Cider Btl 375ml"
   },
@@ -940,7 +751,7 @@
     "last_seen": "2025 yearly report",
     "is_limited_edition": false,
     "source": "historical",
-    "revival_rank": 45,
+    "revival_rank": 36,
     "top_pick": false,
     "display_name": "Muhak Good Day Soju Lychee Bt 360ml"
   },
@@ -961,7 +772,7 @@
     "last_seen": "2025 yearly report",
     "is_limited_edition": false,
     "source": "historical",
-    "revival_rank": 46,
+    "revival_rank": 37,
     "top_pick": false,
     "display_name": "Bacardi Carta Blanca 1L"
   },
@@ -982,7 +793,7 @@
     "last_seen": "2025 yearly report",
     "is_limited_edition": false,
     "source": "historical",
-    "revival_rank": 47,
+    "revival_rank": 38,
     "top_pick": false,
     "display_name": "Lotte Liquor Chum Churum Original Soju Bt 360ml 20"
   },
@@ -1003,7 +814,7 @@
     "last_seen": "2025 yearly report",
     "is_limited_edition": false,
     "source": "historical",
-    "revival_rank": 48,
+    "revival_rank": 39,
     "top_pick": false,
     "display_name": "Chateul Soorok Strawberry 355ml"
   },
@@ -1024,7 +835,7 @@
     "last_seen": "2025 yearly report",
     "is_limited_edition": false,
     "source": "historical",
-    "revival_rank": 49,
+    "revival_rank": 40,
     "top_pick": false,
     "display_name": "Cougar Bourbon 700ml"
   },
@@ -1045,7 +856,7 @@
     "last_seen": "2025 yearly report",
     "is_limited_edition": false,
     "source": "historical",
-    "revival_rank": 50,
+    "revival_rank": 41,
     "top_pick": false,
     "display_name": "Charm Malgeun Vivid Original 360ml"
   },
@@ -1066,7 +877,7 @@
     "last_seen": "2025 yearly report",
     "is_limited_edition": false,
     "source": "historical",
-    "revival_rank": 51,
+    "revival_rank": 42,
     "top_pick": false,
     "display_name": "Jacobs Creek Le Petit Rose 750ml"
   },
@@ -1087,7 +898,7 @@
     "last_seen": "2025 yearly report",
     "is_limited_edition": false,
     "source": "historical",
-    "revival_rank": 52,
+    "revival_rank": 43,
     "top_pick": false,
     "display_name": "Somersby Super Crisp Apple Cider Can 375ml"
   },
@@ -1108,7 +919,7 @@
     "last_seen": "2025 yearly report",
     "is_limited_edition": false,
     "source": "historical",
-    "revival_rank": 53,
+    "revival_rank": 44,
     "top_pick": false,
     "display_name": "Glenmorangie The Original 10YO 700ml"
   },
@@ -1129,7 +940,7 @@
     "last_seen": "2025 yearly report",
     "is_limited_edition": false,
     "source": "historical",
-    "revival_rank": 54,
+    "revival_rank": 45,
     "top_pick": false,
     "display_name": "Winfield Original 30s Blue"
   },
@@ -1150,7 +961,7 @@
     "last_seen": "2025 yearly report",
     "is_limited_edition": false,
     "source": "historical",
-    "revival_rank": 55,
+    "revival_rank": 46,
     "top_pick": false,
     "display_name": "Canadian Club 50ml"
   },
@@ -1171,7 +982,7 @@
     "last_seen": "2025 yearly report",
     "is_limited_edition": false,
     "source": "historical",
-    "revival_rank": 56,
+    "revival_rank": 47,
     "top_pick": false,
     "display_name": "Wild Boar Spiced Rum &Cola 9% 500ml"
   },
@@ -1192,7 +1003,7 @@
     "last_seen": "2025 yearly report",
     "is_limited_edition": false,
     "source": "historical",
-    "revival_rank": 57,
+    "revival_rank": 48,
     "top_pick": false,
     "display_name": "Suntory Strong Zero Double Lemon 350ml"
   },
@@ -1213,7 +1024,7 @@
     "last_seen": "2025 yearly report",
     "is_limited_edition": false,
     "source": "historical",
-    "revival_rank": 58,
+    "revival_rank": 49,
     "top_pick": false,
     "display_name": "WINFIELD JETS BLUE 23S"
   },
@@ -1234,7 +1045,7 @@
     "last_seen": "2025 yearly report",
     "is_limited_edition": false,
     "source": "historical",
-    "revival_rank": 59,
+    "revival_rank": 50,
     "top_pick": false,
     "display_name": "Belvedere Organic Vodka 700ml"
   },
@@ -1255,7 +1066,7 @@
     "last_seen": "2025 yearly report",
     "is_limited_edition": false,
     "source": "historical",
-    "revival_rank": 60,
+    "revival_rank": 51,
     "top_pick": false,
     "display_name": "Little Fat Lamb Ram B.O 8% 1.25L"
   },
@@ -1276,7 +1087,7 @@
     "last_seen": "2025 yearly report",
     "is_limited_edition": false,
     "source": "historical",
-    "revival_rank": 61,
+    "revival_rank": 52,
     "top_pick": false,
     "display_name": "LIT FAT LAMB COLA 8% 1.25L"
   },
@@ -1297,7 +1108,7 @@
     "last_seen": "2025 yearly report",
     "is_limited_edition": false,
     "source": "historical",
-    "revival_rank": 62,
+    "revival_rank": 53,
     "top_pick": false,
     "display_name": "Little Fat Lamb Ginger 8% Bt 1.25L"
   },
@@ -1318,7 +1129,7 @@
     "last_seen": "2025 yearly report",
     "is_limited_edition": false,
     "source": "historical",
-    "revival_rank": 63,
+    "revival_rank": 54,
     "top_pick": false,
     "display_name": "Cheon Yeon Original 360ml"
   },
@@ -1339,7 +1150,7 @@
     "last_seen": "2025 yearly report",
     "is_limited_edition": false,
     "source": "historical",
-    "revival_rank": 64,
+    "revival_rank": 55,
     "top_pick": false,
     "display_name": "Kilkenny Draught Ale Can 440ml"
   },
@@ -1360,7 +1171,7 @@
     "last_seen": "2025 yearly report",
     "is_limited_edition": false,
     "source": "historical",
-    "revival_rank": 65,
+    "revival_rank": 56,
     "top_pick": false,
     "display_name": "Jack Daniels 700ml Gift"
   },
@@ -1381,7 +1192,7 @@
     "last_seen": "2025 yearly report",
     "is_limited_edition": false,
     "source": "historical",
-    "revival_rank": 66,
+    "revival_rank": 57,
     "top_pick": false,
     "display_name": "Charm Malgeun Vivid Green Grape 360ml"
   },
@@ -1402,7 +1213,7 @@
     "last_seen": "2025 yearly report",
     "is_limited_edition": false,
     "source": "historical",
-    "revival_rank": 67,
+    "revival_rank": 58,
     "top_pick": false,
     "display_name": "Cheon Yeon Yoghurt 360ml"
   },
@@ -1423,7 +1234,7 @@
     "last_seen": "2025 yearly report",
     "is_limited_edition": false,
     "source": "historical",
-    "revival_rank": 68,
+    "revival_rank": 59,
     "top_pick": false,
     "display_name": "Kronenbourg 1664 Can 500ml"
   },
@@ -1444,7 +1255,7 @@
     "last_seen": "2025 yearly report",
     "is_limited_edition": false,
     "source": "historical",
-    "revival_rank": 69,
+    "revival_rank": 60,
     "top_pick": false,
     "display_name": "Cheon Yeon Lychee 360ml"
   },
@@ -1465,7 +1276,7 @@
     "last_seen": "2025 yearly report",
     "is_limited_edition": false,
     "source": "historical",
-    "revival_rank": 70,
+    "revival_rank": 61,
     "top_pick": false,
     "display_name": "Cheon Yeon Mango 360ml"
   },
@@ -1486,7 +1297,7 @@
     "last_seen": "2025 yearly report",
     "is_limited_edition": false,
     "source": "historical",
-    "revival_rank": 71,
+    "revival_rank": 62,
     "top_pick": false,
     "display_name": "Cheon Yeon Watermelon 360ml"
   },
@@ -1507,7 +1318,7 @@
     "last_seen": "2025 yearly report",
     "is_limited_edition": false,
     "source": "historical",
-    "revival_rank": 72,
+    "revival_rank": 63,
     "top_pick": false,
     "display_name": "Muhak Good Day Yogurt 350ml"
   },
@@ -1528,7 +1339,7 @@
     "last_seen": "2025 yearly report",
     "is_limited_edition": false,
     "source": "historical",
-    "revival_rank": 73,
+    "revival_rank": 64,
     "top_pick": false,
     "display_name": "Bojak Calypso Hazy IPA 375ml"
   },
@@ -1549,7 +1360,7 @@
     "last_seen": "2025 yearly report",
     "is_limited_edition": false,
     "source": "historical",
-    "revival_rank": 74,
+    "revival_rank": 65,
     "top_pick": false,
     "display_name": "Winfield Original 25s Blue"
   },
@@ -1570,7 +1381,7 @@
     "last_seen": "2025 yearly report",
     "is_limited_edition": false,
     "source": "historical",
-    "revival_rank": 75,
+    "revival_rank": 66,
     "top_pick": false,
     "display_name": "Goulbourn Valley Orange Juice 1.25L"
   },
@@ -1591,7 +1402,7 @@
     "last_seen": "2025 yearly report",
     "is_limited_edition": false,
     "source": "historical",
-    "revival_rank": 76,
+    "revival_rank": 67,
     "top_pick": false,
     "display_name": "Kirks Soda Water Bt 1.25L"
   },
@@ -1612,7 +1423,7 @@
     "last_seen": "2025 yearly report",
     "is_limited_edition": false,
     "source": "historical",
-    "revival_rank": 77,
+    "revival_rank": 68,
     "top_pick": false,
     "display_name": "Jameson Black Barrel 700ml"
   },
@@ -1633,7 +1444,7 @@
     "last_seen": "2025 yearly report",
     "is_limited_edition": false,
     "source": "historical",
-    "revival_rank": 78,
+    "revival_rank": 69,
     "top_pick": false,
     "display_name": "Goulbourn Valley Pineapple Juice 1.25L"
   },
@@ -1654,7 +1465,7 @@
     "last_seen": "2025 yearly report",
     "is_limited_edition": false,
     "source": "historical",
-    "revival_rank": 79,
+    "revival_rank": 70,
     "top_pick": false,
     "display_name": "Smirnoff 5% Can 375ml"
   },
@@ -1675,7 +1486,7 @@
     "last_seen": "2025 yearly report",
     "is_limited_edition": false,
     "source": "historical",
-    "revival_rank": 80,
+    "revival_rank": 71,
     "top_pick": false,
     "display_name": "Cheon Yeon Peach 360ml"
   },
@@ -1696,7 +1507,7 @@
     "last_seen": "2025 yearly report",
     "is_limited_edition": false,
     "source": "historical",
-    "revival_rank": 81,
+    "revival_rank": 72,
     "top_pick": false,
     "display_name": "Jinro Green Grape Soju 360ml"
   },
@@ -1717,7 +1528,7 @@
     "last_seen": "2025 yearly report",
     "is_limited_edition": false,
     "source": "historical",
-    "revival_rank": 82,
+    "revival_rank": 73,
     "top_pick": false,
     "display_name": "Fox Friday WCIPA 375ml"
   },
@@ -1738,7 +1549,7 @@
     "last_seen": "2025 yearly report",
     "is_limited_edition": false,
     "source": "historical",
-    "revival_rank": 83,
+    "revival_rank": 74,
     "top_pick": false,
     "display_name": "Woodstock Bourbon & Cola 4.8% Bt 660ml"
   },
@@ -1759,7 +1570,7 @@
     "last_seen": "2025 yearly report",
     "is_limited_edition": false,
     "source": "historical",
-    "revival_rank": 84,
+    "revival_rank": 75,
     "top_pick": false,
     "display_name": "Victoria Bitter Extra 6% Bt 375ml"
   },
@@ -1780,7 +1591,7 @@
     "last_seen": "2025 yearly report",
     "is_limited_edition": false,
     "source": "historical",
-    "revival_rank": 85,
+    "revival_rank": 76,
     "top_pick": false,
     "display_name": "Mountain Culture Cult IPA 355ml"
   },
@@ -1801,7 +1612,7 @@
     "last_seen": "2025 yearly report",
     "is_limited_edition": false,
     "source": "historical",
-    "revival_rank": 86,
+    "revival_rank": 77,
     "top_pick": false,
     "display_name": "Corona Extra Can 355ml"
   },
@@ -1822,7 +1633,7 @@
     "last_seen": "2025 yearly report",
     "is_limited_edition": false,
     "source": "historical",
-    "revival_rank": 87,
+    "revival_rank": 78,
     "top_pick": false,
     "display_name": "Lotte Chum Churum Soonhari Peach Soju Bt 360"
   },
@@ -1843,7 +1654,7 @@
     "last_seen": "2025 yearly report",
     "is_limited_edition": false,
     "source": "historical",
-    "revival_rank": 88,
+    "revival_rank": 79,
     "top_pick": false,
     "display_name": "Johnnie Walker Black and Cola 6% 375ml"
   },
@@ -1864,7 +1675,7 @@
     "last_seen": "2025 yearly report",
     "is_limited_edition": false,
     "source": "historical",
-    "revival_rank": 89,
+    "revival_rank": 80,
     "top_pick": false,
     "display_name": "Angkor Extra Stout 330ml"
   },
@@ -1885,7 +1696,7 @@
     "last_seen": "2025 yearly report",
     "is_limited_edition": false,
     "source": "historical",
-    "revival_rank": 90,
+    "revival_rank": 81,
     "top_pick": false,
     "display_name": "Tired Hands Hyve Mynd DIPA 473ml"
   },
@@ -1906,7 +1717,7 @@
     "last_seen": "2025 yearly report",
     "is_limited_edition": false,
     "source": "historical",
-    "revival_rank": 91,
+    "revival_rank": 82,
     "top_pick": false,
     "display_name": "Lotte Chum Churum Strawberry Soju"
   },
@@ -1927,7 +1738,7 @@
     "last_seen": "2025 yearly report",
     "is_limited_edition": false,
     "source": "historical",
-    "revival_rank": 92,
+    "revival_rank": 83,
     "top_pick": false,
     "display_name": "HEAPS NORMAL THIRD IPA 375ML"
   },
@@ -1948,7 +1759,7 @@
     "last_seen": "2025 yearly report",
     "is_limited_edition": false,
     "source": "historical",
-    "revival_rank": 93,
+    "revival_rank": 84,
     "top_pick": false,
     "display_name": "Queen Lychee Soju 360ml"
   },
@@ -1969,7 +1780,7 @@
     "last_seen": "2025 yearly report",
     "is_limited_edition": false,
     "source": "historical",
-    "revival_rank": 94,
+    "revival_rank": 85,
     "top_pick": false,
     "display_name": "James Squire Ginger Beer 6% C330ML"
   },
@@ -1990,7 +1801,7 @@
     "last_seen": "2025 yearly report",
     "is_limited_edition": false,
     "source": "historical",
-    "revival_rank": 95,
+    "revival_rank": 86,
     "top_pick": false,
     "display_name": "White Claw Watermelon Seltz Can 330ml"
   },
@@ -2011,7 +1822,7 @@
     "last_seen": "2025 yearly report",
     "is_limited_edition": false,
     "source": "historical",
-    "revival_rank": 96,
+    "revival_rank": 87,
     "top_pick": false,
     "display_name": "Lotte Chum Churum Apple Soju 360ml"
   },
@@ -2032,7 +1843,7 @@
     "last_seen": "2025 yearly report",
     "is_limited_edition": false,
     "source": "historical",
-    "revival_rank": 97,
+    "revival_rank": 88,
     "top_pick": false,
     "display_name": "Hop Nation Karma Oatmeal Stout 5% Can 375ml"
   },
@@ -2053,7 +1864,7 @@
     "last_seen": "2025 yearly report",
     "is_limited_edition": false,
     "source": "historical",
-    "revival_rank": 98,
+    "revival_rank": 89,
     "top_pick": false,
     "display_name": "Peter Lehmann Eight Songs Shiraz 750ml"
   },
@@ -2074,7 +1885,7 @@
     "last_seen": "2025 yearly report",
     "is_limited_edition": false,
     "source": "historical",
-    "revival_rank": 99,
+    "revival_rank": 90,
     "top_pick": false,
     "display_name": "Queen Banana Soju 360ml"
   },
@@ -2095,7 +1906,7 @@
     "last_seen": "2025 yearly report",
     "is_limited_edition": false,
     "source": "historical",
-    "revival_rank": 100,
+    "revival_rank": 91,
     "top_pick": false,
     "display_name": "Muhak Good Day Passionfruit 360ml"
   },
@@ -2116,7 +1927,7 @@
     "last_seen": "2025 yearly report",
     "is_limited_edition": false,
     "source": "historical",
-    "revival_rank": 101,
+    "revival_rank": 92,
     "top_pick": false,
     "display_name": "Little Fat Lamb Brewed Tropical 8% Bt 1.25L"
   },
@@ -2137,7 +1948,7 @@
     "last_seen": "2025 yearly report",
     "is_limited_edition": false,
     "source": "historical",
-    "revival_rank": 102,
+    "revival_rank": 93,
     "top_pick": false,
     "display_name": "Grog - Shochu, Vodka Soda Lemon Ice 330ml Can"
   },
@@ -2158,7 +1969,7 @@
     "last_seen": "2025 yearly report",
     "is_limited_edition": false,
     "source": "historical",
-    "revival_rank": 103,
+    "revival_rank": 94,
     "top_pick": false,
     "display_name": "KIRIN HYOKETSU LYCHEE C330ML"
   },
@@ -2179,7 +1990,7 @@
     "last_seen": "2025 yearly report",
     "is_limited_edition": false,
     "source": "historical",
-    "revival_rank": 104,
+    "revival_rank": 95,
     "top_pick": false,
     "display_name": "Bohae Soony Original Rice Wine 750ml"
   },
@@ -2200,7 +2011,7 @@
     "last_seen": "2025 yearly report",
     "is_limited_edition": false,
     "source": "historical",
-    "revival_rank": 105,
+    "revival_rank": 96,
     "top_pick": false,
     "display_name": "Sense Soju Original 19.3% bt 375ml"
   },
@@ -2221,7 +2032,7 @@
     "last_seen": "2025 yearly report",
     "is_limited_edition": false,
     "source": "historical",
-    "revival_rank": 106,
+    "revival_rank": 97,
     "top_pick": false,
     "display_name": "Sense Soju Greengrape Bt 375ml"
   },
@@ -2242,7 +2053,7 @@
     "last_seen": "2025 yearly report",
     "is_limited_edition": false,
     "source": "historical",
-    "revival_rank": 107,
+    "revival_rank": 98,
     "top_pick": false,
     "display_name": "Sense Soju Peach 14% bt 375ml"
   },
@@ -2263,7 +2074,7 @@
     "last_seen": "2025 yearly report",
     "is_limited_edition": false,
     "source": "historical",
-    "revival_rank": 108,
+    "revival_rank": 99,
     "top_pick": false,
     "display_name": "Soju Vivid Melon 360ml"
   },
@@ -2284,7 +2095,7 @@
     "last_seen": "2025 yearly report",
     "is_limited_edition": false,
     "source": "historical",
-    "revival_rank": 109,
+    "revival_rank": 100,
     "top_pick": false,
     "display_name": "Chateul Soorok Original 360ml"
   },
@@ -2305,7 +2116,7 @@
     "last_seen": "2025 yearly report",
     "is_limited_edition": false,
     "source": "historical",
-    "revival_rank": 110,
+    "revival_rank": 101,
     "top_pick": false,
     "display_name": "Soju Vivid Lychee 360ml"
   },
@@ -2326,7 +2137,7 @@
     "last_seen": "2025 yearly report",
     "is_limited_edition": false,
     "source": "historical",
-    "revival_rank": 111,
+    "revival_rank": 102,
     "top_pick": false,
     "display_name": "DEE VINE EST CASK CL DRY RED4L"
   },
@@ -2347,7 +2158,7 @@
     "last_seen": "2025 yearly report",
     "is_limited_edition": false,
     "source": "historical",
-    "revival_rank": 112,
+    "revival_rank": 103,
     "top_pick": false,
     "display_name": "Charm Malgeun Vivid Apple 330ml"
   },
@@ -2368,7 +2179,7 @@
     "last_seen": "2025 yearly report",
     "is_limited_edition": false,
     "source": "historical",
-    "revival_rank": 113,
+    "revival_rank": 104,
     "top_pick": false,
     "display_name": "Sense Soju Apple 16% bt 375ml"
   },
@@ -2389,7 +2200,7 @@
     "last_seen": "2025 yearly report",
     "is_limited_edition": false,
     "source": "historical",
-    "revival_rank": 114,
+    "revival_rank": 105,
     "top_pick": false,
     "display_name": "Spring Rock Fruity Lexia 4L"
   },
@@ -2410,7 +2221,7 @@
     "last_seen": "2025 yearly report",
     "is_limited_edition": false,
     "source": "historical",
-    "revival_rank": 115,
+    "revival_rank": 106,
     "top_pick": false,
     "display_name": "Smiths Original 90g"
   },
@@ -2431,7 +2242,7 @@
     "last_seen": "2025 yearly report",
     "is_limited_edition": false,
     "source": "historical",
-    "revival_rank": 116,
+    "revival_rank": 107,
     "top_pick": false,
     "display_name": "Cheon Yeon Green Grape 360ml"
   },
@@ -2452,7 +2263,7 @@
     "last_seen": "2025 yearly report",
     "is_limited_edition": false,
     "source": "historical",
-    "revival_rank": 117,
+    "revival_rank": 108,
     "top_pick": false,
     "display_name": "RUMOURS PINOT GRIGIO 750ML"
   },
@@ -2473,7 +2284,7 @@
     "last_seen": "2025 yearly report",
     "is_limited_edition": false,
     "source": "historical",
-    "revival_rank": 118,
+    "revival_rank": 109,
     "top_pick": false,
     "display_name": "Sense Soju Passionfruit Bt 375ml"
   },
@@ -2494,7 +2305,7 @@
     "last_seen": "2025 yearly report",
     "is_limited_edition": false,
     "source": "historical",
-    "revival_rank": 119,
+    "revival_rank": 110,
     "top_pick": false,
     "display_name": "Cruiser Guava 600ml"
   },
@@ -2515,7 +2326,7 @@
     "last_seen": "2025 yearly report",
     "is_limited_edition": false,
     "source": "historical",
-    "revival_rank": 120,
+    "revival_rank": 111,
     "top_pick": false,
     "display_name": "CRUISER FREE MANGO RSBRY 275ML"
   },
@@ -2536,7 +2347,7 @@
     "last_seen": "2025 yearly report",
     "is_limited_edition": false,
     "source": "historical",
-    "revival_rank": 121,
+    "revival_rank": 112,
     "top_pick": false,
     "display_name": "Arirang Lychee 360ml"
   },
@@ -2557,7 +2368,7 @@
     "last_seen": "2025 yearly report",
     "is_limited_edition": false,
     "source": "historical",
-    "revival_rank": 122,
+    "revival_rank": 113,
     "top_pick": false,
     "display_name": "Arirang Peach 360ml"
   },
@@ -2578,7 +2389,7 @@
     "last_seen": "2025 yearly report",
     "is_limited_edition": false,
     "source": "historical",
-    "revival_rank": 123,
+    "revival_rank": 114,
     "top_pick": false,
     "display_name": "Tired Hands Alien Church DIPA 473ml"
   },
@@ -2599,7 +2410,7 @@
     "last_seen": "2025 yearly report",
     "is_limited_edition": false,
     "source": "historical",
-    "revival_rank": 124,
+    "revival_rank": 115,
     "top_pick": false,
     "display_name": "Arirang Watermelon 360ml"
   },
@@ -2620,7 +2431,7 @@
     "last_seen": "2025 yearly report",
     "is_limited_edition": false,
     "source": "historical",
-    "revival_rank": 125,
+    "revival_rank": 116,
     "top_pick": false,
     "display_name": "Arirang Green Grape 360ml"
   },
@@ -2641,7 +2452,7 @@
     "last_seen": "2025 yearly report",
     "is_limited_edition": false,
     "source": "historical",
-    "revival_rank": 126,
+    "revival_rank": 117,
     "top_pick": false,
     "display_name": "Sense Soju Pineapple Bt 375ml"
   },
@@ -2662,7 +2473,7 @@
     "last_seen": "2025 yearly report",
     "is_limited_edition": false,
     "source": "historical",
-    "revival_rank": 127,
+    "revival_rank": 118,
     "top_pick": false,
     "display_name": "Coopers Sparkling Ale Bt 750ml"
   },
@@ -2683,7 +2494,7 @@
     "last_seen": "2025 yearly report",
     "is_limited_edition": false,
     "source": "historical",
-    "revival_rank": 128,
+    "revival_rank": 119,
     "top_pick": false,
     "display_name": "Hoegaarden Witbier Bt 330ml"
   },
@@ -2704,7 +2515,7 @@
     "last_seen": "2025 yearly report",
     "is_limited_edition": false,
     "source": "historical",
-    "revival_rank": 129,
+    "revival_rank": 120,
     "top_pick": false,
     "display_name": "Powerade Mountain Blast Bt 600ml"
   },
@@ -2725,7 +2536,7 @@
     "last_seen": "2025 yearly report",
     "is_limited_edition": false,
     "source": "historical",
-    "revival_rank": 130,
+    "revival_rank": 121,
     "top_pick": false,
     "display_name": "Stomping Ground Into The Wood Westward Whisky Strong Ale 355ml"
   },
@@ -2746,7 +2557,7 @@
     "last_seen": "2025 yearly report",
     "is_limited_edition": false,
     "source": "historical",
-    "revival_rank": 131,
+    "revival_rank": 122,
     "top_pick": false,
     "display_name": "Better Beer 355ml 4.2%"
   },
@@ -2767,7 +2578,7 @@
     "last_seen": "2025 yearly report",
     "is_limited_edition": false,
     "source": "historical",
-    "revival_rank": 132,
+    "revival_rank": 123,
     "top_pick": false,
     "display_name": "Becks Beer Bt 330ml"
   },
@@ -2788,7 +2599,7 @@
     "last_seen": "2025 yearly report",
     "is_limited_edition": false,
     "source": "historical",
-    "revival_rank": 133,
+    "revival_rank": 124,
     "top_pick": false,
     "display_name": "Parish Ghost In The Machine IPA 473ml"
   },
@@ -2809,7 +2620,7 @@
     "last_seen": "2025 yearly report",
     "is_limited_edition": false,
     "source": "historical",
-    "revival_rank": 134,
+    "revival_rank": 125,
     "top_pick": false,
     "display_name": "Kook Soon Dang Rice Wine Peach 750ml"
   },
@@ -2830,7 +2641,7 @@
     "last_seen": "2025 yearly report",
     "is_limited_edition": false,
     "source": "historical",
-    "revival_rank": 135,
+    "revival_rank": 126,
     "top_pick": false,
     "display_name": "Gordons Dry Gin 350ml"
   },
@@ -2851,7 +2662,7 @@
     "last_seen": "2025 yearly report",
     "is_limited_edition": false,
     "source": "historical",
-    "revival_rank": 136,
+    "revival_rank": 127,
     "top_pick": false,
     "display_name": "Smirnoff Soda Black Raspberry 330ml"
   },
@@ -2872,7 +2683,7 @@
     "last_seen": "2025 yearly report",
     "is_limited_edition": false,
     "source": "historical",
-    "revival_rank": 137,
+    "revival_rank": 128,
     "top_pick": false,
     "display_name": "RUMOURS CHARDONNAY 750ML"
   },
@@ -2893,7 +2704,7 @@
     "last_seen": "2025 yearly report",
     "is_limited_edition": false,
     "source": "historical",
-    "revival_rank": 138,
+    "revival_rank": 129,
     "top_pick": false,
     "display_name": "Sapporo Premium Beer Black Can 650ml"
   },
@@ -2914,7 +2725,7 @@
     "last_seen": "2025 yearly report",
     "is_limited_edition": false,
     "source": "historical",
-    "revival_rank": 139,
+    "revival_rank": 130,
     "top_pick": false,
     "display_name": "Hachii Strong Mandarin 9% 350ml"
   },
@@ -2935,7 +2746,7 @@
     "last_seen": "2025 yearly report",
     "is_limited_edition": false,
     "source": "historical",
-    "revival_rank": 140,
+    "revival_rank": 131,
     "top_pick": false,
     "display_name": "Kirin Hyoketsu Strong Lemon 9% 500ml"
   },
@@ -2956,7 +2767,7 @@
     "last_seen": "2025 yearly report",
     "is_limited_edition": false,
     "source": "historical",
-    "revival_rank": 141,
+    "revival_rank": 132,
     "top_pick": false,
     "display_name": "Devils Corner P/noir 750ml"
   },
@@ -2977,7 +2788,7 @@
     "last_seen": "2025 yearly report",
     "is_limited_edition": false,
     "source": "historical",
-    "revival_rank": 142,
+    "revival_rank": 133,
     "top_pick": false,
     "display_name": "Lotte Liquor Chum Churum Green Grape Soju Bt 360ml"
   },
@@ -2998,7 +2809,7 @@
     "last_seen": "2025 yearly report",
     "is_limited_edition": false,
     "source": "historical",
-    "revival_rank": 143,
+    "revival_rank": 134,
     "top_pick": false,
     "display_name": "Miller Chill Real Lime Bt 330ml"
   },
@@ -3019,7 +2830,7 @@
     "last_seen": "2025 yearly report",
     "is_limited_edition": false,
     "source": "historical",
-    "revival_rank": 144,
+    "revival_rank": 135,
     "top_pick": false,
     "display_name": "Victoria Bitter Extra 6% Longneck 750ml"
   },
@@ -3040,7 +2851,7 @@
     "last_seen": "2025 yearly report",
     "is_limited_edition": false,
     "source": "historical",
-    "revival_rank": 145,
+    "revival_rank": 136,
     "top_pick": false,
     "display_name": "Modelo Especial Cerveza 330ml"
   },
@@ -3061,7 +2872,7 @@
     "last_seen": "2025 yearly report",
     "is_limited_edition": false,
     "source": "historical",
-    "revival_rank": 146,
+    "revival_rank": 137,
     "top_pick": false,
     "display_name": "Tooheys Red Bitter Can 375ml"
   },
@@ -3082,7 +2893,7 @@
     "last_seen": "2025 yearly report",
     "is_limited_edition": false,
     "source": "historical",
-    "revival_rank": 147,
+    "revival_rank": 138,
     "top_pick": false,
     "display_name": "Goulburn Valley Cranberry Juice 1.25L"
   },
@@ -3103,7 +2914,7 @@
     "last_seen": "2025 yearly report",
     "is_limited_edition": false,
     "source": "historical",
-    "revival_rank": 148,
+    "revival_rank": 139,
     "top_pick": false,
     "display_name": "Kronenbourg 1664 Bt 330ml"
   },
@@ -3124,7 +2935,7 @@
     "last_seen": "2025 yearly report",
     "is_limited_edition": false,
     "source": "historical",
-    "revival_rank": 149,
+    "revival_rank": 140,
     "top_pick": false,
     "display_name": "Mountain Culture Be Kind Rewind 500ml"
   },
@@ -3145,7 +2956,7 @@
     "last_seen": "2025 yearly report",
     "is_limited_edition": false,
     "source": "historical",
-    "revival_rank": 150,
+    "revival_rank": 141,
     "top_pick": false,
     "display_name": "Slow Lane Outback Sky Flanders Red 375ml"
   },
@@ -3166,7 +2977,7 @@
     "last_seen": "2025 yearly report",
     "is_limited_edition": false,
     "source": "historical",
-    "revival_rank": 151,
+    "revival_rank": 142,
     "top_pick": false,
     "display_name": "Tiger Can 500ml"
   },
@@ -3187,7 +2998,7 @@
     "last_seen": "2025 yearly report",
     "is_limited_edition": false,
     "source": "historical",
-    "revival_rank": 152,
+    "revival_rank": 143,
     "top_pick": false,
     "display_name": "One Drop Shizzert Pastry Stout 440ml"
   },
@@ -3208,7 +3019,7 @@
     "last_seen": "2025 yearly report",
     "is_limited_edition": false,
     "source": "historical",
-    "revival_rank": 153,
+    "revival_rank": 144,
     "top_pick": false,
     "display_name": "Ever Grain Sorbetto #73 Sour 473ml"
   },
@@ -3229,7 +3040,7 @@
     "last_seen": "2025 yearly report",
     "is_limited_edition": false,
     "source": "historical",
-    "revival_rank": 154,
+    "revival_rank": 145,
     "top_pick": false,
     "display_name": "Hop Nation The Chop IPA Can 375ml"
   },
@@ -3250,7 +3061,7 @@
     "last_seen": "2025 yearly report",
     "is_limited_edition": false,
     "source": "historical",
-    "revival_rank": 155,
+    "revival_rank": 146,
     "top_pick": false,
     "display_name": "Grog Shochu Peach Vodka & Soda 330ml Can"
   },
@@ -3271,7 +3082,7 @@
     "last_seen": "2025 yearly report",
     "is_limited_edition": false,
     "source": "historical",
-    "revival_rank": 156,
+    "revival_rank": 147,
     "top_pick": false,
     "display_name": "Hachii Strong Lemon 9% 350ml"
   },
@@ -3292,7 +3103,7 @@
     "last_seen": "2025 yearly report",
     "is_limited_edition": false,
     "source": "historical",
-    "revival_rank": 157,
+    "revival_rank": 148,
     "top_pick": false,
     "display_name": "Yalumba Barossa Shiraz Cabernet Sauvignon 750ml"
   },
@@ -3313,7 +3124,7 @@
     "last_seen": "2025 yearly report",
     "is_limited_edition": false,
     "source": "historical",
-    "revival_rank": 158,
+    "revival_rank": 149,
     "top_pick": false,
     "display_name": "Co Conspirators The Don 2024 Imperial Stout 440ml"
   },
@@ -3334,7 +3145,7 @@
     "last_seen": "2025 yearly report",
     "is_limited_edition": false,
     "source": "historical",
-    "revival_rank": 159,
+    "revival_rank": 150,
     "top_pick": false,
     "display_name": "Espolon Sparkling Margarita 330ml"
   },
@@ -3355,7 +3166,7 @@
     "last_seen": "2025 yearly report",
     "is_limited_edition": false,
     "source": "historical",
-    "revival_rank": 160,
+    "revival_rank": 151,
     "top_pick": false,
     "display_name": "Taylors Estate Merlot 750ml"
   },
@@ -3376,7 +3187,7 @@
     "last_seen": "2025 yearly report",
     "is_limited_edition": false,
     "source": "historical",
-    "revival_rank": 161,
+    "revival_rank": 152,
     "top_pick": false,
     "display_name": "Taylors Jaraman P/Noir 750ml"
   },
@@ -3397,7 +3208,7 @@
     "last_seen": "2025 yearly report",
     "is_limited_edition": false,
     "source": "historical",
-    "revival_rank": 162,
+    "revival_rank": 153,
     "top_pick": false,
     "display_name": "Cruiser Sour Grape 275ml"
   },
@@ -3418,7 +3229,7 @@
     "last_seen": "2025 yearly report",
     "is_limited_edition": false,
     "source": "historical",
-    "revival_rank": 163,
+    "revival_rank": 154,
     "top_pick": false,
     "display_name": "Mud House Central Otago Pinot Noir 750ml"
   },
@@ -3439,7 +3250,7 @@
     "last_seen": "2025 yearly report",
     "is_limited_edition": false,
     "source": "historical",
-    "revival_rank": 164,
+    "revival_rank": 155,
     "top_pick": false,
     "display_name": "Powerade Lemon Lime 600ml"
   },
@@ -3460,7 +3271,7 @@
     "last_seen": "2025 yearly report",
     "is_limited_edition": false,
     "source": "historical",
-    "revival_rank": 165,
+    "revival_rank": 156,
     "top_pick": false,
     "display_name": "One Drop Kilowatt 440ml"
   },
@@ -3481,7 +3292,7 @@
     "last_seen": "2025 yearly report",
     "is_limited_edition": false,
     "source": "historical",
-    "revival_rank": 166,
+    "revival_rank": 157,
     "top_pick": false,
     "display_name": "Gangnam Banana Makgeolli 750ml"
   },
@@ -3502,7 +3313,7 @@
     "last_seen": "2025 yearly report",
     "is_limited_edition": false,
     "source": "historical",
-    "revival_rank": 167,
+    "revival_rank": 158,
     "top_pick": false,
     "display_name": "Spring Rock Smooth Dry Red 4L"
   },
@@ -3523,7 +3334,7 @@
     "last_seen": "2025 yearly report",
     "is_limited_edition": false,
     "source": "historical",
-    "revival_rank": 168,
+    "revival_rank": 159,
     "top_pick": false,
     "display_name": "Mountain Culture Only What You Need 500ml"
   },
@@ -3544,7 +3355,7 @@
     "last_seen": "2025 yearly report",
     "is_limited_edition": false,
     "source": "historical",
-    "revival_rank": 169,
+    "revival_rank": 160,
     "top_pick": false,
     "display_name": "Hawkers Imperial Stout 2025  440ml"
   },
@@ -3565,7 +3376,7 @@
     "last_seen": "2025 yearly report",
     "is_limited_edition": false,
     "source": "historical",
-    "revival_rank": 170,
+    "revival_rank": 161,
     "top_pick": false,
     "display_name": "One Drop Think Again Kettle Sour 440ml"
   },
@@ -3586,7 +3397,7 @@
     "last_seen": "2025 yearly report",
     "is_limited_edition": false,
     "source": "historical",
-    "revival_rank": 171,
+    "revival_rank": 162,
     "top_pick": false,
     "display_name": "Fox Friday Hazy IPA 375ml"
   },
@@ -3607,7 +3418,7 @@
     "last_seen": "2025 yearly report",
     "is_limited_edition": false,
     "source": "historical",
-    "revival_rank": 172,
+    "revival_rank": 163,
     "top_pick": false,
     "display_name": "Hawkers Four Seasons Summer IIIPA 440ml"
   },
@@ -3628,7 +3439,7 @@
     "last_seen": "2025 yearly report",
     "is_limited_edition": false,
     "source": "historical",
-    "revival_rank": 173,
+    "revival_rank": 164,
     "top_pick": false,
     "display_name": "McGuigan Black Label Shiraz 750ml"
   },
@@ -3649,7 +3460,7 @@
     "last_seen": "2025 yearly report",
     "is_limited_edition": false,
     "source": "historical",
-    "revival_rank": 174,
+    "revival_rank": 165,
     "top_pick": false,
     "display_name": "Mountain Culture x Range Hyper IPA 355ml"
   },
@@ -3670,7 +3481,7 @@
     "last_seen": "2025 yearly report",
     "is_limited_edition": false,
     "source": "historical",
-    "revival_rank": 175,
+    "revival_rank": 166,
     "top_pick": false,
     "display_name": "Carlton Draught Mid Can 3.5% 30pk 375ml"
   },
@@ -3691,7 +3502,7 @@
     "last_seen": "2025 yearly report",
     "is_limited_edition": false,
     "source": "historical",
-    "revival_rank": 176,
+    "revival_rank": 167,
     "top_pick": false,
     "display_name": "Mountain Culture Kingston Flyer WCIPA 500ml"
   },
@@ -3712,7 +3523,7 @@
     "last_seen": "2025 yearly report",
     "is_limited_edition": false,
     "source": "historical",
-    "revival_rank": 177,
+    "revival_rank": 168,
     "top_pick": false,
     "display_name": "Mountain Culture Shallow Waters NEIPA 500ml"
   },
@@ -3733,7 +3544,7 @@
     "last_seen": "2025 yearly report",
     "is_limited_edition": false,
     "source": "historical",
-    "revival_rank": 178,
+    "revival_rank": 169,
     "top_pick": false,
     "display_name": "Fireball Cinnamon Whisky with Cola can 355ml"
   },
@@ -3754,7 +3565,7 @@
     "last_seen": "2025 yearly report",
     "is_limited_edition": false,
     "source": "historical",
-    "revival_rank": 179,
+    "revival_rank": 170,
     "top_pick": false,
     "display_name": "Lotte Chum Churum Blueberry 360ml"
   },
@@ -3775,7 +3586,7 @@
     "last_seen": "2025 yearly report",
     "is_limited_edition": false,
     "source": "historical",
-    "revival_rank": 180,
+    "revival_rank": 171,
     "top_pick": false,
     "display_name": "Mountain Culture x DEYA It's Not You It's Me Oat Cream IPA 500ml"
   },
@@ -3796,7 +3607,7 @@
     "last_seen": "2025 yearly report",
     "is_limited_edition": false,
     "source": "historical",
-    "revival_rank": 181,
+    "revival_rank": 172,
     "top_pick": false,
     "display_name": "Hawkers Four Seasons Winter Triple Black IPA 440ml"
   },
@@ -3817,7 +3628,7 @@
     "last_seen": "2025 yearly report",
     "is_limited_edition": false,
     "source": "historical",
-    "revival_rank": 182,
+    "revival_rank": 173,
     "top_pick": false,
     "display_name": "Sweet Corn Rice Wine 750ml"
   },
@@ -3838,7 +3649,7 @@
     "last_seen": "2025 yearly report",
     "is_limited_edition": false,
     "source": "historical",
-    "revival_rank": 183,
+    "revival_rank": 174,
     "top_pick": false,
     "display_name": "McGuigan Black Label Red 750ml"
   },
@@ -3859,7 +3670,7 @@
     "last_seen": "2025 yearly report",
     "is_limited_edition": false,
     "source": "historical",
-    "revival_rank": 184,
+    "revival_rank": 175,
     "top_pick": false,
     "display_name": "BALTER CERVEZA BTL 355ML"
   },
@@ -3880,7 +3691,7 @@
     "last_seen": "2025 yearly report",
     "is_limited_edition": false,
     "source": "historical",
-    "revival_rank": 185,
+    "revival_rank": 176,
     "top_pick": false,
     "display_name": "Hawkers Four Seasons Autumn 440ml"
   },
@@ -3901,7 +3712,7 @@
     "last_seen": "2025 yearly report",
     "is_limited_edition": false,
     "source": "historical",
-    "revival_rank": 186,
+    "revival_rank": 177,
     "top_pick": false,
     "display_name": "Little Fat Lamb Butterscotch Cream 700ml"
   },
@@ -3922,7 +3733,7 @@
     "last_seen": "2025 yearly report",
     "is_limited_edition": false,
     "source": "historical",
-    "revival_rank": 187,
+    "revival_rank": 178,
     "top_pick": false,
     "display_name": "W/Turkey Cola 101 6.5% Bt 340ml"
   },
@@ -3943,7 +3754,7 @@
     "last_seen": "2025 yearly report",
     "is_limited_edition": false,
     "source": "historical",
-    "revival_rank": 188,
+    "revival_rank": 179,
     "top_pick": false,
     "display_name": "Slow Lane & Bracket Hibernation Baltic Porter 375ml"
   },
@@ -3964,7 +3775,7 @@
     "last_seen": "2025 yearly report",
     "is_limited_edition": false,
     "source": "historical",
-    "revival_rank": 189,
+    "revival_rank": 180,
     "top_pick": false,
     "display_name": "Fox Friday Code of Silence Oat Cream Double IPA 440ml"
   },
@@ -3985,7 +3796,7 @@
     "last_seen": "2025 yearly report",
     "is_limited_edition": false,
     "source": "historical",
-    "revival_rank": 190,
+    "revival_rank": 181,
     "top_pick": false,
     "display_name": "Hawkers Please Don't Tap the Glass Oat Cream IPA 440ml"
   },
@@ -4006,7 +3817,7 @@
     "last_seen": "2025 yearly report",
     "is_limited_edition": false,
     "source": "historical",
-    "revival_rank": 191,
+    "revival_rank": 182,
     "top_pick": false,
     "display_name": "Bojak Head in the Clouds IPA 440ml"
   },
@@ -4027,7 +3838,7 @@
     "last_seen": "2025 yearly report",
     "is_limited_edition": false,
     "source": "historical",
-    "revival_rank": 192,
+    "revival_rank": 183,
     "top_pick": false,
     "display_name": "Victoria Bitter Gold 3% Can 375ml"
   },
@@ -4048,7 +3859,7 @@
     "last_seen": "2025 yearly report",
     "is_limited_edition": false,
     "source": "historical",
-    "revival_rank": 193,
+    "revival_rank": 184,
     "top_pick": false,
     "display_name": "Beach Days Pink Moscato 750ml"
   },
@@ -4069,7 +3880,7 @@
     "last_seen": "2025 yearly report",
     "is_limited_edition": false,
     "source": "historical",
-    "revival_rank": 194,
+    "revival_rank": 185,
     "top_pick": false,
     "display_name": "De Bortoli Limoncello 200ml"
   },
@@ -4090,7 +3901,7 @@
     "last_seen": "2025 yearly report",
     "is_limited_edition": false,
     "source": "historical",
-    "revival_rank": 195,
+    "revival_rank": 186,
     "top_pick": false,
     "display_name": "Little Fat Lamb Jam Donut Shot"
   },
@@ -4111,7 +3922,7 @@
     "last_seen": "2025 yearly report",
     "is_limited_edition": false,
     "source": "historical",
-    "revival_rank": 196,
+    "revival_rank": 187,
     "top_pick": false,
     "display_name": "Smirnoff Soda Lime and Lemon 330ml"
   },
@@ -4132,7 +3943,7 @@
     "last_seen": "2025 yearly report",
     "is_limited_edition": false,
     "source": "historical",
-    "revival_rank": 197,
+    "revival_rank": 188,
     "top_pick": false,
     "display_name": "WILD TURKEY RARE & COLA 8% BTL 320ML"
   },
@@ -4153,7 +3964,7 @@
     "last_seen": "2025 yearly report",
     "is_limited_edition": false,
     "source": "historical",
-    "revival_rank": 198,
+    "revival_rank": 189,
     "top_pick": false,
     "display_name": "YVES PREMIUM CUVEE 750ML"
   },
@@ -4174,7 +3985,7 @@
     "last_seen": "2025 yearly report",
     "is_limited_edition": false,
     "source": "historical",
-    "revival_rank": 199,
+    "revival_rank": 190,
     "top_pick": false,
     "display_name": "Hawkers Beauty IPA 440ml"
   },
@@ -4195,7 +4006,7 @@
     "last_seen": "2025 yearly report",
     "is_limited_edition": false,
     "source": "historical",
-    "revival_rank": 200,
+    "revival_rank": 191,
     "top_pick": false,
     "display_name": "Little Fat Lamb Butterscotch Shot"
   },
@@ -4216,7 +4027,7 @@
     "last_seen": "2025 yearly report",
     "is_limited_edition": false,
     "source": "historical",
-    "revival_rank": 201,
+    "revival_rank": 192,
     "top_pick": false,
     "display_name": "Garage Project Matakitaki Valley Hazy IPA 440ml"
   },
@@ -4237,7 +4048,7 @@
     "last_seen": "2025 yearly report",
     "is_limited_edition": false,
     "source": "historical",
-    "revival_rank": 202,
+    "revival_rank": 193,
     "top_pick": false,
     "display_name": "Range Mechanical Bull 440ml"
   },
@@ -4258,7 +4069,7 @@
     "last_seen": "2025 yearly report",
     "is_limited_edition": false,
     "source": "historical",
-    "revival_rank": 203,
+    "revival_rank": 194,
     "top_pick": false,
     "display_name": "Range Double Dripping in Green Citra 440ml"
   },
@@ -4279,7 +4090,7 @@
     "last_seen": "2025 yearly report",
     "is_limited_edition": false,
     "source": "historical",
-    "revival_rank": 204,
+    "revival_rank": 195,
     "top_pick": false,
     "display_name": "Hawkers Open Sesame Zaatar IPA 440ml"
   },
@@ -4300,7 +4111,7 @@
     "last_seen": "2025 yearly report",
     "is_limited_edition": false,
     "source": "historical",
-    "revival_rank": 205,
+    "revival_rank": 196,
     "top_pick": false,
     "display_name": "UDL Orange Can 375ml"
   },
@@ -4321,7 +4132,7 @@
     "last_seen": "2025 yearly report",
     "is_limited_edition": false,
     "source": "historical",
-    "revival_rank": 206,
+    "revival_rank": 197,
     "top_pick": false,
     "display_name": "Garage Project Pernicious Yuzu Weed IPA 440ml"
   },
@@ -4342,7 +4153,7 @@
     "last_seen": "2025 yearly report",
     "is_limited_edition": false,
     "source": "historical",
-    "revival_rank": 207,
+    "revival_rank": 198,
     "top_pick": false,
     "display_name": "One Drop Swing Low Smoothie Sour 440ml"
   },
@@ -4363,7 +4174,7 @@
     "last_seen": "2025 yearly report",
     "is_limited_edition": false,
     "source": "historical",
-    "revival_rank": 208,
+    "revival_rank": 199,
     "top_pick": false,
     "display_name": "Range In Good Hands DDH DIPA 440ml"
   },
@@ -4384,7 +4195,7 @@
     "last_seen": "2025 yearly report",
     "is_limited_edition": false,
     "source": "historical",
-    "revival_rank": 209,
+    "revival_rank": 200,
     "top_pick": false,
     "display_name": "Hachii Strong Grape 9% 350ml"
   },
@@ -4405,7 +4216,7 @@
     "last_seen": "2025 yearly report",
     "is_limited_edition": false,
     "source": "historical",
-    "revival_rank": 210,
+    "revival_rank": 201,
     "top_pick": false,
     "display_name": "Grog Shochu, Vodka, Soda Grape Can 330ML"
   },
@@ -4426,7 +4237,7 @@
     "last_seen": "2025 yearly report",
     "is_limited_edition": false,
     "source": "historical",
-    "revival_rank": 211,
+    "revival_rank": 202,
     "top_pick": false,
     "display_name": "Mountain Goat Trop Drop Pale Ale Can 375ml"
   },
@@ -4447,7 +4258,7 @@
     "last_seen": "2025 yearly report",
     "is_limited_edition": false,
     "source": "historical",
-    "revival_rank": 212,
+    "revival_rank": 203,
     "top_pick": false,
     "display_name": "Balter Hazy IPA Can 375ml"
   },
@@ -4468,7 +4279,7 @@
     "last_seen": "2025 yearly report",
     "is_limited_edition": false,
     "source": "historical",
-    "revival_rank": 213,
+    "revival_rank": 204,
     "top_pick": false,
     "display_name": "Garage Project Tiny Non-Alc Hazy IPA 330ml"
   },
@@ -4489,7 +4300,7 @@
     "last_seen": "2025 yearly report",
     "is_limited_edition": false,
     "source": "historical",
-    "revival_rank": 214,
+    "revival_rank": 205,
     "top_pick": false,
     "display_name": "Brands Laira Blocker C/Sauv 750ml"
   },
@@ -4510,7 +4321,7 @@
     "last_seen": "2025 yearly report",
     "is_limited_edition": false,
     "source": "historical",
-    "revival_rank": 215,
+    "revival_rank": 206,
     "top_pick": false,
     "display_name": "Hawkers Fugue State Vienna IPA 440ml"
   },
@@ -4531,7 +4342,7 @@
     "last_seen": "2025 yearly report",
     "is_limited_edition": false,
     "source": "historical",
-    "revival_rank": 216,
+    "revival_rank": 207,
     "top_pick": false,
     "display_name": "Little Fat Lamb Salted Caramel Shot"
   },
@@ -4552,7 +4363,7 @@
     "last_seen": "2025 yearly report",
     "is_limited_edition": false,
     "source": "historical",
-    "revival_rank": 217,
+    "revival_rank": 208,
     "top_pick": false,
     "display_name": "Range Digital Landscape WCIPA 440ml"
   },
@@ -4573,7 +4384,7 @@
     "last_seen": "2025 yearly report",
     "is_limited_edition": false,
     "source": "historical",
-    "revival_rank": 218,
+    "revival_rank": 209,
     "top_pick": false,
     "display_name": "Slow Lane Classic Haze Hefeweizen 385ml"
   },
@@ -4594,7 +4405,7 @@
     "last_seen": "2025 yearly report",
     "is_limited_edition": false,
     "source": "historical",
-    "revival_rank": 219,
+    "revival_rank": 210,
     "top_pick": false,
     "display_name": "Hawkers Four Seasons Winter 440ml"
   },
@@ -4615,7 +4426,7 @@
     "last_seen": "2025 yearly report",
     "is_limited_edition": false,
     "source": "historical",
-    "revival_rank": 220,
+    "revival_rank": 211,
     "top_pick": false,
     "display_name": "Mountain Culture x Stone and Wood Backpack WCIPA 375ml"
   },
@@ -4636,7 +4447,7 @@
     "last_seen": "2025 yearly report",
     "is_limited_edition": false,
     "source": "historical",
-    "revival_rank": 221,
+    "revival_rank": 212,
     "top_pick": false,
     "display_name": "Yarra Burn Premium Cuvee 750ml"
   },
@@ -4657,7 +4468,7 @@
     "last_seen": "2025 yearly report",
     "is_limited_edition": false,
     "source": "historical",
-    "revival_rank": 222,
+    "revival_rank": 213,
     "top_pick": false,
     "display_name": "Rocky Ridge Rock Candy Fruited Sour 375ml"
   },
@@ -4678,7 +4489,7 @@
     "last_seen": "2025 yearly report",
     "is_limited_edition": false,
     "source": "historical",
-    "revival_rank": 223,
+    "revival_rank": 214,
     "top_pick": false,
     "display_name": "Yellow Tail Big Bold Red 750ml"
   },
@@ -4699,7 +4510,7 @@
     "last_seen": "2025 yearly report",
     "is_limited_edition": false,
     "source": "historical",
-    "revival_rank": 224,
+    "revival_rank": 215,
     "top_pick": false,
     "display_name": "Slow Lane Slow Mole Mexican Stout 375ml"
   },
@@ -4720,7 +4531,7 @@
     "last_seen": "2025 yearly report",
     "is_limited_edition": false,
     "source": "historical",
-    "revival_rank": 225,
+    "revival_rank": 216,
     "top_pick": false,
     "display_name": "Fox Friday Buckle My Shoe Hazy DIPA 440ml"
   },
@@ -4741,7 +4552,7 @@
     "last_seen": "2025 yearly report",
     "is_limited_edition": false,
     "source": "historical",
-    "revival_rank": 226,
+    "revival_rank": 217,
     "top_pick": false,
     "display_name": "Sol Beer Bt 330ml"
   },
@@ -4762,7 +4573,7 @@
     "last_seen": "2025 yearly report",
     "is_limited_edition": false,
     "source": "historical",
-    "revival_rank": 227,
+    "revival_rank": 218,
     "top_pick": false,
     "display_name": "Garage Project x Verdant Lollies for Dinner 440ml"
   },
@@ -4783,7 +4594,7 @@
     "last_seen": "2025 yearly report",
     "is_limited_edition": false,
     "source": "historical",
-    "revival_rank": 228,
+    "revival_rank": 219,
     "top_pick": false,
     "display_name": "Mont Langi Ghiran Billi Billi Shiraz 750ml"
   },
@@ -4804,7 +4615,7 @@
     "last_seen": "2025 yearly report",
     "is_limited_edition": false,
     "source": "historical",
-    "revival_rank": 229,
+    "revival_rank": 220,
     "top_pick": false,
     "display_name": "Bright Imperial Affogato Stout 440ml"
   },
@@ -4825,7 +4636,7 @@
     "last_seen": "2025 yearly report",
     "is_limited_edition": false,
     "source": "historical",
-    "revival_rank": 230,
+    "revival_rank": 221,
     "top_pick": false,
     "display_name": "Great Northern Bc Original Lager 4.2% Bt 700ml"
   },
@@ -4846,7 +4657,7 @@
     "last_seen": "2025 yearly report",
     "is_limited_edition": false,
     "source": "historical",
-    "revival_rank": 231,
+    "revival_rank": 222,
     "top_pick": false,
     "display_name": "Rocky Ridge FCK YEAH Hazy IPA 375ml"
   },
@@ -4867,7 +4678,7 @@
     "last_seen": "2025 yearly report",
     "is_limited_edition": false,
     "source": "historical",
-    "revival_rank": 232,
+    "revival_rank": 223,
     "top_pick": false,
     "display_name": "Hawkers Witching Hour Imperial Porter 440ml"
   },
@@ -4888,7 +4699,7 @@
     "last_seen": "2025 yearly report",
     "is_limited_edition": false,
     "source": "historical",
-    "revival_rank": 233,
+    "revival_rank": 224,
     "top_pick": false,
     "display_name": "Hop Nation The Buzz American Red 375ml"
   },
@@ -4909,7 +4720,7 @@
     "last_seen": "2025 yearly report",
     "is_limited_edition": false,
     "source": "historical",
-    "revival_rank": 234,
+    "revival_rank": 225,
     "top_pick": false,
     "display_name": "Cruiser Pineapple 600ml"
   },
@@ -4930,7 +4741,7 @@
     "last_seen": "2025 yearly report",
     "is_limited_edition": false,
     "source": "historical",
-    "revival_rank": 235,
+    "revival_rank": 226,
     "top_pick": false,
     "display_name": "Pepperjack Chardonnay 750ml"
   },
@@ -4951,7 +4762,7 @@
     "last_seen": "2025 yearly report",
     "is_limited_edition": false,
     "source": "historical",
-    "revival_rank": 236,
+    "revival_rank": 227,
     "top_pick": false,
     "display_name": "Queen Cranberry Soju 360ml"
   },
@@ -4972,7 +4783,7 @@
     "last_seen": "2025 yearly report",
     "is_limited_edition": false,
     "source": "historical",
-    "revival_rank": 237,
+    "revival_rank": 228,
     "top_pick": false,
     "display_name": "Deeds Darker Ritual BBA Imperial Stout 440ml"
   },
@@ -4993,7 +4804,7 @@
     "last_seen": "2025 yearly report",
     "is_limited_edition": false,
     "source": "historical",
-    "revival_rank": 238,
+    "revival_rank": 229,
     "top_pick": false,
     "display_name": "Rocky Ridge Karl's New Watch Mango & Passionfruit Milkshake IPA 375ml"
   },
@@ -5014,7 +4825,7 @@
     "last_seen": "2025 yearly report",
     "is_limited_edition": false,
     "source": "historical",
-    "revival_rank": 239,
+    "revival_rank": 230,
     "top_pick": false,
     "display_name": "Balter Cpt Sensible Can 375ml"
   },
@@ -5035,7 +4846,7 @@
     "last_seen": "2025 yearly report",
     "is_limited_edition": false,
     "source": "historical",
-    "revival_rank": 240,
+    "revival_rank": 231,
     "top_pick": false,
     "display_name": "Fox Friday Pale Ale 375ml"
   },
@@ -5056,7 +4867,7 @@
     "last_seen": "2025 yearly report",
     "is_limited_edition": false,
     "source": "historical",
-    "revival_rank": 241,
+    "revival_rank": 232,
     "top_pick": false,
     "display_name": "Fox Friday The Weight of Resin WCIPA 440ml"
   },
@@ -5077,7 +4888,7 @@
     "last_seen": "2025 yearly report",
     "is_limited_edition": false,
     "source": "historical",
-    "revival_rank": 242,
+    "revival_rank": 233,
     "top_pick": false,
     "display_name": "Squealing Pig Squealini Lemon 750ml"
   },
@@ -5098,7 +4909,7 @@
     "last_seen": "2025 yearly report",
     "is_limited_edition": false,
     "source": "historical",
-    "revival_rank": 243,
+    "revival_rank": 234,
     "top_pick": false,
     "display_name": "Fox Friday Hazy Pale 375ml"
   },
@@ -5119,7 +4930,7 @@
     "last_seen": "2025 yearly report",
     "is_limited_edition": false,
     "source": "historical",
-    "revival_rank": 244,
+    "revival_rank": 235,
     "top_pick": false,
     "display_name": "Slow Lane Supersaturated Hazy IPA 375ml"
   },
@@ -5140,7 +4951,7 @@
     "last_seen": "2025 yearly report",
     "is_limited_edition": false,
     "source": "historical",
-    "revival_rank": 245,
+    "revival_rank": 236,
     "top_pick": false,
     "display_name": "Sizak Blueberry 360ml"
   },
@@ -5161,7 +4972,7 @@
     "last_seen": "2025 yearly report",
     "is_limited_edition": false,
     "source": "historical",
-    "revival_rank": 246,
+    "revival_rank": 237,
     "top_pick": false,
     "display_name": "JUMPIN JACK SHIRAZ 750ML"
   },
@@ -5182,7 +4993,7 @@
     "last_seen": "2025 yearly report",
     "is_limited_edition": false,
     "source": "historical",
-    "revival_rank": 247,
+    "revival_rank": 238,
     "top_pick": false,
     "display_name": "Sizak Mango 360ml"
   },
@@ -5203,7 +5014,7 @@
     "last_seen": "2025 yearly report",
     "is_limited_edition": false,
     "source": "historical",
-    "revival_rank": 248,
+    "revival_rank": 239,
     "top_pick": false,
     "display_name": "Charm Malgeun Vivid Mango"
   },
@@ -5224,7 +5035,7 @@
     "last_seen": "2025 yearly report",
     "is_limited_edition": false,
     "source": "historical",
-    "revival_rank": 249,
+    "revival_rank": 240,
     "top_pick": false,
     "display_name": "Pirate Life Hazy XPA 355ml"
   },
@@ -5245,7 +5056,7 @@
     "last_seen": "2025 yearly report",
     "is_limited_edition": false,
     "source": "historical",
-    "revival_rank": 250,
+    "revival_rank": 241,
     "top_pick": false,
     "display_name": "Dainton Whisky Barrel Aged Imp Stout 375ml"
   },
@@ -5266,7 +5077,7 @@
     "last_seen": "2025 yearly report",
     "is_limited_edition": false,
     "source": "historical",
-    "revival_rank": 251,
+    "revival_rank": 242,
     "top_pick": false,
     "display_name": "Soju Vivid Lemon Lime 360ml"
   },
@@ -5287,7 +5098,7 @@
     "last_seen": "2025 yearly report",
     "is_limited_edition": false,
     "source": "historical",
-    "revival_rank": 252,
+    "revival_rank": 243,
     "top_pick": false,
     "display_name": "Soju Vivid Raspberry 360ml"
   },
@@ -5308,7 +5119,7 @@
     "last_seen": "2025 yearly report",
     "is_limited_edition": false,
     "source": "historical",
-    "revival_rank": 253,
+    "revival_rank": 244,
     "top_pick": false,
     "display_name": "Pepperjack Red Blend 750ml"
   },
@@ -5329,7 +5140,7 @@
     "last_seen": "2025 yearly report",
     "is_limited_edition": false,
     "source": "historical",
-    "revival_rank": 254,
+    "revival_rank": 245,
     "top_pick": false,
     "display_name": "Soju Vivid Peach 360ml"
   },
@@ -5350,7 +5161,7 @@
     "last_seen": "2025 yearly report",
     "is_limited_edition": false,
     "source": "historical",
-    "revival_rank": 255,
+    "revival_rank": 246,
     "top_pick": false,
     "display_name": "Kook Soon Dang Rice Wine Banana 750ml"
   },
@@ -5371,7 +5182,7 @@
     "last_seen": "2025 yearly report",
     "is_limited_edition": false,
     "source": "historical",
-    "revival_rank": 256,
+    "revival_rank": 247,
     "top_pick": false,
     "display_name": "Arirang Original 360ml"
   },
@@ -5392,7 +5203,7 @@
     "last_seen": "2025 yearly report",
     "is_limited_edition": false,
     "source": "historical",
-    "revival_rank": 257,
+    "revival_rank": 248,
     "top_pick": false,
     "display_name": "Charm Malgeun Vivid Passionfruit 360ml"
   },
@@ -5413,7 +5224,7 @@
     "last_seen": "2025 yearly report",
     "is_limited_edition": false,
     "source": "historical",
-    "revival_rank": 258,
+    "revival_rank": 249,
     "top_pick": false,
     "display_name": "Wolf Blass Red Label Sauvignon Blanc 750ml"
   },
@@ -5434,7 +5245,7 @@
     "last_seen": "2025 yearly report",
     "is_limited_edition": false,
     "source": "historical",
-    "revival_rank": 259,
+    "revival_rank": 250,
     "top_pick": false,
     "display_name": "FEVER TREE INDIAN PRM TON500ML"
   },
@@ -5455,7 +5266,7 @@
     "last_seen": "2025 yearly report",
     "is_limited_edition": false,
     "source": "historical",
-    "revival_rank": 260,
+    "revival_rank": 251,
     "top_pick": false,
     "display_name": "Range +64 Nelson 440ml"
   },
@@ -5476,7 +5287,7 @@
     "last_seen": "2025 yearly report",
     "is_limited_edition": false,
     "source": "historical",
-    "revival_rank": 261,
+    "revival_rank": 252,
     "top_pick": false,
     "display_name": "Range +64 Riwaka 440ml"
   },
@@ -5497,7 +5308,7 @@
     "last_seen": "2025 yearly report",
     "is_limited_edition": false,
     "source": "historical",
-    "revival_rank": 262,
+    "revival_rank": 253,
     "top_pick": false,
     "display_name": "MASTER OF MIXES MARGARITA 1L"
   },
@@ -5518,7 +5329,7 @@
     "last_seen": "2025 yearly report",
     "is_limited_edition": false,
     "source": "historical",
-    "revival_rank": 263,
+    "revival_rank": 254,
     "top_pick": false,
     "display_name": "Glass of House White Wine"
   },
@@ -5539,7 +5350,7 @@
     "last_seen": "2025 yearly report",
     "is_limited_edition": false,
     "source": "historical",
-    "revival_rank": 264,
+    "revival_rank": 255,
     "top_pick": false,
     "display_name": "Hawkers Core Workout Pilsner 440ml"
   },
@@ -5560,7 +5371,7 @@
     "last_seen": "2025 yearly report",
     "is_limited_edition": false,
     "source": "historical",
-    "revival_rank": 265,
+    "revival_rank": 256,
     "top_pick": false,
     "display_name": "Charm Malgeun Vivid Apple 360ml"
   },
@@ -5581,7 +5392,7 @@
     "last_seen": "2025 yearly report",
     "is_limited_edition": false,
     "source": "historical",
-    "revival_rank": 266,
+    "revival_rank": 257,
     "top_pick": false,
     "display_name": "Billsons Double Strawberry Watermelon 375ml cans"
   },
@@ -5602,7 +5413,7 @@
     "last_seen": "2025 yearly report",
     "is_limited_edition": false,
     "source": "historical",
-    "revival_rank": 267,
+    "revival_rank": 258,
     "top_pick": false,
     "display_name": "Charm Malgeun Vivid Yogurt 360ml"
   },
@@ -5623,7 +5434,7 @@
     "last_seen": "2025 yearly report",
     "is_limited_edition": false,
     "source": "historical",
-    "revival_rank": 268,
+    "revival_rank": 259,
     "top_pick": false,
     "display_name": "Blackmans Raspberry & Coconut Ice Cream IPA 375ml"
   },
@@ -5644,7 +5455,7 @@
     "last_seen": "2025 yearly report",
     "is_limited_edition": false,
     "source": "historical",
-    "revival_rank": 269,
+    "revival_rank": 260,
     "top_pick": false,
     "display_name": "Garage Project One Day In March Hazy IPA 440ml"
   },
@@ -5665,7 +5476,7 @@
     "last_seen": "2025 yearly report",
     "is_limited_edition": false,
     "source": "historical",
-    "revival_rank": 270,
+    "revival_rank": 261,
     "top_pick": false,
     "display_name": "Terra Beer 355ml"
   },
@@ -5686,7 +5497,7 @@
     "last_seen": "2025 yearly report",
     "is_limited_edition": false,
     "source": "historical",
-    "revival_rank": 271,
+    "revival_rank": 262,
     "top_pick": false,
     "display_name": "Smirnoff Soda Yuzu 330ml"
   },
@@ -5707,7 +5518,7 @@
     "last_seen": "2025 yearly report",
     "is_limited_edition": false,
     "source": "historical",
-    "revival_rank": 272,
+    "revival_rank": 263,
     "top_pick": false,
     "display_name": "One Drop We Jammin Fruited Sour 375ml"
   },
@@ -5728,7 +5539,7 @@
     "last_seen": "2025 yearly report",
     "is_limited_edition": false,
     "source": "historical",
-    "revival_rank": 273,
+    "revival_rank": 264,
     "top_pick": false,
     "display_name": "Kingfisher Strong 8% Bt 650ml"
   },
@@ -5749,7 +5560,7 @@
     "last_seen": "2025 yearly report",
     "is_limited_edition": false,
     "source": "historical",
-    "revival_rank": 274,
+    "revival_rank": 265,
     "top_pick": false,
     "display_name": "Mountain Culture Betamax OCIPA 500ml"
   },
@@ -5770,7 +5581,7 @@
     "last_seen": "2025 yearly report",
     "is_limited_edition": false,
     "source": "historical",
-    "revival_rank": 275,
+    "revival_rank": 266,
     "top_pick": false,
     "display_name": "Black Douglas & Cola Can 375ml"
   },
@@ -5791,7 +5602,7 @@
     "last_seen": "2025 yearly report",
     "is_limited_edition": false,
     "source": "historical",
-    "revival_rank": 276,
+    "revival_rank": 267,
     "top_pick": false,
     "display_name": "Garage Project All The Things Sour IPA 440ml"
   },
@@ -5812,7 +5623,7 @@
     "last_seen": "2025 yearly report",
     "is_limited_edition": false,
     "source": "historical",
-    "revival_rank": 277,
+    "revival_rank": 268,
     "top_pick": false,
     "display_name": "Co Conspirators Hacker Hazy IPA 440ml"
   },
@@ -5833,7 +5644,7 @@
     "last_seen": "2025 yearly report",
     "is_limited_edition": false,
     "source": "historical",
-    "revival_rank": 278,
+    "revival_rank": 269,
     "top_pick": false,
     "display_name": "Hawkers Retrovision Brown Ale 440ml"
   },
@@ -5854,7 +5665,7 @@
     "last_seen": "2025 yearly report",
     "is_limited_edition": false,
     "source": "historical",
-    "revival_rank": 279,
+    "revival_rank": 270,
     "top_pick": false,
     "display_name": "Oyster Bay Merlot 750ml"
   },
@@ -5875,7 +5686,7 @@
     "last_seen": "2025 yearly report",
     "is_limited_edition": false,
     "source": "historical",
-    "revival_rank": 280,
+    "revival_rank": 271,
     "top_pick": false,
     "display_name": "Blackman's Juicy Banger Indian Pale Lager 375ml"
   },
@@ -5896,7 +5707,7 @@
     "last_seen": "2025 yearly report",
     "is_limited_edition": false,
     "source": "historical",
-    "revival_rank": 281,
+    "revival_rank": 272,
     "top_pick": false,
     "display_name": "Range +64 Motueka 440ml"
   },
@@ -5917,7 +5728,7 @@
     "last_seen": "2025 yearly report",
     "is_limited_edition": false,
     "source": "historical",
-    "revival_rank": 282,
+    "revival_rank": 273,
     "top_pick": false,
     "display_name": "Hawkers BBA White Stout 2024 440ml"
   },
@@ -5938,7 +5749,7 @@
     "last_seen": "2025 yearly report",
     "is_limited_edition": false,
     "source": "historical",
-    "revival_rank": 283,
+    "revival_rank": 274,
     "top_pick": false,
     "display_name": "Cruiser Black Cherry Cola 275ml"
   },
@@ -5959,7 +5770,7 @@
     "last_seen": "2025 yearly report",
     "is_limited_edition": false,
     "source": "historical",
-    "revival_rank": 284,
+    "revival_rank": 275,
     "top_pick": false,
     "display_name": "Rocky Ridge Big Head Mode 375ml"
   },
@@ -5980,7 +5791,7 @@
     "last_seen": "2025 yearly report",
     "is_limited_edition": false,
     "source": "historical",
-    "revival_rank": 285,
+    "revival_rank": 276,
     "top_pick": false,
     "display_name": "Rocky Ridge OMFG Double IPA 375ml"
   },
@@ -6001,7 +5812,7 @@
     "last_seen": "2025 yearly report",
     "is_limited_edition": false,
     "source": "historical",
-    "revival_rank": 286,
+    "revival_rank": 277,
     "top_pick": false,
     "display_name": "Kettle Sea Salt Chips 90g"
   },
@@ -6022,7 +5833,7 @@
     "last_seen": "2025 yearly report",
     "is_limited_edition": false,
     "source": "historical",
-    "revival_rank": 287,
+    "revival_rank": 278,
     "top_pick": false,
     "display_name": "Slow Lane Conditioned Hazy Pale 375ml"
   },
@@ -6043,7 +5854,7 @@
     "last_seen": "2025 yearly report",
     "is_limited_edition": false,
     "source": "historical",
-    "revival_rank": 288,
+    "revival_rank": 279,
     "top_pick": false,
     "display_name": "Behemoth Dominion Road Double Hazy IPA 440ml"
   },
@@ -6064,7 +5875,7 @@
     "last_seen": "2025 yearly report",
     "is_limited_edition": false,
     "source": "historical",
-    "revival_rank": 289,
+    "revival_rank": 280,
     "top_pick": false,
     "display_name": "Fox Friday WCIPA 440ml"
   },
@@ -6085,7 +5896,7 @@
     "last_seen": "2025 yearly report",
     "is_limited_edition": false,
     "source": "historical",
-    "revival_rank": 290,
+    "revival_rank": 281,
     "top_pick": false,
     "display_name": "Chateuil Soorok Soju Coffee"
   },
@@ -6106,7 +5917,7 @@
     "last_seen": "2025 yearly report",
     "is_limited_edition": false,
     "source": "historical",
-    "revival_rank": 291,
+    "revival_rank": 282,
     "top_pick": false,
     "display_name": "Holgate Millennium Falcon Empirial IPA 375ml"
   },
@@ -6127,7 +5938,7 @@
     "last_seen": "2025 yearly report",
     "is_limited_edition": false,
     "source": "historical",
-    "revival_rank": 292,
+    "revival_rank": 283,
     "top_pick": false,
     "display_name": "Blackmans Milk Choc Stout 375ml"
   },
@@ -6148,7 +5959,7 @@
     "last_seen": "2025 yearly report",
     "is_limited_edition": false,
     "source": "historical",
-    "revival_rank": 293,
+    "revival_rank": 284,
     "top_pick": false,
     "display_name": "Gweilo Apricot Sundae Sour 375ml"
   },
@@ -6169,7 +5980,7 @@
     "last_seen": "2025 yearly report",
     "is_limited_edition": false,
     "source": "historical",
-    "revival_rank": 294,
+    "revival_rank": 285,
     "top_pick": false,
     "display_name": "Cruiser Raspberry 600ml"
   },
@@ -6190,7 +6001,7 @@
     "last_seen": "2025 yearly report",
     "is_limited_edition": false,
     "source": "historical",
-    "revival_rank": 295,
+    "revival_rank": 286,
     "top_pick": false,
     "display_name": "Heineken Non alcoholic Lager Btl 330ml"
   },
@@ -6211,7 +6022,7 @@
     "last_seen": "2025 yearly report",
     "is_limited_edition": false,
     "source": "historical",
-    "revival_rank": 296,
+    "revival_rank": 287,
     "top_pick": false,
     "display_name": "Yellow Tail Jammy Red 750ml"
   },
@@ -6232,7 +6043,7 @@
     "last_seen": "2025 yearly report",
     "is_limited_edition": false,
     "source": "historical",
-    "revival_rank": 297,
+    "revival_rank": 288,
     "top_pick": false,
     "display_name": "JUMPIN JACK SEMSAUVBLANC 750ML"
   },
@@ -6253,7 +6064,7 @@
     "last_seen": "2025 yearly report",
     "is_limited_edition": false,
     "source": "historical",
-    "revival_rank": 298,
+    "revival_rank": 289,
     "top_pick": false,
     "display_name": "Hahn Super Dry Mid 3.5% Can 375ml"
   },
@@ -6274,7 +6085,7 @@
     "last_seen": "2025 yearly report",
     "is_limited_edition": false,
     "source": "historical",
-    "revival_rank": 299,
+    "revival_rank": 290,
     "top_pick": false,
     "display_name": "Billson Fruit Tangle Can 355ml"
   },
@@ -6295,7 +6106,7 @@
     "last_seen": "2025 yearly report",
     "is_limited_edition": false,
     "source": "historical",
-    "revival_rank": 300,
+    "revival_rank": 291,
     "top_pick": false,
     "display_name": "Range Space Age DDH IPA 440ml"
   },
@@ -6316,7 +6127,7 @@
     "last_seen": "2025 yearly report",
     "is_limited_edition": false,
     "source": "historical",
-    "revival_rank": 301,
+    "revival_rank": 292,
     "top_pick": false,
     "display_name": "Fox Friday Late Night With El Dorado Hazy IPA 440ml"
   },
@@ -6337,7 +6148,7 @@
     "last_seen": "2025 yearly report",
     "is_limited_edition": false,
     "source": "historical",
-    "revival_rank": 302,
+    "revival_rank": 293,
     "top_pick": false,
     "display_name": "Wyndham Est Bin 444 Cabernet Sauvignon 750ml"
   },
@@ -6358,7 +6169,7 @@
     "last_seen": "2025 yearly report",
     "is_limited_edition": false,
     "source": "historical",
-    "revival_rank": 303,
+    "revival_rank": 294,
     "top_pick": false,
     "display_name": "Weldwerks Coffee Peanut Butter Vanilla Imperial Stout 473ml"
   },
@@ -6379,7 +6190,7 @@
     "last_seen": "2025 yearly report",
     "is_limited_edition": false,
     "source": "historical",
-    "revival_rank": 304,
+    "revival_rank": 295,
     "top_pick": false,
     "display_name": "Bojak Enroute to Palm Springs WCIPA 440ml"
   },
@@ -6400,7 +6211,7 @@
     "last_seen": "2025 yearly report",
     "is_limited_edition": false,
     "source": "historical",
-    "revival_rank": 305,
+    "revival_rank": 296,
     "top_pick": false,
     "display_name": "Bright Staircase Porter 355ml"
   },
@@ -6421,7 +6232,7 @@
     "last_seen": "2025 yearly report",
     "is_limited_edition": false,
     "source": "historical",
-    "revival_rank": 306,
+    "revival_rank": 297,
     "top_pick": false,
     "display_name": "Voodoo Ranger IPA 355ml"
   },
@@ -6442,7 +6253,7 @@
     "last_seen": "2025 yearly report",
     "is_limited_edition": false,
     "source": "historical",
-    "revival_rank": 307,
+    "revival_rank": 298,
     "top_pick": false,
     "display_name": "FEVER TREE MED TONIC WATER 500ML"
   }

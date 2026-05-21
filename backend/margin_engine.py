@@ -167,27 +167,24 @@ def build_margin_analysis(data_root: str) -> list[dict]:
         wow = wow_deltas.get(key, {})
         cause = classify_cause(row, wow)
 
-        # Chain-subsidised loss: reported margin is positive but true margin is negative
-        # because Bottlemart promo subsidy > the item's intrinsic profit.
-        # Not a pricing error — but important to know these items lose money without chain support.
-        chain_subsidised_loss = (true_margin < 0 and reported_margin > 0 and promo_savings > 0)
+        # chain_subsidised_loss: item is selling at a loss (true margin < 0)
+        # and has Bottlemart promo activity — worth flagging for review.
+        chain_subsidised_loss = (true_margin < 0 and promo_savings > 0)
 
         # Exact calculation breakdown for the frontend "show your working" pane
         reported_profit = promo_data["reported_profit"]
         true_profit     = promo_data["true_profit"]
         cogs_implied    = revenue - reported_profit
         calculation_breakdown = {
-            "step1_revenue":          round(revenue, 2),
-            "step2_reported_profit":  round(reported_profit, 2),
-            "step2_cogs_implied":     round(cogs_implied, 2),
-            "step3_reported_margin":  f"{reported_margin:.2f}%  (= ${reported_profit:.2f} ÷ ${revenue:.2f} × 100)",
-            "step4_promo_savings":    round(promo_savings, 2),
-            "step5_true_profit":      round(true_profit, 2),
-            "step5_formula":          f"True profit = Reported profit − Promo savings = ${reported_profit:.2f} − ${promo_savings:.2f} = ${true_profit:.2f}",
-            "step6_true_margin":      f"{true_margin:.2f}%  (= ${true_profit:.2f} ÷ ${revenue:.2f} × 100)",
-            "step7_floor":            f"{floor:.0f}%  (category floor for {row['category']})",
-            "step8_gap_pts":          round(floor - true_margin, 2),
-            "step9_dollar_drag":      f"${dollar_drag:.2f}/wk  (= {floor - true_margin:.2f} pts ÷ 100 × ${revenue:.2f})",
+            "step1_revenue":         round(revenue, 2),
+            "step2_profit":          round(reported_profit, 2),
+            "step2_cogs_implied":    round(cogs_implied, 2),
+            "step3_margin":          f"{reported_margin:.2f}%  (= ${reported_profit:.2f} profit ÷ ${revenue:.2f} revenue × 100)",
+            "step4_promo_savings":   round(promo_savings, 2),
+            "step4_note":            "Promo savings is informational — already reflected in POS profit figure above",
+            "step5_floor":           f"{floor:.0f}%  (category floor for {row['category']})",
+            "step6_gap_pts":         round(floor - true_margin, 2),
+            "step7_dollar_drag":     f"${dollar_drag:.2f}/wk  (= {floor - true_margin:.2f} pts ÷ 100 × ${revenue:.2f})",
         }
 
         results.append({

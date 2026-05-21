@@ -178,21 +178,21 @@ def compute_momentum(matrix: dict) -> dict:
 
 def promo_adjusted_margin(row: dict) -> dict:
     """
-    Returns adjusted margin metrics with promo savings stripped out.
-    Promotional Savings column = sum of Bottlemart chain discounts applied.
+    Returns margin metrics.
+    Promotional Savings are informational only — the POS already bakes the promo
+    price into Revenue and Profit, so reported_profit IS the true profit.
+    promo_savings tells you how much of the chain funded the discount (context only).
     """
     revenue = row.get("revenue", 0.0)
     cogs = row.get("cogs", 0.0)
     promo = row.get("promo_savings", 0.0)
 
-    # Reported margin includes promo subsidy inflating profit
     reported_profit = row.get("profit", revenue - cogs)
     reported_margin = row.get("profit_pct", 0.0)
 
-    # True margin = (profit - promo savings) / revenue
-    # Because promo savings reduces COGS but is funded by the chain, not real store margin
-    true_profit = reported_profit - promo
-    true_margin = (true_profit / revenue * 100.0) if revenue else 0.0
+    # True profit = reported profit (promo is already in the numbers)
+    true_profit = reported_profit
+    true_margin = reported_margin
 
     promo_contribution = (promo / revenue * 100.0) if revenue else 0.0
 

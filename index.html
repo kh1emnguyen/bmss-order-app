@@ -382,29 +382,37 @@
 
 <!-- ═══════════ HISTORICAL PANE ═══════════ -->
 <div class="pane" id="pane-historical">
+  <!-- Commentary section -->
+  <div id="hist-commentary" style="margin-bottom:14px;"></div>
+
+  <!-- Legend / explainer -->
   <div class="card" style="padding:10px 14px;margin-bottom:14px;font-size:.8rem;color:var(--muted);">
-    <strong>Trend badge</strong> = recent 4-week average velocity (cases/wk) vs. Jan–Apr 2026 monthly pace (cases/wk) — apples-to-apples comparison. &nbsp;|&nbsp;
-    <span style="background:var(--green-light);color:var(--green);border:1px solid #86efac;border-radius:4px;padding:1px 6px;font-weight:600">+%</span> selling faster &nbsp;
-    <span style="background:var(--red-light);color:var(--red);border:1px solid #fca5a5;border-radius:4px;padding:1px 6px;font-weight:600">−%</span> slowing &nbsp;
-    <span style="background:#f1f5f9;color:var(--muted);border:1px solid var(--border);border-radius:4px;padding:1px 6px;font-weight:600">~0%</span> on track
+    <strong>Revenue columns</strong> are raw totals for each period, normalised to <strong>avg $/month</strong> for fair comparison. &nbsp;|&nbsp;
+    <strong>YoY %</strong> = (avg/mo new − avg/mo old) ÷ avg/mo old × 100 — apples-to-apples across periods of different lengths. &nbsp;|&nbsp;
+    <span style="background:var(--green-light);color:var(--green);border:1px solid #86efac;border-radius:4px;padding:1px 6px;font-weight:600">+%</span> growing &nbsp;
+    <span style="background:var(--red-light);color:var(--red);border:1px solid #fca5a5;border-radius:4px;padding:1px 6px;font-weight:600">−%</span> declining &nbsp;
+    <span style="background:#f1f5f9;color:var(--muted);border:1px solid var(--border);border-radius:4px;padding:1px 6px;font-weight:600">—</span> no data
   </div>
   <div class="controls">
     <input class="search-box" type="text" id="historical-search" placeholder="Search item…" oninput="renderHistorical()">
-    <label style="font-size:.78rem;color:var(--muted);display:flex;align-items:center;gap:6px;cursor:pointer;">
-      <input type="checkbox" id="hist-monthly-only" onchange="renderHistorical()"> In monthly only
-    </label>
+    <button class="filter-btn indigo active" id="hist-all"     onclick="setHistFilter('all')">All</button>
+    <button class="filter-btn indigo" id="hist-in2026"         onclick="setHistFilter('in2026')">In 2026</button>
+    <button class="filter-btn indigo" id="hist-gainers"        onclick="setHistFilter('gainers')">↑ Gainers</button>
+    <button class="filter-btn indigo" id="hist-decliners"      onclick="setHistFilter('decliners')">↓ Decliners</button>
+    <button class="filter-btn indigo" id="hist-new2026"        onclick="setHistFilter('new2026')">New in 2026</button>
   </div>
   <div class="table-wrap">
     <table id="historical-table">
       <thead><tr>
         <th class="sortable" data-col="0">Item</th>
         <th class="sortable" data-col="1">Category</th>
-        <th class="sortable right" data-col="2">Monthly Rev<br><small style="font-weight:400;color:var(--faint)">Jan–Apr 2026</small></th>
-        <th class="sortable right" data-col="3">Yearly Rev<br><small style="font-weight:400;color:var(--faint)">2025</small></th>
-        <th class="sortable right" data-col="4" title="Monthly revenue ÷ weeks in Jan–Apr report (≈17 wks)">Avg $/wk (M)</th>
-        <th class="sortable right" data-col="5" title="2025 revenue ÷ 52 weeks">Avg $/wk (Y)</th>
-        <th class="sortable right" data-col="6" title="Avg cases/wk from last 4 weekly reports">Recent Vel</th>
-        <th class="sortable right" data-col="7" title="Recent 4-week pace vs Jan–Apr monthly average">Trend</th>
+        <th class="sortable right" data-col="2">2026 YTD<br><small style="font-weight:400;color:var(--faint)">Jan–Apr 102d</small></th>
+        <th class="sortable right" data-col="3">2025 Full Year</th>
+        <th class="sortable right" data-col="4">H2 2024<br><small style="font-weight:400;color:var(--faint)">Jul–Dec 184d</small></th>
+        <th class="sortable right" data-col="5" title="Avg revenue per calendar month — normalised for period length" style="background:#eff6ff">Avg/mo 2026</th>
+        <th class="sortable right" data-col="6" title="Avg revenue per calendar month — 2025 full year" style="background:#f0fdf4">Avg/mo 2025</th>
+        <th class="sortable right" data-col="7" title="YoY change: 2026 avg/mo vs 2025 avg/mo" style="background:#eff6ff">YoY 26v25</th>
+        <th class="sortable right" data-col="8" title="YoY change: 2025 avg/mo vs H2 2024 avg/mo">YoY 25vH2</th>
       </tr></thead>
       <tbody id="historical-body"></tbody>
     </table>
@@ -483,6 +491,19 @@ const RISK_TIP = {
 // DATA LOADING
 // ═══════════════════════════════════════════════════════════════════════════
 async function loadData() {
+  // Merge server-side flags.json into FLAGS (server wins over localStorage for known lists)
+  try {
+    const fr = await fetch('data/flags.json');
+    if (fr.ok) {
+      const sf = await fr.json();
+      for (const k of Object.keys(FLAGS)) {
+        if (Array.isArray(sf[k]) && sf[k].length > 0) FLAGS[k] = sf[k];
+      }
+      // Also persist merged state back to localStorage
+      localStorage.setItem('bmss_flags', JSON.stringify(FLAGS));
+    }
+  } catch(e) { /* flags.json not available yet — use localStorage only */ }
+
   const keys = ['summary','orders','margins','pricing','momentum','historical','revival','briefing'];
   const results = await Promise.allSettled(
     keys.map(k => fetch(`data/${k}.json`).then(r => r.json()))
@@ -508,7 +529,7 @@ function initApp() {
   setBadge('pricing', sum.pricing_opportunities_count || 0);
   const mom = DATA.momentum || {};
   setBadge('momentum', (mom.rising||[]).length);
-  setBadge('historical', (DATA.historical||[]).length);
+  setBadge('historical', ((DATA.historical||{}).items||[]).length);
   setBadge('revival', sum.revival_candidates_count || 0);
   setBadge('skipped', FLAGS.skipped_items.length || 0);
 
@@ -645,6 +666,8 @@ function isDiscarded(name) {
 function initSort(tableId) {
   const tbl = document.getElementById(tableId);
   if (!tbl) return;
+  if (tbl.dataset.sortInited === '1') return;
+  tbl.dataset.sortInited = '1';
   tbl.querySelectorAll('th.sortable').forEach(th => {
     th.addEventListener('click', () => {
       const col = +th.dataset.col;
@@ -879,10 +902,10 @@ function renderMargins() {
     calcBreakdownHtml = `
     <div class="card" style="background:#fff7ed;border-color:#fed7aa;margin-bottom:16px;">
       <div style="font-size:.875rem;font-weight:700;color:#c2410c;margin-bottom:10px;">
-        🔢 Exact Calculation Breakdown — Negative True Margin Items
+        🔢 Exact Calculation Breakdown — Below-Floor Items
       </div>
       <p style="font-size:.75rem;color:#9a3412;margin-bottom:12px;">
-        These items show negative true margin. Below is the exact working for how those figures are derived.
+        These items are selling below their category margin floor. The POS profit figure already includes any Bottlemart promo support — it's the true profit.
       </p>
       ${negMarginItems.map(m => {
         const b = m.calculation_breakdown || {};
@@ -890,15 +913,13 @@ function renderMargins() {
         <div style="border:1px solid #fed7aa;border-radius:6px;padding:10px 14px;margin-bottom:10px;background:#fff;">
           <div style="font-weight:600;font-size:.875rem;margin-bottom:8px;">${esc(m.display_name||m.name)} <span style="color:var(--faint);font-weight:400">(${esc(m.category)})</span></div>
           <table style="font-size:.78rem;border-collapse:collapse;width:100%;">
-            <tr><td style="padding:2px 8px 2px 0;color:var(--muted);width:220px;">① Revenue this week</td><td style="font-weight:600">$${(b.step1_revenue||0).toFixed(2)}</td></tr>
-            <tr><td style="padding:2px 8px 2px 0;color:var(--muted);">② Reported profit (from POS)</td><td>$${(b.step2_reported_profit||0).toFixed(2)} &nbsp;<span style="color:var(--faint);font-style:italic">(implied COGS = $${(b.step2_cogs_implied||0).toFixed(2)})</span></td></tr>
-            <tr><td style="padding:2px 8px 2px 0;color:var(--muted);">③ Reported margin</td><td>${b.step3_reported_margin||'—'}</td></tr>
-            <tr><td style="padding:2px 8px 2px 0;color:var(--amber);">④ Bottlemart promo savings</td><td style="color:var(--amber)">$${(b.step4_promo_savings||0).toFixed(2)} <span style="font-style:italic;color:var(--faint)">(chain-funded — not your real profit)</span></td></tr>
-            <tr><td style="padding:2px 8px 2px 0;color:var(--red);font-weight:600;">⑤ True profit (after removing promo)</td><td style="color:var(--red);font-weight:600">$${(b.step5_true_profit||0).toFixed(2)} &nbsp;<span style="font-weight:400;font-style:italic">${esc(b.step5_formula||'')}</span></td></tr>
-            <tr><td style="padding:2px 8px 2px 0;color:var(--red);">⑥ True margin</td><td style="color:var(--red);font-weight:600">${b.step6_true_margin||'—'}</td></tr>
-            <tr><td style="padding:2px 8px 2px 0;color:var(--muted);">⑦ Category floor</td><td>${b.step7_floor||'—'}</td></tr>
-            <tr><td style="padding:2px 8px 2px 0;color:var(--muted);">⑧ Gap to floor</td><td>${(b.step8_gap_pts||0).toFixed(2)} pts</td></tr>
-            <tr><td style="padding:2px 8px 2px 0;color:var(--red);font-weight:600;">⑨ Weekly dollar drag</td><td style="color:var(--red);font-weight:600">${b.step9_dollar_drag||'—'}</td></tr>
+            <tr><td style="padding:2px 8px 2px 0;color:var(--muted);width:240px;">① Revenue this week</td><td style="font-weight:600">$${(b.step1_revenue||0).toFixed(2)}</td></tr>
+            <tr><td style="padding:2px 8px 2px 0;color:var(--muted);">② POS profit (reported)</td><td>$${(b.step2_profit||0).toFixed(2)} &nbsp;<span style="color:var(--faint);font-style:italic">(implied COGS = $${(b.step2_cogs_implied||0).toFixed(2)})</span></td></tr>
+            <tr><td style="padding:2px 8px 2px 0;color:var(--muted);">③ Margin</td><td>${esc(b.step3_margin||'—')}</td></tr>
+            <tr><td style="padding:2px 8px 2px 0;color:var(--amber);">④ Bottlemart promo savings</td><td style="color:var(--amber)">$${(b.step4_promo_savings||0).toFixed(2)} &nbsp;<span style="font-style:italic;color:var(--faint)">${esc(b.step4_note||'Already reflected in POS profit above')}</span></td></tr>
+            <tr><td style="padding:2px 8px 2px 0;color:var(--muted);">⑤ Category floor</td><td>${esc(b.step5_floor||'—')}</td></tr>
+            <tr><td style="padding:2px 8px 2px 0;color:var(--red);">⑥ Gap to floor</td><td style="color:var(--red)">${(b.step6_gap_pts||0).toFixed(2)} pts below floor</td></tr>
+            <tr><td style="padding:2px 8px 2px 0;color:var(--red);font-weight:600;">⑦ Weekly dollar drag</td><td style="color:var(--red);font-weight:600">${esc(b.step7_dollar_drag||'—')}</td></tr>
           </table>
         </div>`;
       }).join('')}
@@ -1109,58 +1130,148 @@ function renderMomentum() {
 // ═══════════════════════════════════════════════════════════════════════════
 // HISTORICAL PANE
 // ═══════════════════════════════════════════════════════════════════════════
+let histFilter = 'all';
+function setHistFilter(f) {
+  histFilter = f;
+  ['all','in2026','gainers','decliners','new2026'].forEach(x => {
+    document.getElementById(`hist-${x}`)?.classList.toggle('active', x === f);
+  });
+  renderHistorical();
+}
+
+function yoyBadge(pct) {
+  if (pct == null) return '<span style="color:var(--faint)">—</span>';
+  const cls = pct > 5  ? 'color:var(--green);background:var(--green-light);border-color:#86efac'
+            : pct < -5 ? 'color:var(--red);background:var(--red-light);border-color:#fca5a5'
+            : 'color:var(--muted);background:#f1f5f9;border-color:var(--border)';
+  return `<span style="font-size:.75rem;font-weight:600;padding:1px 8px;border-radius:4px;border:1px solid;${cls}">${pct>0?'+':''}${pct.toFixed(1)}%</span>`;
+}
+
+function renderHistoricalCommentary(hist) {
+  const c = hist.commentary || {};
+  const pm = hist.period_months || {};
+  const el = document.getElementById('hist-commentary');
+  if (!el) return;
+
+  // Store-level stat cards
+  const yoy2626 = c.overall_yoy_2026_vs_2025;
+  const yoyH2   = c.overall_yoy_2025_vs_h2;
+  const statsHtml = `
+    <div style="display:flex;flex-wrap:wrap;gap:8px;margin:10px 0 12px;">
+      ${[
+        { l:'Avg/mo 2026 YTD', v:'$'+fmt0(c.store_avg_mo_2026||0), delta: yoy2626, badge:'2026 vs 2025' },
+        { l:'Avg/mo 2025',     v:'$'+fmt0(c.store_avg_mo_2025||0), delta: yoyH2,   badge:'2025 vs H2\'24' },
+        { l:'Avg/mo H2 2024',  v:'$'+fmt0(c.store_avg_mo_h2_2024||0) },
+        { l:'2026 YTD Total',  v:'$'+fmt0(c.store_total_2026_ytd||0) },
+        { l:'2025 Full Year',  v:'$'+fmt0(c.store_total_2025_full||0) },
+      ].map(s => `
+        <div style="background:#fff;border:1px solid var(--border);border-radius:6px;padding:8px 12px;min-width:130px;">
+          <div style="font-size:.72rem;color:var(--muted)">${s.l}</div>
+          <div style="font-size:1.05rem;font-weight:700">${s.v}</div>
+          ${s.delta != null ? `<div style="font-size:.72rem;${s.delta>0?'color:var(--green)':s.delta<0?'color:var(--red)':'color:var(--faint)'}">
+            ${s.delta>0?'↑':'↓'} ${Math.abs(s.delta).toFixed(1)}% &nbsp;<span style="color:var(--faint)">${s.badge}</span>
+          </div>` : ''}
+        </div>`
+      ).join('')}
+    </div>`;
+
+  // Sections (ordered list from backend — no titles, assign them here)
+  const SECTION_TITLES = [
+    { icon:'📊', title:'Overall Store Trend',        open: true  },
+    { icon:'📦', title:'Category Shifts',            open: false },
+    { icon:'🚀', title:'Top Gainers (2026 vs 2025)', open: false },
+    { icon:'📉', title:'Top Decliners',              open: false },
+    { icon:'🆕', title:'New in 2026',                open: false },
+    { icon:'👻', title:'Absent from 2026',           open: false },
+  ];
+
+  const sectHtml = (c.sections || []).map((s, i) => {
+    const meta = SECTION_TITLES[i] || { icon:'📄', title:`Section ${i+1}`, open: false };
+    const body = `<p style="font-size:.83rem;line-height:1.8;color:#374151;white-space:pre-wrap">${esc(s.body||'')}</p>`;
+    const id = `hist-comm-${i}`;
+    return `
+      <div style="border-bottom:1px solid var(--border-light);padding:7px 0;">
+        <button onclick="document.getElementById('${id}').classList.toggle('open')"
+          style="background:none;border:none;cursor:pointer;font-size:.84rem;font-weight:600;color:var(--text);display:flex;align-items:center;gap:6px;width:100%;text-align:left;padding:0;">
+          ${meta.icon} ${meta.title}
+          <span style="font-size:.7rem;color:var(--blue);margin-left:auto;font-weight:400">toggle ▾</span>
+        </button>
+        <div id="${id}" class="insight-box ${meta.open ? 'open' : ''}" style="margin-top:6px;">
+          ${body}
+        </div>
+      </div>`;
+  }).join('');
+
+  el.innerHTML = `
+    <div class="card" style="padding:14px 16px;">
+      <div style="font-size:.875rem;font-weight:700;color:var(--text);margin-bottom:4px;">
+        📅 Year-on-Year Revenue Analysis
+        <span style="font-size:.72rem;font-weight:400;color:var(--faint);margin-left:8px;">
+          2026 YTD (${(pm['2026_ytd']||0).toFixed(1)} mo) · 2025 full year (${(pm['2025_full']||0).toFixed(1)} mo) · H2 2024 (${(pm['h2_2024']||0).toFixed(1)} mo)
+        </span>
+      </div>
+      ${statsHtml}
+      ${sectHtml}
+    </div>`;
+}
+
 function renderHistorical() {
-  const all  = DATA.historical || [];
+  const hist = DATA.historical || {};
+  const all  = hist.items || [];
+
+  // Render commentary once (guard: only if hist has actual data)
+  if (all.length && hist.commentary) renderHistoricalCommentary(hist);
+
   const search = (document.getElementById('historical-search')?.value||'').toLowerCase();
-  const monthOnly = document.getElementById('hist-monthly-only')?.checked;
   let items = all.filter(item => {
     if (PROTECTED_VIEW && !item.is_profit_protected && !item.is_revenue_protected) return false;
-    if (monthOnly && !item.in_monthly) return false;
     if (search && !(item.display_name||item.name).toLowerCase().includes(search)) return false;
+    switch (histFilter) {
+      case 'in2026':    return item.in_2026;
+      case 'gainers':   return item.yoy_2026_vs_2025 != null && item.yoy_2026_vs_2025 > 5;
+      case 'decliners': return item.yoy_2026_vs_2025 != null && item.yoy_2026_vs_2025 < -5;
+      case 'new2026':   return item.in_2026 && !item.in_2025 && !item.in_h2_2024;
+    }
     return true;
   });
 
   const sortCols = item => [
-    (item.display_name||item.name), item.category, item.monthly_revenue||0,
-    item.yearly_revenue||0, item.est_weekly_from_monthly||0,
-    item.est_weekly_from_yearly||0, item.recent_weekly_velocity||0, item.trend_vs_monthly||0
+    (item.display_name||item.name), item.category,
+    item.rev_2026_ytd||0, item.rev_2025_full||0, item.rev_h2_2024||0,
+    item.avg_month_2026||0, item.avg_month_2025||0,
+    item.yoy_2026_vs_2025, item.yoy_2025_vs_h2
   ];
   items = sortRows(items, 'historical-table', sortCols);
-  if (!SORT['historical-table']) items = [...items].sort((a,b)=>(b.monthly_revenue||0)-(a.monthly_revenue||0));
+  // Default sort: 2026 YTD revenue descending
+  if (!SORT['historical-table']) items = [...items].sort((a,b)=>(b.rev_2026_ytd||0)-(a.rev_2026_ytd||0));
 
   const tbody = document.getElementById('historical-body');
-  if (!items.length) { tbody.innerHTML = `<tr><td colspan="8" class="empty">No items match filters.</td></tr>`; return; }
+  if (!items.length) { tbody.innerHTML = `<tr><td colspan="9" class="empty">No items match filters.</td></tr>`; return; }
 
-  tbody.innerHTML = items.slice(0, 200).map(item => {
-    const t = item.trend_vs_monthly;
-    let trendHtml = '—';
-    if (t != null) {
-      const cls = t > 10 ? 'color:var(--green);background:var(--green-light);border-color:#86efac'
-                 : t < -10 ? 'color:var(--red);background:var(--red-light);border-color:#fca5a5'
-                 : 'color:var(--muted);background:#f1f5f9;border-color:var(--border)';
-      trendHtml = `<span style="font-size:.75rem;font-weight:600;padding:1px 6px;border-radius:4px;border:1px solid;${cls}">${t>0?'+':''}${t.toFixed(0)}%</span>`;
-    }
+  tbody.innerHTML = items.slice(0, 300).map(item => {
     const badges = [
-      item.in_monthly ? `<span class="badge badge-green" style="font-size:.65rem">monthly</span>` : '',
-      item.in_yearly  ? `<span class="badge badge-blue"  style="font-size:.65rem">yearly</span>`  : '',
-    ].join(' ');
+      item.in_2026    ? `<span class="badge badge-blue"   style="font-size:.62rem">2026</span>` : '',
+      item.in_2025    ? `<span class="badge badge-green"  style="font-size:.62rem">2025</span>` : '',
+      item.in_h2_2024 ? `<span class="badge badge-grey"   style="font-size:.62rem">H2'24</span>` : '',
+    ].filter(Boolean).join(' ');
     return `<tr>
       <td>
         <div class="item-name">${esc(item.display_name||item.name)}</div>
-        <div style="margin-top:2px">${badges}</div>
+        <div style="margin-top:3px">${badges}</div>
       </td>
       <td style="font-size:.78rem;color:var(--faint)">${esc(item.category||'')}</td>
-      <td class="right">${item.monthly_revenue ? '$'+fmt0(item.monthly_revenue) : '—'}</td>
-      <td class="right">${item.yearly_revenue  ? '$'+fmt0(item.yearly_revenue)  : '—'}</td>
-      <td class="right">${item.est_weekly_from_monthly ? '$'+item.est_weekly_from_monthly.toFixed(0) : '—'}</td>
-      <td class="right">${item.est_weekly_from_yearly  ? '$'+item.est_weekly_from_yearly.toFixed(0)  : '—'}</td>
-      <td class="right" style="color:var(--blue);font-weight:500">${item.recent_weekly_velocity > 0 ? item.recent_weekly_velocity.toFixed(2)+' cs' : '—'}</td>
-      <td class="right">${trendHtml}</td>
+      <td class="right">${item.rev_2026_ytd ? '$'+fmt0(item.rev_2026_ytd) : '—'}</td>
+      <td class="right">${item.rev_2025_full ? '$'+fmt0(item.rev_2025_full) : '—'}</td>
+      <td class="right">${item.rev_h2_2024 ? '$'+fmt0(item.rev_h2_2024) : '—'}</td>
+      <td class="right" style="background:#eff6ff;color:var(--blue-dark);font-weight:500">${item.avg_month_2026 ? '$'+fmt0(item.avg_month_2026) : '—'}</td>
+      <td class="right" style="background:#f0fdf4;color:var(--green);font-weight:500">${item.avg_month_2025 ? '$'+fmt0(item.avg_month_2025) : '—'}</td>
+      <td class="right" style="background:#eff6ff">${yoyBadge(item.yoy_2026_vs_2025)}</td>
+      <td class="right">${yoyBadge(item.yoy_2025_vs_h2)}</td>
     </tr>`;
   }).join('');
 
   document.getElementById('hist-footer').textContent =
-    `Showing ${Math.min(items.length,200)} of ${items.length} items`;
+    `Showing ${Math.min(items.length,300)} of ${items.length} items`;
   initSort('historical-table');
 }
 

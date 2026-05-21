@@ -30,6 +30,7 @@ from margin_engine import build_margin_analysis, build_margin_summary
 from pricing_engine import build_pricing_recommendations
 from revival_engine import build_revival_list
 from briefing_engine import build_briefing
+from historical_engine import build_yoy_historical
 
 
 # ---------------------------------------------------------------------------
@@ -103,46 +104,10 @@ def run_analysis(data_root: str) -> dict:
     stable  = sorted([x for x in momentum_items if x["momentum_direction"] == "stable"],
                      key=lambda x: -x["revenue_latest_week"])[:20]
 
-    # --- Historical ---
-    print("[BMSS] Computing historical baseline...")
-    historical     = sales["historical_baseline"]
-    historical_list = []
-    for key, data in historical.items():
-        monthly_rev = data.get("monthly_revenue", 0.0)
-        yearly_rev  = data.get("yearly_revenue", 0.0)
-        if monthly_rev + yearly_rev < 100:
-            continue
-        vel_data   = velocity.get(key, {})
-        recent_vel = vel_data.get("avg_cases_per_week", 0.0)
-        monthly_wkly = monthly_rev / 14.0 if data["in_monthly"] else 0.0
-        yearly_wkly  = yearly_rev / 52.0  if data["in_yearly"]  else 0.0
-
-        # Trend: compare recent cases/week vs monthly cases/week (same unit)
-        # historical baseline now includes monthly_cases — use that for an apples-to-apples comparison
-        monthly_cases_total = data.get("monthly_cases", 0.0)
-        monthly_cases_per_week = (monthly_cases_total / 14.0) if (data["in_monthly"] and monthly_cases_total > 0) else 0.0
-        trend = None
-        if monthly_cases_per_week > 0:
-            trend = round(((recent_vel - monthly_cases_per_week) / monthly_cases_per_week) * 100, 1)
-        elif monthly_cases_per_week == 0 and recent_vel > 0 and data["in_monthly"]:
-            trend = None  # Monthly had zero cases recorded; skip comparison
-        hist_item = {
-            "name":                   data["canonical_name"],
-            "category":               data["category"],
-            "monthly_revenue":        round(monthly_rev, 2),
-            "yearly_revenue":         round(yearly_rev, 2),
-            "monthly_txns":           data.get("monthly_txns", 0),
-            "yearly_txns":            data.get("yearly_txns", 0),
-            "est_weekly_from_monthly": round(monthly_wkly, 2),
-            "est_weekly_from_yearly":  round(yearly_wkly, 2),
-            "recent_weekly_velocity":  round(recent_vel, 3),
-            "trend_vs_monthly":        trend,
-            "in_monthly":             data["in_monthly"],
-            "in_yearly":              data["in_yearly"],
-        }
-        hist_item["display_name"] = display_name(hist_item["name"])
-        historical_list.append(hist_item)
-    historical_list.sort(key=lambda x: -(x["monthly_revenue"] or x["yearly_revenue"]))
+    # --- Historical (YoY analysis) ---
+    print("[BMSS] Computing YoY historical analysis...")
+    yoy_data = build_yoy_historical(data_root)
+    historical_list = yoy_data["items"]
 
     # --- Margins ---
     print("[BMSS] Computing margin analysis...")
@@ -197,7 +162,7 @@ def run_analysis(data_root: str) -> dict:
     return {
         "orders":   orders,
         "momentum": {"rising": rising, "falling": falling, "stable": stable},
-        "historical": historical_list[:100],
+        "historical": yoy_data,
         "margins":  margins,
         "pricing":  pricing,
         "revival":  revival,
