@@ -9,7 +9,7 @@
     "est_weekly_from_monthly": 1005.59,
     "est_weekly_from_yearly": 1320.69,
     "recent_weekly_velocity": 44.25,
-    "trend_vs_monthly": -95.6,
+    "trend_vs_monthly": -19.4,
     "in_monthly": true,
     "in_yearly": true,
     "display_name": "Carlton Draught Keg JUG 1140ml"
@@ -24,7 +24,7 @@
     "est_weekly_from_monthly": 976.69,
     "est_weekly_from_yearly": 1189.04,
     "recent_weekly_velocity": 8.729,
-    "trend_vs_monthly": -99.1,
+    "trend_vs_monthly": -34.6,
     "in_monthly": true,
     "in_yearly": true,
     "display_name": "Carlton Draught Can 375ml"
@@ -39,7 +39,7 @@
     "est_weekly_from_monthly": 894.99,
     "est_weekly_from_yearly": 1201.11,
     "recent_weekly_velocity": 7.802,
-    "trend_vs_monthly": -99.1,
+    "trend_vs_monthly": -37.6,
     "in_monthly": true,
     "in_yearly": true,
     "display_name": "Carlton Draught Bt 375ml"
@@ -54,7 +54,7 @@
     "est_weekly_from_monthly": 889.06,
     "est_weekly_from_yearly": 1269.78,
     "recent_weekly_velocity": 13.719,
-    "trend_vs_monthly": -98.5,
+    "trend_vs_monthly": 5.5,
     "in_monthly": true,
     "in_yearly": true,
     "display_name": "Victoria Bitter Bt 375ml"
@@ -69,7 +69,7 @@
     "est_weekly_from_monthly": 878.97,
     "est_weekly_from_yearly": 930.79,
     "recent_weekly_velocity": 6.51,
-    "trend_vs_monthly": -99.3,
+    "trend_vs_monthly": -31.5,
     "in_monthly": true,
     "in_yearly": true,
     "display_name": "Victoria Bitter Can 375ml"
@@ -84,7 +84,7 @@
     "est_weekly_from_monthly": 757.83,
     "est_weekly_from_yearly": 1179.86,
     "recent_weekly_velocity": 4.0,
-    "trend_vs_monthly": -99.5,
+    "trend_vs_monthly": 19.1,
     "in_monthly": true,
     "in_yearly": true,
     "display_name": "Woodstock Bourbon & Cola Reserve 12% Can 200ml"
@@ -99,7 +99,7 @@
     "est_weekly_from_monthly": 741.91,
     "est_weekly_from_yearly": 1254.78,
     "recent_weekly_velocity": 9.281,
-    "trend_vs_monthly": -98.7,
+    "trend_vs_monthly": -9.8,
     "in_monthly": true,
     "in_yearly": true,
     "display_name": "Corona Extra Bt 355ml"
@@ -129,25 +129,10 @@
     "est_weekly_from_monthly": 569.95,
     "est_weekly_from_yearly": 1447.26,
     "recent_weekly_velocity": 0.792,
-    "trend_vs_monthly": -99.9,
+    "trend_vs_monthly": -7.6,
     "in_monthly": true,
     "in_yearly": true,
     "display_name": "Martell Cognac Blue Swift 700ml"
-  },
-  {
-    "name": "Drink Here-$2",
-    "category": "Misc",
-    "monthly_revenue": 7891.21,
-    "yearly_revenue": 24793.68,
-    "monthly_txns": 2072,
-    "yearly_txns": 7758,
-    "est_weekly_from_monthly": 563.66,
-    "est_weekly_from_yearly": 476.8,
-    "recent_weekly_velocity": 281.25,
-    "trend_vs_monthly": -50.1,
-    "in_monthly": true,
-    "in_yearly": true,
-    "display_name": "Drink Here-$2"
   },
   {
     "name": "Johnnie Walker Blue LNY Snake 2025 750ml",
@@ -174,7 +159,7 @@
     "est_weekly_from_monthly": 438.1,
     "est_weekly_from_yearly": 561.2,
     "recent_weekly_velocity": 0.76,
-    "trend_vs_monthly": -99.8,
+    "trend_vs_monthly": -37.4,
     "in_monthly": true,
     "in_yearly": true,
     "display_name": "Wild Boar 15% Bourbon&Cola 375ml"
@@ -189,7 +174,7 @@
     "est_weekly_from_monthly": 436.91,
     "est_weekly_from_yearly": 554.86,
     "recent_weekly_velocity": 6.49,
-    "trend_vs_monthly": -98.5,
+    "trend_vs_monthly": -10.9,
     "in_monthly": true,
     "in_yearly": true,
     "display_name": "Heineken Bt 330ml"
@@ -234,7 +219,7 @@
     "est_weekly_from_monthly": 336.19,
     "est_weekly_from_yearly": 442.24,
     "recent_weekly_velocity": 1.604,
-    "trend_vs_monthly": -99.5,
+    "trend_vs_monthly": -16.8,
     "in_monthly": true,
     "in_yearly": true,
     "display_name": "Jim Beam White & Cola Can 375ml"
@@ -249,7 +234,7 @@
     "est_weekly_from_monthly": 333.18,
     "est_weekly_from_yearly": 323.6,
     "recent_weekly_velocity": 4.25,
-    "trend_vs_monthly": -98.7,
+    "trend_vs_monthly": -13.8,
     "in_monthly": true,
     "in_yearly": true,
     "display_name": "Asahi Super Dry Bt 330ml"
@@ -264,7 +249,7 @@
     "est_weekly_from_monthly": 329.54,
     "est_weekly_from_yearly": 318.81,
     "recent_weekly_velocity": 0.896,
-    "trend_vs_monthly": -99.7,
+    "trend_vs_monthly": -37.3,
     "in_monthly": true,
     "in_yearly": true,
     "display_name": "Jim Beam Black Double Serve & Cola 6.9% Can 375ml"
@@ -279,7 +264,7 @@
     "est_weekly_from_monthly": 318.81,
     "est_weekly_from_yearly": 435.22,
     "recent_weekly_velocity": 3.365,
-    "trend_vs_monthly": -98.9,
+    "trend_vs_monthly": -32.7,
     "in_monthly": true,
     "in_yearly": true,
     "display_name": "Carlton Dry Btl 330ml"
@@ -309,7 +294,7 @@
     "est_weekly_from_monthly": 310.46,
     "est_weekly_from_yearly": 423.01,
     "recent_weekly_velocity": 1.177,
-    "trend_vs_monthly": -99.6,
+    "trend_vs_monthly": -39.0,
     "in_monthly": true,
     "in_yearly": true,
     "display_name": "Woodstock Bourbon & Cola 4.8% Can 375ml"
@@ -324,7 +309,7 @@
     "est_weekly_from_monthly": 304.73,
     "est_weekly_from_yearly": 362.43,
     "recent_weekly_velocity": 2.99,
-    "trend_vs_monthly": -99.0,
+    "trend_vs_monthly": -36.6,
     "in_monthly": true,
     "in_yearly": true,
     "display_name": "Carlton Pure Blonde Bt 330ml"
@@ -339,7 +324,7 @@
     "est_weekly_from_monthly": 292.72,
     "est_weekly_from_yearly": 242.08,
     "recent_weekly_velocity": 5.25,
-    "trend_vs_monthly": -98.2,
+    "trend_vs_monthly": 13.1,
     "in_monthly": true,
     "in_yearly": true,
     "display_name": "Great Northern BC Original Lager 4.2% Bt 330ml"
@@ -354,7 +339,7 @@
     "est_weekly_from_monthly": 292.39,
     "est_weekly_from_yearly": 379.88,
     "recent_weekly_velocity": 2.729,
-    "trend_vs_monthly": -99.1,
+    "trend_vs_monthly": -30.5,
     "in_monthly": true,
     "in_yearly": true,
     "display_name": "Crown Lager Bt 375ml"
@@ -414,7 +399,7 @@
     "est_weekly_from_monthly": 270.17,
     "est_weekly_from_yearly": 198.55,
     "recent_weekly_velocity": 0.135,
-    "trend_vs_monthly": -100.0,
+    "trend_vs_monthly": -81.1,
     "in_monthly": true,
     "in_yearly": true,
     "display_name": "Grants Fam Reserve Scotch Whisky 1L"
@@ -429,7 +414,7 @@
     "est_weekly_from_monthly": 262.84,
     "est_weekly_from_yearly": 402.71,
     "recent_weekly_velocity": 0.792,
-    "trend_vs_monthly": -99.7,
+    "trend_vs_monthly": -26.1,
     "in_monthly": true,
     "in_yearly": true,
     "display_name": "Woodstock Bourbon & Cola 8% Can 375ml"
@@ -474,7 +459,7 @@
     "est_weekly_from_monthly": 244.9,
     "est_weekly_from_yearly": 237.19,
     "recent_weekly_velocity": 2.177,
-    "trend_vs_monthly": -99.1,
+    "trend_vs_monthly": 1.6,
     "in_monthly": true,
     "in_yearly": true,
     "display_name": "Asahi Super Dry Can 500ml"
@@ -489,7 +474,7 @@
     "est_weekly_from_monthly": 244.84,
     "est_weekly_from_yearly": 695.71,
     "recent_weekly_velocity": 1.833,
-    "trend_vs_monthly": -99.3,
+    "trend_vs_monthly": 51.0,
     "in_monthly": true,
     "in_yearly": true,
     "display_name": "Woodstock Bourbon & Cola 6% Can 375ml"
@@ -519,7 +504,7 @@
     "est_weekly_from_monthly": 238.33,
     "est_weekly_from_yearly": 396.33,
     "recent_weekly_velocity": 14.75,
-    "trend_vs_monthly": -93.8,
+    "trend_vs_monthly": -49.6,
     "in_monthly": true,
     "in_yearly": true,
     "display_name": "Carlton Draught Keg Schooner"
@@ -549,7 +534,7 @@
     "est_weekly_from_monthly": 226.56,
     "est_weekly_from_yearly": 641.41,
     "recent_weekly_velocity": 14.0,
-    "trend_vs_monthly": -93.8,
+    "trend_vs_monthly": -38.4,
     "in_monthly": true,
     "in_yearly": true,
     "display_name": "Carlton Draught Kegs Pint 570ml"
@@ -564,7 +549,7 @@
     "est_weekly_from_monthly": 218.05,
     "est_weekly_from_yearly": 278.55,
     "recent_weekly_velocity": 1.354,
-    "trend_vs_monthly": -99.4,
+    "trend_vs_monthly": -34.6,
     "in_monthly": true,
     "in_yearly": true,
     "display_name": "Divas Retro Ruby Raspberry Bt 330ml"
@@ -579,7 +564,7 @@
     "est_weekly_from_monthly": 214.21,
     "est_weekly_from_yearly": 415.76,
     "recent_weekly_velocity": 0.229,
-    "trend_vs_monthly": -99.9,
+    "trend_vs_monthly": -19.8,
     "in_monthly": true,
     "in_yearly": true,
     "display_name": "Jim Beam White Bourbon 375ml"
@@ -594,7 +579,7 @@
     "est_weekly_from_monthly": 197.33,
     "est_weekly_from_yearly": 367.15,
     "recent_weekly_velocity": 0.188,
-    "trend_vs_monthly": -99.9,
+    "trend_vs_monthly": 31.6,
     "in_monthly": true,
     "in_yearly": true,
     "display_name": "Jim Beam White Bourbon 200ml"
@@ -609,7 +594,7 @@
     "est_weekly_from_monthly": 195.25,
     "est_weekly_from_yearly": 310.16,
     "recent_weekly_velocity": 0.198,
-    "trend_vs_monthly": -99.9,
+    "trend_vs_monthly": -7.6,
     "in_monthly": true,
     "in_yearly": true,
     "display_name": "Jack Daniels Black Label 700ml"
@@ -624,7 +609,7 @@
     "est_weekly_from_monthly": 193.06,
     "est_weekly_from_yearly": 246.67,
     "recent_weekly_velocity": 3.531,
-    "trend_vs_monthly": -98.2,
+    "trend_vs_monthly": 33.6,
     "in_monthly": true,
     "in_yearly": true,
     "display_name": "Sapporo Premium Beer Bt 355ml"
@@ -639,7 +624,7 @@
     "est_weekly_from_monthly": 191.96,
     "est_weekly_from_yearly": 361.64,
     "recent_weekly_velocity": 0.146,
-    "trend_vs_monthly": -99.9,
+    "trend_vs_monthly": -48.9,
     "in_monthly": true,
     "in_yearly": true,
     "display_name": "Smirnoff Vodka Red 700ml"
@@ -654,7 +639,7 @@
     "est_weekly_from_monthly": 189.19,
     "est_weekly_from_yearly": 138.86,
     "recent_weekly_velocity": 0.365,
-    "trend_vs_monthly": -99.8,
+    "trend_vs_monthly": -14.8,
     "in_monthly": true,
     "in_yearly": true,
     "display_name": "Canadian Club Whisky 1L"
@@ -669,7 +654,7 @@
     "est_weekly_from_monthly": 183.4,
     "est_weekly_from_yearly": 253.36,
     "recent_weekly_velocity": 0.139,
-    "trend_vs_monthly": -99.9,
+    "trend_vs_monthly": -67.6,
     "in_monthly": true,
     "in_yearly": true,
     "display_name": "Smirnoff Vodka Red 1L"
@@ -684,7 +669,7 @@
     "est_weekly_from_monthly": 180.91,
     "est_weekly_from_yearly": 237.41,
     "recent_weekly_velocity": 1.49,
-    "trend_vs_monthly": -99.2,
+    "trend_vs_monthly": -0.7,
     "in_monthly": true,
     "in_yearly": true,
     "display_name": "Heineken Can 500ml"
@@ -774,7 +759,7 @@
     "est_weekly_from_monthly": 161.95,
     "est_weekly_from_yearly": 141.33,
     "recent_weekly_velocity": 0.802,
-    "trend_vs_monthly": -99.5,
+    "trend_vs_monthly": -13.6,
     "in_monthly": true,
     "in_yearly": true,
     "display_name": "Hard Rated Lemon Seltzer 375ml"
@@ -819,7 +804,7 @@
     "est_weekly_from_monthly": 158.38,
     "est_weekly_from_yearly": 173.04,
     "recent_weekly_velocity": 1.0,
-    "trend_vs_monthly": -99.4,
+    "trend_vs_monthly": -56.2,
     "in_monthly": true,
     "in_yearly": true,
     "display_name": "Carlton Dry Can 375ml"
@@ -834,7 +819,7 @@
     "est_weekly_from_monthly": 157.4,
     "est_weekly_from_yearly": 295.98,
     "recent_weekly_velocity": 0.104,
-    "trend_vs_monthly": -99.9,
+    "trend_vs_monthly": -51.5,
     "in_monthly": true,
     "in_yearly": true,
     "display_name": "Jim Beam White Bourbon 700ml"
@@ -864,7 +849,7 @@
     "est_weekly_from_monthly": 156.14,
     "est_weekly_from_yearly": 140.39,
     "recent_weekly_velocity": 2.0,
-    "trend_vs_monthly": -98.7,
+    "trend_vs_monthly": -26.3,
     "in_monthly": true,
     "in_yearly": true,
     "display_name": "Coronita Extra Bt 210ml"
@@ -879,7 +864,7 @@
     "est_weekly_from_monthly": 155.19,
     "est_weekly_from_yearly": 268.34,
     "recent_weekly_velocity": 0.344,
-    "trend_vs_monthly": -99.8,
+    "trend_vs_monthly": -19.7,
     "in_monthly": true,
     "in_yearly": true,
     "display_name": "Jameson Irish Whisky 700ml"
@@ -909,7 +894,7 @@
     "est_weekly_from_monthly": 154.67,
     "est_weekly_from_yearly": 294.27,
     "recent_weekly_velocity": 0.156,
-    "trend_vs_monthly": -99.9,
+    "trend_vs_monthly": -56.3,
     "in_monthly": true,
     "in_yearly": true,
     "display_name": "Jack Daniels Black Label 350ml Promo"
@@ -924,7 +909,7 @@
     "est_weekly_from_monthly": 153.43,
     "est_weekly_from_yearly": 55.83,
     "recent_weekly_velocity": 1.615,
-    "trend_vs_monthly": -98.9,
+    "trend_vs_monthly": 73.9,
     "in_monthly": true,
     "in_yearly": true,
     "display_name": "-196 Lemon 9% 250ml"
@@ -939,7 +924,7 @@
     "est_weekly_from_monthly": 147.35,
     "est_weekly_from_yearly": 176.5,
     "recent_weekly_velocity": 0.469,
-    "trend_vs_monthly": -99.7,
+    "trend_vs_monthly": -53.1,
     "in_monthly": true,
     "in_yearly": true,
     "display_name": "Lion Strong Beer 8.8% Bt 625ml"
@@ -954,7 +939,7 @@
     "est_weekly_from_monthly": 146.97,
     "est_weekly_from_yearly": 292.22,
     "recent_weekly_velocity": 1.083,
-    "trend_vs_monthly": -99.3,
+    "trend_vs_monthly": 51.6,
     "in_monthly": true,
     "in_yearly": true,
     "display_name": "Smirnoff Ice Double Black 6.5% Can 375ml"
@@ -984,7 +969,7 @@
     "est_weekly_from_monthly": 144.86,
     "est_weekly_from_yearly": 169.7,
     "recent_weekly_velocity": 0.646,
-    "trend_vs_monthly": -99.6,
+    "trend_vs_monthly": -56.9,
     "in_monthly": true,
     "in_yearly": true,
     "display_name": "Carlton Draught Bt 750ml"
@@ -999,7 +984,7 @@
     "est_weekly_from_monthly": 144.39,
     "est_weekly_from_yearly": 112.01,
     "recent_weekly_velocity": 1.844,
-    "trend_vs_monthly": -98.7,
+    "trend_vs_monthly": 29.1,
     "in_monthly": true,
     "in_yearly": true,
     "display_name": "Mercury Double Cider 250ml"
@@ -1029,7 +1014,7 @@
     "est_weekly_from_monthly": 141.34,
     "est_weekly_from_yearly": 25.37,
     "recent_weekly_velocity": 1.625,
-    "trend_vs_monthly": -98.9,
+    "trend_vs_monthly": 33.8,
     "in_monthly": true,
     "in_yearly": true,
     "display_name": "THREE OAKS CIDER 10% 10PK375ML"
@@ -1059,7 +1044,7 @@
     "est_weekly_from_monthly": 140.69,
     "est_weekly_from_yearly": 181.49,
     "recent_weekly_velocity": 0.104,
-    "trend_vs_monthly": -99.9,
+    "trend_vs_monthly": -51.5,
     "in_monthly": true,
     "in_yearly": true,
     "display_name": "Canadian Club Whisky 700ml"
@@ -1074,7 +1059,7 @@
     "est_weekly_from_monthly": 140.3,
     "est_weekly_from_yearly": 439.7,
     "recent_weekly_velocity": 1.125,
-    "trend_vs_monthly": -99.2,
+    "trend_vs_monthly": 75.0,
     "in_monthly": true,
     "in_yearly": true,
     "display_name": "Jim Beam White Double Serve & Cola 6.7% Can 375ml"
@@ -1089,7 +1074,7 @@
     "est_weekly_from_monthly": 135.71,
     "est_weekly_from_yearly": 414.3,
     "recent_weekly_velocity": 0.083,
-    "trend_vs_monthly": -99.9,
+    "trend_vs_monthly": null,
     "in_monthly": true,
     "in_yearly": true,
     "display_name": "Martell Cognac XO Supreme 700ml"
@@ -1104,7 +1089,7 @@
     "est_weekly_from_monthly": 132.01,
     "est_weekly_from_yearly": 110.97,
     "recent_weekly_velocity": 0.708,
-    "trend_vs_monthly": -99.5,
+    "trend_vs_monthly": -50.4,
     "in_monthly": true,
     "in_yearly": true,
     "display_name": "Coopers Sparkling Ale Bt 375ml"
@@ -1123,21 +1108,6 @@
     "in_monthly": false,
     "in_yearly": true,
     "display_name": "Johnnie Walker Green Malt 700ml"
-  },
-  {
-    "name": "Remy Martin XO Gift Bag 2024 700ML",
-    "category": "Cognac",
-    "monthly_revenue": 0.0,
-    "yearly_revenue": 1799.94,
-    "monthly_txns": 0,
-    "yearly_txns": 6,
-    "est_weekly_from_monthly": 0.0,
-    "est_weekly_from_yearly": 34.61,
-    "recent_weekly_velocity": 0.0,
-    "trend_vs_monthly": null,
-    "in_monthly": false,
-    "in_yearly": true,
-    "display_name": "Remy Martin XO Gift Bag 2024 700ML"
   },
   {
     "name": "Hennessy XO LNY 2025 700ml",
@@ -1179,7 +1149,7 @@
     "est_weekly_from_monthly": 125.91,
     "est_weekly_from_yearly": 344.71,
     "recent_weekly_velocity": 0.069,
-    "trend_vs_monthly": -99.9,
+    "trend_vs_monthly": -75.8,
     "in_monthly": true,
     "in_yearly": true,
     "display_name": "Absolut Vodka 1L"
@@ -1194,7 +1164,7 @@
     "est_weekly_from_monthly": 124.55,
     "est_weekly_from_yearly": 56.13,
     "recent_weekly_velocity": 0.312,
-    "trend_vs_monthly": -99.7,
+    "trend_vs_monthly": -81.0,
     "in_monthly": true,
     "in_yearly": true,
     "display_name": "Strongbow Original Bt 355ml"
@@ -1209,7 +1179,7 @@
     "est_weekly_from_monthly": 123.65,
     "est_weekly_from_yearly": 106.23,
     "recent_weekly_velocity": 0.323,
-    "trend_vs_monthly": -99.7,
+    "trend_vs_monthly": -49.8,
     "in_monthly": true,
     "in_yearly": true,
     "display_name": "Jack Daniel & Cola Amer Ser 10% Can 250ml"
@@ -1224,7 +1194,7 @@
     "est_weekly_from_monthly": 123.63,
     "est_weekly_from_yearly": 245.75,
     "recent_weekly_velocity": 0.083,
-    "trend_vs_monthly": -99.9,
+    "trend_vs_monthly": -41.9,
     "in_monthly": true,
     "in_yearly": true,
     "display_name": "Hennessy VSOP Cognac 700ml"
@@ -1284,7 +1254,7 @@
     "est_weekly_from_monthly": 116.68,
     "est_weekly_from_yearly": 4.59,
     "recent_weekly_velocity": 4.25,
-    "trend_vs_monthly": -96.4,
+    "trend_vs_monthly": -60.1,
     "in_monthly": true,
     "in_yearly": true,
     "display_name": "Coopers Pale Ale PINT"
@@ -1314,7 +1284,7 @@
     "est_weekly_from_monthly": 114.93,
     "est_weekly_from_yearly": 287.59,
     "recent_weekly_velocity": 0.667,
-    "trend_vs_monthly": -99.4,
+    "trend_vs_monthly": 55.6,
     "in_monthly": true,
     "in_yearly": true,
     "display_name": "W/Turkey Rare Cola 8% Can 375ml"
@@ -1374,7 +1344,7 @@
     "est_weekly_from_monthly": 111.21,
     "est_weekly_from_yearly": 116.48,
     "recent_weekly_velocity": 0.778,
-    "trend_vs_monthly": -99.3,
+    "trend_vs_monthly": -42.7,
     "in_monthly": true,
     "in_yearly": true,
     "display_name": "333 Export Beer Bt 355ml"
@@ -1389,7 +1359,7 @@
     "est_weekly_from_monthly": 111.16,
     "est_weekly_from_yearly": 306.71,
     "recent_weekly_velocity": 0.698,
-    "trend_vs_monthly": -99.4,
+    "trend_vs_monthly": 8.6,
     "in_monthly": true,
     "in_yearly": true,
     "display_name": "Jack Daniels Double Jack & Cola Can 6.9% 375ml"
@@ -1404,7 +1374,7 @@
     "est_weekly_from_monthly": 109.12,
     "est_weekly_from_yearly": 44.92,
     "recent_weekly_velocity": 0.062,
-    "trend_vs_monthly": -99.9,
+    "trend_vs_monthly": -78.3,
     "in_monthly": true,
     "in_yearly": true,
     "display_name": "Jack Daniels Honey Whiskey 700ml"
@@ -1419,7 +1389,7 @@
     "est_weekly_from_monthly": 107.98,
     "est_weekly_from_yearly": 159.83,
     "recent_weekly_velocity": 0.056,
-    "trend_vs_monthly": -99.9,
+    "trend_vs_monthly": -80.4,
     "in_monthly": true,
     "in_yearly": true,
     "display_name": "Sierra Tequila Blanco 700ml"
@@ -1434,7 +1404,7 @@
     "est_weekly_from_monthly": 107.93,
     "est_weekly_from_yearly": 208.86,
     "recent_weekly_velocity": 0.104,
-    "trend_vs_monthly": -99.9,
+    "trend_vs_monthly": -51.5,
     "in_monthly": true,
     "in_yearly": true,
     "display_name": "Hennessy VS Cognac 700ml"
@@ -1479,7 +1449,7 @@
     "est_weekly_from_monthly": 106.71,
     "est_weekly_from_yearly": 148.65,
     "recent_weekly_velocity": 0.75,
-    "trend_vs_monthly": -99.3,
+    "trend_vs_monthly": 50.0,
     "in_monthly": true,
     "in_yearly": true,
     "display_name": "Woodstock Bourbon & Cola 10% Can 200ml"
@@ -1498,5 +1468,35 @@
     "in_monthly": false,
     "in_yearly": true,
     "display_name": "Muhak Good Day Soju Peach Bt 360ml"
+  },
+  {
+    "name": "Jagermeister 1Ll",
+    "category": "Liqueur",
+    "monthly_revenue": 0.0,
+    "yearly_revenue": 1458.81,
+    "monthly_txns": 0,
+    "yearly_txns": 19,
+    "est_weekly_from_monthly": 0.0,
+    "est_weekly_from_yearly": 28.05,
+    "recent_weekly_velocity": 0.0,
+    "trend_vs_monthly": null,
+    "in_monthly": false,
+    "in_yearly": true,
+    "display_name": "Jagermeister 1Ll"
+  },
+  {
+    "name": "Boags Premium Lager Bt 375ml 24pk",
+    "category": "Beer Local",
+    "monthly_revenue": 1442.52,
+    "yearly_revenue": 7586.69,
+    "monthly_txns": 77,
+    "yearly_txns": 341,
+    "est_weekly_from_monthly": 103.04,
+    "est_weekly_from_yearly": 145.9,
+    "recent_weekly_velocity": 1.177,
+    "trend_vs_monthly": -13.3,
+    "in_monthly": true,
+    "in_yearly": true,
+    "display_name": "Boags Premium Lager Bt 375ml"
   }
 ]

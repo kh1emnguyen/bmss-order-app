@@ -15,7 +15,20 @@
     "wow_margin_delta_pts": -15.53,
     "wow_revenue_delta": -57.0,
     "txn_count": 1,
-    "pct_of_total_drag": 10.2,
+    "calculation_breakdown": {
+      "step1_revenue": 266.97,
+      "step2_reported_profit": 31.35,
+      "step2_cogs_implied": 235.62,
+      "step3_reported_margin": "11.74%  (= $31.35 \u00f7 $266.97 \u00d7 100)",
+      "step4_promo_savings": 57.0,
+      "step5_true_profit": -25.65,
+      "step5_formula": "True profit = Reported profit \u2212 Promo savings = $31.35 \u2212 $57.00 = $-25.65",
+      "step6_true_margin": "-9.61%  (= $-25.65 \u00f7 $266.97 \u00d7 100)",
+      "step7_floor": "15%  (category floor for Blended Scotch Whisky)",
+      "step8_gap_pts": 24.61,
+      "step9_dollar_drag": "$65.70/wk  (= 24.61 pts \u00f7 100 \u00d7 $266.97)"
+    },
+    "pct_of_total_drag": 10.3,
     "display_name": "Johnnie Walker Gold 750ml"
   },
   {
@@ -34,7 +47,20 @@
     "wow_margin_delta_pts": -8.09,
     "wow_revenue_delta": 154.97,
     "txn_count": 5,
-    "pct_of_total_drag": 7.4,
+    "calculation_breakdown": {
+      "step1_revenue": 284.95,
+      "step2_reported_profit": 34.9,
+      "step2_cogs_implied": 250.05,
+      "step3_reported_margin": "12.25%  (= $34.90 \u00f7 $284.95 \u00d7 100)",
+      "step4_promo_savings": 40.0,
+      "step5_true_profit": -5.1,
+      "step5_formula": "True profit = Reported profit \u2212 Promo savings = $34.90 \u2212 $40.00 = $-5.10",
+      "step6_true_margin": "-1.79%  (= $-5.10 \u00f7 $284.95 \u00d7 100)",
+      "step7_floor": "15%  (category floor for Blended Scotch Whisky)",
+      "step8_gap_pts": 16.79,
+      "step9_dollar_drag": "$47.84/wk  (= 16.79 pts \u00f7 100 \u00d7 $284.95)"
+    },
+    "pct_of_total_drag": 7.5,
     "display_name": "Johnnie Walker Black 700ml"
   },
   {
@@ -53,7 +79,20 @@
     "wow_margin_delta_pts": -8.18,
     "wow_revenue_delta": -27.0,
     "txn_count": 2,
-    "pct_of_total_drag": 6.7,
+    "calculation_breakdown": {
+      "step1_revenue": 179.97,
+      "step2_reported_profit": 19.56,
+      "step2_cogs_implied": 160.41,
+      "step3_reported_margin": "10.87%  (= $19.56 \u00f7 $179.97 \u00d7 100)",
+      "step4_promo_savings": 27.0,
+      "step5_true_profit": -7.44,
+      "step5_formula": "True profit = Reported profit \u2212 Promo savings = $19.56 \u2212 $27.00 = $-7.44",
+      "step6_true_margin": "-4.13%  (= $-7.44 \u00f7 $179.97 \u00d7 100)",
+      "step7_floor": "20%  (category floor for Vodka)",
+      "step8_gap_pts": 24.13,
+      "step9_dollar_drag": "$43.43/wk  (= 24.13 pts \u00f7 100 \u00d7 $179.97)"
+    },
+    "pct_of_total_drag": 6.8,
     "display_name": "Smirnoff Vodka Red 1L"
   },
   {
@@ -72,7 +111,20 @@
     "wow_margin_delta_pts": 3.56,
     "wow_revenue_delta": -24.99,
     "txn_count": 4,
-    "pct_of_total_drag": 6.0,
+    "calculation_breakdown": {
+      "step1_revenue": 418.92,
+      "step2_reported_profit": 66.03,
+      "step2_cogs_implied": 352.89,
+      "step3_reported_margin": "15.76%  (= $66.03 \u00f7 $418.92 \u00d7 100)",
+      "step4_promo_savings": 21.0,
+      "step5_true_profit": 45.03,
+      "step5_formula": "True profit = Reported profit \u2212 Promo savings = $66.03 \u2212 $21.00 = $45.03",
+      "step6_true_margin": "10.75%  (= $45.03 \u00f7 $418.92 \u00d7 100)",
+      "step7_floor": "20%  (category floor for Gin)",
+      "step8_gap_pts": 9.25,
+      "step9_dollar_drag": "$38.75/wk  (= 9.25 pts \u00f7 100 \u00d7 $418.92)"
+    },
+    "pct_of_total_drag": 6.1,
     "display_name": "Gordons London Dry Gin 700ml"
   },
   {
@@ -91,6 +143,19 @@
     "wow_margin_delta_pts": -1.29,
     "wow_revenue_delta": 189.9,
     "txn_count": 46,
+    "calculation_breakdown": {
+      "step1_revenue": 1044.45,
+      "step2_reported_profit": 593.15,
+      "step2_cogs_implied": 451.3,
+      "step3_reported_margin": "56.79%  (= $593.15 \u00f7 $1044.45 \u00d7 100)",
+      "step4_promo_savings": 0.0,
+      "step5_true_profit": 593.15,
+      "step5_formula": "True profit = Reported profit \u2212 Promo savings = $593.15 \u2212 $0.00 = $593.15",
+      "step6_true_margin": "56.79%  (= $593.15 \u00f7 $1044.45 \u00d7 100)",
+      "step7_floor": "60%  (category floor for Beer Kegs)",
+      "step8_gap_pts": 3.21,
+      "step9_dollar_drag": "$33.53/wk  (= 3.21 pts \u00f7 100 \u00d7 $1044.45)"
+    },
     "pct_of_total_drag": 5.2,
     "display_name": "Carlton Draught Keg JUG 1140ml"
   },
@@ -110,6 +175,19 @@
     "wow_margin_delta_pts": -1.19,
     "wow_revenue_delta": 58.99,
     "txn_count": 3,
+    "calculation_breakdown": {
+      "step1_revenue": 164.97,
+      "step2_reported_profit": 17.4,
+      "step2_cogs_implied": 147.57,
+      "step3_reported_margin": "10.55%  (= $17.40 \u00f7 $164.97 \u00d7 100)",
+      "step4_promo_savings": 24.0,
+      "step5_true_profit": -6.6,
+      "step5_formula": "True profit = Reported profit \u2212 Promo savings = $17.40 \u2212 $24.00 = $-6.60",
+      "step6_true_margin": "-4.00%  (= $-6.60 \u00f7 $164.97 \u00d7 100)",
+      "step7_floor": "15%  (category floor for Blended Scotch Whisky)",
+      "step8_gap_pts": 19.0,
+      "step9_dollar_drag": "$31.34/wk  (= 19.00 pts \u00f7 100 \u00d7 $164.97)"
+    },
     "pct_of_total_drag": 4.9,
     "display_name": "Chivas Regal 12YO 700ml"
   },
@@ -129,6 +207,19 @@
     "wow_margin_delta_pts": -9.05,
     "wow_revenue_delta": -12.0,
     "txn_count": 3,
+    "calculation_breakdown": {
+      "step1_revenue": 275.96,
+      "step2_reported_profit": 36.23,
+      "step2_cogs_implied": 239.73,
+      "step3_reported_margin": "13.13%  (= $36.23 \u00f7 $275.96 \u00d7 100)",
+      "step4_promo_savings": 12.0,
+      "step5_true_profit": 24.23,
+      "step5_formula": "True profit = Reported profit \u2212 Promo savings = $36.23 \u2212 $12.00 = $24.23",
+      "step6_true_margin": "8.78%  (= $24.23 \u00f7 $275.96 \u00d7 100)",
+      "step7_floor": "20%  (category floor for Gin)",
+      "step8_gap_pts": 11.22,
+      "step9_dollar_drag": "$30.96/wk  (= 11.22 pts \u00f7 100 \u00d7 $275.96)"
+    },
     "pct_of_total_drag": 4.8,
     "display_name": "Gordons London Dry Gin 1L"
   },
@@ -148,6 +239,19 @@
     "wow_margin_delta_pts": 0.0,
     "wow_revenue_delta": 159.98,
     "txn_count": 3,
+    "calculation_breakdown": {
+      "step1_revenue": 239.97,
+      "step2_reported_profit": 39.27,
+      "step2_cogs_implied": 200.7,
+      "step3_reported_margin": "16.36%  (= $39.27 \u00f7 $239.97 \u00d7 100)",
+      "step4_promo_savings": 21.0,
+      "step5_true_profit": 18.27,
+      "step5_formula": "True profit = Reported profit \u2212 Promo savings = $39.27 \u2212 $21.00 = $18.27",
+      "step6_true_margin": "7.61%  (= $18.27 \u00f7 $239.97 \u00d7 100)",
+      "step7_floor": "20%  (category floor for Bourbon)",
+      "step8_gap_pts": 12.39,
+      "step9_dollar_drag": "$29.73/wk  (= 12.39 pts \u00f7 100 \u00d7 $239.97)"
+    },
     "pct_of_total_drag": 4.6,
     "display_name": "Jack Daniels Black Label 1L"
   },
@@ -167,6 +271,19 @@
     "wow_margin_delta_pts": -8.52,
     "wow_revenue_delta": 66.99,
     "txn_count": 2,
+    "calculation_breakdown": {
+      "step1_revenue": 149.98,
+      "step2_reported_profit": 17.52,
+      "step2_cogs_implied": 132.46,
+      "step3_reported_margin": "11.68%  (= $17.52 \u00f7 $149.98 \u00d7 100)",
+      "step4_promo_savings": 16.0,
+      "step5_true_profit": 1.52,
+      "step5_formula": "True profit = Reported profit \u2212 Promo savings = $17.52 \u2212 $16.00 = $1.52",
+      "step6_true_margin": "1.01%  (= $1.52 \u00f7 $149.98 \u00d7 100)",
+      "step7_floor": "15%  (category floor for Irish Whisky)",
+      "step8_gap_pts": 13.99,
+      "step9_dollar_drag": "$20.98/wk  (= 13.99 pts \u00f7 100 \u00d7 $149.98)"
+    },
     "pct_of_total_drag": 3.3,
     "display_name": "Jameson Irish Whisky 1L"
   },
@@ -186,6 +303,19 @@
     "wow_margin_delta_pts": 5.19,
     "wow_revenue_delta": -81.98,
     "txn_count": 2,
+    "calculation_breakdown": {
+      "step1_revenue": 85.98,
+      "step2_reported_profit": 10.32,
+      "step2_cogs_implied": 75.66,
+      "step3_reported_margin": "12.00%  (= $10.32 \u00f7 $85.98 \u00d7 100)",
+      "step4_promo_savings": 18.0,
+      "step5_true_profit": -7.68,
+      "step5_formula": "True profit = Reported profit \u2212 Promo savings = $10.32 \u2212 $18.00 = $-7.68",
+      "step6_true_margin": "-8.93%  (= $-7.68 \u00f7 $85.98 \u00d7 100)",
+      "step7_floor": "15%  (category floor for Single Malt Whisky - Scotch)",
+      "step8_gap_pts": 23.93,
+      "step9_dollar_drag": "$20.58/wk  (= 23.93 pts \u00f7 100 \u00d7 $85.98)"
+    },
     "pct_of_total_drag": 3.2,
     "display_name": "Grants Family Reserve Scotch Whisky 700ml"
   },
@@ -205,6 +335,19 @@
     "wow_margin_delta_pts": 5.47,
     "wow_revenue_delta": -47.99,
     "txn_count": 2,
+    "calculation_breakdown": {
+      "step1_revenue": 131.98,
+      "step2_reported_profit": 23.52,
+      "step2_cogs_implied": 108.46,
+      "step3_reported_margin": "17.82%  (= $23.52 \u00f7 $131.98 \u00d7 100)",
+      "step4_promo_savings": 12.0,
+      "step5_true_profit": 11.52,
+      "step5_formula": "True profit = Reported profit \u2212 Promo savings = $23.52 \u2212 $12.00 = $11.52",
+      "step6_true_margin": "8.73%  (= $11.52 \u00f7 $131.98 \u00d7 100)",
+      "step7_floor": "20%  (category floor for Bourbon)",
+      "step8_gap_pts": 11.27,
+      "step9_dollar_drag": "$14.87/wk  (= 11.27 pts \u00f7 100 \u00d7 $131.98)"
+    },
     "pct_of_total_drag": 2.3,
     "display_name": "Jim Beam White Bourbon 1L"
   },
@@ -224,6 +367,19 @@
     "wow_margin_delta_pts": -5.61,
     "wow_revenue_delta": 155.97,
     "txn_count": 4,
+    "calculation_breakdown": {
+      "step1_revenue": 263.95,
+      "step2_reported_profit": 44.51,
+      "step2_cogs_implied": 219.44,
+      "step3_reported_margin": "16.86%  (= $44.51 \u00f7 $263.95 \u00d7 100)",
+      "step4_promo_savings": 6.0,
+      "step5_true_profit": 38.51,
+      "step5_formula": "True profit = Reported profit \u2212 Promo savings = $44.51 \u2212 $6.00 = $38.51",
+      "step6_true_margin": "14.59%  (= $38.51 \u00f7 $263.95 \u00d7 100)",
+      "step7_floor": "20%  (category floor for Vodka)",
+      "step8_gap_pts": 5.41,
+      "step9_dollar_drag": "$14.28/wk  (= 5.41 pts \u00f7 100 \u00d7 $263.95)"
+    },
     "pct_of_total_drag": 2.2,
     "display_name": "Absolut Vodka 700ml"
   },
@@ -243,6 +399,19 @@
     "wow_margin_delta_pts": 0.0,
     "wow_revenue_delta": 0.0,
     "txn_count": 1,
+    "calculation_breakdown": {
+      "step1_revenue": 59.99,
+      "step2_reported_profit": 5.78,
+      "step2_cogs_implied": 54.21,
+      "step3_reported_margin": "9.63%  (= $5.78 \u00f7 $59.99 \u00d7 100)",
+      "step4_promo_savings": 8.0,
+      "step5_true_profit": -2.22,
+      "step5_formula": "True profit = Reported profit \u2212 Promo savings = $5.78 \u2212 $8.00 = $-2.22",
+      "step6_true_margin": "-3.70%  (= $-2.22 \u00f7 $59.99 \u00d7 100)",
+      "step7_floor": "20%  (category floor for Tequila)",
+      "step8_gap_pts": 23.7,
+      "step9_dollar_drag": "$14.22/wk  (= 23.70 pts \u00f7 100 \u00d7 $59.99)"
+    },
     "pct_of_total_drag": 2.2,
     "display_name": "Altos Tequila 700ml"
   },
@@ -262,6 +431,19 @@
     "wow_margin_delta_pts": -3.7,
     "wow_revenue_delta": -100.98,
     "txn_count": 3,
+    "calculation_breakdown": {
+      "step1_revenue": 136.97,
+      "step2_reported_profit": 20.24,
+      "step2_cogs_implied": 116.73,
+      "step3_reported_margin": "14.78%  (= $20.24 \u00f7 $136.97 \u00d7 100)",
+      "step4_promo_savings": 7.0,
+      "step5_true_profit": 13.24,
+      "step5_formula": "True profit = Reported profit \u2212 Promo savings = $20.24 \u2212 $7.00 = $13.24",
+      "step6_true_margin": "9.67%  (= $13.24 \u00f7 $136.97 \u00d7 100)",
+      "step7_floor": "20%  (category floor for Vodka)",
+      "step8_gap_pts": 10.33,
+      "step9_dollar_drag": "$14.15/wk  (= 10.33 pts \u00f7 100 \u00d7 $136.97)"
+    },
     "pct_of_total_drag": 2.2,
     "display_name": "Skyy Vodka 700ml"
   },
@@ -281,6 +463,19 @@
     "wow_margin_delta_pts": 0.0,
     "wow_revenue_delta": 0.0,
     "txn_count": 1,
+    "calculation_breakdown": {
+      "step1_revenue": 59.99,
+      "step2_reported_profit": 5.78,
+      "step2_cogs_implied": 54.21,
+      "step3_reported_margin": "9.63%  (= $5.78 \u00f7 $59.99 \u00d7 100)",
+      "step4_promo_savings": 10.0,
+      "step5_true_profit": -4.22,
+      "step5_formula": "True profit = Reported profit \u2212 Promo savings = $5.78 \u2212 $10.00 = $-4.22",
+      "step6_true_margin": "-7.03%  (= $-4.22 \u00f7 $59.99 \u00d7 100)",
+      "step7_floor": "15%  (category floor for Blended Scotch Whisky)",
+      "step8_gap_pts": 22.03,
+      "step9_dollar_drag": "$13.22/wk  (= 22.03 pts \u00f7 100 \u00d7 $59.99)"
+    },
     "pct_of_total_drag": 2.1,
     "display_name": "Monkey Shoulder Scotch Whisky 700ml"
   },
@@ -300,6 +495,19 @@
     "wow_margin_delta_pts": -7.91,
     "wow_revenue_delta": -55.94,
     "txn_count": 3,
+    "calculation_breakdown": {
+      "step1_revenue": 31.96,
+      "step2_reported_profit": 14.96,
+      "step2_cogs_implied": 17.0,
+      "step3_reported_margin": "46.81%  (= $14.96 \u00f7 $31.96 \u00d7 100)",
+      "step4_promo_savings": 8.5,
+      "step5_true_profit": 6.46,
+      "step5_formula": "True profit = Reported profit \u2212 Promo savings = $14.96 \u2212 $8.50 = $6.46",
+      "step6_true_margin": "20.21%  (= $6.46 \u00f7 $31.96 \u00d7 100)",
+      "step7_floor": "60%  (category floor for Beer Kegs)",
+      "step8_gap_pts": 39.79,
+      "step9_dollar_drag": "$12.72/wk  (= 39.79 pts \u00f7 100 \u00d7 $31.96)"
+    },
     "pct_of_total_drag": 2.0,
     "display_name": "Carlton Draught Keg Schooner"
   },
@@ -319,6 +527,19 @@
     "wow_margin_delta_pts": 2.69,
     "wow_revenue_delta": -47.99,
     "txn_count": 3,
+    "calculation_breakdown": {
+      "step1_revenue": 191.97,
+      "step2_reported_profit": 26.96,
+      "step2_cogs_implied": 165.01,
+      "step3_reported_margin": "14.04%  (= $26.96 \u00f7 $191.97 \u00d7 100)",
+      "step4_promo_savings": 9.0,
+      "step5_true_profit": 17.96,
+      "step5_formula": "True profit = Reported profit \u2212 Promo savings = $26.96 \u2212 $9.00 = $17.96",
+      "step6_true_margin": "9.36%  (= $17.96 \u00f7 $191.97 \u00d7 100)",
+      "step7_floor": "15%  (category floor for Single Malt Whisky - Scotch)",
+      "step8_gap_pts": 5.64,
+      "step9_dollar_drag": "$10.83/wk  (= 5.64 pts \u00f7 100 \u00d7 $191.97)"
+    },
     "pct_of_total_drag": 1.7,
     "display_name": "Grants Fam Reserve Scotch Whisky 1L"
   },
@@ -338,6 +559,19 @@
     "wow_margin_delta_pts": -18.15,
     "wow_revenue_delta": -8.0,
     "txn_count": 2,
+    "calculation_breakdown": {
+      "step1_revenue": 27.98,
+      "step2_reported_profit": 5.14,
+      "step2_cogs_implied": 22.84,
+      "step3_reported_margin": "18.37%  (= $5.14 \u00f7 $27.98 \u00d7 100)",
+      "step4_promo_savings": 8.0,
+      "step5_true_profit": -2.86,
+      "step5_formula": "True profit = Reported profit \u2212 Promo savings = $5.14 \u2212 $8.00 = $-2.86",
+      "step6_true_margin": "-10.22%  (= $-2.86 \u00f7 $27.98 \u00d7 100)",
+      "step7_floor": "25%  (category floor for Sparkling & Champagne)",
+      "step8_gap_pts": 35.22,
+      "step9_dollar_drag": "$9.85/wk  (= 35.22 pts \u00f7 100 \u00d7 $27.98)"
+    },
     "pct_of_total_drag": 1.5,
     "display_name": "De Bortoli Prosecco 750ml"
   },
@@ -357,6 +591,19 @@
     "wow_margin_delta_pts": 1.63,
     "wow_revenue_delta": -229.96,
     "txn_count": 4,
+    "calculation_breakdown": {
+      "step1_revenue": 241.96,
+      "step2_reported_profit": 44.64,
+      "step2_cogs_implied": 197.32,
+      "step3_reported_margin": "18.45%  (= $44.64 \u00f7 $241.96 \u00d7 100)",
+      "step4_promo_savings": 6.0,
+      "step5_true_profit": 38.64,
+      "step5_formula": "True profit = Reported profit \u2212 Promo savings = $44.64 \u2212 $6.00 = $38.64",
+      "step6_true_margin": "15.97%  (= $38.64 \u00f7 $241.96 \u00d7 100)",
+      "step7_floor": "20%  (category floor for Bourbon)",
+      "step8_gap_pts": 4.03,
+      "step9_dollar_drag": "$9.75/wk  (= 4.03 pts \u00f7 100 \u00d7 $241.96)"
+    },
     "pct_of_total_drag": 1.5,
     "display_name": "Jack Daniels Black Label 700ml"
   },
@@ -376,6 +623,19 @@
     "wow_margin_delta_pts": -2.98,
     "wow_revenue_delta": 19.99,
     "txn_count": 2,
+    "calculation_breakdown": {
+      "step1_revenue": 39.98,
+      "step2_reported_profit": 10.89,
+      "step2_cogs_implied": 29.09,
+      "step3_reported_margin": "27.24%  (= $10.89 \u00f7 $39.98 \u00d7 100)",
+      "step4_promo_savings": 10.0,
+      "step5_true_profit": 0.89,
+      "step5_formula": "True profit = Reported profit \u2212 Promo savings = $10.89 \u2212 $10.00 = $0.89",
+      "step6_true_margin": "2.23%  (= $0.89 \u00f7 $39.98 \u00d7 100)",
+      "step7_floor": "25%  (category floor for Wine Red)",
+      "step8_gap_pts": 22.77,
+      "step9_dollar_drag": "$9.10/wk  (= 22.77 pts \u00f7 100 \u00d7 $39.98)"
+    },
     "pct_of_total_drag": 1.4,
     "display_name": "Jacobs Creek Double Barrel Shiraz 750ml"
   },
@@ -395,7 +655,20 @@
     "wow_margin_delta_pts": 0.0,
     "wow_revenue_delta": 0.0,
     "txn_count": 1,
-    "pct_of_total_drag": 1.3,
+    "calculation_breakdown": {
+      "step1_revenue": 67.99,
+      "step2_reported_profit": 7.52,
+      "step2_cogs_implied": 60.47,
+      "step3_reported_margin": "11.06%  (= $7.52 \u00f7 $67.99 \u00d7 100)",
+      "step4_promo_savings": 6.0,
+      "step5_true_profit": 1.52,
+      "step5_formula": "True profit = Reported profit \u2212 Promo savings = $7.52 \u2212 $6.00 = $1.52",
+      "step6_true_margin": "2.24%  (= $1.52 \u00f7 $67.99 \u00d7 100)",
+      "step7_floor": "15%  (category floor for Single Malt Whisky - Scotch)",
+      "step8_gap_pts": 12.76,
+      "step9_dollar_drag": "$8.68/wk  (= 12.76 pts \u00f7 100 \u00d7 $67.99)"
+    },
+    "pct_of_total_drag": 1.4,
     "display_name": "Dimple Scotch 15YO 700ml"
   },
   {
@@ -414,6 +687,19 @@
     "wow_margin_delta_pts": 4.23,
     "wow_revenue_delta": 2.0,
     "txn_count": 2,
+    "calculation_breakdown": {
+      "step1_revenue": 34.97,
+      "step2_reported_profit": 10.61,
+      "step2_cogs_implied": 24.36,
+      "step3_reported_margin": "30.34%  (= $10.61 \u00f7 $34.97 \u00d7 100)",
+      "step4_promo_savings": 10.0,
+      "step5_true_profit": 0.61,
+      "step5_formula": "True profit = Reported profit \u2212 Promo savings = $10.61 \u2212 $10.00 = $0.61",
+      "step6_true_margin": "1.74%  (= $0.61 \u00f7 $34.97 \u00d7 100)",
+      "step7_floor": "25%  (category floor for Wine Red)",
+      "step8_gap_pts": 23.26,
+      "step9_dollar_drag": "$8.13/wk  (= 23.26 pts \u00f7 100 \u00d7 $34.97)"
+    },
     "pct_of_total_drag": 1.3,
     "display_name": "19 Crimes Shiraz 750ml"
   },
@@ -433,6 +719,19 @@
     "wow_margin_delta_pts": -2.54,
     "wow_revenue_delta": 93.98,
     "txn_count": 3,
+    "calculation_breakdown": {
+      "step1_revenue": 145.97,
+      "step2_reported_profit": 23.95,
+      "step2_cogs_implied": 122.02,
+      "step3_reported_margin": "16.41%  (= $23.95 \u00f7 $145.97 \u00d7 100)",
+      "step4_promo_savings": 10.0,
+      "step5_true_profit": 13.95,
+      "step5_formula": "True profit = Reported profit \u2212 Promo savings = $23.95 \u2212 $10.00 = $13.95",
+      "step6_true_margin": "9.56%  (= $13.95 \u00f7 $145.97 \u00d7 100)",
+      "step7_floor": "15%  (category floor for Canadian Whisky)",
+      "step8_gap_pts": 5.44,
+      "step9_dollar_drag": "$7.94/wk  (= 5.44 pts \u00f7 100 \u00d7 $145.97)"
+    },
     "pct_of_total_drag": 1.2,
     "display_name": "Canadian Club Whisky 700ml"
   },
@@ -452,6 +751,19 @@
     "wow_margin_delta_pts": -0.01,
     "wow_revenue_delta": 0.0,
     "txn_count": 1,
+    "calculation_breakdown": {
+      "step1_revenue": 62.99,
+      "step2_reported_profit": 11.26,
+      "step2_cogs_implied": 51.73,
+      "step3_reported_margin": "17.88%  (= $11.26 \u00f7 $62.99 \u00d7 100)",
+      "step4_promo_savings": 0.0,
+      "step5_true_profit": 11.26,
+      "step5_formula": "True profit = Reported profit \u2212 Promo savings = $11.26 \u2212 $0.00 = $11.26",
+      "step6_true_margin": "17.88%  (= $11.26 \u00f7 $62.99 \u00d7 100)",
+      "step7_floor": "30%  (category floor for Whiskey)",
+      "step8_gap_pts": 12.12,
+      "step9_dollar_drag": "$7.63/wk  (= 12.12 pts \u00f7 100 \u00d7 $62.99)"
+    },
     "pct_of_total_drag": 1.2,
     "display_name": "Jack Daniels Honey Whiskey 700ml"
   },
@@ -471,6 +783,19 @@
     "wow_margin_delta_pts": -17.57,
     "wow_revenue_delta": -27.99,
     "txn_count": 1,
+    "calculation_breakdown": {
+      "step1_revenue": 17.99,
+      "step2_reported_profit": 3.44,
+      "step2_cogs_implied": 14.55,
+      "step3_reported_margin": "19.12%  (= $3.44 \u00f7 $17.99 \u00d7 100)",
+      "step4_promo_savings": 5.0,
+      "step5_true_profit": -1.56,
+      "step5_formula": "True profit = Reported profit \u2212 Promo savings = $3.44 \u2212 $5.00 = $-1.56",
+      "step6_true_margin": "-8.67%  (= $-1.56 \u00f7 $17.99 \u00d7 100)",
+      "step7_floor": "30%  (category floor for Wine White)",
+      "step8_gap_pts": 38.67,
+      "step9_dollar_drag": "$6.96/wk  (= 38.67 pts \u00f7 100 \u00d7 $17.99)"
+    },
     "pct_of_total_drag": 1.1,
     "display_name": "Oyster Bay Sauvignon Blanc 750ml"
   },
@@ -490,6 +815,19 @@
     "wow_margin_delta_pts": 0.0,
     "wow_revenue_delta": 0.0,
     "txn_count": 1,
+    "calculation_breakdown": {
+      "step1_revenue": 17.99,
+      "step2_reported_profit": 3.94,
+      "step2_cogs_implied": 14.05,
+      "step3_reported_margin": "21.90%  (= $3.94 \u00f7 $17.99 \u00d7 100)",
+      "step4_promo_savings": 5.0,
+      "step5_true_profit": -1.06,
+      "step5_formula": "True profit = Reported profit \u2212 Promo savings = $3.94 \u2212 $5.00 = $-1.06",
+      "step6_true_margin": "-5.89%  (= $-1.06 \u00f7 $17.99 \u00d7 100)",
+      "step7_floor": "30%  (category floor for Wine Red)",
+      "step8_gap_pts": 35.89,
+      "step9_dollar_drag": "$6.46/wk  (= 35.89 pts \u00f7 100 \u00d7 $17.99)"
+    },
     "pct_of_total_drag": 1.0,
     "display_name": "Little Yering Shiraz 750ml"
   },
@@ -509,7 +847,20 @@
     "wow_margin_delta_pts": -0.04,
     "wow_revenue_delta": -53.88,
     "txn_count": 5,
-    "pct_of_total_drag": 0.9,
+    "calculation_breakdown": {
+      "step1_revenue": 53.88,
+      "step2_reported_profit": 18.13,
+      "step2_cogs_implied": 35.75,
+      "step3_reported_margin": "33.65%  (= $18.13 \u00f7 $53.88 \u00d7 100)",
+      "step4_promo_savings": 0.0,
+      "step5_true_profit": 18.13,
+      "step5_formula": "True profit = Reported profit \u2212 Promo savings = $18.13 \u2212 $0.00 = $18.13",
+      "step6_true_margin": "33.65%  (= $18.13 \u00f7 $53.88 \u00d7 100)",
+      "step7_floor": "45%  (category floor for Soft Drinks)",
+      "step8_gap_pts": 11.35,
+      "step9_dollar_drag": "$6.12/wk  (= 11.35 pts \u00f7 100 \u00d7 $53.88)"
+    },
+    "pct_of_total_drag": 1.0,
     "display_name": "Coca Cola Bt 600ml"
   },
   {
@@ -528,6 +879,19 @@
     "wow_margin_delta_pts": 0.0,
     "wow_revenue_delta": 19.98,
     "txn_count": 3,
+    "calculation_breakdown": {
+      "step1_revenue": 29.97,
+      "step2_reported_profit": 11.37,
+      "step2_cogs_implied": 18.6,
+      "step3_reported_margin": "37.94%  (= $11.37 \u00f7 $29.97 \u00d7 100)",
+      "step4_promo_savings": 9.0,
+      "step5_true_profit": 2.37,
+      "step5_formula": "True profit = Reported profit \u2212 Promo savings = $11.37 \u2212 $9.00 = $2.37",
+      "step6_true_margin": "7.91%  (= $2.37 \u00f7 $29.97 \u00d7 100)",
+      "step7_floor": "25%  (category floor for Wine Red)",
+      "step8_gap_pts": 17.09,
+      "step9_dollar_drag": "$5.12/wk  (= 17.09 pts \u00f7 100 \u00d7 $29.97)"
+    },
     "pct_of_total_drag": 0.8,
     "display_name": "Master Peace Shiraz 750ml"
   },
@@ -547,6 +911,19 @@
     "wow_margin_delta_pts": 0.0,
     "wow_revenue_delta": 0.0,
     "txn_count": 1,
+    "calculation_breakdown": {
+      "step1_revenue": 19.99,
+      "step2_reported_profit": 6.13,
+      "step2_cogs_implied": 13.86,
+      "step3_reported_margin": "30.67%  (= $6.13 \u00f7 $19.99 \u00d7 100)",
+      "step4_promo_savings": 5.0,
+      "step5_true_profit": 1.13,
+      "step5_formula": "True profit = Reported profit \u2212 Promo savings = $6.13 \u2212 $5.00 = $1.13",
+      "step6_true_margin": "5.65%  (= $1.13 \u00f7 $19.99 \u00d7 100)",
+      "step7_floor": "30%  (category floor for Wine Red)",
+      "step8_gap_pts": 24.35,
+      "step9_dollar_drag": "$4.87/wk  (= 24.35 pts \u00f7 100 \u00d7 $19.99)"
+    },
     "pct_of_total_drag": 0.8,
     "display_name": "Jacobs Creek Double Barrel Shiraz Cabernet 750ml"
   },
@@ -566,7 +943,20 @@
     "wow_margin_delta_pts": 0.0,
     "wow_revenue_delta": 0.0,
     "txn_count": 1,
-    "pct_of_total_drag": 0.7,
+    "calculation_breakdown": {
+      "step1_revenue": 99.99,
+      "step2_reported_profit": 15.19,
+      "step2_cogs_implied": 84.8,
+      "step3_reported_margin": "15.19%  (= $15.19 \u00f7 $99.99 \u00d7 100)",
+      "step4_promo_savings": 0.0,
+      "step5_true_profit": 15.19,
+      "step5_formula": "True profit = Reported profit \u2212 Promo savings = $15.19 \u2212 $0.00 = $15.19",
+      "step6_true_margin": "15.19%  (= $15.19 \u00f7 $99.99 \u00d7 100)",
+      "step7_floor": "20%  (category floor for Vodka)",
+      "step8_gap_pts": 4.81,
+      "step9_dollar_drag": "$4.81/wk  (= 4.81 pts \u00f7 100 \u00d7 $99.99)"
+    },
+    "pct_of_total_drag": 0.8,
     "display_name": "Grey Goose Vodka 1L"
   },
   {
@@ -585,27 +975,21 @@
     "wow_margin_delta_pts": 0.0,
     "wow_revenue_delta": -37.98,
     "txn_count": 1,
+    "calculation_breakdown": {
+      "step1_revenue": 18.99,
+      "step2_reported_profit": 4.99,
+      "step2_cogs_implied": 14.0,
+      "step3_reported_margin": "26.28%  (= $4.99 \u00f7 $18.99 \u00d7 100)",
+      "step4_promo_savings": 4.0,
+      "step5_true_profit": 0.99,
+      "step5_formula": "True profit = Reported profit \u2212 Promo savings = $4.99 \u2212 $4.00 = $0.99",
+      "step6_true_margin": "5.21%  (= $0.99 \u00f7 $18.99 \u00d7 100)",
+      "step7_floor": "30%  (category floor for Cask & Port)",
+      "step8_gap_pts": 24.79,
+      "step9_dollar_drag": "$4.71/wk  (= 24.79 pts \u00f7 100 \u00d7 $18.99)"
+    },
     "pct_of_total_drag": 0.7,
     "display_name": "De Bortoli Prem Pressings Shiraz Cask 4L"
-  },
-  {
-    "name": "Credit Card Surcharge",
-    "category": "Administration",
-    "revenue": 57.0,
-    "reported_margin_pct": 0.0,
-    "true_margin_pct": 0.0,
-    "floor_pct": 8,
-    "margin_gap_pts": 8.0,
-    "dollar_drag": 4.56,
-    "promo_savings": 0.0,
-    "promo_contribution_pts": 0.0,
-    "cause": "unknown",
-    "chain_subsidised_loss": false,
-    "wow_margin_delta_pts": 0.0,
-    "wow_revenue_delta": -3.5,
-    "txn_count": 107,
-    "pct_of_total_drag": 0.7,
-    "display_name": "Credit Card Surcharge"
   },
   {
     "name": "PENFOLDS B311 CHARDONNAY 2017 750ml",
@@ -623,6 +1007,19 @@
     "wow_margin_delta_pts": 0.0,
     "wow_revenue_delta": 0.0,
     "txn_count": 1,
+    "calculation_breakdown": {
+      "step1_revenue": 49.99,
+      "step2_reported_profit": 10.58,
+      "step2_cogs_implied": 39.41,
+      "step3_reported_margin": "21.16%  (= $10.58 \u00f7 $49.99 \u00d7 100)",
+      "step4_promo_savings": 0.0,
+      "step5_true_profit": 10.58,
+      "step5_formula": "True profit = Reported profit \u2212 Promo savings = $10.58 \u2212 $0.00 = $10.58",
+      "step6_true_margin": "21.16%  (= $10.58 \u00f7 $49.99 \u00d7 100)",
+      "step7_floor": "30%  (category floor for Wine White)",
+      "step8_gap_pts": 8.84,
+      "step9_dollar_drag": "$4.42/wk  (= 8.84 pts \u00f7 100 \u00d7 $49.99)"
+    },
     "pct_of_total_drag": 0.7,
     "display_name": "PENFOLDS B311 CHARDONNAY 2017 750ml"
   },
@@ -642,6 +1039,19 @@
     "wow_margin_delta_pts": -2.97,
     "wow_revenue_delta": 244.95,
     "txn_count": 6,
+    "calculation_breakdown": {
+      "step1_revenue": 296.94,
+      "step2_reported_profit": 70.18,
+      "step2_cogs_implied": 226.76,
+      "step3_reported_margin": "23.63%  (= $70.18 \u00f7 $296.94 \u00d7 100)",
+      "step4_promo_savings": 15.0,
+      "step5_true_profit": 55.18,
+      "step5_formula": "True profit = Reported profit \u2212 Promo savings = $70.18 \u2212 $15.00 = $55.18",
+      "step6_true_margin": "18.58%  (= $55.18 \u00f7 $296.94 \u00d7 100)",
+      "step7_floor": "20%  (category floor for Bourbon)",
+      "step8_gap_pts": 1.42,
+      "step9_dollar_drag": "$4.22/wk  (= 1.42 pts \u00f7 100 \u00d7 $296.94)"
+    },
     "pct_of_total_drag": 0.7,
     "display_name": "Jim Beam White Bourbon 700ml"
   },
@@ -661,6 +1071,19 @@
     "wow_margin_delta_pts": -1.48,
     "wow_revenue_delta": 19.98,
     "txn_count": 1,
+    "calculation_breakdown": {
+      "step1_revenue": 39.96,
+      "step2_reported_profit": 9.89,
+      "step2_cogs_implied": 30.07,
+      "step3_reported_margin": "24.75%  (= $9.89 \u00f7 $39.96 \u00d7 100)",
+      "step4_promo_savings": 4.0,
+      "step5_true_profit": 5.89,
+      "step5_formula": "True profit = Reported profit \u2212 Promo savings = $9.89 \u2212 $4.00 = $5.89",
+      "step6_true_margin": "14.74%  (= $5.89 \u00f7 $39.96 \u00d7 100)",
+      "step7_floor": "25%  (category floor for Wine White)",
+      "step8_gap_pts": 10.26,
+      "step9_dollar_drag": "$4.10/wk  (= 10.26 pts \u00f7 100 \u00d7 $39.96)"
+    },
     "pct_of_total_drag": 0.6,
     "display_name": "Jacobs Creek Classic Sauvignon Blanc 750ml"
   },
@@ -680,6 +1103,19 @@
     "wow_margin_delta_pts": 0.0,
     "wow_revenue_delta": 0.0,
     "txn_count": 1,
+    "calculation_breakdown": {
+      "step1_revenue": 9.99,
+      "step2_reported_profit": 1.92,
+      "step2_cogs_implied": 8.07,
+      "step3_reported_margin": "19.22%  (= $1.92 \u00f7 $9.99 \u00d7 100)",
+      "step4_promo_savings": 3.0,
+      "step5_true_profit": -1.08,
+      "step5_formula": "True profit = Reported profit \u2212 Promo savings = $1.92 \u2212 $3.00 = $-1.08",
+      "step6_true_margin": "-10.81%  (= $-1.08 \u00f7 $9.99 \u00d7 100)",
+      "step7_floor": "30%  (category floor for Wine White)",
+      "step8_gap_pts": 40.81,
+      "step9_dollar_drag": "$4.08/wk  (= 40.81 pts \u00f7 100 \u00d7 $9.99)"
+    },
     "pct_of_total_drag": 0.6,
     "display_name": "Master Peace Sauv Blanc 750ml"
   },
@@ -699,6 +1135,19 @@
     "wow_margin_delta_pts": -10.31,
     "wow_revenue_delta": -3.0,
     "txn_count": 1,
+    "calculation_breakdown": {
+      "step1_revenue": 18.99,
+      "step2_reported_profit": 4.64,
+      "step2_cogs_implied": 14.35,
+      "step3_reported_margin": "24.43%  (= $4.64 \u00f7 $18.99 \u00d7 100)",
+      "step4_promo_savings": 3.0,
+      "step5_true_profit": 1.64,
+      "step5_formula": "True profit = Reported profit \u2212 Promo savings = $4.64 \u2212 $3.00 = $1.64",
+      "step6_true_margin": "8.64%  (= $1.64 \u00f7 $18.99 \u00d7 100)",
+      "step7_floor": "30%  (category floor for Wine Red)",
+      "step8_gap_pts": 21.36,
+      "step9_dollar_drag": "$4.06/wk  (= 21.36 pts \u00f7 100 \u00d7 $18.99)"
+    },
     "pct_of_total_drag": 0.6,
     "display_name": "De Bortoli Woodfired Shiraz 750ml"
   },
@@ -718,6 +1167,19 @@
     "wow_margin_delta_pts": 7.08,
     "wow_revenue_delta": 24.0,
     "txn_count": 3,
+    "calculation_breakdown": {
+      "step1_revenue": 203.97,
+      "step2_reported_profit": 39.21,
+      "step2_cogs_implied": 164.76,
+      "step3_reported_margin": "19.22%  (= $39.21 \u00f7 $203.97 \u00d7 100)",
+      "step4_promo_savings": 12.0,
+      "step5_true_profit": 27.21,
+      "step5_formula": "True profit = Reported profit \u2212 Promo savings = $39.21 \u2212 $12.00 = $27.21",
+      "step6_true_margin": "13.34%  (= $27.21 \u00f7 $203.97 \u00d7 100)",
+      "step7_floor": "15%  (category floor for Canadian Whisky)",
+      "step8_gap_pts": 1.66,
+      "step9_dollar_drag": "$3.39/wk  (= 1.66 pts \u00f7 100 \u00d7 $203.97)"
+    },
     "pct_of_total_drag": 0.5,
     "display_name": "Canadian Club Whisky 1L"
   },
@@ -737,6 +1199,19 @@
     "wow_margin_delta_pts": 5.1,
     "wow_revenue_delta": 1.0,
     "txn_count": 1,
+    "calculation_breakdown": {
+      "step1_revenue": 15.99,
+      "step2_reported_profit": 3.76,
+      "step2_cogs_implied": 12.23,
+      "step3_reported_margin": "23.51%  (= $3.76 \u00f7 $15.99 \u00d7 100)",
+      "step4_promo_savings": 2.0,
+      "step5_true_profit": 1.76,
+      "step5_formula": "True profit = Reported profit \u2212 Promo savings = $3.76 \u2212 $2.00 = $1.76",
+      "step6_true_margin": "11.01%  (= $1.76 \u00f7 $15.99 \u00d7 100)",
+      "step7_floor": "30%  (category floor for Wine White)",
+      "step8_gap_pts": 18.99,
+      "step9_dollar_drag": "$3.04/wk  (= 18.99 pts \u00f7 100 \u00d7 $15.99)"
+    },
     "pct_of_total_drag": 0.5,
     "display_name": "Stoneleigh Marlborough Sauvignon Blanc 750ml"
   },
@@ -756,6 +1231,19 @@
     "wow_margin_delta_pts": 0.0,
     "wow_revenue_delta": 0.0,
     "txn_count": 1,
+    "calculation_breakdown": {
+      "step1_revenue": 10.99,
+      "step2_reported_profit": 2.47,
+      "step2_cogs_implied": 8.52,
+      "step3_reported_margin": "22.47%  (= $2.47 \u00f7 $10.99 \u00d7 100)",
+      "step4_promo_savings": 2.0,
+      "step5_true_profit": 0.47,
+      "step5_formula": "True profit = Reported profit \u2212 Promo savings = $2.47 \u2212 $2.00 = $0.47",
+      "step6_true_margin": "4.28%  (= $0.47 \u00f7 $10.99 \u00d7 100)",
+      "step7_floor": "30%  (category floor for Wine Red)",
+      "step8_gap_pts": 25.72,
+      "step9_dollar_drag": "$2.83/wk  (= 25.72 pts \u00f7 100 \u00d7 $10.99)"
+    },
     "pct_of_total_drag": 0.4,
     "display_name": "Wyndham Est Bin 555 Shiraz 750ml"
   },
@@ -775,6 +1263,19 @@
     "wow_margin_delta_pts": 2.69,
     "wow_revenue_delta": 58.99,
     "txn_count": 2,
+    "calculation_breakdown": {
+      "step1_revenue": 117.98,
+      "step2_reported_profit": 20.81,
+      "step2_cogs_implied": 97.17,
+      "step3_reported_margin": "17.64%  (= $20.81 \u00f7 $117.98 \u00d7 100)",
+      "step4_promo_savings": 0.0,
+      "step5_true_profit": 20.81,
+      "step5_formula": "True profit = Reported profit \u2212 Promo savings = $20.81 \u2212 $0.00 = $20.81",
+      "step6_true_margin": "17.64%  (= $20.81 \u00f7 $117.98 \u00d7 100)",
+      "step7_floor": "20%  (category floor for Tequila)",
+      "step8_gap_pts": 2.36,
+      "step9_dollar_drag": "$2.78/wk  (= 2.36 pts \u00f7 100 \u00d7 $117.98)"
+    },
     "pct_of_total_drag": 0.4,
     "display_name": "Sierra Tequila Blanco 700ml"
   },
@@ -794,6 +1295,19 @@
     "wow_margin_delta_pts": -3.27,
     "wow_revenue_delta": -2.0,
     "txn_count": 1,
+    "calculation_breakdown": {
+      "step1_revenue": 17.98,
+      "step2_reported_profit": 12.1,
+      "step2_cogs_implied": 5.88,
+      "step3_reported_margin": "67.30%  (= $12.10 \u00f7 $17.98 \u00d7 100)",
+      "step4_promo_savings": 4.0,
+      "step5_true_profit": 8.1,
+      "step5_formula": "True profit = Reported profit \u2212 Promo savings = $12.10 \u2212 $4.00 = $8.10",
+      "step6_true_margin": "45.05%  (= $8.10 \u00f7 $17.98 \u00d7 100)",
+      "step7_floor": "60%  (category floor for Beer Kegs)",
+      "step8_gap_pts": 14.95,
+      "step9_dollar_drag": "$2.69/wk  (= 14.95 pts \u00f7 100 \u00d7 $17.98)"
+    },
     "pct_of_total_drag": 0.4,
     "display_name": "Stomping Ground Gipps St SCNR"
   },
@@ -813,6 +1327,19 @@
     "wow_margin_delta_pts": 0.0,
     "wow_revenue_delta": 0.0,
     "txn_count": 1,
+    "calculation_breakdown": {
+      "step1_revenue": 57.49,
+      "step2_reported_profit": 8.91,
+      "step2_cogs_implied": 48.58,
+      "step3_reported_margin": "15.50%  (= $8.91 \u00f7 $57.49 \u00d7 100)",
+      "step4_promo_savings": 0.0,
+      "step5_true_profit": 8.91,
+      "step5_formula": "True profit = Reported profit \u2212 Promo savings = $8.91 \u2212 $0.00 = $8.91",
+      "step6_true_margin": "15.50%  (= $8.91 \u00f7 $57.49 \u00d7 100)",
+      "step7_floor": "20%  (category floor for Gin)",
+      "step8_gap_pts": 4.5,
+      "step9_dollar_drag": "$2.59/wk  (= 4.50 pts \u00f7 100 \u00d7 $57.49)"
+    },
     "pct_of_total_drag": 0.4,
     "display_name": "Gordons Gin Med Orange 700ml"
   },
@@ -832,6 +1359,19 @@
     "wow_margin_delta_pts": 0.31,
     "wow_revenue_delta": -75.93,
     "txn_count": 4,
+    "calculation_breakdown": {
+      "step1_revenue": 43.96,
+      "step2_reported_profit": 28.04,
+      "step2_cogs_implied": 15.92,
+      "step3_reported_margin": "63.79%  (= $28.04 \u00f7 $43.96 \u00d7 100)",
+      "step4_promo_savings": 4.0,
+      "step5_true_profit": 24.04,
+      "step5_formula": "True profit = Reported profit \u2212 Promo savings = $28.04 \u2212 $4.00 = $24.04",
+      "step6_true_margin": "54.69%  (= $24.04 \u00f7 $43.96 \u00d7 100)",
+      "step7_floor": "60%  (category floor for Beer Kegs)",
+      "step8_gap_pts": 5.31,
+      "step9_dollar_drag": "$2.33/wk  (= 5.31 pts \u00f7 100 \u00d7 $43.96)"
+    },
     "pct_of_total_drag": 0.4,
     "display_name": "Carlton Draught Kegs Pint 570ml"
   },
@@ -851,6 +1391,19 @@
     "wow_margin_delta_pts": 0.0,
     "wow_revenue_delta": 0.0,
     "txn_count": 1,
+    "calculation_breakdown": {
+      "step1_revenue": 7.99,
+      "step2_reported_profit": 2.19,
+      "step2_cogs_implied": 5.8,
+      "step3_reported_margin": "27.41%  (= $2.19 \u00f7 $7.99 \u00d7 100)",
+      "step4_promo_savings": 2.0,
+      "step5_true_profit": 0.19,
+      "step5_formula": "True profit = Reported profit \u2212 Promo savings = $2.19 \u2212 $2.00 = $0.19",
+      "step6_true_margin": "2.38%  (= $0.19 \u00f7 $7.99 \u00d7 100)",
+      "step7_floor": "30%  (category floor for Wine Red)",
+      "step8_gap_pts": 27.62,
+      "step9_dollar_drag": "$2.21/wk  (= 27.62 pts \u00f7 100 \u00d7 $7.99)"
+    },
     "pct_of_total_drag": 0.3,
     "display_name": "Lindemans Bin 50 Shiraz 750ml"
   },
@@ -870,6 +1423,19 @@
     "wow_margin_delta_pts": 0.53,
     "wow_revenue_delta": -19.98,
     "txn_count": 9,
+    "calculation_breakdown": {
+      "step1_revenue": 100.91,
+      "step2_reported_profit": 74.36,
+      "step2_cogs_implied": 26.55,
+      "step3_reported_margin": "73.69%  (= $74.36 \u00f7 $100.91 \u00d7 100)",
+      "step4_promo_savings": 16.0,
+      "step5_true_profit": 58.36,
+      "step5_formula": "True profit = Reported profit \u2212 Promo savings = $74.36 \u2212 $16.00 = $58.36",
+      "step6_true_margin": "57.83%  (= $58.36 \u00f7 $100.91 \u00d7 100)",
+      "step7_floor": "60%  (category floor for Beer Kegs)",
+      "step8_gap_pts": 2.17,
+      "step9_dollar_drag": "$2.19/wk  (= 2.17 pts \u00f7 100 \u00d7 $100.91)"
+    },
     "pct_of_total_drag": 0.3,
     "display_name": "Tiger PINT"
   },
@@ -889,6 +1455,19 @@
     "wow_margin_delta_pts": 3.22,
     "wow_revenue_delta": -49.95,
     "txn_count": 3,
+    "calculation_breakdown": {
+      "step1_revenue": 33.97,
+      "step2_reported_profit": 20.2,
+      "step2_cogs_implied": 13.77,
+      "step3_reported_margin": "59.46%  (= $20.20 \u00f7 $33.97 \u00d7 100)",
+      "step4_promo_savings": 2.0,
+      "step5_true_profit": 18.2,
+      "step5_formula": "True profit = Reported profit \u2212 Promo savings = $20.20 \u2212 $2.00 = $18.20",
+      "step6_true_margin": "53.58%  (= $18.20 \u00f7 $33.97 \u00d7 100)",
+      "step7_floor": "60%  (category floor for Beer Kegs)",
+      "step8_gap_pts": 6.42,
+      "step9_dollar_drag": "$2.18/wk  (= 6.42 pts \u00f7 100 \u00d7 $33.97)"
+    },
     "pct_of_total_drag": 0.3,
     "display_name": "Mountain Culture Juice Trip SCNR"
   },
@@ -908,6 +1487,19 @@
     "wow_margin_delta_pts": 0.0,
     "wow_revenue_delta": 0.0,
     "txn_count": 1,
+    "calculation_breakdown": {
+      "step1_revenue": 9.99,
+      "step2_reported_profit": 2.89,
+      "step2_cogs_implied": 7.1,
+      "step3_reported_margin": "28.93%  (= $2.89 \u00f7 $9.99 \u00d7 100)",
+      "step4_promo_savings": 2.0,
+      "step5_true_profit": 0.89,
+      "step5_formula": "True profit = Reported profit \u2212 Promo savings = $2.89 \u2212 $2.00 = $0.89",
+      "step6_true_margin": "8.91%  (= $0.89 \u00f7 $9.99 \u00d7 100)",
+      "step7_floor": "30%  (category floor for Sparkling & Champagne)",
+      "step8_gap_pts": 21.09,
+      "step9_dollar_drag": "$2.11/wk  (= 21.09 pts \u00f7 100 \u00d7 $9.99)"
+    },
     "pct_of_total_drag": 0.3,
     "display_name": "Yellowglen Colours Pink Soft Rose 750ml"
   },
@@ -927,6 +1519,19 @@
     "wow_margin_delta_pts": 0.0,
     "wow_revenue_delta": 9.99,
     "txn_count": 3,
+    "calculation_breakdown": {
+      "step1_revenue": 29.97,
+      "step2_reported_profit": 8.4,
+      "step2_cogs_implied": 21.57,
+      "step3_reported_margin": "28.03%  (= $8.40 \u00f7 $29.97 \u00d7 100)",
+      "step4_promo_savings": 3.0,
+      "step5_true_profit": 5.4,
+      "step5_formula": "True profit = Reported profit \u2212 Promo savings = $8.40 \u2212 $3.00 = $5.40",
+      "step6_true_margin": "18.02%  (= $5.40 \u00f7 $29.97 \u00d7 100)",
+      "step7_floor": "25%  (category floor for Wine Red)",
+      "step8_gap_pts": 6.98,
+      "step9_dollar_drag": "$2.09/wk  (= 6.98 pts \u00f7 100 \u00d7 $29.97)"
+    },
     "pct_of_total_drag": 0.3,
     "display_name": "Yellow Tail Cabernet Sauvignon 750ml"
   },
@@ -946,6 +1551,19 @@
     "wow_margin_delta_pts": -7.84,
     "wow_revenue_delta": -2.0,
     "txn_count": 1,
+    "calculation_breakdown": {
+      "step1_revenue": 15.99,
+      "step2_reported_profit": 4.71,
+      "step2_cogs_implied": 11.28,
+      "step3_reported_margin": "29.46%  (= $4.71 \u00f7 $15.99 \u00d7 100)",
+      "step4_promo_savings": 2.0,
+      "step5_true_profit": 2.71,
+      "step5_formula": "True profit = Reported profit \u2212 Promo savings = $4.71 \u2212 $2.00 = $2.71",
+      "step6_true_margin": "16.95%  (= $2.71 \u00f7 $15.99 \u00d7 100)",
+      "step7_floor": "30%  (category floor for Wine Rose)",
+      "step8_gap_pts": 13.05,
+      "step9_dollar_drag": "$2.09/wk  (= 13.05 pts \u00f7 100 \u00d7 $15.99)"
+    },
     "pct_of_total_drag": 0.3,
     "display_name": "19 CRIMES SNOOP CALI ROSE750ML"
   },
@@ -965,6 +1583,19 @@
     "wow_margin_delta_pts": 0.0,
     "wow_revenue_delta": 0.0,
     "txn_count": 1,
+    "calculation_breakdown": {
+      "step1_revenue": 39.99,
+      "step2_reported_profit": 10.0,
+      "step2_cogs_implied": 29.99,
+      "step3_reported_margin": "25.01%  (= $10.00 \u00f7 $39.99 \u00d7 100)",
+      "step4_promo_savings": 0.0,
+      "step5_true_profit": 10.0,
+      "step5_formula": "True profit = Reported profit \u2212 Promo savings = $10.00 \u2212 $0.00 = $10.00",
+      "step6_true_margin": "25.01%  (= $10.00 \u00f7 $39.99 \u00d7 100)",
+      "step7_floor": "30%  (category floor for Wine Red)",
+      "step8_gap_pts": 4.99,
+      "step9_dollar_drag": "$2.00/wk  (= 4.99 pts \u00f7 100 \u00d7 $39.99)"
+    },
     "pct_of_total_drag": 0.3,
     "display_name": "Faiveley Bourgogne Rouge 750ml"
   },
@@ -984,6 +1615,19 @@
     "wow_margin_delta_pts": -3.17,
     "wow_revenue_delta": -121.94,
     "txn_count": 2,
+    "calculation_breakdown": {
+      "step1_revenue": 62.98,
+      "step2_reported_profit": 15.81,
+      "step2_cogs_implied": 47.17,
+      "step3_reported_margin": "25.10%  (= $15.81 \u00f7 $62.98 \u00d7 100)",
+      "step4_promo_savings": 2.0,
+      "step5_true_profit": 13.81,
+      "step5_formula": "True profit = Reported profit \u2212 Promo savings = $15.81 \u2212 $2.00 = $13.81",
+      "step6_true_margin": "21.93%  (= $13.81 \u00f7 $62.98 \u00d7 100)",
+      "step7_floor": "25%  (category floor for RTD)",
+      "step8_gap_pts": 3.07,
+      "step9_dollar_drag": "$1.93/wk  (= 3.07 pts \u00f7 100 \u00d7 $62.98)"
+    },
     "pct_of_total_drag": 0.3,
     "display_name": "Jack Daniels & Cola Can 375ml"
   },
@@ -1003,6 +1647,19 @@
     "wow_margin_delta_pts": 0.0,
     "wow_revenue_delta": 49.99,
     "txn_count": 2,
+    "calculation_breakdown": {
+      "step1_revenue": 99.98,
+      "step2_reported_profit": 23.22,
+      "step2_cogs_implied": 76.76,
+      "step3_reported_margin": "23.22%  (= $23.22 \u00f7 $99.98 \u00d7 100)",
+      "step4_promo_savings": 0.0,
+      "step5_true_profit": 23.22,
+      "step5_formula": "True profit = Reported profit \u2212 Promo savings = $23.22 \u2212 $0.00 = $23.22",
+      "step6_true_margin": "23.22%  (= $23.22 \u00f7 $99.98 \u00d7 100)",
+      "step7_floor": "25%  (category floor for Liqueur)",
+      "step8_gap_pts": 1.78,
+      "step9_dollar_drag": "$1.78/wk  (= 1.78 pts \u00f7 100 \u00d7 $99.98)"
+    },
     "pct_of_total_drag": 0.3,
     "display_name": "Southern Comfort 700ml"
   },
@@ -1022,6 +1679,19 @@
     "wow_margin_delta_pts": 0.0,
     "wow_revenue_delta": 0.0,
     "txn_count": 1,
+    "calculation_breakdown": {
+      "step1_revenue": 11.99,
+      "step2_reported_profit": 3.82,
+      "step2_cogs_implied": 8.17,
+      "step3_reported_margin": "31.86%  (= $3.82 \u00f7 $11.99 \u00d7 100)",
+      "step4_promo_savings": 2.0,
+      "step5_true_profit": 1.82,
+      "step5_formula": "True profit = Reported profit \u2212 Promo savings = $3.82 \u2212 $2.00 = $1.82",
+      "step6_true_margin": "15.18%  (= $1.82 \u00f7 $11.99 \u00d7 100)",
+      "step7_floor": "30%  (category floor for Wine Red)",
+      "step8_gap_pts": 14.82,
+      "step9_dollar_drag": "$1.78/wk  (= 14.82 pts \u00f7 100 \u00d7 $11.99)"
+    },
     "pct_of_total_drag": 0.3,
     "display_name": "Wolf Blass Yellow Label Merlot 750ml"
   },
@@ -1041,6 +1711,19 @@
     "wow_margin_delta_pts": 0.25,
     "wow_revenue_delta": -3.99,
     "txn_count": 3,
+    "calculation_breakdown": {
+      "step1_revenue": 11.97,
+      "step2_reported_profit": 4.26,
+      "step2_cogs_implied": 7.71,
+      "step3_reported_margin": "35.59%  (= $4.26 \u00f7 $11.97 \u00d7 100)",
+      "step4_promo_savings": 3.0,
+      "step5_true_profit": 1.26,
+      "step5_formula": "True profit = Reported profit \u2212 Promo savings = $4.26 \u2212 $3.00 = $1.26",
+      "step6_true_margin": "10.53%  (= $1.26 \u00f7 $11.97 \u00d7 100)",
+      "step7_floor": "25%  (category floor for Snack Foods)",
+      "step8_gap_pts": 14.47,
+      "step9_dollar_drag": "$1.73/wk  (= 14.47 pts \u00f7 100 \u00d7 $11.97)"
+    },
     "pct_of_total_drag": 0.3,
     "display_name": "Red Rock Sweet Chilli & Sour Cream 90g"
   },
@@ -1060,6 +1743,19 @@
     "wow_margin_delta_pts": 0.0,
     "wow_revenue_delta": -8.99,
     "txn_count": 1,
+    "calculation_breakdown": {
+      "step1_revenue": 8.99,
+      "step2_reported_profit": 2.06,
+      "step2_cogs_implied": 6.93,
+      "step3_reported_margin": "22.91%  (= $2.06 \u00f7 $8.99 \u00d7 100)",
+      "step4_promo_savings": 1.0,
+      "step5_true_profit": 1.06,
+      "step5_formula": "True profit = Reported profit \u2212 Promo savings = $2.06 \u2212 $1.00 = $1.06",
+      "step6_true_margin": "11.79%  (= $1.06 \u00f7 $8.99 \u00d7 100)",
+      "step7_floor": "30%  (category floor for Wine Red)",
+      "step8_gap_pts": 18.21,
+      "step9_dollar_drag": "$1.64/wk  (= 18.21 pts \u00f7 100 \u00d7 $8.99)"
+    },
     "pct_of_total_drag": 0.3,
     "display_name": "Hardys VR Pinot Noir 1L"
   },
@@ -1079,6 +1775,19 @@
     "wow_margin_delta_pts": 0.0,
     "wow_revenue_delta": 0.0,
     "txn_count": 3,
+    "calculation_breakdown": {
+      "step1_revenue": 17.97,
+      "step2_reported_profit": 6.75,
+      "step2_cogs_implied": 11.22,
+      "step3_reported_margin": "37.56%  (= $6.75 \u00f7 $17.97 \u00d7 100)",
+      "step4_promo_savings": 0.0,
+      "step5_true_profit": 6.75,
+      "step5_formula": "True profit = Reported profit \u2212 Promo savings = $6.75 \u2212 $0.00 = $6.75",
+      "step6_true_margin": "37.56%  (= $6.75 \u00f7 $17.97 \u00d7 100)",
+      "step7_floor": "45%  (category floor for Accessories)",
+      "step8_gap_pts": 7.44,
+      "step9_dollar_drag": "$1.34/wk  (= 7.44 pts \u00f7 100 \u00d7 $17.97)"
+    },
     "pct_of_total_drag": 0.2,
     "display_name": "REDDS 25 RED CUPS 425ML"
   },
@@ -1098,6 +1807,19 @@
     "wow_margin_delta_pts": -4.74,
     "wow_revenue_delta": -15.99,
     "txn_count": 1,
+    "calculation_breakdown": {
+      "step1_revenue": 13.99,
+      "step2_reported_profit": 3.99,
+      "step2_cogs_implied": 10.0,
+      "step3_reported_margin": "28.52%  (= $3.99 \u00f7 $13.99 \u00d7 100)",
+      "step4_promo_savings": 1.0,
+      "step5_true_profit": 2.99,
+      "step5_formula": "True profit = Reported profit \u2212 Promo savings = $3.99 \u2212 $1.00 = $2.99",
+      "step6_true_margin": "21.37%  (= $2.99 \u00f7 $13.99 \u00d7 100)",
+      "step7_floor": "30%  (category floor for Cask & Port)",
+      "step8_gap_pts": 8.63,
+      "step9_dollar_drag": "$1.21/wk  (= 8.63 pts \u00f7 100 \u00d7 $13.99)"
+    },
     "pct_of_total_drag": 0.2,
     "display_name": "Sovereign PT Fruity Red Cask 4.4L"
   },
@@ -1117,6 +1839,19 @@
     "wow_margin_delta_pts": -4.76,
     "wow_revenue_delta": -1.0,
     "txn_count": 1,
+    "calculation_breakdown": {
+      "step1_revenue": 13.99,
+      "step2_reported_profit": 4.01,
+      "step2_cogs_implied": 9.98,
+      "step3_reported_margin": "28.66%  (= $4.01 \u00f7 $13.99 \u00d7 100)",
+      "step4_promo_savings": 1.0,
+      "step5_true_profit": 3.01,
+      "step5_formula": "True profit = Reported profit \u2212 Promo savings = $4.01 \u2212 $1.00 = $3.01",
+      "step6_true_margin": "21.52%  (= $3.01 \u00f7 $13.99 \u00d7 100)",
+      "step7_floor": "30%  (category floor for Wine Red)",
+      "step8_gap_pts": 8.48,
+      "step9_dollar_drag": "$1.19/wk  (= 8.48 pts \u00f7 100 \u00d7 $13.99)"
+    },
     "pct_of_total_drag": 0.2,
     "display_name": "Elephant In the Room Shiraz 750ml"
   },
@@ -1136,6 +1871,19 @@
     "wow_margin_delta_pts": 0.0,
     "wow_revenue_delta": 0.0,
     "txn_count": 2,
+    "calculation_breakdown": {
+      "step1_revenue": 7.98,
+      "step2_reported_profit": 2.84,
+      "step2_cogs_implied": 5.14,
+      "step3_reported_margin": "35.59%  (= $2.84 \u00f7 $7.98 \u00d7 100)",
+      "step4_promo_savings": 2.0,
+      "step5_true_profit": 0.84,
+      "step5_formula": "True profit = Reported profit \u2212 Promo savings = $2.84 \u2212 $2.00 = $0.84",
+      "step6_true_margin": "10.53%  (= $0.84 \u00f7 $7.98 \u00d7 100)",
+      "step7_floor": "25%  (category floor for Snack Foods)",
+      "step8_gap_pts": 14.47,
+      "step9_dollar_drag": "$1.15/wk  (= 14.47 pts \u00f7 100 \u00d7 $7.98)"
+    },
     "pct_of_total_drag": 0.2,
     "display_name": "Red Rock Deli Spicy Chilli Sriracha 90g"
   },
@@ -1155,6 +1903,19 @@
     "wow_margin_delta_pts": 0.0,
     "wow_revenue_delta": 0.0,
     "txn_count": 1,
+    "calculation_breakdown": {
+      "step1_revenue": 14.99,
+      "step2_reported_profit": 7.7,
+      "step2_cogs_implied": 7.29,
+      "step3_reported_margin": "51.37%  (= $7.70 \u00f7 $14.99 \u00d7 100)",
+      "step4_promo_savings": 5.0,
+      "step5_true_profit": 2.7,
+      "step5_formula": "True profit = Reported profit \u2212 Promo savings = $7.70 \u2212 $5.00 = $2.70",
+      "step6_true_margin": "18.01%  (= $2.70 \u00f7 $14.99 \u00d7 100)",
+      "step7_floor": "25%  (category floor for RTD)",
+      "step8_gap_pts": 6.99,
+      "step9_dollar_drag": "$1.05/wk  (= 6.99 pts \u00f7 100 \u00d7 $14.99)"
+    },
     "pct_of_total_drag": 0.2,
     "display_name": "Casa Hard Lemon 8% 375ml"
   },
@@ -1174,6 +1935,19 @@
     "wow_margin_delta_pts": -3.42,
     "wow_revenue_delta": -3.0,
     "txn_count": 1,
+    "calculation_breakdown": {
+      "step1_revenue": 68.99,
+      "step2_reported_profit": 12.32,
+      "step2_cogs_implied": 56.67,
+      "step3_reported_margin": "17.86%  (= $12.32 \u00f7 $68.99 \u00d7 100)",
+      "step4_promo_savings": 3.0,
+      "step5_true_profit": 9.32,
+      "step5_formula": "True profit = Reported profit \u2212 Promo savings = $12.32 \u2212 $3.00 = $9.32",
+      "step6_true_margin": "13.51%  (= $9.32 \u00f7 $68.99 \u00d7 100)",
+      "step7_floor": "15%  (category floor for Blended Scotch Whisky)",
+      "step8_gap_pts": 1.49,
+      "step9_dollar_drag": "$1.03/wk  (= 1.49 pts \u00f7 100 \u00d7 $68.99)"
+    },
     "pct_of_total_drag": 0.2,
     "display_name": "Johnnie Walker Red 1L"
   },
@@ -1193,6 +1967,19 @@
     "wow_margin_delta_pts": 0.0,
     "wow_revenue_delta": 0.0,
     "txn_count": 1,
+    "calculation_breakdown": {
+      "step1_revenue": 21.99,
+      "step2_reported_profit": 5.62,
+      "step2_cogs_implied": 16.37,
+      "step3_reported_margin": "25.56%  (= $5.62 \u00f7 $21.99 \u00d7 100)",
+      "step4_promo_savings": 0.0,
+      "step5_true_profit": 5.62,
+      "step5_formula": "True profit = Reported profit \u2212 Promo savings = $5.62 \u2212 $0.00 = $5.62",
+      "step6_true_margin": "25.56%  (= $5.62 \u00f7 $21.99 \u00d7 100)",
+      "step7_floor": "30%  (category floor for Sparkling & Champagne)",
+      "step8_gap_pts": 4.44,
+      "step9_dollar_drag": "$0.98/wk  (= 4.44 pts \u00f7 100 \u00d7 $21.99)"
+    },
     "pct_of_total_drag": 0.2,
     "display_name": "Grant Burge Pinot Noir Chardonnay NV 750ml"
   },
@@ -1212,6 +1999,19 @@
     "wow_margin_delta_pts": 0.0,
     "wow_revenue_delta": 6.99,
     "txn_count": 2,
+    "calculation_breakdown": {
+      "step1_revenue": 13.98,
+      "step2_reported_profit": 5.4,
+      "step2_cogs_implied": 8.58,
+      "step3_reported_margin": "38.63%  (= $5.40 \u00f7 $13.98 \u00d7 100)",
+      "step4_promo_savings": 0.0,
+      "step5_true_profit": 5.4,
+      "step5_formula": "True profit = Reported profit \u2212 Promo savings = $5.40 \u2212 $0.00 = $5.40",
+      "step6_true_margin": "38.63%  (= $5.40 \u00f7 $13.98 \u00d7 100)",
+      "step7_floor": "45%  (category floor for Soft Drinks)",
+      "step8_gap_pts": 6.37,
+      "step9_dollar_drag": "$0.89/wk  (= 6.37 pts \u00f7 100 \u00d7 $13.98)"
+    },
     "pct_of_total_drag": 0.1,
     "display_name": "Spring Valley Pineapple Juice 1L"
   },
@@ -1231,6 +2031,19 @@
     "wow_margin_delta_pts": -3.49,
     "wow_revenue_delta": -74.94,
     "txn_count": 4,
+    "calculation_breakdown": {
+      "step1_revenue": 117.46,
+      "step2_reported_profit": 29.49,
+      "step2_cogs_implied": 87.97,
+      "step3_reported_margin": "25.11%  (= $29.49 \u00f7 $117.46 \u00d7 100)",
+      "step4_promo_savings": 1.0,
+      "step5_true_profit": 28.49,
+      "step5_formula": "True profit = Reported profit \u2212 Promo savings = $29.49 \u2212 $1.00 = $28.49",
+      "step6_true_margin": "24.26%  (= $28.49 \u00f7 $117.46 \u00d7 100)",
+      "step7_floor": "25%  (category floor for RTD)",
+      "step8_gap_pts": 0.74,
+      "step9_dollar_drag": "$0.87/wk  (= 0.74 pts \u00f7 100 \u00d7 $117.46)"
+    },
     "pct_of_total_drag": 0.1,
     "display_name": "Woodstock Bourbon & Cola 4.8% Can 375ml"
   },
@@ -1250,6 +2063,19 @@
     "wow_margin_delta_pts": -3.26,
     "wow_revenue_delta": 22.99,
     "txn_count": 4,
+    "calculation_breakdown": {
+      "step1_revenue": 27.98,
+      "step2_reported_profit": 13.72,
+      "step2_cogs_implied": 14.26,
+      "step3_reported_margin": "49.04%  (= $13.72 \u00f7 $27.98 \u00d7 100)",
+      "step4_promo_savings": 1.96,
+      "step5_true_profit": 11.76,
+      "step5_formula": "True profit = Reported profit \u2212 Promo savings = $13.72 \u2212 $1.96 = $11.76",
+      "step6_true_margin": "42.03%  (= $11.76 \u00f7 $27.98 \u00d7 100)",
+      "step7_floor": "45%  (category floor for Soft Drinks)",
+      "step8_gap_pts": 2.97,
+      "step9_dollar_drag": "$0.83/wk  (= 2.97 pts \u00f7 100 \u00d7 $27.98)"
+    },
     "pct_of_total_drag": 0.1,
     "display_name": "Coca Cola No Sugar 1.25L"
   },
@@ -1269,6 +2095,19 @@
     "wow_margin_delta_pts": 0.0,
     "wow_revenue_delta": -21.98,
     "txn_count": 1,
+    "calculation_breakdown": {
+      "step1_revenue": 10.99,
+      "step2_reported_profit": 7.77,
+      "step2_cogs_implied": 3.22,
+      "step3_reported_margin": "70.70%  (= $7.77 \u00f7 $10.99 \u00d7 100)",
+      "step4_promo_savings": 2.0,
+      "step5_true_profit": 5.77,
+      "step5_formula": "True profit = Reported profit \u2212 Promo savings = $7.77 \u2212 $2.00 = $5.77",
+      "step6_true_margin": "52.50%  (= $5.77 \u00f7 $10.99 \u00d7 100)",
+      "step7_floor": "60%  (category floor for Beer Kegs)",
+      "step8_gap_pts": 7.5,
+      "step9_dollar_drag": "$0.82/wk  (= 7.50 pts \u00f7 100 \u00d7 $10.99)"
+    },
     "pct_of_total_drag": 0.1,
     "display_name": "STELLA ARTOIS PINT"
   },
@@ -1288,6 +2127,19 @@
     "wow_margin_delta_pts": 0.0,
     "wow_revenue_delta": 0.0,
     "txn_count": 1,
+    "calculation_breakdown": {
+      "step1_revenue": 23.99,
+      "step2_reported_profit": 5.2,
+      "step2_cogs_implied": 18.79,
+      "step3_reported_margin": "21.68%  (= $5.20 \u00f7 $23.99 \u00d7 100)",
+      "step4_promo_savings": 0.0,
+      "step5_true_profit": 5.2,
+      "step5_formula": "True profit = Reported profit \u2212 Promo savings = $5.20 \u2212 $0.00 = $5.20",
+      "step6_true_margin": "21.68%  (= $5.20 \u00f7 $23.99 \u00d7 100)",
+      "step7_floor": "25%  (category floor for RTD)",
+      "step8_gap_pts": 3.32,
+      "step9_dollar_drag": "$0.80/wk  (= 3.32 pts \u00f7 100 \u00d7 $23.99)"
+    },
     "pct_of_total_drag": 0.1,
     "display_name": "Hard Rated Orange 375ml"
   },
@@ -1307,6 +2159,19 @@
     "wow_margin_delta_pts": -1.66,
     "wow_revenue_delta": -31.69,
     "txn_count": 2,
+    "calculation_breakdown": {
+      "step1_revenue": 15.28,
+      "step2_reported_profit": 4.74,
+      "step2_cogs_implied": 10.54,
+      "step3_reported_margin": "31.02%  (= $4.74 \u00f7 $15.28 \u00d7 100)",
+      "step4_promo_savings": 1.7,
+      "step5_true_profit": 3.04,
+      "step5_formula": "True profit = Reported profit \u2212 Promo savings = $4.74 \u2212 $1.70 = $3.04",
+      "step6_true_margin": "19.90%  (= $3.04 \u00f7 $15.28 \u00d7 100)",
+      "step7_floor": "25%  (category floor for Beer Craft)",
+      "step8_gap_pts": 5.1,
+      "step9_dollar_drag": "$0.78/wk  (= 5.10 pts \u00f7 100 \u00d7 $15.28)"
+    },
     "pct_of_total_drag": 0.1,
     "display_name": "Garage Project Pernicious Weed IPA 330ml"
   },
@@ -1326,6 +2191,19 @@
     "wow_margin_delta_pts": -3.71,
     "wow_revenue_delta": -4.0,
     "txn_count": 3,
+    "calculation_breakdown": {
+      "step1_revenue": 28.97,
+      "step2_reported_profit": 20.12,
+      "step2_cogs_implied": 8.85,
+      "step3_reported_margin": "69.45%  (= $20.12 \u00f7 $28.97 \u00d7 100)",
+      "step4_promo_savings": 3.5,
+      "step5_true_profit": 16.62,
+      "step5_formula": "True profit = Reported profit \u2212 Promo savings = $20.12 \u2212 $3.50 = $16.62",
+      "step6_true_margin": "57.37%  (= $16.62 \u00f7 $28.97 \u00d7 100)",
+      "step7_floor": "60%  (category floor for Beer Kegs)",
+      "step8_gap_pts": 2.63,
+      "step9_dollar_drag": "$0.76/wk  (= 2.63 pts \u00f7 100 \u00d7 $28.97)"
+    },
     "pct_of_total_drag": 0.1,
     "display_name": "Tiger SCNR"
   },
@@ -1345,6 +2223,19 @@
     "wow_margin_delta_pts": 0.0,
     "wow_revenue_delta": -35.99,
     "txn_count": 2,
+    "calculation_breakdown": {
+      "step1_revenue": 71.98,
+      "step2_reported_profit": 13.66,
+      "step2_cogs_implied": 58.32,
+      "step3_reported_margin": "18.98%  (= $13.66 \u00f7 $71.98 \u00d7 100)",
+      "step4_promo_savings": 0.0,
+      "step5_true_profit": 13.66,
+      "step5_formula": "True profit = Reported profit \u2212 Promo savings = $13.66 \u2212 $0.00 = $13.66",
+      "step6_true_margin": "18.98%  (= $13.66 \u00f7 $71.98 \u00d7 100)",
+      "step7_floor": "20%  (category floor for Bourbon)",
+      "step8_gap_pts": 1.02,
+      "step9_dollar_drag": "$0.73/wk  (= 1.02 pts \u00f7 100 \u00d7 $71.98)"
+    },
     "pct_of_total_drag": 0.1,
     "display_name": "Jack Daniels Black Label 350ml Promo"
   },
@@ -1364,6 +2255,19 @@
     "wow_margin_delta_pts": -8.25,
     "wow_revenue_delta": 9.5,
     "txn_count": 1,
+    "calculation_breakdown": {
+      "step1_revenue": 28.99,
+      "step2_reported_profit": 6.71,
+      "step2_cogs_implied": 22.28,
+      "step3_reported_margin": "23.15%  (= $6.71 \u00f7 $28.99 \u00d7 100)",
+      "step4_promo_savings": 0.0,
+      "step5_true_profit": 6.71,
+      "step5_formula": "True profit = Reported profit \u2212 Promo savings = $6.71 \u2212 $0.00 = $6.71",
+      "step6_true_margin": "23.15%  (= $6.71 \u00f7 $28.99 \u00d7 100)",
+      "step7_floor": "25%  (category floor for Cider)",
+      "step8_gap_pts": 1.85,
+      "step9_dollar_drag": "$0.54/wk  (= 1.85 pts \u00f7 100 \u00d7 $28.99)"
+    },
     "pct_of_total_drag": 0.1,
     "display_name": "Somersby Pear Cider Can 375ml"
   },
@@ -1383,6 +2287,19 @@
     "wow_margin_delta_pts": 0.0,
     "wow_revenue_delta": -49.98,
     "txn_count": 1,
+    "calculation_breakdown": {
+      "step1_revenue": 24.99,
+      "step2_reported_profit": 6.98,
+      "step2_cogs_implied": 18.01,
+      "step3_reported_margin": "27.93%  (= $6.98 \u00f7 $24.99 \u00d7 100)",
+      "step4_promo_savings": 0.0,
+      "step5_true_profit": 6.98,
+      "step5_formula": "True profit = Reported profit \u2212 Promo savings = $6.98 \u2212 $0.00 = $6.98",
+      "step6_true_margin": "27.93%  (= $6.98 \u00f7 $24.99 \u00d7 100)",
+      "step7_floor": "30%  (category floor for Miniatures)",
+      "step8_gap_pts": 2.07,
+      "step9_dollar_drag": "$0.52/wk  (= 2.07 pts \u00f7 100 \u00d7 $24.99)"
+    },
     "pct_of_total_drag": 0.1,
     "display_name": "Jack Daniels Black Label 200ml"
   },
@@ -1402,6 +2319,19 @@
     "wow_margin_delta_pts": -3.72,
     "wow_revenue_delta": -0.5,
     "txn_count": 1,
+    "calculation_breakdown": {
+      "step1_revenue": 8.99,
+      "step2_reported_profit": 2.64,
+      "step2_cogs_implied": 6.35,
+      "step3_reported_margin": "29.37%  (= $2.64 \u00f7 $8.99 \u00d7 100)",
+      "step4_promo_savings": 0.0,
+      "step5_true_profit": 2.64,
+      "step5_formula": "True profit = Reported profit \u2212 Promo savings = $2.64 \u2212 $0.00 = $2.64",
+      "step6_true_margin": "29.37%  (= $2.64 \u00f7 $8.99 \u00d7 100)",
+      "step7_floor": "35%  (category floor for Cider)",
+      "step8_gap_pts": 5.63,
+      "step9_dollar_drag": "$0.51/wk  (= 5.63 pts \u00f7 100 \u00d7 $8.99)"
+    },
     "pct_of_total_drag": 0.1,
     "display_name": "Little Fat Lamb Lemon 8% Bt 1.25L"
   },
@@ -1421,6 +2351,19 @@
     "wow_margin_delta_pts": 0.0,
     "wow_revenue_delta": -8.98,
     "txn_count": 1,
+    "calculation_breakdown": {
+      "step1_revenue": 4.49,
+      "step2_reported_profit": 1.53,
+      "step2_cogs_implied": 2.96,
+      "step3_reported_margin": "34.08%  (= $1.53 \u00f7 $4.49 \u00d7 100)",
+      "step4_promo_savings": 0.0,
+      "step5_true_profit": 1.53,
+      "step5_formula": "True profit = Reported profit \u2212 Promo savings = $1.53 \u2212 $0.00 = $1.53",
+      "step6_true_margin": "34.08%  (= $1.53 \u00f7 $4.49 \u00d7 100)",
+      "step7_floor": "45%  (category floor for Soft Drinks)",
+      "step8_gap_pts": 10.92,
+      "step9_dollar_drag": "$0.49/wk  (= 10.92 pts \u00f7 100 \u00d7 $4.49)"
+    },
     "pct_of_total_drag": 0.1,
     "display_name": "Sprite Lemonade Bt 600ml"
   },
@@ -1440,6 +2383,19 @@
     "wow_margin_delta_pts": 0.8,
     "wow_revenue_delta": 63.77,
     "txn_count": 6,
+    "calculation_breakdown": {
+      "step1_revenue": 234.74,
+      "step2_reported_profit": 18.32,
+      "step2_cogs_implied": 216.42,
+      "step3_reported_margin": "7.80%  (= $18.32 \u00f7 $234.74 \u00d7 100)",
+      "step4_promo_savings": 0.0,
+      "step5_true_profit": 18.32,
+      "step5_formula": "True profit = Reported profit \u2212 Promo savings = $18.32 \u2212 $0.00 = $18.32",
+      "step6_true_margin": "7.80%  (= $18.32 \u00f7 $234.74 \u00d7 100)",
+      "step7_floor": "8%  (category floor for Beer Local)",
+      "step8_gap_pts": 0.2,
+      "step9_dollar_drag": "$0.47/wk  (= 0.20 pts \u00f7 100 \u00d7 $234.74)"
+    },
     "pct_of_total_drag": 0.1,
     "display_name": "Victoria Bitter Bt 250ml"
   },
@@ -1459,6 +2415,19 @@
     "wow_margin_delta_pts": 0.0,
     "wow_revenue_delta": 0.0,
     "txn_count": 1,
+    "calculation_breakdown": {
+      "step1_revenue": 6.99,
+      "step2_reported_profit": 2.7,
+      "step2_cogs_implied": 4.29,
+      "step3_reported_margin": "38.63%  (= $2.70 \u00f7 $6.99 \u00d7 100)",
+      "step4_promo_savings": 0.0,
+      "step5_true_profit": 2.7,
+      "step5_formula": "True profit = Reported profit \u2212 Promo savings = $2.70 \u2212 $0.00 = $2.70",
+      "step6_true_margin": "38.63%  (= $2.70 \u00f7 $6.99 \u00d7 100)",
+      "step7_floor": "45%  (category floor for Soft Drinks)",
+      "step8_gap_pts": 6.37,
+      "step9_dollar_drag": "$0.45/wk  (= 6.37 pts \u00f7 100 \u00d7 $6.99)"
+    },
     "pct_of_total_drag": 0.1,
     "display_name": "Spring Valley Orange Juice 1L"
   },
@@ -1478,6 +2447,19 @@
     "wow_margin_delta_pts": 0.0,
     "wow_revenue_delta": 0.0,
     "txn_count": 2,
+    "calculation_breakdown": {
+      "step1_revenue": 30.28,
+      "step2_reported_profit": 8.09,
+      "step2_cogs_implied": 22.19,
+      "step3_reported_margin": "26.72%  (= $8.09 \u00f7 $30.28 \u00d7 100)",
+      "step4_promo_savings": 0.7,
+      "step5_true_profit": 7.39,
+      "step5_formula": "True profit = Reported profit \u2212 Promo savings = $8.09 \u2212 $0.70 = $7.39",
+      "step6_true_margin": "24.41%  (= $7.39 \u00f7 $30.28 \u00d7 100)",
+      "step7_floor": "25%  (category floor for Beer Craft)",
+      "step8_gap_pts": 0.59,
+      "step9_dollar_drag": "$0.18/wk  (= 0.59 pts \u00f7 100 \u00d7 $30.28)"
+    },
     "pct_of_total_drag": 0.0,
     "display_name": "Gweilo Rainbow Sherbet Sour 375ml"
   },
@@ -1497,6 +2479,19 @@
     "wow_margin_delta_pts": 0.0,
     "wow_revenue_delta": 0.0,
     "txn_count": 1,
+    "calculation_breakdown": {
+      "step1_revenue": 13.17,
+      "step2_reported_profit": 3.79,
+      "step2_cogs_implied": 9.38,
+      "step3_reported_margin": "28.78%  (= $3.79 \u00f7 $13.17 \u00d7 100)",
+      "step4_promo_savings": 0.0,
+      "step5_true_profit": 3.79,
+      "step5_formula": "True profit = Reported profit \u2212 Promo savings = $3.79 \u2212 $0.00 = $3.79",
+      "step6_true_margin": "28.78%  (= $3.79 \u00f7 $13.17 \u00d7 100)",
+      "step7_floor": "30%  (category floor for Wine Red)",
+      "step8_gap_pts": 1.22,
+      "step9_dollar_drag": "$0.16/wk  (= 1.22 pts \u00f7 100 \u00d7 $13.17)"
+    },
     "pct_of_total_drag": 0.0,
     "display_name": "Kilarni Estate GSM 750ml"
   },
@@ -1516,6 +2511,19 @@
     "wow_margin_delta_pts": 0.0,
     "wow_revenue_delta": 3.99,
     "txn_count": 2,
+    "calculation_breakdown": {
+      "step1_revenue": 7.98,
+      "step2_reported_profit": 2.84,
+      "step2_cogs_implied": 5.14,
+      "step3_reported_margin": "35.59%  (= $2.84 \u00f7 $7.98 \u00d7 100)",
+      "step4_promo_savings": 1.0,
+      "step5_true_profit": 1.84,
+      "step5_formula": "True profit = Reported profit \u2212 Promo savings = $2.84 \u2212 $1.00 = $1.84",
+      "step6_true_margin": "23.06%  (= $1.84 \u00f7 $7.98 \u00d7 100)",
+      "step7_floor": "25%  (category floor for Snack Foods)",
+      "step8_gap_pts": 1.94,
+      "step9_dollar_drag": "$0.15/wk  (= 1.94 pts \u00f7 100 \u00d7 $7.98)"
+    },
     "pct_of_total_drag": 0.0,
     "display_name": "Red Rock Deli Honey Soy Chicken 90g"
   },
@@ -1535,6 +2543,19 @@
     "wow_margin_delta_pts": 0.0,
     "wow_revenue_delta": 0.0,
     "txn_count": 1,
+    "calculation_breakdown": {
+      "step1_revenue": 57.99,
+      "step2_reported_profit": 11.49,
+      "step2_cogs_implied": 46.5,
+      "step3_reported_margin": "19.81%  (= $11.49 \u00f7 $57.99 \u00d7 100)",
+      "step4_promo_savings": 0.0,
+      "step5_true_profit": 11.49,
+      "step5_formula": "True profit = Reported profit \u2212 Promo savings = $11.49 \u2212 $0.00 = $11.49",
+      "step6_true_margin": "19.81%  (= $11.49 \u00f7 $57.99 \u00d7 100)",
+      "step7_floor": "20%  (category floor for Tequila)",
+      "step8_gap_pts": 0.19,
+      "step9_dollar_drag": "$0.11/wk  (= 0.19 pts \u00f7 100 \u00d7 $57.99)"
+    },
     "pct_of_total_drag": 0.0,
     "display_name": "Sierra Tequila Reposado Gold 700ml"
   },
@@ -1554,6 +2575,19 @@
     "wow_margin_delta_pts": 0.0,
     "wow_revenue_delta": 21.99,
     "txn_count": 5,
+    "calculation_breakdown": {
+      "step1_revenue": 109.95,
+      "step2_reported_profit": 27.4,
+      "step2_cogs_implied": 82.55,
+      "step3_reported_margin": "24.92%  (= $27.40 \u00f7 $109.95 \u00d7 100)",
+      "step4_promo_savings": 0.0,
+      "step5_true_profit": 27.4,
+      "step5_formula": "True profit = Reported profit \u2212 Promo savings = $27.40 \u2212 $0.00 = $27.40",
+      "step6_true_margin": "24.92%  (= $27.40 \u00f7 $109.95 \u00d7 100)",
+      "step7_floor": "25%  (category floor for Miniatures)",
+      "step8_gap_pts": 0.08,
+      "step9_dollar_drag": "$0.09/wk  (= 0.08 pts \u00f7 100 \u00d7 $109.95)"
+    },
     "pct_of_total_drag": 0.0,
     "display_name": "Jameson 200ml"
   },
@@ -1573,6 +2607,19 @@
     "wow_margin_delta_pts": 5.33,
     "wow_revenue_delta": 2.0,
     "txn_count": 3,
+    "calculation_breakdown": {
+      "step1_revenue": 28.97,
+      "step2_reported_profit": 8.18,
+      "step2_cogs_implied": 20.79,
+      "step3_reported_margin": "28.24%  (= $8.18 \u00f7 $28.97 \u00d7 100)",
+      "step4_promo_savings": 1.0,
+      "step5_true_profit": 7.18,
+      "step5_formula": "True profit = Reported profit \u2212 Promo savings = $8.18 \u2212 $1.00 = $7.18",
+      "step6_true_margin": "24.78%  (= $7.18 \u00f7 $28.97 \u00d7 100)",
+      "step7_floor": "25%  (category floor for Wine Red)",
+      "step8_gap_pts": 0.22,
+      "step9_dollar_drag": "$0.06/wk  (= 0.22 pts \u00f7 100 \u00d7 $28.97)"
+    },
     "pct_of_total_drag": 0.0,
     "display_name": "Hardy VR Shiraz 1L"
   },
@@ -1592,6 +2639,19 @@
     "wow_margin_delta_pts": 0.0,
     "wow_revenue_delta": 0.0,
     "txn_count": 1,
+    "calculation_breakdown": {
+      "step1_revenue": 9.99,
+      "step2_reported_profit": 2.94,
+      "step2_cogs_implied": 7.05,
+      "step3_reported_margin": "29.43%  (= $2.94 \u00f7 $9.99 \u00d7 100)",
+      "step4_promo_savings": 0.0,
+      "step5_true_profit": 2.94,
+      "step5_formula": "True profit = Reported profit \u2212 Promo savings = $2.94 \u2212 $0.00 = $2.94",
+      "step6_true_margin": "29.43%  (= $2.94 \u00f7 $9.99 \u00d7 100)",
+      "step7_floor": "30%  (category floor for Sparkling & Champagne)",
+      "step8_gap_pts": 0.57,
+      "step9_dollar_drag": "$0.06/wk  (= 0.57 pts \u00f7 100 \u00d7 $9.99)"
+    },
     "pct_of_total_drag": 0.0,
     "display_name": "Book Club Prosecco 750ml"
   },
@@ -1611,6 +2671,19 @@
     "wow_margin_delta_pts": 0.96,
     "wow_revenue_delta": 88.99,
     "txn_count": 2,
+    "calculation_breakdown": {
+      "step1_revenue": 175.98,
+      "step2_reported_profit": 28.34,
+      "step2_cogs_implied": 147.64,
+      "step3_reported_margin": "16.10%  (= $28.34 \u00f7 $175.98 \u00d7 100)",
+      "step4_promo_savings": 2.0,
+      "step5_true_profit": 26.34,
+      "step5_formula": "True profit = Reported profit \u2212 Promo savings = $28.34 \u2212 $2.00 = $26.34",
+      "step6_true_margin": "14.97%  (= $26.34 \u00f7 $175.98 \u00d7 100)",
+      "step7_floor": "15%  (category floor for Blended Scotch Whisky)",
+      "step8_gap_pts": 0.03,
+      "step9_dollar_drag": "$0.05/wk  (= 0.03 pts \u00f7 100 \u00d7 $175.98)"
+    },
     "pct_of_total_drag": 0.0,
     "display_name": "Johnnie Walker Black 1L"
   },
@@ -1630,6 +2703,19 @@
     "wow_margin_delta_pts": 1.75,
     "wow_revenue_delta": 27.98,
     "txn_count": 6,
+    "calculation_breakdown": {
+      "step1_revenue": 95.92,
+      "step2_reported_profit": 65.52,
+      "step2_cogs_implied": 30.4,
+      "step3_reported_margin": "68.31%  (= $65.52 \u00f7 $95.92 \u00d7 100)",
+      "step4_promo_savings": 8.0,
+      "step5_true_profit": 57.52,
+      "step5_formula": "True profit = Reported profit \u2212 Promo savings = $65.52 \u2212 $8.00 = $57.52",
+      "step6_true_margin": "59.97%  (= $57.52 \u00f7 $95.92 \u00d7 100)",
+      "step7_floor": "60%  (category floor for Beer Kegs)",
+      "step8_gap_pts": 0.03,
+      "step9_dollar_drag": "$0.03/wk  (= 0.03 pts \u00f7 100 \u00d7 $95.92)"
+    },
     "pct_of_total_drag": 0.0,
     "display_name": "Weihenstephan Dunkel PINT"
   },
@@ -1649,6 +2735,19 @@
     "wow_margin_delta_pts": 0.0,
     "wow_revenue_delta": 0.0,
     "txn_count": 1,
+    "calculation_breakdown": {
+      "step1_revenue": 18.49,
+      "step2_reported_profit": 5.53,
+      "step2_cogs_implied": 12.96,
+      "step3_reported_margin": "29.91%  (= $5.53 \u00f7 $18.49 \u00d7 100)",
+      "step4_promo_savings": 0.0,
+      "step5_true_profit": 5.53,
+      "step5_formula": "True profit = Reported profit \u2212 Promo savings = $5.53 \u2212 $0.00 = $5.53",
+      "step6_true_margin": "29.91%  (= $5.53 \u00f7 $18.49 \u00d7 100)",
+      "step7_floor": "30%  (category floor for Cask & Port)",
+      "step8_gap_pts": 0.09,
+      "step9_dollar_drag": "$0.02/wk  (= 0.09 pts \u00f7 100 \u00d7 $18.49)"
+    },
     "pct_of_total_drag": 0.0,
     "display_name": "Stones Mac Ginger Wine 750ml"
   }

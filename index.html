@@ -184,13 +184,19 @@
   .badge-indigo { background: #e0e7ff; color: #3730a3; }
   .badge-orange { background: #ffedd5; color: #c2410c; }
 
-  /* ── Discard button ── */
-  .discard-btn {
-    background: none; border: none; cursor: pointer; color: #cbd5e1;
-    font-size: .72rem; padding: 2px 4px; border-radius: 4px; transition: all .1s;
+  /* ── Discard / Skip buttons ── */
+  .discard-btn, .skip-btn, .restore-btn {
+    background: none; border: none; cursor: pointer;
+    font-size: .72rem; padding: 2px 6px; border-radius: 4px; transition: all .1s;
     font-family: inherit;
   }
+  .discard-btn { color: #cbd5e1; }
   .discard-btn:hover { color: var(--red); background: var(--red-light); }
+  .skip-btn { color: #cbd5e1; }
+  .skip-btn:hover { color: var(--amber); background: var(--amber-light); }
+  .restore-btn { color: var(--blue); background: var(--blue-light); border: 1px solid #bfdbfe; }
+  .restore-btn:hover { background: #dbeafe; }
+  .action-btns { display: flex; gap: 4px; }
 
   /* ── Briefing pane ── */
   .briefing-wrap { max-width: 760px; }
@@ -257,6 +263,7 @@
   <button class="tab-btn" data-pane="momentum">📈 Momentum <span class="tab-badge blue" id="badge-momentum"></span></button>
   <button class="tab-btn" data-pane="historical">📅 Historical <span class="tab-badge grey" id="badge-historical"></span></button>
   <button class="tab-btn" data-pane="revival">🔁 Revival <span class="tab-badge purple" id="badge-revival"></span></button>
+  <button class="tab-btn" data-pane="skipped">⏭ Skipped <span class="tab-badge amber" id="badge-skipped"></span></button>
 </nav>
 
 <!-- ═══════════ BRIEFING PANE ═══════════ -->
@@ -285,7 +292,8 @@
         <th class="sortable right" data-col="1">Stock</th>
         <th class="sortable right" data-col="2">Wks Cover</th>
         <th class="sortable right" data-col="3">Vel/wk</th>
-        <th class="sortable right" data-col="4" style="background:#f0fdf4">Order Cases</th>
+        <th class="sortable right" data-col="4" style="background:#f0fdf4">Order Qty</th>
+        <th class="sortable right" data-col="9" title="Units already in your current cart order">In Cart</th>
         <th class="sortable" data-col="5">Urgency</th>
         <th data-col="6">Notes</th>
         <th></th>
@@ -359,7 +367,7 @@
 <!-- ═══════════ MOMENTUM PANE ═══════════ -->
 <div class="pane" id="pane-momentum">
   <div class="card" style="padding:10px 14px;margin-bottom:14px;font-size:.8rem;color:var(--muted);">
-    <strong>% change</strong> = sales velocity in the oldest week vs. the newest week (oldest → newest). Shows direction of travel, not an average. &nbsp;|&nbsp;
+    <strong>% change</strong> = compound average weekly growth rate (geometric mean of all week-on-week ratios — like CAGR applied weekly). Reflects sustained momentum, not just oldest vs newest. &nbsp;|&nbsp;
     <strong>$/wk</strong> = revenue in the most recent week only. &nbsp;|&nbsp;
     <strong>Sparkline</strong>: grey (oldest) → light blue → blue (newest). Hover a bar for volume.
   </div>
@@ -375,7 +383,7 @@
 <!-- ═══════════ HISTORICAL PANE ═══════════ -->
 <div class="pane" id="pane-historical">
   <div class="card" style="padding:10px 14px;margin-bottom:14px;font-size:.8rem;color:var(--muted);">
-    <strong>Trend badge</strong> = recent 4-week average velocity vs. Jan–Apr 2026 monthly weekly average. &nbsp;|&nbsp;
+    <strong>Trend badge</strong> = recent 4-week average velocity (cases/wk) vs. Jan–Apr 2026 monthly pace (cases/wk) — apples-to-apples comparison. &nbsp;|&nbsp;
     <span style="background:var(--green-light);color:var(--green);border:1px solid #86efac;border-radius:4px;padding:1px 6px;font-weight:600">+%</span> selling faster &nbsp;
     <span style="background:var(--red-light);color:var(--red);border:1px solid #fca5a5;border-radius:4px;padding:1px 6px;font-weight:600">−%</span> slowing &nbsp;
     <span style="background:#f1f5f9;color:var(--muted);border:1px solid var(--border);border-radius:4px;padding:1px 6px;font-weight:600">~0%</span> on track
@@ -404,6 +412,19 @@
   <p id="hist-footer" style="font-size:.72rem;color:var(--faint);margin-top:8px;text-align:right;"></p>
 </div>
 
+<!-- ═══════════ SKIPPED PANE ═══════════ -->
+<div class="pane" id="pane-skipped">
+  <div class="card" style="background:var(--amber-light);border-color:#fcd34d;margin-bottom:14px;">
+    <p style="font-size:.875rem;color:#92400e;">
+      <strong>Skipped items</strong> — won't appear in the Orders pane this week. These are items you chose to skip short-term (e.g. already have stock inbound, or don't need right now). Restore any item to put it back into Orders.
+    </p>
+    <p style="font-size:.75rem;color:#b45309;margin-top:4px;">
+      Skipped ≠ Discarded. Discarded items are archived to Revival for long-term consideration.
+    </p>
+  </div>
+  <div id="skipped-content"></div>
+</div>
+
 <!-- ═══════════ REVIVAL PANE ═══════════ -->
 <div class="pane" id="pane-revival">
   <div class="card" id="revival-headline" style="background:var(--purple-light);border-color:#c4b5fd;margin-bottom:14px;"></div>
@@ -422,7 +443,17 @@
 // STATE
 // ═══════════════════════════════════════════════════════════════════════════
 let DATA = {};
-let FLAGS = JSON.parse(localStorage.getItem('bmss_flags') || '{"obsolete_items":[],"seasonal_overrides":[]}');
+let FLAGS = (() => {
+  const stored = JSON.parse(localStorage.getItem('bmss_flags') || '{}');
+  return {
+    obsolete_items:            stored.obsolete_items            || [],
+    seasonal_overrides:        stored.seasonal_overrides        || [],
+    skipped_items:             stored.skipped_items             || [],
+    archived_from_orders:      stored.archived_from_orders      || [],
+    discarded_from_revival:    stored.discarded_from_revival    || [],
+    limited_edition_overrides: stored.limited_edition_overrides || [],
+  };
+})();
 let PROTECTED_VIEW = false;
 let SORT = {};            // { tableId: { col, asc } }
 let urgencyFilter = 'ALL';
@@ -479,6 +510,7 @@ function initApp() {
   setBadge('momentum', (mom.rising||[]).length);
   setBadge('historical', (DATA.historical||[]).length);
   setBadge('revival', sum.revival_candidates_count || 0);
+  setBadge('skipped', FLAGS.skipped_items.length || 0);
 
   renderBriefing();
   renderOrders();
@@ -513,27 +545,98 @@ document.querySelectorAll('.tab-btn').forEach(btn => {
 function toggleProtectedView() {
   PROTECTED_VIEW = !PROTECTED_VIEW;
   document.getElementById('protectToggle').classList.toggle('active', PROTECTED_VIEW);
-  renderOrders(); renderMomentum(); renderHistorical(); renderRevival();
+  renderOrders(); renderMomentum(); renderHistorical(); renderRevival(); renderSkipped();
 }
 
 // ═══════════════════════════════════════════════════════════════════════════
-// DISCARD (obsolete) SYSTEM
+// FLAG PERSISTENCE
 // ═══════════════════════════════════════════════════════════════════════════
-function isDiscarded(name) {
-  return (FLAGS.obsolete_items || []).some(n => n.toLowerCase() === name.toLowerCase());
-}
-function toggleDiscard(name) {
-  const arr = FLAGS.obsolete_items || [];
-  const idx = arr.findIndex(n => n.toLowerCase() === name.toLowerCase());
-  if (idx >= 0) arr.splice(idx, 1);
-  else arr.push(name);
-  FLAGS.obsolete_items = arr;
+function saveFlags() {
   localStorage.setItem('bmss_flags', JSON.stringify(FLAGS));
-  renderOrders(); renderRevival(); renderPricing(); renderMargins();
+}
+
+function inList(list, name) {
+  return list.some(n => n.toLowerCase() === name.toLowerCase());
+}
+function addToList(list, name) {
+  if (!inList(list, name)) list.push(name);
+}
+function removeFromList(list, name) {
+  const idx = list.findIndex(n => n.toLowerCase() === name.toLowerCase());
+  if (idx >= 0) list.splice(idx, 1);
+}
+
+// ═══════════════════════════════════════════════════════════════════════════
+// DISCARD FROM ORDERS → archives to revival consideration
+// "Discarded" = won't order long-term; surfaces in Revival tab for review
+// ═══════════════════════════════════════════════════════════════════════════
+function isArchivedFromOrders(name) {
+  return inList(FLAGS.archived_from_orders, name);
+}
+function discardFromOrders(name) {
+  // Move from orders to archived_from_orders (feeds revival tab)
+  removeFromList(FLAGS.obsolete_items, name);
+  removeFromList(FLAGS.skipped_items, name);
+  addToList(FLAGS.archived_from_orders, name);
+  saveFlags();
+  renderOrders(); renderRevival(); renderSkipped();
+  setBadge('skipped', FLAGS.skipped_items.length);
+}
+function undiscardFromOrders(name) {
+  removeFromList(FLAGS.archived_from_orders, name);
+  saveFlags();
+  renderOrders(); renderRevival(); renderSkipped();
 }
 function discardBtn(name, label = '✕ discard') {
   const escaped = name.replace(/'/g, "\\'").replace(/"/g, '&quot;');
-  return `<button class="discard-btn" onclick="toggleDiscard('${escaped}')" title="Exclude from this list permanently">${label}</button>`;
+  return `<button class="discard-btn" onclick="discardFromOrders('${escaped}')" title="Archive from orders — surfaces in Revival tab">${label}</button>`;
+}
+
+// ═══════════════════════════════════════════════════════════════════════════
+// SKIP FROM ORDERS → short-term only, restorable from Skipped tab
+// ═══════════════════════════════════════════════════════════════════════════
+function isSkipped(name) {
+  return inList(FLAGS.skipped_items, name);
+}
+function skipFromOrders(name) {
+  removeFromList(FLAGS.archived_from_orders, name);
+  addToList(FLAGS.skipped_items, name);
+  saveFlags();
+  renderOrders(); renderSkipped();
+  setBadge('skipped', FLAGS.skipped_items.length);
+}
+function restoreSkipped(name) {
+  removeFromList(FLAGS.skipped_items, name);
+  saveFlags();
+  renderOrders(); renderSkipped();
+  setBadge('skipped', FLAGS.skipped_items.length);
+}
+function skipBtn(name) {
+  const escaped = name.replace(/'/g, "\\'").replace(/"/g, '&quot;');
+  return `<button class="skip-btn" onclick="skipFromOrders('${escaped}')" title="Skip this week — will not appear in Orders short-term. Restorable from Skipped tab.">⏭ skip</button>`;
+}
+
+// ═══════════════════════════════════════════════════════════════════════════
+// DISCARD FROM REVIVAL → permanent — never resurface
+// ═══════════════════════════════════════════════════════════════════════════
+function isDiscardedFromRevival(name) {
+  return inList(FLAGS.discarded_from_revival, name);
+}
+function discardFromRevival(name) {
+  // Remove from archived_from_orders too so it doesn't come back
+  removeFromList(FLAGS.archived_from_orders, name);
+  addToList(FLAGS.discarded_from_revival, name);
+  saveFlags();
+  renderRevival();
+}
+function revivalDiscardBtn(name) {
+  const escaped = name.replace(/'/g, "\\'").replace(/"/g, '&quot;');
+  return `<button class="discard-btn" onclick="discardFromRevival('${escaped}')" title="Permanently exclude — never resurface in Revival or Orders">✕ never order</button>`;
+}
+
+// Legacy — used in margins/pricing panes (discard from those views)
+function isDiscarded(name) {
+  return inList(FLAGS.archived_from_orders, name) || inList(FLAGS.discarded_from_revival, name);
 }
 
 // ═══════════════════════════════════════════════════════════════════════════
@@ -631,7 +734,9 @@ function setUrgencyFilter(u) {
 }
 
 function renderOrders() {
-  const raw = (DATA.orders || []).filter(o => !isDiscarded(o.name));
+  const raw = (DATA.orders || []).filter(o =>
+    !isArchivedFromOrders(o.name) && !isSkipped(o.name)
+  );
   const search = (document.getElementById('orders-search')?.value || '').toLowerCase();
   let items = raw.filter(o => {
     if (urgencyFilter !== 'ALL' && o.urgency !== urgencyFilter) return false;
@@ -642,7 +747,8 @@ function renderOrders() {
 
   const sortCols = o => [
     (o.display_name || o.name), o.current_cases, o.weeks_of_cover ?? 999,
-    o.weekly_velocity_cases, o.recommend_cases, o.urgency, o.notes
+    o.weekly_velocity_cases, o.recommend_cases, o.urgency, o.notes,
+    '', '', o.cart_units_ordered || 0
   ];
   items = sortRows(items, 'orders-table', sortCols);
 
@@ -650,19 +756,46 @@ function renderOrders() {
   const allRaw = DATA.orders || [];
   const crit = allRaw.filter(o => o.urgency === 'CRITICAL').length;
   const out  = allRaw.filter(o => o.weeks_of_cover === 0 || o.weeks_of_cover === null).length;
+  const ordered = allRaw.filter(o => o.urgency === 'ORDERED').length;
+  const skippedCount = FLAGS.skipped_items.length;
   renderInsights('insights-orders', [
     crit > 0 ? { icon:'🚨', color:'red',  text:`${crit} profit-protected items are critically low — order today.` } : null,
     out  > 0 ? { icon:'📭', color:'amber',text:`${out} items are completely out of stock right now.` } : null,
+    ordered > 0 ? { icon:'✅', color:'green', text:`${ordered} items already covered by your current cart order.` } : null,
+    skippedCount > 0 ? { icon:'⏭', color:'amber', text:`${skippedCount} items skipped this week. Restore them in the Skipped tab.` } : null,
     { icon:'⭐', color:'blue', text:`${allRaw.filter(o=>o.is_profit_protected).length} items on your protect-at-all-costs list.` },
   ].filter(Boolean));
 
   const tbody = document.getElementById('orders-body');
-  if (!items.length) { tbody.innerHTML = `<tr><td colspan="8" class="empty">No items match filters.</td></tr>`; return; }
+  if (!items.length) { tbody.innerHTML = `<tr><td colspan="9" class="empty">No items match filters.</td></tr>`; return; }
 
   tbody.innerHTML = items.map(o => {
     const woc = o.weeks_of_cover != null ? o.weeks_of_cover.toFixed(1) : '—';
     const prot = o.is_profit_protected ? '<span class="badge badge-purple" title="Profit-protected item">⭐ P</span> ' : '';
-    return `<tr class="${o.urgency==='CRITICAL'?'bg-amber-row':''}">
+    const isOrdered = o.urgency === 'ORDERED';
+    const rowCls = isOrdered ? 'bg-green-row' : o.urgency === 'CRITICAL' ? 'bg-amber-row' : '';
+
+    // Order qty display — cognac/scotch/brandy show bottles not cases
+    let qtyHtml;
+    if (o.order_by_bottle) {
+      qtyHtml = `<strong style="color:var(--green)">${o.recommend_units} btl</strong>
+        <div style="font-size:.72rem;color:var(--faint)">(${o.recommend_cases} cs equiv)</div>`;
+    } else {
+      qtyHtml = `<strong style="color:var(--green)">${o.recommend_cases} cs</strong>
+        <div style="font-size:.72rem;color:var(--faint)">${o.recommend_units} units</div>`;
+    }
+
+    // Cart column
+    const cartUnits = o.cart_units_ordered || 0;
+    const cartHtml = cartUnits > 0
+      ? `<span style="color:var(--green);font-weight:600">✓ ${cartUnits.toFixed(0)}</span>`
+      : '<span style="color:var(--faint)">—</span>';
+
+    const urgencyBadge = isOrdered
+      ? `<span class="badge badge-green">ORDERED</span>`
+      : `<span class="badge ${URGENCY_COLOR[o.urgency]||'badge-grey'}">${o.urgency}</span>`;
+
+    return `<tr class="${rowCls}">
       <td>
         <div class="item-name">${prot}${esc(o.display_name || o.name)}</div>
         <div class="item-sub">${esc(o.category)}</div>
@@ -670,13 +803,11 @@ function renderOrders() {
       <td class="right">${o.current_cases.toFixed(1)} cs<br><small style="color:var(--faint)">${o.current_units} units</small></td>
       <td class="right">${woc} wks</td>
       <td class="right">${o.weekly_velocity_cases.toFixed(2)} cs/wk</td>
-      <td class="right" style="background:var(--green-light)">
-        <strong style="color:var(--green)">${o.recommend_cases} cs</strong>
-        <div style="font-size:.72rem;color:var(--faint)">${o.recommend_units} units</div>
-      </td>
-      <td><span class="badge ${URGENCY_COLOR[o.urgency]||'badge-grey'}">${o.urgency}</span></td>
+      <td class="right" style="background:var(--green-light)">${qtyHtml}</td>
+      <td class="right">${cartHtml}</td>
+      <td>${urgencyBadge}</td>
       <td style="max-width:220px;font-size:.8rem;color:var(--muted)">${esc(o.notes || '')}</td>
-      <td>${discardBtn(o.name)}</td>
+      <td><div class="action-btns">${skipBtn(o.name)}${discardBtn(o.name)}</div></td>
     </tr>`;
   }).join('');
 
@@ -738,6 +869,54 @@ function renderMargins() {
 
   const tbody = document.getElementById('margins-body');
   if (!items.length) { tbody.innerHTML = `<tr><td colspan="10" class="empty">No items match filters.</td></tr>`; return; }
+
+  // Find top 3 items with negative true margin for calculation exemplars
+  const negMarginItems = items.filter(m => m.true_margin_pct < 0).slice(0, 3);
+
+  // Calculation breakdown pane — show exact working for negative-margin items
+  let calcBreakdownHtml = '';
+  if (negMarginItems.length > 0) {
+    calcBreakdownHtml = `
+    <div class="card" style="background:#fff7ed;border-color:#fed7aa;margin-bottom:16px;">
+      <div style="font-size:.875rem;font-weight:700;color:#c2410c;margin-bottom:10px;">
+        🔢 Exact Calculation Breakdown — Negative True Margin Items
+      </div>
+      <p style="font-size:.75rem;color:#9a3412;margin-bottom:12px;">
+        These items show negative true margin. Below is the exact working for how those figures are derived.
+      </p>
+      ${negMarginItems.map(m => {
+        const b = m.calculation_breakdown || {};
+        return `
+        <div style="border:1px solid #fed7aa;border-radius:6px;padding:10px 14px;margin-bottom:10px;background:#fff;">
+          <div style="font-weight:600;font-size:.875rem;margin-bottom:8px;">${esc(m.display_name||m.name)} <span style="color:var(--faint);font-weight:400">(${esc(m.category)})</span></div>
+          <table style="font-size:.78rem;border-collapse:collapse;width:100%;">
+            <tr><td style="padding:2px 8px 2px 0;color:var(--muted);width:220px;">① Revenue this week</td><td style="font-weight:600">$${(b.step1_revenue||0).toFixed(2)}</td></tr>
+            <tr><td style="padding:2px 8px 2px 0;color:var(--muted);">② Reported profit (from POS)</td><td>$${(b.step2_reported_profit||0).toFixed(2)} &nbsp;<span style="color:var(--faint);font-style:italic">(implied COGS = $${(b.step2_cogs_implied||0).toFixed(2)})</span></td></tr>
+            <tr><td style="padding:2px 8px 2px 0;color:var(--muted);">③ Reported margin</td><td>${b.step3_reported_margin||'—'}</td></tr>
+            <tr><td style="padding:2px 8px 2px 0;color:var(--amber);">④ Bottlemart promo savings</td><td style="color:var(--amber)">$${(b.step4_promo_savings||0).toFixed(2)} <span style="font-style:italic;color:var(--faint)">(chain-funded — not your real profit)</span></td></tr>
+            <tr><td style="padding:2px 8px 2px 0;color:var(--red);font-weight:600;">⑤ True profit (after removing promo)</td><td style="color:var(--red);font-weight:600">$${(b.step5_true_profit||0).toFixed(2)} &nbsp;<span style="font-weight:400;font-style:italic">${esc(b.step5_formula||'')}</span></td></tr>
+            <tr><td style="padding:2px 8px 2px 0;color:var(--red);">⑥ True margin</td><td style="color:var(--red);font-weight:600">${b.step6_true_margin||'—'}</td></tr>
+            <tr><td style="padding:2px 8px 2px 0;color:var(--muted);">⑦ Category floor</td><td>${b.step7_floor||'—'}</td></tr>
+            <tr><td style="padding:2px 8px 2px 0;color:var(--muted);">⑧ Gap to floor</td><td>${(b.step8_gap_pts||0).toFixed(2)} pts</td></tr>
+            <tr><td style="padding:2px 8px 2px 0;color:var(--red);font-weight:600;">⑨ Weekly dollar drag</td><td style="color:var(--red);font-weight:600">${b.step9_dollar_drag||'—'}</td></tr>
+          </table>
+        </div>`;
+      }).join('')}
+    </div>`;
+  }
+
+  const existingBreakdown = document.getElementById('margin-calc-breakdown');
+  if (existingBreakdown) existingBreakdown.outerHTML = calcBreakdownHtml
+    ? `<div id="margin-calc-breakdown">${calcBreakdownHtml}</div>` : '<div id="margin-calc-breakdown"></div>';
+  else {
+    const tableWrap = document.querySelector('#pane-margins .table-wrap');
+    if (tableWrap) {
+      const div = document.createElement('div');
+      div.id = 'margin-calc-breakdown';
+      div.innerHTML = calcBreakdownHtml;
+      tableWrap.parentNode.insertBefore(div, tableWrap);
+    }
+  }
 
   tbody.innerHTML = items.map(m => {
     const chainLoss = m.chain_subsidised_loss;
@@ -907,198 +1086,4 @@ function renderMomentum() {
   });
   items = [...items].sort((a,b) => (b.revenue_latest_week||0)-(a.revenue_latest_week||0));
 
-  const accent = momTab === 'rising' ? 'var(--green)' : momTab === 'falling' ? 'var(--red)' : 'var(--muted)';
-  const container = document.getElementById('momentum-list');
-  if (!items.length) { container.innerHTML = '<p class="empty">No items in this category.</p>'; return; }
-
-  container.innerHTML = `<div style="max-height:520px;overflow-y:auto;padding-right:4px;">${
-    items.map(item => `
-      <div class="mom-item">
-        <div class="mom-info">
-          <div class="mom-name">${esc(item.display_name||item.name)}</div>
-          <div class="mom-cat">${esc(item.category||'')}</div>
-        </div>
-        ${sparkline(item.velocities, item.case_qty||24, item.category||'')}
-        <div class="mom-pct" style="color:${accent}">
-          ${(item.pct_change_oldest_to_latest||0) > 0 ? '+' : ''}${(item.pct_change_oldest_to_latest||0).toFixed(0)}%
-        </div>
-        <div class="mom-rev">$${fmt0(item.revenue_latest_week||0)}/wk</div>
-      </div>`).join('')
-  }</div>`;
-}
-
-// ═══════════════════════════════════════════════════════════════════════════
-// HISTORICAL PANE
-// ═══════════════════════════════════════════════════════════════════════════
-function renderHistorical() {
-  const all  = DATA.historical || [];
-  const search = (document.getElementById('historical-search')?.value||'').toLowerCase();
-  const monthOnly = document.getElementById('hist-monthly-only')?.checked;
-  let items = all.filter(item => {
-    if (PROTECTED_VIEW && !item.is_profit_protected && !item.is_revenue_protected) return false;
-    if (monthOnly && !item.in_monthly) return false;
-    if (search && !(item.display_name||item.name).toLowerCase().includes(search)) return false;
-    return true;
-  });
-
-  const sortCols = item => [
-    (item.display_name||item.name), item.category, item.monthly_revenue||0,
-    item.yearly_revenue||0, item.est_weekly_from_monthly||0,
-    item.est_weekly_from_yearly||0, item.recent_weekly_velocity||0, item.trend_vs_monthly||0
-  ];
-  items = sortRows(items, 'historical-table', sortCols);
-  if (!SORT['historical-table']) items = [...items].sort((a,b)=>(b.monthly_revenue||0)-(a.monthly_revenue||0));
-
-  const tbody = document.getElementById('historical-body');
-  if (!items.length) { tbody.innerHTML = `<tr><td colspan="8" class="empty">No items match filters.</td></tr>`; return; }
-
-  tbody.innerHTML = items.slice(0, 200).map(item => {
-    const t = item.trend_vs_monthly;
-    let trendHtml = '—';
-    if (t != null) {
-      const cls = t > 10 ? 'color:var(--green);background:var(--green-light);border-color:#86efac'
-                 : t < -10 ? 'color:var(--red);background:var(--red-light);border-color:#fca5a5'
-                 : 'color:var(--muted);background:#f1f5f9;border-color:var(--border)';
-      trendHtml = `<span style="font-size:.75rem;font-weight:600;padding:1px 6px;border-radius:4px;border:1px solid;${cls}">${t>0?'+':''}${t.toFixed(0)}%</span>`;
-    }
-    const badges = [
-      item.in_monthly ? `<span class="badge badge-green" style="font-size:.65rem">monthly</span>` : '',
-      item.in_yearly  ? `<span class="badge badge-blue"  style="font-size:.65rem">yearly</span>`  : '',
-    ].join(' ');
-    return `<tr>
-      <td>
-        <div class="item-name">${esc(item.display_name||item.name)}</div>
-        <div style="margin-top:2px">${badges}</div>
-      </td>
-      <td style="font-size:.78rem;color:var(--faint)">${esc(item.category||'')}</td>
-      <td class="right">${item.monthly_revenue ? '$'+fmt0(item.monthly_revenue) : '—'}</td>
-      <td class="right">${item.yearly_revenue  ? '$'+fmt0(item.yearly_revenue)  : '—'}</td>
-      <td class="right">${item.est_weekly_from_monthly ? '$'+item.est_weekly_from_monthly.toFixed(0) : '—'}</td>
-      <td class="right">${item.est_weekly_from_yearly  ? '$'+item.est_weekly_from_yearly.toFixed(0)  : '—'}</td>
-      <td class="right" style="color:var(--blue);font-weight:500">${item.recent_weekly_velocity > 0 ? item.recent_weekly_velocity.toFixed(2)+' cs' : '—'}</td>
-      <td class="right">${trendHtml}</td>
-    </tr>`;
-  }).join('');
-
-  document.getElementById('hist-footer').textContent =
-    `Showing ${Math.min(items.length,200)} of ${items.length} items`;
-  initSort('historical-table');
-}
-
-// ═══════════════════════════════════════════════════════════════════════════
-// REVIVAL PANE
-// ═══════════════════════════════════════════════════════════════════════════
-function renderRevival() {
-  const raw = DATA.revival || [];
-  const allFiltered = raw.filter(r => !isDiscarded(r.name));
-  const totalRev = allFiltered.reduce((s,x)=>s+(x.est_weekly_revenue||0),0);
-  document.getElementById('revival-headline').innerHTML = `
-    <p style="font-size:.875rem;color:var(--purple)">
-      <strong style="font-size:1.2rem;color:#5b21b6">${allFiltered.length}</strong> items sold in 2025 but absent from Jan–Apr 2026 and all recent weeks.
-      <strong>≈$${fmt0(totalRev)}/wk</strong> in potential recovered revenue.
-    </p>
-    <p style="font-size:.75rem;color:#7c3aed;margin-top:4px;">
-      Est. revenue = 2025 total ÷ weeks in report. Order qty = 2 weeks of historical pace minus current stock.
-    </p>`;
-
-  const search = (document.getElementById('revival-search')?.value||'').toLowerCase();
-  const inStockOnly = document.getElementById('revival-in-stock')?.checked;
-  let items = allFiltered.filter(r => {
-    if (PROTECTED_VIEW && !r.is_profit_protected && !r.is_revenue_protected) return false;
-    if (inStockOnly && !r.in_inventory) return false;
-    if (search && !(r.display_name||r.name).toLowerCase().includes(search)) return false;
-    return true;
-  });
-
-  const tops = items.filter(r=>r.top_pick);
-  const rest = items.filter(r=>!r.top_pick);
-
-  // Insights
-  const topRev = tops.slice(0,3).map(r=>r.display_name||r.name).join(', ');
-  renderInsights('insights-revival', [
-    tops.length ? { icon:'⭐', color:'amber', text:`Top 20 picks include ${topRev} — highest historical revenue, most worth chasing with your rep.` } : null,
-    { icon:'📦', color:'purple', text:`${items.filter(r=>r.in_inventory).length} revival items are still in your system — just need to be reordered.` },
-  ].filter(Boolean));
-
-  const tHead = `<thead><tr>
-    <th style="width:30px">#</th>
-    <th>Item</th>
-    <th class="right">2025 Rev</th>
-    <th class="right">Est $/wk</th>
-    <th class="right">Hist. Margin</th>
-    <th class="right">In System?</th>
-    <th class="right">Stock</th>
-    <th class="right" style="background:var(--purple-light)">Order Cases</th>
-    <th>Rationale</th>
-    <th></th>
-  </tr></thead>`;
-
-  function revRows(arr, highlight = false) {
-    return arr.map(r => `<tr style="${highlight ? 'background:#fefce8' : ''}">
-      <td style="color:var(--faint);font-size:.78rem">${r.revival_rank}</td>
-      <td>
-        <div class="item-name">${esc(r.display_name||r.name)}</div>
-        <div class="item-sub">${esc(r.category||'')}</div>
-        ${r.is_limited_edition ? `<span class="badge badge-amber" style="font-size:.65rem">limited</span>` : ''}
-      </td>
-      <td class="right">$${fmt0(r.yearly_revenue||0)}</td>
-      <td class="right" style="font-weight:600;color:var(--purple)">$${(r.est_weekly_revenue||0).toFixed(0)}</td>
-      <td class="right">${r.margin_pct_historical>0?pct(r.margin_pct_historical):'—'}</td>
-      <td class="right">${r.in_inventory
-        ? `<span style="color:var(--green);font-weight:600">✓ Yes</span>`
-        : `<span style="color:var(--faint)">✗ No</span>`}</td>
-      <td class="right">${r.in_inventory ? (r.current_stock_cases||0).toFixed(1)+' cs' : '—'}</td>
-      <td class="right" style="background:var(--purple-light)">
-        <strong style="color:var(--purple)">${r.suggested_order_cases}</strong>
-        <span style="font-size:.72rem;color:var(--faint)"> cs</span>
-      </td>
-      <td style="font-size:.78rem;color:var(--muted);max-width:160px">${esc(r.revival_rationale||'')}</td>
-      <td>${discardBtn(r.name)}</td>
-    </tr>`).join('');
-  }
-
-  const html = [];
-  if (tops.length) {
-    html.push(`
-      <div style="margin-bottom:20px;">
-        <div style="display:flex;align-items:center;gap:8px;margin-bottom:8px;">
-          <span style="font-size:1rem;font-weight:700;color:#b45309">⭐ Top 20 Revival Picks</span>
-          <span style="font-size:.78rem;color:var(--faint)">— highest historical revenue</span>
-        </div>
-        <div class="table-wrap" style="border:2px solid #fcd34d">
-          <table>${tHead}<tbody>${revRows(tops, true)}</tbody></table>
-        </div>
-      </div>`);
-  }
-  if (rest.length) {
-    html.push(`
-      <div>
-        <div style="font-size:.875rem;font-weight:600;color:var(--muted);margin-bottom:8px;">
-          Other candidates (${rest.length})
-        </div>
-        <div class="table-wrap">
-          <table>${tHead}<tbody>${revRows(rest)}</tbody></table>
-        </div>
-      </div>`);
-  }
-
-  document.getElementById('revival-content').innerHTML = html.join('') ||
-    '<p class="empty">No revival candidates match filters.</p>';
-}
-
-// ═══════════════════════════════════════════════════════════════════════════
-// UTILS
-// ═══════════════════════════════════════════════════════════════════════════
-function esc(s) {
-  return String(s||'').replace(/&/g,'&amp;').replace(/</g,'&lt;').replace(/>/g,'&gt;').replace(/"/g,'&quot;');
-}
-function fmt0(n) { return Number(n||0).toLocaleString(undefined,{maximumFractionDigits:0}); }
-function pct(n) { return (n||0).toFixed(1)+'%'; }
-
-// ═══════════════════════════════════════════════════════════════════════════
-// INIT
-// ═══════════════════════════════════════════════════════════════════════════
-loadData();
-</script>
-</body>
-</html>
+  const accent = momTab === 'rising' ? 'var(
