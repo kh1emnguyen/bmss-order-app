@@ -1086,4 +1086,265 @@ function renderMomentum() {
   });
   items = [...items].sort((a,b) => (b.revenue_latest_week||0)-(a.revenue_latest_week||0));
 
-  const accent = momTab === 'rising' ? 'var(
+  const accent = momTab === 'rising' ? 'var(--green)' : momTab === 'falling' ? 'var(--red)' : 'var(--muted)';
+  const container = document.getElementById('momentum-list');
+  if (!items.length) { container.innerHTML = '<p class="empty">No items in this category.</p>'; return; }
+
+  container.innerHTML = `<div style="max-height:520px;overflow-y:auto;padding-right:4px;">${
+    items.map(item => `
+      <div class="mom-item">
+        <div class="mom-info">
+          <div class="mom-name">${esc(item.display_name||item.name)}</div>
+          <div class="mom-cat">${esc(item.category||'')}</div>
+        </div>
+        ${sparkline(item.velocities, item.case_qty||24, item.category||'')}
+        <div class="mom-pct" style="color:${accent}">
+          ${(item.pct_change_oldest_to_latest||0) > 0 ? '+' : ''}${(item.pct_change_oldest_to_latest||0).toFixed(0)}%
+        </div>
+        <div class="mom-rev">$${fmt0(item.revenue_latest_week||0)}/wk</div>
+      </div>`).join('')
+  }</div>`;
+}
+
+// ═══════════════════════════════════════════════════════════════════════════
+// HISTORICAL PANE
+// ═══════════════════════════════════════════════════════════════════════════
+function renderHistorical() {
+  const all  = DATA.historical || [];
+  const search = (document.getElementById('historical-search')?.value||'').toLowerCase();
+  const monthOnly = document.getElementById('hist-monthly-only')?.checked;
+  let items = all.filter(item => {
+    if (PROTECTED_VIEW && !item.is_profit_protected && !item.is_revenue_protected) return false;
+    if (monthOnly && !item.in_monthly) return false;
+    if (search && !(item.display_name||item.name).toLowerCase().includes(search)) return false;
+    return true;
+  });
+
+  const sortCols = item => [
+    (item.display_name||item.name), item.category, item.monthly_revenue||0,
+    item.yearly_revenue||0, item.est_weekly_from_monthly||0,
+    item.est_weekly_from_yearly||0, item.recent_weekly_velocity||0, item.trend_vs_monthly||0
+  ];
+  items = sortRows(items, 'historical-table', sortCols);
+  if (!SORT['historical-table']) items = [...items].sort((a,b)=>(b.monthly_revenue||0)-(a.monthly_revenue||0));
+
+  const tbody = document.getElementById('historical-body');
+  if (!items.length) { tbody.innerHTML = `<tr><td colspan="8" class="empty">No items match filters.</td></tr>`; return; }
+
+  tbody.innerHTML = items.slice(0, 200).map(item => {
+    const t = item.trend_vs_monthly;
+    let trendHtml = '—';
+    if (t != null) {
+      const cls = t > 10 ? 'color:var(--green);background:var(--green-light);border-color:#86efac'
+                 : t < -10 ? 'color:var(--red);background:var(--red-light);border-color:#fca5a5'
+                 : 'color:var(--muted);background:#f1f5f9;border-color:var(--border)';
+      trendHtml = `<span style="font-size:.75rem;font-weight:600;padding:1px 6px;border-radius:4px;border:1px solid;${cls}">${t>0?'+':''}${t.toFixed(0)}%</span>`;
+    }
+    const badges = [
+      item.in_monthly ? `<span class="badge badge-green" style="font-size:.65rem">monthly</span>` : '',
+      item.in_yearly  ? `<span class="badge badge-blue"  style="font-size:.65rem">yearly</span>`  : '',
+    ].join(' ');
+    return `<tr>
+      <td>
+        <div class="item-name">${esc(item.display_name||item.name)}</div>
+        <div style="margin-top:2px">${badges}</div>
+      </td>
+      <td style="font-size:.78rem;color:var(--faint)">${esc(item.category||'')}</td>
+      <td class="right">${item.monthly_revenue ? '$'+fmt0(item.monthly_revenue) : '—'}</td>
+      <td class="right">${item.yearly_revenue  ? '$'+fmt0(item.yearly_revenue)  : '—'}</td>
+      <td class="right">${item.est_weekly_from_monthly ? '$'+item.est_weekly_from_monthly.toFixed(0) : '—'}</td>
+      <td class="right">${item.est_weekly_from_yearly  ? '$'+item.est_weekly_from_yearly.toFixed(0)  : '—'}</td>
+      <td class="right" style="color:var(--blue);font-weight:500">${item.recent_weekly_velocity > 0 ? item.recent_weekly_velocity.toFixed(2)+' cs' : '—'}</td>
+      <td class="right">${trendHtml}</td>
+    </tr>`;
+  }).join('');
+
+  document.getElementById('hist-footer').textContent =
+    `Showing ${Math.min(items.length,200)} of ${items.length} items`;
+  initSort('historical-table');
+}
+
+// ═══════════════════════════════════════════════════════════════════════════
+// REVIVAL PANE
+// ═══════════════════════════════════════════════════════════════════════════
+function renderRevival() {
+  const raw = DATA.revival || [];
+  const allFiltered = raw.filter(r => !isDiscardedFromRevival(r.name));
+  const totalRev = allFiltered.reduce((s,x)=>s+(x.est_weekly_revenue||0),0);
+  document.getElementById('revival-headline').innerHTML = `
+    <p style="font-size:.875rem;color:var(--purple)">
+      <strong style="font-size:1.2rem;color:#5b21b6">${allFiltered.length}</strong> items sold in 2025 but absent from Jan–Apr 2026 and all recent weeks.
+      <strong>~$${fmt0(totalRev)}/wk</strong> in potential recovered revenue.
+    </p>
+    <p style="font-size:.75rem;color:#7c3aed;margin-top:4px;">
+      Est. revenue = 2025 total / weeks in report. Order qty = 2 weeks of historical pace minus current stock.
+    </p>`;
+
+  const search = (document.getElementById('revival-search')?.value||'').toLowerCase();
+  const inStockOnly = document.getElementById('revival-in-stock')?.checked;
+  let items = allFiltered.filter(r => {
+    if (PROTECTED_VIEW && !r.is_profit_protected && !r.is_revenue_protected) return false;
+    if (inStockOnly && !r.in_inventory) return false;
+    if (search && !(r.display_name||r.name).toLowerCase().includes(search)) return false;
+    return true;
+  });
+
+  const archivedItems = items.filter(r => r.source === 'archived_from_orders');
+  const historicalItems = items.filter(r => r.source !== 'archived_from_orders');
+  const tops = historicalItems.filter(r=>r.top_pick);
+  const rest = historicalItems.filter(r=>!r.top_pick);
+
+  const topRev = tops.slice(0,3).map(r=>r.display_name||r.name).join(', ');
+  renderInsights('insights-revival', [
+    tops.length ? { icon:'⭐', color:'amber', text:`Top 20 picks include ${topRev} — highest historical revenue, most worth chasing with your rep.` } : null,
+    { icon:'📦', color:'purple', text:`${items.filter(r=>r.in_inventory).length} revival items are still in your system — just need to be reordered.` },
+  ].filter(Boolean));
+
+  const tHead = `<thead><tr>
+    <th style="width:30px">#</th>
+    <th>Item</th>
+    <th class="right">2025 Rev</th>
+    <th class="right">Est $/wk</th>
+    <th class="right">Hist. Margin</th>
+    <th class="right">In System?</th>
+    <th class="right">Stock</th>
+    <th class="right" style="background:var(--purple-light)">Order Cases</th>
+    <th>Rationale</th>
+    <th></th>
+  </tr></thead>`;
+
+  function revRows(arr, highlight) {
+    return arr.map(r => `<tr style="${highlight ? 'background:#fefce8' : ''}">
+      <td style="color:var(--faint);font-size:.78rem">${r.revival_rank}</td>
+      <td>
+        <div class="item-name">${esc(r.display_name||r.name)}</div>
+        <div class="item-sub">${esc(r.category||'')}</div>
+        ${r.is_limited_edition ? `<span class="badge badge-amber" style="font-size:.65rem">limited</span>` : ''}
+      </td>
+      <td class="right">$${fmt0(r.yearly_revenue||0)}</td>
+      <td class="right" style="font-weight:600;color:var(--purple)">$${(r.est_weekly_revenue||0).toFixed(0)}</td>
+      <td class="right">${r.margin_pct_historical>0?pct(r.margin_pct_historical):'—'}</td>
+      <td class="right">${r.in_inventory
+        ? `<span style="color:var(--green);font-weight:600">Yes</span>`
+        : `<span style="color:var(--faint)">No</span>`}</td>
+      <td class="right">${r.in_inventory ? (r.current_stock_cases||0).toFixed(1)+' cs' : '—'}</td>
+      <td class="right" style="background:var(--purple-light)">
+        <strong style="color:var(--purple)">${r.suggested_order_cases}</strong>
+        <span style="font-size:.72rem;color:var(--faint)"> cs</span>
+      </td>
+      <td style="font-size:.78rem;color:var(--muted);max-width:160px">${esc(r.revival_rationale||'')}</td>
+      <td>${revivalDiscardBtn(r.name)}</td>
+    </tr>`).join('');
+  }
+
+  const html = [];
+  if (tops.length) {
+    html.push(`
+      <div style="margin-bottom:20px;">
+        <div style="display:flex;align-items:center;gap:8px;margin-bottom:8px;">
+          <span style="font-size:1rem;font-weight:700;color:#b45309">⭐ Top 20 Revival Picks</span>
+          <span style="font-size:.78rem;color:var(--faint)">— highest historical revenue</span>
+        </div>
+        <div class="table-wrap" style="border:2px solid #fcd34d">
+          <table>${tHead}<tbody>${revRows(tops, true)}</tbody></table>
+        </div>
+      </div>`);
+  }
+  if (rest.length) {
+    html.push(`
+      <div>
+        <div style="font-size:.875rem;font-weight:600;color:var(--muted);margin-bottom:8px;">
+          Other candidates (${rest.length})
+        </div>
+        <div class="table-wrap">
+          <table>${tHead}<tbody>${revRows(rest)}</tbody></table>
+        </div>
+      </div>`);
+  }
+  if (archivedItems.length) {
+    html.push(`
+      <div style="margin-top:20px;">
+        <div style="display:flex;align-items:center;gap:8px;margin-bottom:8px;">
+          <span style="font-size:1rem;font-weight:700;color:#92400e">📥 Archived from Orders (${archivedItems.length})</span>
+          <span style="font-size:.78rem;color:var(--faint)">— items you discarded from the Orders pane.</span>
+        </div>
+        <div class="table-wrap" style="border:2px solid #fcd34d">
+          <table>${tHead}<tbody>${revRows(archivedItems)}</tbody></table>
+        </div>
+      </div>`);
+  }
+
+  document.getElementById('revival-content').innerHTML = html.join('') ||
+    '<p class="empty">No revival candidates match filters.</p>';
+}
+
+// ═══════════════════════════════════════════════════════════════════════════
+// SKIPPED PANE
+// ═══════════════════════════════════════════════════════════════════════════
+function renderSkipped() {
+  const skipped = FLAGS.skipped_items || [];
+  setBadge('skipped', skipped.length || 0);
+  const container = document.getElementById('skipped-content');
+  if (!container) return;
+
+  if (!skipped.length) {
+    container.innerHTML = '<p class="empty">No items are currently skipped. Use the skip button on any order to skip it for this week.</p>';
+    return;
+  }
+
+  const ordersMap = {};
+  (DATA.orders || []).forEach(o => { ordersMap[o.name.toLowerCase()] = o; });
+
+  const rows = skipped.map(name => {
+    const o = ordersMap[name.toLowerCase()] || {};
+    const displayName = o.display_name || name;
+    const category = o.category || '';
+    const vel = o.weekly_velocity_cases != null ? o.weekly_velocity_cases.toFixed(2) + ' cs/wk' : '—';
+    const woc = o.weeks_of_cover != null ? o.weeks_of_cover.toFixed(1) + ' wks' : '—';
+    const escaped = name.replace(/'/g, "\'").replace(/"/g, '&quot;');
+    return `<tr>
+      <td>
+        <div class="item-name">${esc(displayName)}</div>
+        <div class="item-sub">${esc(category)}</div>
+      </td>
+      <td class="right" style="color:var(--muted)">${vel}</td>
+      <td class="right" style="color:var(--muted)">${woc}</td>
+      <td>
+        <button class="restore-btn" onclick="restoreSkipped('${escaped}')">↩ Restore to Orders</button>
+      </td>
+      <td>
+        <button class="discard-btn" onclick="discardFromOrders('${escaped}')" title="Move to Revival">→ Archive to Revival</button>
+      </td>
+    </tr>`;
+  }).join('');
+
+  container.innerHTML = `
+    <div class="table-wrap">
+      <table>
+        <thead><tr>
+          <th>Item</th>
+          <th class="right">Velocity</th>
+          <th class="right">Wks Cover</th>
+          <th colspan="2">Actions</th>
+        </tr></thead>
+        <tbody>${rows}</tbody>
+      </table>
+    </div>`;
+}
+
+// ═══════════════════════════════════════════════════════════════════════════
+// UTILS
+// ═══════════════════════════════════════════════════════════════════════════
+function esc(s) {
+  return String(s||'').replace(/&/g,'&amp;').replace(/</g,'&lt;').replace(/>/g,'&gt;').replace(/"/g,'&quot;');
+}
+function fmt0(n) { return Number(n||0).toLocaleString(undefined,{maximumFractionDigits:0}); }
+function pct(n) { return (n||0).toFixed(1)+'%'; }
+
+// ═══════════════════════════════════════════════════════════════════════════
+// INIT
+// ═══════════════════════════════════════════════════════════════════════════
+loadData();
+</script>
+</body>
+</html>
